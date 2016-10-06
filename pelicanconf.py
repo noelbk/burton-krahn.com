@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Noel Burton-Krahn'
 SITENAME = u'Noel Burton-Krahn'
-SITEURL = 'http://noelbk.github.io'
+SITEURL = 'http://burton-krahn.com'
 
 PATH = 'content'
 
@@ -39,7 +39,7 @@ EXTRA_PATH_METADATA = {'root/%s' % f: {'path': f} for f in ROOT_FILES}
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['render_math']
