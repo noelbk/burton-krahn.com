@@ -26,14 +26,15 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('Email', 'mailto:noel@burton-krahn.com'),
+    ('GitHub', 'https://github.com/noelbk'),
+    ('Facebook', 'https://www.facebook.com/noel.burtonkrahn'),
+    )
 
-STATIC_PATHS = ['static', 'root/CNAME']
-
-EXTRA_PATH_METADATA = {
-    'root/CNAME': {'path': 'CNAME'},
-}
+ROOT_FILES = ['CNAME', 'favicon.ico', 'logo.png']
+STATIC_PATHS = ['static'] + ["root/%s" % f for f in ROOT_FILES]
+EXTRA_PATH_METADATA = {'root/%s' % f: {'path': f} for f in ROOT_FILES}
 
 DEFAULT_PAGINATION = 5
 
@@ -43,4 +44,35 @@ DEFAULT_PAGINATION = 5
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['render_math']
 
-THEME = 'pelican-themes/pelican-twitchy'
+#THEME = 'pelican-themes/pelican-twitchy'
+THEME = 'theme'
+
+BOOTSTRAP_THEME = 'superhero'
+###BOOTSTRAP_THEME = 'darkly'
+###BOOTSTRAP_THEME = 'readable'
+###BOOTSTRAP_THEME = 'united'
+###BOOTSTRAP_THEME = 'cyborg'
+##BOOTSTRAP_THEME = 'paper'
+##BOOTSTRAP_THEME = 'simplex'
+##BOOTSTRAP_THEME = 'slate'
+#BOOTSTRAP_THEME = 'amelia'
+#BOOTSTRAP_THEME = 'cerulean'
+#BOOTSTRAP_THEME = 'cosmo'
+#BOOTSTRAP_THEME = 'cupid'
+#BOOTSTRAP_THEME = 'flatly'
+#BOOTSTRAP_THEME = 'journal'
+#BOOTSTRAP_THEME = 'lumen'
+#BOOTSTRAP_THEME = 'readable-old'
+#BOOTSTRAP_THEME = 'sandstone'
+#BOOTSTRAP_THEME = 'shamrock'
+#BOOTSTRAP_THEME = 'spacelab'
+
+#SITELOGO = 'logo.png'
+#SITELOGO_SIZE = '200'
+DISPLAY_RECENT_POSTS_ON_MENU = True
+SITESUBTITLE = 'When your core shielding breaks down'
+
+DISQUS_SITENAME='noel-burton-krahn'
+
+#CC_LICENSE='CC-BY'
+#CC_ATTR_MARKUP=True
