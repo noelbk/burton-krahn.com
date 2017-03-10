@@ -86,5 +86,7 @@ VPM: no mantissa. You can't address memory, you can't index into
      you reach the end of allocated storage or something -- that's
      array subscripting, OK?
 
-To be continued...
+Never leave the cubicle, absolutely goddamn right, unless you're going
+all the way.  Knuth left the cubicle, he wrote the whole fucking
+program.
 
