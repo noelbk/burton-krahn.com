@@ -21,14 +21,13 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         )
 
 # Social widget
 SOCIAL = (
-    ('Email', 'mailto:noel@burton-krahn.com'),
+    ('Resume', 'static/NoelBurtonKrahnResume.pdf'),
     ('GitHub', 'https://github.com/noelbk'),
+    ('Email', 'mailto:noel@burton-krahn.com'),
     ('Facebook', 'https://www.facebook.com/noel.burtonkrahn'),
     )
 
