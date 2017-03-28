@@ -25,7 +25,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (
-    ('Resume', 'static/NoelBurtonKrahnResume.pdf'),
+    ('Resume', '/static/NoelBurtonKrahnResume.pdf'),
     ('GitHub', 'https://github.com/noelbk'),
     ('Email', 'mailto:noel@burton-krahn.com'),
     ('Facebook', 'https://www.facebook.com/noel.burtonkrahn'),
