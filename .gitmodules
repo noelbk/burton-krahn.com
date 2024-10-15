@@ -4,6 +4,3 @@
 [submodule "pelican-themes"]
 	path = pelican-themes
 	url = https://github.com/getpelican/pelican-themes
-[submodule "output"]
-	path = output
-	url = git@github.com:noelbk/noelbk.github.io.git

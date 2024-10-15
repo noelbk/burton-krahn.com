@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Noel Burton-Krahn" />
+        <meta name="description" content="When your core shielding breaks down" />
+
+
+    <title>Noel Burton-Krahn - Articles by Donald Chan</title>
+
+        <link rel="stylesheet" href="../theme/css/bootstrap.superhero.min.css" type="text/css"/>
+
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../theme/css/pygments/native.css" rel="stylesheet" />
+    
+    <link href="../theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href=".." title="Noel Burton-Krahn" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="../archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="/static/NoelBurtonKrahnResume.pdf" title="Resume"><i class="fa fa-resume-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/noelbk" title="GitHub"><i class="fa fa-github-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:noel@burton-krahn.com" title="Email"><i class="fa fa-envelope-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/noel.burtonkrahn" title="Facebook"><i class="fa fa-facebook-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="../">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Noel Burton-Krahn
+                    </a>
+                </li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latest">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                    <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
+                        <li class="">
+                            <a class="hide-overflow" href="../data-science-meetup-delirium-detection-with-cnns.html" title="Data Science Meetup: Delirium Detection With CNNs">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Data Science Meetup: Delirium Detection With CNNs
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="../communicating-with-vegtative-patients.html" title="Communicating with vegtative patients">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Communicating with vegtative patients
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="../deep-learning-for-medicine.html" title="Deep Learning for Medicine">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Deep Learning for Medicine
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="../battlesnakes.html" title="Battlesnakes">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Battlesnakes
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="../if-a-number-is-divisible-by-3-then-so-is-the-sum-of-its-digits.html" title="If a number is divisible by 3, then so is the sum of its digits">
+                                <i class="fa fa-file-text padding-small"></i>
+                                If a number is divisible by 3, then so is the sum of its digits
+                            </a>
+                        </li>
+                    <li>
+                        <a href="../archives.html">
+                            <i class="fa fa-arrow-right padding-small"></i>
+                            More
+                        </a>
+                    </li>
+                    </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/static/NoelBurtonKrahnResume.pdf" title="Resume">
+                            <i class="fa fa-resume-square fa-lg padding-small"></i>
+                            Resume
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/noelbk" title="GitHub">
+                            <i class="fa fa-github-square fa-lg padding-small"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:noel@burton-krahn.com" title="Email">
+                            <i class="fa fa-envelope-square fa-lg padding-small"></i>
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/noel.burtonkrahn" title="Facebook">
+                            <i class="fa fa-facebook-square fa-lg padding-small"></i>
+                            Facebook
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="../pages/resume.html">
+                            <i class="fa fa-file-text padding-small"></i>
+                            Resume
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li >
+                        <a href="../category/humour.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Humour
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../category/log.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            log
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../category/math.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Math
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../category/misc.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            misc
+                            <span class="badge pull-right categorybadge">2</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../category/programming.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Programming
+                            <span class="badge pull-right categorybadge">2</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content" class="body">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="jumbotron">  
+                <div class="row">
+                    <div class="col-lg-12">
+		      <img align="left" src="/logo.png"/>
+                        <h1>Noel Burton-Krahn</h1>
+                        <p>When your core shielding breaks down</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9">
+            <h2>Recent Articles:</h2>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-lg-9">
+            <article>
+                <h2>
+                  <a href="../data-science-meetup-delirium-detection-with-cnns.html">Data Science Meetup: Delirium Detection With CNNs</a>
+		  <br/>
+                  <small><div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-07-26T00:00:00-07:00"> Wed 26 July 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="../category/log.html">log</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="../tag/log.html">log</a> /                 <a href="../tag/eeg.html">eeg</a> /                 <a href="../tag/cnn.html">cnn</a> /                 <a href="../tag/nnet.html">nnet</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info --></small>
+                </h2>
+                <div class="summary">
+                    <h1>Introduction</h1>
+<p>Noel Burton-Krahn</p>
+<h1>Delirium Detection in EEGs</h1>
+<p>Got baseStudyEDF: control and delerium EEGs
+Total Control: 27
+Total Delirium: 25</p>
+<p><img alt="baseStudyEDF" src="../static/20170727-DataScienceMeetup/baseStudyEDF.png"></p>
+<h1>Neural Networks</h1>
+<p>Images from <a href="http://cs231n.github.io/convolutional-networks/">CS231n Convolutional Neural Networks for Visual Recognition</a></p>
+<p><img alt="neural_net2" src="../static/20170727-DataScienceMeetup/neural_net2.jpeg"></p>
+<p><img alt="cnn" src="../static/20170727-DataScienceMeetup/cnn.jpeg"></p>
+<h2>Convolutional Networks</h2>
+<p><img alt="convnet" src="../static/20170727-DataScienceMeetup/convnet.jpeg"></p>
+<p><img alt="weights" src="../static/20170727-DataScienceMeetup/weights.jpeg"></p>
+<h2>Deep Neural Networks</h2>
+<p><img alt="AlexNet" src="../static/20170727-DataScienceMeetup/Figure-27-CNN-Architecture-from-AlexNet-32.jpg"></p>
+<p><img alt="inception" src="../static/20170727-DataScienceMeetup/inception.png"></p>
+<h2>Demo Digit Classifier</h2>
+<p><a href="http://scs.ryerson.ca/~aharley/vis/conv/flat.html">2D Visualization of a CNN</a> by A Harley, Ryerson</p>
+<p>https://vimeo.com …</p>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                  <a href="../communicating-with-vegtative-patients.html">Communicating with vegtative patients</a>
+		  <br/>
+                  <small><div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-06-22T00:00:00-07:00"> Thu 22 June 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="../category/misc.html">misc</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="../tag/eeg.html">eeg</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info --></small>
+                </h2>
+                <div class="summary">
+                    <p>Imagine if you were completely conscious but couldn't move or speak?
+<a href="http://www.owenlab.uwo.ca/">Neuroscientist Adrian Owen</a> has been
+using brain-imaging techniques to detect consciousness in patients who
+are presumed to be vegetative, sometimes for many years. By giving
+simple commands and then measuring brain activity, Owen has learned
+some patients are completely …</p>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                  <a href="../deep-learning-for-medicine.html">Deep Learning for Medicine</a>
+		  <br/>
+                  <small><div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-04-30T00:00:00-07:00"> Sun 30 April 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="../category/misc.html">misc</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="../tag/nnet.html">nnet</a> /                 <a href="../tag/fda.html">fda</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info --></small>
+                </h2>
+                <div class="summary">
+                    <p>Machine learning has made great strides in the last few years, and
+<a href="http://cs231n.github.io/convolutional-networks/">Convolutional Neural Networks</a> have demonstrated
+some very impressive results in image and speech processing.  There
+are some great opportunities to apply them to healthcare, but there
+are some significant challenges too.</p>
+<ul>
+<li><a href="https://medium.com/the-mission/deep-learning-in-healthcare-challenges-and-opportunities-d2eee7e2545">Deep Learning in Healthcare: Challenges and Opportunities …</a></li></ul>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                  <a href="../battlesnakes.html">Battlesnakes</a>
+		  <br/>
+                  <small><div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-03-10T00:00:00-08:00"> Fri 10 March 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="../category/programming.html">Programming</a>
+            </span>
+        </small>
+    </div>
+</div><!-- /.post-info --></small>
+                </h2>
+                <div class="summary">
+                    <p><a href="https://en.wikipedia.org/wiki/Genetic_programming">Genetic programming</a> for
+the win! This is my entry into the
+2017 <a href="http://battlesnake.io">Battlesnake</a> competition.</p>
+<div>
+<a href="https://cdn.rawgit.com/noelbk/genetisnake/abc247e/html/snake.html">
+See them in action!
+<img src="https://raw.githubusercontent.com/noelbk/genetisnake/master/html/images/board2.png" width="322px" height="250px" />
+</a>
+</div>
+
+<p><a href="https://github.com/noelbk/genetisnake">Git repo</a></p>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                  <a href="../if-a-number-is-divisible-by-3-then-so-is-the-sum-of-its-digits.html">If a number is divisible by 3, then so is the sum of its digits</a>
+		  <br/>
+                  <small><div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2016-10-03T00:00:00-07:00"> Mon 03 October 2016</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="../category/math.html">Math</a>
+            </span>
+        </small>
+    </div>
+</div><!-- /.post-info --></small>
+                </h2>
+                <div class="summary">
+                    <p>A toy proof of a math trick I learned in elementary school.</p>
+                </div>
+            </article>
+        <div class="btn-more text-right">
+            <a class="btn btn-default btn-xs twitchy-background" href="../archives.html">
+                View all Articles ...
+            </a>
+        </div>
+    </div>
+</div>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2017 Noel Burton-Krahn
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="../theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="../theme/js/pelican_twitchy.min.js"></script>
+<script>
+    function FadeInOnScroll(ObjectList){
+        ObjectList.each(function(i) {
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_object ){
+                $(this).fadeTo(750,1);
+            }
+        });
+    }
+    articles = $("article").fadeTo(0, 0.05);
+    FadeInOnScroll(articles)
+    $(window).scroll(function() {
+        FadeInOnScroll(articles)
+    });
+</script>
+</body>
+</html>
