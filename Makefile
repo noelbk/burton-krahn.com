@@ -8,6 +8,14 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
+# Quartz + public vault (recommended)
+VAULT_DIR?=$(BASEDIR)/vault
+QUARTZ_DIR?=$(BASEDIR)/quartz
+QUARTZ_SITE_CONTENT_DIR?=$(BASEDIR)/site-content
+QUARTZ_UPSTREAM?=https://github.com/jackyzha0/quartz.git
+QUARTZ_REF?=v4
+SITE_DOMAIN?=burton-krahn.com
+
 FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
@@ -120,5 +128,45 @@ cf_upload: publish
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push -f git@github.com:noelbk/noelbk.github.io.git $(GITHUB_PAGES_BRANCH):master
+
+# New local preview flow (Quartz)
+.PHONY: build preview sync-vault quartz-publish preview-stop quartz-update
+
+PREVIEW_HOST?=127.0.0.1
+PREVIEW_PORT?=4321
+
+preview-stop:
+	@pids="$$(lsof -ti tcp:$(PREVIEW_PORT) 2>/dev/null)"; \
+	if [ -n "$$pids" ]; then \
+	  echo "Stopping preview on port $(PREVIEW_PORT): $$pids"; \
+	  kill $$pids || true; \
+	fi
+
+sync-vault:
+	VAULT_DIR=$(VAULT_DIR) QUARTZ_DIR=$(QUARTZ_DIR) QUARTZ_CONTENT_DIR=$(QUARTZ_SITE_CONTENT_DIR) node $(BASEDIR)/tools/sync-vault-to-quartz.mjs
+
+build: preview-stop sync-vault
+	npm --prefix $(QUARTZ_DIR) install
+	cd $(QUARTZ_DIR) && npx quartz build -d ../site-content
+
+preview: preview-stop sync-vault
+	npm --prefix $(QUARTZ_DIR) install
+	cd $(QUARTZ_DIR) && npx quartz build -d ../site-content --serve --port $(PREVIEW_PORT)
+
+quartz-publish: build
+	cd $(QUARTZ_DIR) && npx gh-pages -d public -b gh-pages
+
+# Update vendored Quartz from upstream v4.
+# Replaces ./quartz entirely, then reapplies local tweaks (CNAME + deps).
+quartz-update:
+	@echo "Updating Quartz from $(QUARTZ_UPSTREAM) ($(QUARTZ_REF))"
+	@rm -rf $(BASEDIR)/.quartz-tmp
+	git clone --depth 1 --branch $(QUARTZ_REF) $(QUARTZ_UPSTREAM) $(BASEDIR)/.quartz-tmp
+	@rm -rf $(BASEDIR)/.quartz-tmp/.git
+	@rm -rf $(QUARTZ_DIR)
+	@mv $(BASEDIR)/.quartz-tmp $(QUARTZ_DIR)
+	@mkdir -p $(QUARTZ_DIR)/quartz/static
+	@printf "%s\n" "$(SITE_DOMAIN)" > $(QUARTZ_DIR)/quartz/static/CNAME
+	npm --prefix $(QUARTZ_DIR) install node-tikzjax @resvg/resvg-js
 
 .PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github

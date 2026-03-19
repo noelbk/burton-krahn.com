@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Great Circle Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+        #controls h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+        }
+        .control-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .control-item label {
+            cursor: pointer;
+            user-select: none;
+        }
+        .control-item input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        .control-item input[type="number"] {
+            width: 80px;
+            padding: 4px 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+        .control-item input[type="number"]:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        #controlToggle {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 10px;
+            border-radius: 0 0 5px 5px;
+            cursor: pointer;
+            font-size: 18px;
+            user-select: none;
+            z-index: 1000;
+            transition: background 0.2s;
+        }
+        #controlToggle:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        #controls {
+            position: absolute;
+            top: -250px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 220px;
+            transition: top 0.3s ease;
+        }
+        #controls.open {
+            top: 40px;
+        }
+        #miniView {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 25vw;
+            height: 25vh;
+            #border: 2px solid rgba(255, 255, 255, 0.5);
+            #border-radius: 5px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="controlToggle">⚙</div>
+    <div id="controls">
+        <h3>Controls</h3>
+        <div class="control-item">
+            <label for="toggleDebug">Debug Vectors</label>
+            <input type="checkbox" id="toggleDebug">
+        </div>
+        <div class="control-item">
+            <label for="toggleTexture">Constellation Texture</label>
+            <input type="checkbox" id="toggleTexture">
+        </div>
+        <div class="control-item">
+            <label for="toggleBackground">Background Skybox</label>
+            <input type="checkbox" id="toggleBackground">
+        </div>
+        <div class="control-item">
+            <label for="toggleBlobs">Food Blobs</label>
+            <input type="checkbox" id="toggleBlobs">
+        </div>
+        <div class="control-item">
+            <label for="playerSpeed">Player Speed</label>
+            <input type="number" id="playerSpeed" value="1.0" step="0.2" min="0.2">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Sphere parameters
+        const SPHERE_RADIUS = 5;
+        const CAMERA_DISTANCE = 8;
+        const PLAYER_SIZE = 0.25;
+        const ROTATION_SPEED = .01;
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        // Remove solid background color - we'll use a skybox instead
+        // scene.background = new THREE.Color(0x000510);
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create mini view camera and renderer (looking down Z axis)
+        const miniCamera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        const miniCameraPos = new THREE.Vector3(.5, .2, 1).normalize().multiplyScalar(CAMERA_DISTANCE * 1.5);
+        miniCamera.position.copy(miniCameraPos);
+        miniCamera.lookAt(0, 0, 0);
+        miniCamera.up.set(0, 1, 0);
+
+        const miniRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        const miniSize = Math.min(window.innerWidth, window.innerHeight) * 0.25;
+        miniRenderer.setSize(miniSize, miniSize);
+        miniRenderer.domElement.id = 'miniView';
+        document.body.appendChild(miniRenderer.domElement);
+
+        // Create space skybox background
+        const skyboxCanvas = document.createElement('canvas');
+        skyboxCanvas.width = 4096;
+        skyboxCanvas.height = 2048;
+        const skyCtx = skyboxCanvas.getContext('2d');
+
+        // Create deep space gradient background
+        const gradient = skyCtx.createLinearGradient(0, 0, 0, skyboxCanvas.height);
+        gradient.addColorStop(0, '#0a0a1a');    // Very dark blue at top
+        gradient.addColorStop(0.3, '#1a0a2e');  // Dark purple
+        gradient.addColorStop(0.6, '#0f0520');  // Deep purple-black
+        gradient.addColorStop(1, '#000000');    // Pure black at bottom
+        skyCtx.fillStyle = gradient;
+        skyCtx.fillRect(0, 0, skyboxCanvas.width, skyboxCanvas.height);
+
+        // Add nebula clouds with multiple layers
+        function drawNebula(x, y, radius, color, alpha) {
+            const nebulaGradient = skyCtx.createRadialGradient(x, y, 0, x, y, radius);
+            nebulaGradient.addColorStop(0, color.replace(')', `, ${alpha})`).replace('rgb', 'rgba'));
+            nebulaGradient.addColorStop(0.5, color.replace(')', `, ${alpha * 0.3})`).replace('rgb', 'rgba'));
+            nebulaGradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            skyCtx.fillStyle = nebulaGradient;
+            skyCtx.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+        }
+
+        // Purple nebula
+        drawNebula(800, 400, 600, 'rgb(138, 43, 226)', 0.15);
+        drawNebula(1000, 500, 400, 'rgb(75, 0, 130)', 0.2);
+
+        // Blue nebula
+        drawNebula(2500, 600, 700, 'rgb(25, 25, 112)', 0.12);
+        drawNebula(2700, 700, 500, 'rgb(65, 105, 225)', 0.15);
+
+        // Pink/magenta nebula
+        drawNebula(3200, 1200, 550, 'rgb(199, 21, 133)', 0.1);
+        drawNebula(3400, 1300, 400, 'rgb(255, 20, 147)', 0.12);
+
+        // Cyan nebula
+        drawNebula(1500, 1400, 500, 'rgb(0, 139, 139)', 0.08);
+
+        // Add distant stars (smaller and dimmer than constellation stars)
+        skyCtx.fillStyle = '#ffffff';
+        for (let i = 0; i < 8000; i++) {
+            const lon = Math.random() * Math.PI * 2;
+            const lat = Math.asin(Math.random() * 2 - 1);
+
+            const x = (lon / (Math.PI * 2)) * skyboxCanvas.width;
+            const y = ((lat + Math.PI / 2) / Math.PI) * skyboxCanvas.height;
+
+            const latFactor = Math.cos(lat);
+            const brightness = Math.random();
+            const size = (Math.random() * 0.8 + 0.3) * Math.max(0.3, latFactor);
+
+            // Vary star colors slightly
+            if (brightness > 0.95) {
+                skyCtx.fillStyle = '#aaaaff'; // Slight blue tint for bright stars
+            } else if (brightness > 0.9) {
+                skyCtx.fillStyle = '#ffeeaa'; // Slight yellow tint
+            } else {
+                skyCtx.fillStyle = `rgba(255, 255, 255, ${0.3 + brightness * 0.7})`;
+            }
+
+            skyCtx.beginPath();
+            skyCtx.ellipse(x, y, size, size * latFactor, 0, 0, Math.PI * 2);
+            skyCtx.fill();
+        }
+
+        // Create skybox sphere (much larger than constellation sphere, rendered from inside)
+        const skyboxGeometry = new THREE.SphereGeometry(100, 64, 64);
+        const skyboxTexture = new THREE.CanvasTexture(skyboxCanvas);
+        skyboxTexture.needsUpdate = true;
+
+        const skyboxMaterial = new THREE.MeshBasicMaterial({
+            map: skyboxTexture,
+            side: THREE.BackSide,  // Render inside of sphere
+            fog: false
+        });
+
+        const skybox = new THREE.Mesh(skyboxGeometry, skyboxMaterial);
+        skybox.visible = false;  // Start with skybox hidden
+        scene.add(skybox);
+
+        // Create main sphere with constellation map
+        const sphereGeometry = new THREE.SphereGeometry(SPHERE_RADIUS, 128, 128);
+
+        // Create detailed constellation map with proper figures
+        const canvas = document.createElement('canvas');
+        canvas.width = 4096;
+        canvas.height = 2048;
+        const ctx = canvas.getContext('2d');
+
+        // Dark background
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Helper function to draw constellation with figure
+        function drawConstellation(name, stars, lines, figure) {
+            ctx.strokeStyle = '#ffffff';
+            ctx.fillStyle = '#ffffff';
+            ctx.lineWidth = 3;
+
+            // Draw connecting lines
+            lines.forEach(([i, j]) => {
+                ctx.beginPath();
+                ctx.moveTo(stars[i][0], stars[i][1]);
+                ctx.lineTo(stars[j][0], stars[j][1]);
+                ctx.stroke();
+            });
+
+            // Draw stars
+            stars.forEach(([x, y]) => {
+                ctx.beginPath();
+                ctx.arc(x, y, 8, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Draw figure outline if provided
+            if (figure) {
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(figure[0][0], figure[0][1]);
+                for (let i = 1; i < figure.length; i++) {
+                    ctx.lineTo(figure[i][0], figure[i][1]);
+                }
+                ctx.stroke();
+            }
+        }
+
+        // Ursa Major (Big Dipper/Great Bear)
+        drawConstellation('Ursa Major',
+            [[600, 400], [750, 380], [900, 400], [1050, 380], [1150, 480], [1050, 580], [900, 560]],
+            [[0,1], [1,2], [2,3], [3,4], [4,5], [5,6]],
+            [[550, 350], [650, 300], [800, 320], [950, 350], [1100, 320], [1200, 400], [1200, 550], [1100, 650], [900, 680], [700, 650], [550, 550]]
+        );
+
+        // Orion (The Hunter)
+        drawConstellation('Orion',
+            [[2400, 800], [2500, 700], [2600, 800], [2450, 950], [2550, 950], [2500, 1100], [2400, 1200], [2600, 1200]],
+            [[0,1], [1,2], [0,3], [2,4], [3,5], [4,5], [5,6], [5,7]],
+            [[2350, 650], [2450, 600], [2550, 600], [2650, 650], [2700, 900], [2650, 1150], [2550, 1250], [2450, 1250], [2350, 1150], [2300, 900]]
+        );
+
+        // Leo (The Lion)
+        drawConstellation('Leo',
+            [[1600, 1000], [1700, 950], [1800, 1000], [1850, 1100], [1800, 1200], [1700, 1150], [1600, 1200]],
+            [[0,1], [1,2], [2,3], [3,4], [4,5], [5,6], [6,0]],
+            [[1550, 950], [1650, 900], [1750, 900], [1850, 950], [1900, 1050], [1900, 1150], [1850, 1250], [1750, 1280], [1650, 1280], [1550, 1250], [1500, 1150], [1500, 1050]]
+        );
+
+        // Cassiopeia (The Queen - W shape)
+        drawConstellation('Cassiopeia',
+            [[3200, 300], [3300, 400], [3400, 300], [3500, 400], [3600, 300]],
+            [[0,1], [1,2], [2,3], [3,4]],
+            null
+        );
+
+        // Scorpius (The Scorpion)
+        drawConstellation('Scorpius',
+            [[3000, 1400], [3100, 1350], [3200, 1400], [3300, 1500], [3350, 1600], [3300, 1700], [3200, 1750], [3100, 1700]],
+            [[0,1], [1,2], [2,3], [3,4], [4,5], [5,6], [6,7]],
+            [[2950, 1350], [3050, 1300], [3150, 1300], [3250, 1350], [3350, 1450], [3400, 1600], [3350, 1750], [3250, 1800], [3150, 1800], [3050, 1750], [2950, 1650]]
+        );
+
+        // Add random background stars with proper spherical distribution
+        ctx.fillStyle = '#ffffff';
+        for (let i = 0; i < 5000; i++) {
+            const lon = Math.random() * Math.PI * 2;
+            const lat = Math.asin(Math.random() * 2 - 1);
+
+            const x = (lon / (Math.PI * 2)) * canvas.width;
+            const y = ((lat + Math.PI / 2) / Math.PI) * canvas.height;
+
+            const latFactor = Math.cos(lat);
+            const size = (Math.random() * 1.5 + 0.5) * Math.max(0.3, latFactor);
+
+            ctx.beginPath();
+            ctx.ellipse(x, y, size, size * latFactor, 0, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Create texture from canvas
+        const constellationMap = new THREE.CanvasTexture(canvas);
+        constellationMap.needsUpdate = true;
+
+        const sphereMaterial = new THREE.MeshPhongMaterial({
+            color: 0x4488ff,  // Lighter blue color
+            emissiveMap: null,  // Start with texture off
+            emissive: 0xffffff,  // White glow for constellations
+            emissiveIntensity: 0,  // Start with intensity at 0
+            transparent: true,
+            opacity: 0.8
+        });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        scene.add(sphere);
+
+        // Add latitude and longitude lines using spherical coordinates
+        const latLongGroup = new THREE.Group();
+        const r = SPHERE_RADIUS * 1.001;
+        const latLongMaterial = new THREE.LineBasicMaterial({
+            color: 0x44aaff,
+            transparent: true,
+            opacity: 0.5
+        });
+
+        // Longitude lines (meridians) - from pole to pole
+        for (let lon = 0; lon < 24; lon++) {
+            const points = [];
+            const longitude = (lon / 24) * Math.PI * 2;
+
+            for (let lat = 0; lat <= 50; lat++) {
+                const latitude = (lat / 50) * Math.PI - Math.PI / 2;
+                const x = r * Math.cos(latitude) * Math.cos(longitude);
+                const y = r * Math.sin(latitude);
+                const z = r * Math.cos(latitude) * Math.sin(longitude);
+                points.push(new THREE.Vector3(x, y, z));
+            }
+
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(geometry, latLongMaterial);
+            latLongGroup.add(line);
+        }
+
+        // Latitude lines (parallels) - circles around sphere
+        for (let lat = 1; lat < 12; lat++) {
+            const points = [];
+            const latitude = (lat / 12) * Math.PI - Math.PI / 2;
+
+            for (let lon = 0; lon <= 100; lon++) {
+                const longitude = (lon / 100) * Math.PI * 2;
+                const x = r * Math.cos(latitude) * Math.cos(longitude);
+                const y = r * Math.sin(latitude);
+                const z = r * Math.cos(latitude) * Math.sin(longitude);
+                points.push(new THREE.Vector3(x, y, z));
+            }
+
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(geometry, latLongMaterial);
+            latLongGroup.add(line);
+        }
+
+        scene.add(latLongGroup);
+
+        // Create player marker
+        const playerGeometry = new THREE.SphereGeometry(PLAYER_SIZE, 32, 32);
+        const playerMaterial = new THREE.MeshPhongMaterial({
+            color: 0xff3333,
+            emissive: 0xff0000,
+            emissiveIntensity: 0.5
+        });
+        const player = new THREE.Mesh(playerGeometry, playerMaterial);
+        scene.add(player);
+
+        const NUM_BLOBS = 150;
+        const BLOB_SIZE = PLAYER_SIZE * 0.2;
+        const blobGeometry = new THREE.SphereGeometry(BLOB_SIZE, 32, 32);
+        const blobMaterial = new THREE.MeshPhongMaterial({
+            color: 0x33ff33,
+            emissive: 0x00ff00,
+            emissiveIntensity: 0.5
+        });
+        const blobSet = new Set();
+        function addBlobs() {
+            const minus1 = new THREE.Vector3(-1, -1, -1);
+            for (let i = 0; i < NUM_BLOBS; i++) {
+                const p = (new THREE.Vector3());
+                p.random().multiplyScalar(2).add(minus1);
+                p.normalize().multiplyScalar(SPHERE_RADIUS);
+                const blob = new THREE.Mesh(blobGeometry, blobMaterial);
+                blob.position.copy(p);
+                blob.visible = false;  // Start with blobs hidden
+                blobSet.add(blob);
+                scene.add(blob);
+            }
+        }
+        addBlobs();
+
+        // Create great circle visualization
+        let greatCircleLine = null;
+        debugGreatCircle = false;
+
+        function updateGreatCircle(normal, referencePoint) {
+            greatCircleNormal.copy(normal);
+
+            // Remove old great circle line
+            if (greatCircleLine) {
+                scene.remove(greatCircleLine);
+            }
+
+            if( debugGreatCircle ) {
+                // Generate points along the great circle
+                const points = [];
+                const numPoints = 100;
+
+                // Use the reference point to generate the circle
+                const refPoint = referencePoint.clone().normalize().multiplyScalar(SPHERE_RADIUS*1.001);
+
+                for (let i = 0; i <= numPoints; i++) {
+                    const angle = (i / numPoints) * Math.PI * 2;
+                    const quaternion = new THREE.Quaternion();
+                    quaternion.setFromAxisAngle(normal, angle);
+
+                    const point = refPoint.clone();
+                    point.applyQuaternion(quaternion);
+                    points.push(point);
+                }
+
+                const geometry = new THREE.BufferGeometry().setFromPoints(points);
+                const material = new THREE.LineBasicMaterial({
+                    color: 0xffff00,
+                    linewidth: 2,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                greatCircleLine = new THREE.Line(geometry, material);
+                scene.add(greatCircleLine);
+            }
+        }
+
+        const debugArrows = new Set();
+        function clearDebugVectors() {
+            debugArrows.forEach(arrow => {
+                scene.remove(arrow);
+            });
+            debugArrows.clear();
+        }
+
+        function addDebugVector(direction, origin, length, color, headLength = 0.2, headWidth = 0.2) {
+            const arrowHelper = new THREE.ArrowHelper(
+                direction.clone().normalize(),
+                origin,
+                length,
+                color,
+                headLength,
+                headWidth
+            );
+            debugArrows.add(arrowHelper);
+            scene.add(arrowHelper);
+        }
+
+        function formatVector(v) {
+          return "[" + v.x + ", " + v.y + ", " + v.z + "]";
+        }
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(10, 10, 10);
+        scene.add(directionalLight);
+
+        // Player state
+        let playerPos = new THREE.Vector3(0, 0, SPHERE_RADIUS) ; // Start on the equator
+        let playerSpeed = 1.0;
+        let targetDirection = new THREE.Vector3(0, 0, 0);
+        let isMoving = false;
+        let greatCircleNormal = new THREE.Vector3(-1, 1, -1).normalize(); // Initial great circle normal
+
+        // camera
+        const cameraPos = playerPos.clone().normalize().multiplyScalar(CAMERA_DISTANCE);
+        camera.position.copy(cameraPos);
+        const cameraUp = new THREE.Vector3(0, 1, 0); // Start on the equator
+        camera.up.set(cameraUp);
+
+        // Initialize
+        updateGreatCircle(greatCircleNormal, playerPos);
+        isMoving = true;
+
+        // Handle mouse movement
+        function onMouseClick(event) {
+            isMoving = ! isMoving;
+        }
+
+        // Handle mouse movement
+        function onMouseMove(event) {
+            // Clear and add debug vectors if debug mode is enabled
+            clearDebugVectors();
+            const origin = new THREE.Vector3(0, 0, 0);
+            if (debugGreatCircle) {
+                // debug World axes
+                addDebugVector(new THREE.Vector3(1, 0, 0), origin, SPHERE_RADIUS * 1.2, 0xffffff); // X axis - Red
+                addDebugVector(new THREE.Vector3(0, 1, 0), origin, SPHERE_RADIUS * 1.2, 0xffffff); // Y axis - Green
+                addDebugVector(new THREE.Vector3(0, 0, 1), origin, SPHERE_RADIUS * 1.2, 0xffffff); // Z axis - Blue
+            }
+
+            // Project mouse into scene space onto a plane in front of the camera
+            // Convert mouse position to normalized device coordinates (-1 to +1)
+            const mouse = new THREE.Vector2();
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            const raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(mouse, camera);
+            const plane = new THREE.Plane();
+            const cameraNearPlaneMult = 0.95;
+            const cameraPoint = camera.position.clone().multiplyScalar(cameraNearPlaneMult)
+            plane.setFromNormalAndCoplanarPoint(camera.position, cameraPoint);
+            const mouseVector = new THREE.Vector3();
+            raycaster.ray.intersectPlane(plane, mouseVector);
+            if (debugGreatCircle) {
+                addDebugVector(mouseVector, origin, mouseVector.length(), 0xff00ff, .02, .02); // Red: unprojected mouse vector
+            }
+
+            // tangent from cameraPoint (p) to mouse (m):
+            //   t = C * m - p
+            //   t dot p = 0
+            //   => ( C * m - p ) dot p = 0
+            //   => C = ( p dot p ) / ( m dot p )
+            const d = mouseVector.clone().dot(cameraPoint);
+            if( Math.abs(d) < Number.EPSILON ) {
+                console.log('DEBUG(noelbk) onMouseMove mouse too close to player mouseVector=' + formatVector(mouseVector));
+                return;
+            }
+            const c = cameraPoint.clone().dot(cameraPoint) / d;
+            const tangent = mouseVector.clone().multiplyScalar(c).sub(cameraPoint)
+            if (debugGreatCircle) {
+                addDebugVector(tangent, cameraPoint, tangent.length(), 0x00ffff, .02, .02); // Yellow: tangent
+            }
+
+            // Calculate playerSpeed based on tangent length scaled relative to the sphere: 1 on the sphere radius
+            const tangentToSphereScale = 1.0 / (1.0 - cameraNearPlaneMult);
+            const tangentSpeed = tangent.length() * tangentToSphereScale / SPHERE_RADIUS;
+            updatePlayerSpeed(tangentSpeed);
+
+            // Calculate great circle normal (axis of rotation)
+            // The great circle passes through current player position and tangent
+            // normal = playerPos × tangent (both normalized)
+            const newNormal = new THREE.Vector3().crossVectors(playerPos, tangent);
+            newNormal.normalize();
+
+            // Show great circle normal if debug mode is enabled
+            if (debugGreatCircle) {
+                addDebugVector(newNormal, origin, SPHERE_RADIUS * 1.4, 0xffeeee); // Magenta: normal
+            }
+
+            // Update visualizations
+            updateGreatCircle(newNormal, playerPos);
+        }
+
+        // Animate player along great circle
+        function animatePlayer() {
+            if (isMoving && greatCircleNormal.length() > 0.01) {
+                // Create rotation quaternion around the great circle normal using dynamic speed
+                const quaternion = new THREE.Quaternion();
+                quaternion.setFromAxisAngle(greatCircleNormal, playerSpeed * ROTATION_SPEED);
+
+                // Rotate player position
+                playerPos.applyQuaternion(quaternion);
+
+                // Normalize to keep on sphere surface
+                playerPos.normalize().multiplyScalar(SPHERE_RADIUS);
+
+                // Camera always looks down on playerPos
+                const cameraPos = playerPos.clone().normalize().multiplyScalar(CAMERA_DISTANCE);
+                camera.position.copy(cameraPos);
+                camera.lookAt(playerPos);
+
+                // rotate the cameraUp so the angle of travel remains constant
+                cameraUp.applyQuaternion(quaternion);
+            }
+            player.position.copy(playerPos);
+            camera.up.copy(cameraUp);
+        }
+
+        // Control panel functionality
+        const toggleTextureCheckbox = document.getElementById('toggleTexture');
+        toggleTextureCheckbox.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                // Turn texture on
+                sphereMaterial.emissiveMap = constellationMap;
+                sphereMaterial.emissiveIntensity = 1.0;
+            } else {
+                // Turn texture off
+                sphereMaterial.emissiveMap = null;
+                sphereMaterial.emissiveIntensity = 0;
+            }
+            sphereMaterial.needsUpdate = true;
+        });
+
+        const toggleBackgroundCheckbox = document.getElementById('toggleBackground');
+        toggleBackgroundCheckbox.addEventListener('change', (event) => {
+            skybox.visible = event.target.checked;
+        });
+
+        const toggleBlobsCheckbox = document.getElementById('toggleBlobs');
+        toggleBlobsCheckbox.addEventListener('change', (event) => {
+            blobSet.forEach(blob => {
+                blob.visible = event.target.checked;
+            });
+        });
+
+        function updatePlayerSpeed(speed) {
+            playerSpeed = speed;
+            const playerSpeedInput = document.getElementById('playerSpeed');
+            playerSpeedInput.value = playerSpeed;
+        }
+
+        const playerSpeedInput = document.getElementById('playerSpeed');
+        playerSpeedInput.addEventListener('input', (event) => {
+            const value = parseFloat(event.target.value);
+            if (!isNaN(value)) {
+                playerSpeed = value;
+            }
+        });
+
+        const toggleDebugCheckbox = document.getElementById('toggleDebug');
+        toggleDebugCheckbox.addEventListener('change', (event) => {
+            debugGreatCircle = event.target.checked;
+            if (debugGreatCircle) {
+                // Show debug vectors
+                updateGreatCircle(greatCircleNormal, playerPos);
+            } else {
+                // Hide debug vectors
+                clearDebugVectors();
+                if (greatCircleLine) {
+                    scene.remove(greatCircleLine);
+                    greatCircleLine = null;
+                }
+            }
+        });
+
+        // Control panel toggle functionality
+        const controlToggle = document.getElementById('controlToggle');
+        const controlsPanel = document.getElementById('controls');
+
+        controlToggle.addEventListener('click', () => {
+            controlsPanel.classList.toggle('open');
+        });
+
+        // Event listeners
+        window.addEventListener('mousemove', onMouseMove);
+
+        window.addEventListener('click', onMouseClick);
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            const miniSize = Math.min(window.innerWidth, window.innerHeight) * 0.25;
+            miniRenderer.setSize(miniSize, miniSize);
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            animatePlayer();
+
+            // Render main view
+            sphereMaterial.opacity = 0.8;
+            latLongMaterial.opacity = 0.6;
+            latLongMaterial.transparent = false;
+            renderer.render(scene, camera);
+
+            // Render mini view with more transparent globe
+            sphereMaterial.opacity = 0.4;
+            latLongMaterial.opacity = 0.6;
+            latLongMaterial.transparent = true;
+            miniRenderer.render(scene, miniCamera);
+        }
+        animate();
+    </script>
+</body>
+</html>

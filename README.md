@@ -1,32 +1,20 @@
-INSTALLATION
-------------
+This site is built with [Quartz](https://quartz.jzhao.xyz/) (Obsidian-focused static site generator).
 
-This blog is built with [Pelican](https://blog.getpelican.com/).
+### Content
 
-INSTALLATION
-------------
+- **Public vault (committed)**: `vault/`
+- **Static assets**: `vault/static/` (served at `/static/...`)
 
-Set up a Python virtualenv and install dependencies
+### Local development
 
-	virtualenv env
-	. env/bin/activate
-	pip install --upgrade pip
-	pip install -r requirements.txt
+- **Preview**: `make preview` then open `http://localhost:4321`
+- **Build**: `make build` (outputs to `quartz/public/`)
 
-Get Pelican plugins and themes
+### Deploy (GitHub Pages)
 
-	git clone --recursive https://github.com/getpelican/pelican-plugins
-	git clone --recursive https://github.com/getpelican/pelican-themes
+- **Publish**: `make quartz-publish` (pushes `quartz/public` to the `gh-pages` branch)
 
-BUILDING
---------
+### Legacy Pelican
 
-To view pages while you edit them:
-
-	make devserver
-	make stopserver
-
-To publish:
-
-	make github
+The repo still contains the historical Pelican configuration under `content/` and related files, but Quartz is the current build path.
 	
