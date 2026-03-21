@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Emacs Advanced Features Tutorial</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Noel Burton-Krahn"/><meta property="og:title" content="Emacs Advanced Features Tutorial"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Emacs Advanced Features Tutorial"/><meta name="twitter:description" content="The good bits of Emacs, after the online tutorial without too much kool-aid"/><meta property="og:description" content="The good bits of Emacs, after the online tutorial without too much kool-aid"/><meta property="og:image:alt" content="The good bits of Emacs, after the online tutorial without too much kool-aid"/><meta property="twitter:domain" content="burton-krahn.com"/><meta property="og:url" content="https://burton-krahn.com/emacstut"/><meta property="twitter:url" content="https://burton-krahn.com/emacstut"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="The good bits of Emacs, after the online tutorial without too much kool-aid"/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL25vZWwvcHJvamVjdHMvYnVydG9uLWtyYWhuLmNvbS9idXJ0b24ta3JhaG4uY29tL3F1YXJ0ei9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css"/><style>
+            .tikz-diagram svg {
+              max-width: 100%;
+              height: auto;
+            }
+          </style><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://burton-krahn.com/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://burton-krahn.com/emacstut-og-image.webp"/><meta property="og:image:url" content="https://burton-krahn.com/emacstut-og-image.webp"/><meta name="twitter:image" content="https://burton-krahn.com/emacstut-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="emacstut"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">Noel Burton-Krahn</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let aIsFolder=a.isFolder,bIsFolder=b.isFolder;if(aIsFolder!==bIsFolder)return aIsFolder?1:-1;let dateMs=__name(node=>{let d=node?.data?.date;if(!d)return-1/0;if(typeof d==\&quot;number\&quot;)return d;let t=Date.parse(typeof d==\&quot;string\&quot;?d:String(d));return Number.isFinite(t)?t:-1/0},\&quot;dateMs\&quot;);if(!aIsFolder&amp;&amp;!bIsFolder){let dt=dateMs(b)-dateMs(a);if(dt!==0)return dt}return a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;})}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-15"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Pages</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-15" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li><a href="./calculating-pi" data-for="calculating-pi">Calculating π with Archimedes' Method of Exhaustion</a></li><li><a href="./great-circle" data-for="great-circle">Great Circle</a></li><li><a href="./20170727-DataScienceMeetup" data-for="20170727-DataScienceMeetup">Data Science Meetup: Delirium Detection With CNNs</a></li><li><a href="./20170622-communicating-with-vegtative-patients" data-for="20170622-communicating-with-vegtative-patients">Communicating with vegtative patients</a></li><li><a href="./20170430-deep-learning-for-medicine" data-for="20170430-deep-learning-for-medicine">Deep Learning for Medicine</a></li><li><a href="./battlesnake2017" data-for="battlesnake2017">Battlesnakes</a></li><li><a href="./resume" data-for="resume">Projects and Resume</a></li><li><a href="./div3digits" data-for="div3digits">If a number is divisible by 3, then so is the sum of its digits</a></li><li><a href="./emacstut" data-for="emacstut">Emacs Advanced Features Tutorial</a></li><li><a href="./core_of_darkness" data-for="core_of_darkness">Core of Darkness</a></li><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Emacs Advanced Features Tutorial</a></div></nav><h1 class="article-title">Emacs Advanced Features Tutorial</h1><p show-comma="true" class="content-meta"><time datetime="2015-08-26T22:00:00.000Z">Aug 27, 2015</time><span>8 min read</span></p><ul class="tags"><li><a href="./tags/programming" class="internal tag-link">programming</a></li></ul></div></div><article class="popover-hint"><h2 id="emacs-advanced-features-tutorial">Emacs Advanced Features Tutorial<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#emacs-advanced-features-tutorial" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="introduction">Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#introduction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Depending on who you ask, Emacs is either an advanced text editor, a
+lisp-based operating system, or a program cleverly designed to tie
+your fingers into knots.  It’s a bit of all of the above.  I encourage
+programmers to give it a try, but there seems to be a mythos around
+Emacs that it’s too complicated to learn.  This is an advanced
+tutorial about Emacs.  I’ll skip over most of the basics and get into
+more of the really advanced features that make it actually useful.</p>
+<h2 id="conventions">Conventions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#conventions" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Emacs is a lisp operating system with an editor bolted on top.  All
+the functions of Emacs are written in Lisp, and there are a lot of
+them.  There are functions for colorizing and indenting programming
+languages, reading email, games, etc.  More on that later.</p>
+<p>Emacs functions are bound to keys.  There are lots of key
+combinations, so be prepared for some finger flexibility conditioning.
+Here’s how key bindings are represented in Emacs documentation:</p>
+<pre><code>&quot;C-&quot;      - Means hold contol, then type a key
+&quot;M-&quot;      - Means type escape, then type a key.
+	      	Emacs calls this the &quot;meta&quot; key.
+&quot;C-f&quot;     - means hold control, press f, release
+&quot;C-u C-f&quot; - means hold control, press u, release, hold control,
+	      	press f, release
+&quot;C-u f&quot;   - means hold control, press u, release, type h
+&quot;M-f&quot;     - means press Escape, release, type f
+</code></pre>
+<p>Emacs has an extensive online help system which I highly recommend to
+you… in a bit.  Reviewing the tutorial now, I can see where the
+mythos about weird key combos came from.  Emacs goes back to Richard
+Stallman’s Editor MaCroS in 1976, before keyboards had standard cursor
+movement keys, so the tutorial starts with a long section on cursor
+movement using weird key bindings like “C-f”, “C-b”, “C-v”, etc.
+Ignore all that.  The standard cursor movement keys work.  Feel free
+to take a detour to the tutorial now with:</p>
+<pre><code>&quot;C-h t&quot; - Emacs tutorial
+</code></pre>
+<p>… Welcome back!  I’ll start with some basic commands first if you
+skipped the tutorial, but you can get back to it any time with “C-h
+t”.</p>
+<h2 id="before-we-begin">Before We Begin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#before-we-begin" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>Download this whole repo from github</p>
+<p>git clone <a href="https://github.com/noelbk/emacstut" class="external">https://github.com/noelbk/emacstut<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>cd emacstut</p>
+</li>
+<li>
+<p>Install this .emacs startup file.  I added a couple of simple
+keybindings.</p>
+<p>cp -i dot-emacs ~/.emacs</p>
+</li>
+<li>
+<p>Reopen this tutorial in Emacs</p>
+<p>emacs README.md</p>
+</li>
+</ol>
+<h2 id="basic-commands">Basic Commands<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#basic-commands" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Safety first:  In case you need to quit emacs (not yet, though!):</p>
+<pre><code>&quot;C-x C-c&quot; - quit emacs
+</code></pre>
+<p>and in case you get stuck in a command, or Emacs becomes unresponsive
+because a command’s taking too long, you can always break out of the
+current command with:</p>
+<pre><code>&quot;C-g&quot; - quit current function
+</code></pre>
+<p>Now on to editing files:</p>
+<pre><code>&quot;C-x C-f&quot; - open a file in a new buffer
+
+&quot;C-x k&quot; - kill buffer (close file)
+</code></pre>
+<p>Wait! don’t open a new file until you know how to get back here.  Let
+me tell you about buffers first.  Emacs opens files in buffers, and
+displays buffers in windows.  Let’s do a quick experiment in Emacs
+(you <em>are</em> reading this file in Emacs, right?) to make sure you know
+how to open a new buffer, display it, and get back.</p>
+<ol>
+<li>
+<p>Type “C-x 4 f hellotut.c” to open hellotut.c in a new window.</p>
+</li>
+<li>
+<p>Notice how the screen is split now with hellotut.c below this
+tutorial.Also, notice how the cursor is in the hellotut.c window,
+and the cursor in this window is hollow.</p>
+</li>
+<li>
+<p>Type “C-x o” to move the cursor back to this window.</p>
+</li>
+<li>
+<p>Type “C-x 1” to make this window take up the whole frame.</p>
+</li>
+<li>
+<p>Type “C-x b RET” to switch to viewing hellotut.c again.</p>
+</li>
+<li>
+<p>Congratulations for finding your way back here with another
+“C-x b RET”!</p>
+</li>
+</ol>
+<p>Eventually you may find you never leave Emacs, just keep opening new
+buffers within it and switching between them.  Goodbye, mouse!</p>
+<h2 id="help">Help<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#help" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Did I mention Emacs has a great help system?</p>
+<pre><code>&quot;C-h ?&quot; - list all help commands
+&quot;C-h t&quot; - Emacs tutorial
+&quot;C-h b&quot; - list all key bindings
+&quot;C-h k&quot; - help for a particular key binding
+&quot;C-h f&quot; - help for a function
+&quot;C-h a&quot; - help apropos - keyword search
+</code></pre>
+<p>This is one of my favorites to explore all the functions available in Emacs:</p>
+<pre><code>&quot;C-h f TAB&quot; - list all functions in emacs
+</code></pre>
+<p>Oh, and you can open man pages in emacs too:</p>
+<pre><code>&quot;M-x man&quot; 
+</code></pre>
+<p>Emacs has its own manual system called info, which is extensive:</p>
+<pre><code>&quot;C-h i&quot; - list all functions in emacs
+</code></pre>
+<h2 id="shells">Shells<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shells" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>You can run interactive shells inside emacs buffers.  That means you
+can cut-and-paste from example code into shells, from shells to your
+log, etc.</p>
+<pre><code>&quot;M-x shell&quot; - start a new shell in a buffer named *shell*
+&quot;M-x newshell&quot; - start a new shell in a buffer with a new name
+
+&quot;M-!&quot;     - put shell command output in new buffer
+&quot;C-u M-!&quot; - insert shell command output at cursor
+&quot;M-|&quot;     - pipe region through command, output in new buffer
+&quot;C-u M-|&quot; - pipe region through command, output at cursor
+</code></pre>
+<p>Emacs shells are a little different from regular terminals: Your
+cursor is free to move off the command line, so you can move, select,
+and search in them like any other buffer.</p>
+<pre><code>&quot;C-x h&quot;, &quot;C-w&quot; - cut all text (clear the buffer)
+&quot;M->&quot; - end of buffer (last command line)
+&quot;M-p&quot; - previous command (command history)
+&quot;M-r&quot; - regexp search backwards through command history
+</code></pre>
+<p>Emacs shells also track the current directory, so when you do “C-x f”
+to open a file, it’s relative to the shell’s current directory.</p>
+<p>Emacs shells are dumb.  They don’t do terminal emulation.  If you
+really need terminal capabilities for curses, use</p>
+<pre><code>&quot;M-x term&quot; - start a shell in terminal mode
+</code></pre>
+<p>Emacs can open and edit files on remote hosts, and open shells there
+too:</p>
+<pre><code>&quot;M-x ssh&quot; - start a shell ssh'ed to user@host
+
+&quot;C-x C-f /ssh:USER@HOST:PATH&quot; open a file via ssh to HOST
+
+&quot;C-x C-f /sudo::PATH&quot; open a file with sudo, so you can edit root-writable files with tramp
+</code></pre>
+<h2 id="compilation">Compilation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#compilation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Compilation buffers work like grep, Emacs runs a command into a buffer then parses the results to iterate over errors:</p>
+<pre><code>&quot;M-x compile&quot; - run make in a buffer
+&quot;M-x `&quot; - next-error - jump to next error
+</code></pre>
+<p>Try it now:</p>
+<pre><code>1. &quot;M-x compile&quot; - oops! you should see an error in hellotut.c
+2. &quot;M-x `&quot; - will open the file hellotut.c at the error
+3. comment out &quot;Intentional error here!&quot;
+4. &quot;M-x compile&quot; - compiled OK
+</code></pre>
+<h2 id="amusements">Amusements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amusements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Did I mention emacs is a lisp OS?  Yes, there are games:</p>
+<pre><code>&quot;M-x life&quot;
+&quot;M-x pong&quot;
+&quot;M-x snake&quot;
+&quot;M-x hanoi&quot;
+&quot;M-x doctor&quot;
+</code></pre>
+<h2 id="buffers-windows-and-frames">Buffers, Windows and Frames<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#buffers-windows-and-frames" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>&quot;C-x f&quot; - open file in a new buffer
+&quot;C-x 4 f&quot; - open file in buffer, split window
+&quot;C-x k&quot; - kill buffer (close file)
+
+&quot;C-x b&quot; - switch to buffer
+&quot;C-x o&quot; - move cursor to other window
+&quot;C-x 1&quot; - make current buffer fill window
+
+&quot;C-x C-b&quot; - list all buffers
+
+&quot;C-x 4 b&quot; - switch to buffer, split window vertically
+&quot;C-x 3 b&quot; - switch to buffer, split window horizontally
+&quot;C-x 5 b&quot; - switch to buffer in new frame
+</code></pre>
+<h2 id="selecting-text">Selecting text<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#selecting-text" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Cutting, copying, and pasting</p>
+<pre><code>&quot;C-SPC&quot; - Set the mark.  That's used for selecting a range of text
+ 	      between the mark and the cursor
+
+&quot;C-x h&quot; - select the whole buffer.
+
+&quot;C-w&quot; - cut text between cursor and mark.  Sorry, Emacs was
+	    invented before Macintosh, so it bound the now common C-x
+	    and C-v to other functions.
+
+&quot;M-w&quot; - copy text between point and mark
+
+&quot;C-y&quot; - paste text
+
+&quot;C-x r k&quot; - cut a rectangle of text between cursor and mark
+&quot;C-x r y&quot; - paste a rectangle of text
+</code></pre>
+<h2 id="searching">Searching<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#searching" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The i in isearch is for incremental.  Emacs will search and highlight
+matches as you type.  Type “C-r” to search backwards.</p>
+<pre><code>&quot;C-s&quot; - isearch
+&quot;C-s C-r&quot; - isearch backwards
+&quot;M-C-s&quot; - regexp isearch
+</code></pre>
+<p>Query-replace prompts for each replacement:</p>
+<pre><code>&quot;C-r&quot; - query replace regexp
+</code></pre>
+<p>Even better, you can run grep into a buffer, then step through the
+results, jumping to matches:</p>
+<pre><code>&quot;M-x grep&quot; - run grep over files in the current directory
+&quot;M-x grep-find&quot; - run grep recursively into subdirs
+</code></pre>
+<h2 id="modes">Modes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#modes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Each buffer has a mode for the type of file it contains.  The mode
+controls syntax highlighting, indentation rules, and mode-specific
+functions.</p>
+<p>For example, if you open hellotut.c again, you’ll be in c++-mode.  Try
+these commands:</p>
+<pre><code>  &quot;M-\&quot; - indent region
+  &quot;)&quot;, &quot;}&quot;, &quot;]&quot; - blink matching parens
+  &quot;C-h m&quot; - help on current mode
+</code></pre>
+<h2 id="what-next">What Next?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-next" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Finger exercises :).  Then, read the tutorial and explore the info
+system with “C-h i”.  Also see <a href="http://www.gnu.org/software/emacs/tour/" class="external">A Guided Tour of
+Emacs<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Questions, comments, and pull requests are welcome!  I’d like to hear
+how Emacs worked out for you.</p>
+<p>Noel Burton-Krahn <a href="mailto:noel@burton-krahn.com" class="external">noel@burton-krahn.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+Aug 27, 2015</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-3" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#emacs-advanced-features-tutorial" data-for="emacs-advanced-features-tutorial">Emacs Advanced Features Tutorial</a></li><li class="depth-0"><a href="#introduction" data-for="introduction">Introduction</a></li><li class="depth-0"><a href="#conventions" data-for="conventions">Conventions</a></li><li class="depth-0"><a href="#before-we-begin" data-for="before-we-begin">Before We Begin</a></li><li class="depth-0"><a href="#basic-commands" data-for="basic-commands">Basic Commands</a></li><li class="depth-0"><a href="#help" data-for="help">Help</a></li><li class="depth-0"><a href="#shells" data-for="shells">Shells</a></li><li class="depth-0"><a href="#compilation" data-for="compilation">Compilation</a></li><li class="depth-0"><a href="#amusements" data-for="amusements">Amusements</a></li><li class="depth-0"><a href="#buffers-windows-and-frames" data-for="buffers-windows-and-frames">Buffers, Windows and Frames</a></li><li class="depth-0"><a href="#selecting-text" data-for="selecting-text">Selecting text</a></li><li class="depth-0"><a href="#searching" data-for="searching">Searching</a></li><li class="depth-0"><a href="#modes" data-for="modes">Modes</a></li><li class="depth-0"><a href="#what-next" data-for="what-next">What Next?</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

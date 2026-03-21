@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Java Page Fold Applet Demo</title>
+
+<script language="JavaScript">
+  function resize() {
+      // debug
+      return;
+
+      if (navigator.appName.indexOf("Microsoft") != -1) {
+          width=document.body.clientWidth;
+          height=document.body.clientHeight;
+      } else {
+          var netscapeScrollWidth=15;
+          width=window.innerWidth - netscapeScrollWidth;
+          height=window.innerHeight-netscapeScrollWidth;
+      }
+      document.PageApplet.width = width;
+      document.PageApplet.height = height;
+      window.scroll(0,0);
+  }
+  window.onResize = resize;
+  window.onLoad = resize;
+</script>
+
+</head>
+
+<body onResize="resize()" onLoad="resize()" style="margin: 0px">
+
+<center>
+<h1>Java Page Fold Applet Demo</h1>
+<em>Noel Burton-Krahn <a href="mailto:noel@burton-krahn.com">noel@burton-krahn.com</a></em>
+</center>
+
+<p>Click on the right hand page and drag to flip it.  Note the shadow
+and higlighting under the fold and in the seam between pages.</p>
+
+<center>
+<applet NAME="PageApplet"
+     width=700
+     height=600
+     code="com.kodak.pageapplet.PageApplet.class" 
+     archive="pageapplet.jar"
+     >
+</applet>
+</center>
+
+<p>
+This is the start of a page-flipping preview with Java (jdk-1.4.1).
+It seems to work OK in IE, FireFox, and Safari.
+</p>
+
+  </body>
+</html>

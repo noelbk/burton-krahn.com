@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Noel Burton-Krahn</title>
+      <link>https://burton-krahn.com</link>
+      <description>Last 10 notes on Noel Burton-Krahn</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Noel Burton-Krahn</title>
+    <link>https://burton-krahn.com/</link>
+    <guid>https://burton-krahn.com/</guid>
+    <description><![CDATA[ Noel Burton-Krahn. I build software (backend, data, and graphics-y experiments) and keep notes here. ]]></description>
+    <pubDate>Fri, 20 Mar 2026 23:00:00 GMT</pubDate>
+  </item><item>
+    <title>Calculating π with Archimedes&#039; Method of Exhaustion</title>
+    <link>https://burton-krahn.com/calculating-pi</link>
+    <guid>https://burton-krahn.com/calculating-pi</guid>
+    <description><![CDATA[  `0=p2`1`i+1=p2r1¡q1¡`i2411r=1ab TikZ source Copy to clipboard \begin{document} % Polygon colour palette (adjust here) \definecolor{polyA}{RGB}{20,60,180} % square: deep blue \definecolor{polyB}{RGB}{30,120,120} % octagon: blue/green blend \definecolor{polyC}{RGB}{20,160,80} % 16-gon: greenish \colo... ]]></description>
+    <pubDate>Wed, 18 Mar 2026 23:00:00 GMT</pubDate>
+  </item><item>
+    <title>Great Circle</title>
+    <link>https://burton-krahn.com/great-circle</link>
+    <guid>https://burton-krahn.com/great-circle</guid>
+    <description><![CDATA[ This page embeds the interactive demo. ]]></description>
+    <pubDate>Wed, 18 Mar 2026 23:00:00 GMT</pubDate>
+  </item><item>
+    <title>Data Science Meetup: Delirium Detection With CNNs</title>
+    <link>https://burton-krahn.com/20170727-DataScienceMeetup</link>
+    <guid>https://burton-krahn.com/20170727-DataScienceMeetup</guid>
+    <description><![CDATA[ Introduction Noel Burton-Krahn Delirium Detection in EEGs Got baseStudyEDF: control and delerium EEGs Total Control: 27 Total Delirium: 25 Neural Networks Images from CS231n Convolutional Neural Networks for Visual Recognition Convolutional Networks Deep Neural Networks Demo Digit Classifier 2D Visu... ]]></description>
+    <pubDate>Tue, 25 Jul 2017 22:00:00 GMT</pubDate>
+  </item><item>
+    <title>Communicating with vegtative patients</title>
+    <link>https://burton-krahn.com/20170622-communicating-with-vegtative-patients</link>
+    <guid>https://burton-krahn.com/20170622-communicating-with-vegtative-patients</guid>
+    <description><![CDATA[ Imagine if you were completely conscious but couldn’t move or speak? Neuroscientist Adrian Owen has been using brain-imaging techniques to detect consciousness in patients who are presumed to be vegetative, sometimes for many years. ]]></description>
+    <pubDate>Wed, 21 Jun 2017 22:00:00 GMT</pubDate>
+  </item><item>
+    <title>Deep Learning for Medicine</title>
+    <link>https://burton-krahn.com/20170430-deep-learning-for-medicine</link>
+    <guid>https://burton-krahn.com/20170430-deep-learning-for-medicine</guid>
+    <description><![CDATA[ Machine learning has made great strides in the last few years, and Convolutional Neural Networks have demonstrated some very impressive results in image and speech processing. ]]></description>
+    <pubDate>Sat, 29 Apr 2017 22:00:00 GMT</pubDate>
+  </item><item>
+    <title>Battlesnakes</title>
+    <link>https://burton-krahn.com/battlesnake2017</link>
+    <guid>https://burton-krahn.com/battlesnake2017</guid>
+    <description><![CDATA[ Genetic programming for the win! This is my entry into the 2017 Battlesnake competition. See them in action! Git repo. ]]></description>
+    <pubDate>Thu, 09 Mar 2017 23:00:00 GMT</pubDate>
+  </item><item>
+    <title>Projects and Resume</title>
+    <link>https://burton-krahn.com/resume</link>
+    <guid>https://burton-krahn.com/resume</guid>
+    <description><![CDATA[ Noel Burton-Krahn — code samples Here are some samples of my own code from favourite past projects. ]]></description>
+    <pubDate>Thu, 09 Mar 2017 23:00:00 GMT</pubDate>
+  </item><item>
+    <title>If a number is divisible by 3, then so is the sum of its digits</title>
+    <link>https://burton-krahn.com/div3digits</link>
+    <guid>https://burton-krahn.com/div3digits</guid>
+    <description><![CDATA[ A toy proof of a math trick I learned in elementary school. ]]></description>
+    <pubDate>Sun, 02 Oct 2016 22:00:00 GMT</pubDate>
+  </item><item>
+    <title>Emacs Advanced Features Tutorial</title>
+    <link>https://burton-krahn.com/emacstut</link>
+    <guid>https://burton-krahn.com/emacstut</guid>
+    <description><![CDATA[ The good bits of Emacs, after the online tutorial without too much kool-aid ]]></description>
+    <pubDate>Wed, 26 Aug 2015 22:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
