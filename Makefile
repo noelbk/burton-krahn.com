@@ -104,8 +104,12 @@ stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish:
+# Legacy Pelican publishing (kept for reference)
+pelican-publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+
+# Publish the Quartz site (GitHub Pages + CNAME=burton-krahn.com)
+publish: quartz-publish
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -154,7 +158,7 @@ preview: preview-stop sync-vault
 	cd $(QUARTZ_DIR) && npx quartz build -d ../site-content --serve --port $(PREVIEW_PORT)
 
 quartz-publish: build
-	cd $(QUARTZ_DIR) && npx gh-pages -d public -b gh-pages
+	cd $(QUARTZ_DIR) && npx gh-pages -d public -b gh-pages --nojekyll --cname $(SITE_DOMAIN)
 
 # Update vendored Quartz from upstream v4.
 # Replaces ./quartz entirely, then reapplies local tweaks (CNAME + deps).
@@ -169,4 +173,4 @@ quartz-update:
 	@printf "%s\n" "$(SITE_DOMAIN)" > $(QUARTZ_DIR)/quartz/static/CNAME
 	npm --prefix $(QUARTZ_DIR) install node-tikzjax @resvg/resvg-js
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+.PHONY: html help clean regenerate serve serve-global devserver publish pelican-publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
