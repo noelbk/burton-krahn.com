@@ -3,6 +3,8 @@ title: "Battlesnakes"
 date: "2017-03-10"
 tags:
   - "programming"
+created: "2024-08-22"
+modified: "2024-08-22"
 ---
 [Genetic programming](https://en.wikipedia.org/wiki/Genetic_programming) for
 the win! This is my entry into the

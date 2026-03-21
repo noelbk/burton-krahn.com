@@ -1,6 +1,9 @@
 ---
 title: "Great Circle"
 category: "programming"
+date: "2026-03-19"
+created: "2026-03-11"
+modified: "2026-03-19"
 ---
 
 This page embeds the interactive demo.

@@ -4,6 +4,8 @@ date: "Oct 3, 2016"
 description: "A toy proof of a math trick I learned in elementary school."
 tags:
   - "math"
+created: "2024-08-22"
+modified: "2024-08-22"
 ---
 # Preamble
 
@@ -19,11 +21,9 @@ This document is also available as
 
 There was a trick we learned in elementary school: if the sum of the
 digits of a number is divisible by 3, then the number itself is
-divisble by 3.
+divisible by 3.
 
-**Example:** Is $54,321$ divisible by $3$?  The sum of digits $5 + 4 + 3
-+ 2 + 1 = 15$, which is divisible by $3$, so $54,321$ should be divisible
-by $3$ according to this rule, and yes, $54,321 = 3 \cdot 18,107$.
+**Example:** Is $54,321$ divisible by $3$? The sum of digits is $5 + 4 + 3 + 2 + 1 = 15$, which is divisible by $3$, so $54,321$ should be divisible by $3$ according to this rule, and yes, $54,321 = 3 \cdot 18,107$.
 
 Is that true for all numbers?
 

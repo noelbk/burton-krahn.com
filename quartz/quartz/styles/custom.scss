@@ -1,3 +1,64 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// TikZ diagrams are inlined as SVG. Make any "default black" strokes/fills
+// inherit the current theme foreground color, so dark mode doesn't leave
+// black lines or black radical overlines.
+.tikz-diagram {
+  color: var(--dark);
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // many strokes come out as explicit black
+  svg [stroke="#000"],
+  svg [stroke="#000000"],
+  svg [stroke="black"] {
+    stroke: currentColor !important;
+  }
+
+  // some fills (including some glyph paths) come out explicit black
+  svg [fill="#000"],
+  svg [fill="#000000"],
+  svg [fill="black"] {
+    fill: currentColor !important;
+  }
+
+  // ensure text nodes inherit too (some have no explicit fill)
+  svg text {
+    fill: currentColor;
+  }
+
+  // TeX "rules" (like radical overbars) often render as <path> with *no* fill/stroke
+  // inside a group with stroke="none". Default SVG fill is black, so force those to inherit.
+  svg g[stroke="none"] path:not([fill]):not([stroke]) {
+    fill: currentColor !important;
+  }
+}
+
+// Explorer ("Pages") list: use bullets so wrapped titles are readable.
+.explorer-content ul.explorer-ul {
+  list-style-type: disc !important;
+  list-style-position: outside;
+  padding-left: 1.2rem !important;
+}
+
+.explorer-content ul.explorer-ul > li {
+  margin: 0.15rem 0;
+}
+
+.explorer-content ul.explorer-ul > li::marker {
+  color: var(--gray);
+}
+
+// Internal links: remove pill/highlight background (looks odd on wrapped titles).
+// Keep tag styling intact.
+a.internal:not(.tag-link) {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  line-height: inherit !important;
+}

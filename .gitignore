@@ -8,6 +8,9 @@ quartz/quartz/static/site/
 quartz/quartz/static/generated/
 quartz/quartz/static/pages/
 
+# Generated content mirror (do not commit)
+site-content/
+
 # Repo-local public vault
 vault/.obsidian/
 

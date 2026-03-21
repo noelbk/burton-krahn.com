@@ -25,6 +25,14 @@ async function ensureDir(p) {
   await fs.mkdir(p, { recursive: true });
 }
 
+async function atomicWriteFile(filePath, data, encoding = "utf8") {
+  const dir = path.dirname(filePath);
+  await ensureDir(dir);
+  const tmpPath = `${filePath}.tmp-${process.pid}-${Date.now()}`;
+  await fs.writeFile(tmpPath, data, encoding);
+  await fs.rename(tmpPath, filePath);
+}
+
 async function clearDir(dir) {
   await fs.rm(dir, { recursive: true, force: true });
   await ensureDir(dir);
@@ -61,11 +69,23 @@ function escapeTextareaValue(s) {
   return String(s).replaceAll("</textarea>", "<\\/textarea>");
 }
 
-async function renderTikzToPng({ tikzSource, outPngAbsPath, siteRequire }) {
+function stripSvgBackground(svg) {
+  let out = String(svg);
+  // Some renderers include a white background rect; remove/neutralize it so the SVG
+  // blends with Quartz themes (light/dark) via transparency.
+  out = out.replace(
+    /<rect\b([^>]*?)\bfill=(["'])white\2([^>]*?)\/?>/i,
+    `<rect$1fill="transparent"$3/>`
+  );
+  out = out.replace(
+    /<rect\b([^>]*?)\bstyle=(["'])[^"']*fill:\s*white;?[^"']*\2([^>]*?)\/?>/i,
+    `<rect$1style="fill:transparent"$3/>`
+  );
+  return out;
+}
+
+async function renderTikzToSvg({ tikzSource, siteRequire }) {
   const tex2svgPath = siteRequire.resolve("node-tikzjax");
-  const resvgPath = siteRequire.resolve("@resvg/resvg-js");
-  const tikzjaxFontsCssPath = siteRequire.resolve("node-tikzjax/css/fonts.css");
-  const tikzjaxFontDir = path.join(path.dirname(tikzjaxFontsCssPath), "bakoma", "ttf");
 
   const tex2svgMod = await import(tex2svgPath);
   const tex2svg =
@@ -74,28 +94,15 @@ async function renderTikzToPng({ tikzSource, outPngAbsPath, siteRequire }) {
     tex2svgMod.tex2svg ??
     tex2svgMod;
 
-  const resvgMod = await import(resvgPath);
-  const Resvg = resvgMod.Resvg ?? resvgMod.default?.Resvg ?? resvgMod.default;
-
-  const svg = await tex2svg(tikzSource, {
+  let svg = await tex2svg(String(tikzSource ?? ""), {
     showConsole: false,
     texPackages: { amsmath: "" },
     embedFontCss: false,
     disableOptimize: false,
   });
 
-  const resvg = new Resvg(svg, {
-    fitTo: { mode: "width", value: 1200 },
-    background: "white",
-    font: {
-      fontDirs: [tikzjaxFontDir],
-      loadSystemFonts: false,
-    },
-  });
-
-  const png = resvg.render().asPng();
-  await ensureDir(path.dirname(outPngAbsPath));
-  await fs.writeFile(outPngAbsPath, png);
+  svg = stripSvgBackground(svg);
+  return svg;
 }
 
 async function replaceTikzBlocksWithImages({ markdown, idBase, siteRequire }) {
@@ -115,17 +122,11 @@ async function replaceTikzBlocksWithImages({ markdown, idBase, siteRequire }) {
     out += markdown.slice(last, start);
 
     const key = hashShort(body);
-    const name = `${idBase}-tikz-${String(idx + 1).padStart(2, "0")}-${key}.png`;
-    const relPng = path
-      .join("site", "generated", "tikz", name)
-      .replaceAll(path.sep, "/");
-    const absPng = path.join(QUARTZ_STATIC_DIR, relPng);
-
-    await renderTikzToPng({ tikzSource: body, outPngAbsPath: absPng, siteRequire });
-
+    const svg = await renderTikzToSvg({ tikzSource: body, siteRequire });
     const textareaId = `tikz-src-${idBase}-${String(idx + 1).padStart(2, "0")}-${key}`;
 
-    out += `![TikZ diagram](/static/${relPng})\n\n`;
+    // Inline SVG so it inherits theme + loaded TeX fonts (fixes missing glyphs like \sqrt).
+    out += `<div class="tikz-diagram">\n${svg}\n</div>\n\n`;
     out += `<details class="tikz-source">\n`;
     out += `<summary>TikZ source</summary>\n`;
     out += `<div class="tikz-source__controls">\n`;
@@ -162,6 +163,11 @@ async function syncContent() {
 
   const siteRequire = createRequire(path.join(QUARTZ_DIR, "package.json"));
 
+  // Mirror the vault into QUARTZ_CONTENT_DIR without clearing the directory first.
+  // This avoids Quartz `--serve` seeing a transient empty content directory and rebuilding
+  // with 0 Markdown files (which makes the Explorer/Pages list appear empty/incomplete).
+  const expectedOutAbsPaths = new Set();
+
   for (const f of mdFiles) {
     // skip Obsidian internals
     if (f.includes(`${path.sep}.obsidian${path.sep}`)) continue;
@@ -170,7 +176,7 @@ async function syncContent() {
 
     const rel = path.relative(VAULT_DIR, f);
     const outPath = path.join(QUARTZ_CONTENT_DIR, rel);
-    await ensureDir(path.dirname(outPath));
+    expectedOutAbsPaths.add(outPath);
 
     const raw = await fs.readFile(f, "utf8");
     const idBase = rel.replace(/\.md$/i, "").replaceAll(path.sep, "-");
@@ -179,7 +185,22 @@ async function syncContent() {
       idBase,
       siteRequire,
     });
-    await fs.writeFile(outPath, processed, "utf8");
+    await atomicWriteFile(outPath, processed, "utf8");
+  }
+
+  // Remove stale generated markdown that no longer exists in the vault.
+  // (We only delete markdown files; other filetypes aren't expected here.)
+  if (await pathExists(QUARTZ_CONTENT_DIR)) {
+    const existing = (await walk(QUARTZ_CONTENT_DIR)).filter((p) =>
+      p.toLowerCase().endsWith(".md")
+    );
+    for (const p of existing) {
+      if (!expectedOutAbsPaths.has(p)) {
+        await fs.rm(p, { force: true });
+      }
+    }
+  } else {
+    await ensureDir(QUARTZ_CONTENT_DIR);
   }
 }
 
@@ -187,7 +208,7 @@ async function main() {
   if (!(await pathExists(VAULT_DIR))) throw new Error(`VAULT_DIR not found: ${VAULT_DIR}`);
   if (!(await pathExists(QUARTZ_DIR))) throw new Error(`QUARTZ_DIR not found: ${QUARTZ_DIR}`);
 
-  await clearDir(QUARTZ_CONTENT_DIR);
+  await ensureDir(QUARTZ_CONTENT_DIR);
   // Don't clear QUARTZ_STATIC_DIR entirely (Quartz owns icons/fonts). Only clear our site-owned static.
   await clearDir(QUARTZ_SITE_STATIC_DIR);
 

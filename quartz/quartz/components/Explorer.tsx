@@ -8,6 +8,8 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import { FullSlug, resolveRelative } from "../util/path"
+import { getDate } from "./Date"
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -60,8 +62,24 @@ export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
 
-  const Explorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
+  const Explorer: QuartzComponent = ({ cfg, displayClass, fileData, allFiles }: QuartzComponentProps) => {
     const id = `explorer-${numExplorers++}`
+    const currentSlug = (fileData.slug ?? "index") as FullSlug
+
+    // Server-render a minimal list so the explorer isn't empty if JS fails.
+    const items = (allFiles ?? [])
+      .filter((f) => typeof f.slug === "string" && !f.slug.startsWith("tags/") && f.slug !== "index")
+      .map((f) => ({
+        slug: f.slug as FullSlug,
+        title: (f.frontmatter?.title as string) ?? (f.slug as string),
+        date: getDate(cfg, f),
+      }))
+      .sort((a, b) => {
+        const at = a.date?.getTime() ?? -Infinity
+        const bt = b.date?.getTime() ?? -Infinity
+        if (bt !== at) return bt - at
+        return a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: "base" })
+      })
 
     return (
       <div
@@ -120,7 +138,15 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
         <div id={id} class="explorer-content" aria-expanded={false} role="group">
-          <OverflowList class="explorer-ul" />
+          <OverflowList class="explorer-ul">
+            {items.map((it) => (
+              <li>
+                <a href={resolveRelative(currentSlug, it.slug)} data-for={it.slug}>
+                  {it.title}
+                </a>
+              </li>
+            ))}
+          </OverflowList>
         </div>
         <template id="template-file">
           <li>

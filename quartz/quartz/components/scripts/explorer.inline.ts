@@ -4,6 +4,22 @@ import { ContentDetails } from "../../plugins/emitters/contentIndex"
 
 type MaybeHTMLElement = HTMLElement | undefined
 
+const fetchData: Promise<Record<FullSlug, ContentDetails>> = (async () => {
+  const candidates = ["./static/contentIndex.json", "/static/contentIndex.json"]
+  let lastErr: unknown
+  for (const url of candidates) {
+    try {
+      const res = await fetch(url)
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`)
+      return (await res.json()) as Record<FullSlug, ContentDetails>
+    } catch (e) {
+      lastErr = e
+    }
+  }
+  console.error("Explorer: failed to load content index", lastErr)
+  return {}
+})()
+
 interface ParsedOptions {
   folderClickBehavior: "collapse" | "link"
   folderDefaultState: "collapsed" | "open"
@@ -210,6 +226,11 @@ async function setupExplorer(currentSlug: FullSlug) {
     if (!explorerUl) continue
 
     // Create and insert new content
+    // Clear existing server-rendered items while preserving the overflow sentinel
+    for (const child of Array.from(explorerUl.children)) {
+      if ((child as HTMLElement).classList?.contains("overflow-end")) continue
+      child.remove()
+    }
     const fragment = document.createDocumentFragment()
     for (const child of trie.children) {
       const node = child.isFolder
@@ -302,4 +323,30 @@ window.addEventListener("resize", function () {
 
 function setFolderState(folderElement: HTMLElement, collapsed: boolean) {
   return collapsed ? folderElement.classList.remove("open") : folderElement.classList.add("open")
+}
+
+function slugFromLocation(): FullSlug {
+  // window.location.pathname is already normalized (no origin, no hash)
+  let p = window.location.pathname.replace(/^\/+/, "")
+  // strip query-like suffixes just in case
+  p = p.split("?")[0].split("#")[0]
+  // Quartz uses /index as homepage
+  if (p === "" || p === "/") return "index" as FullSlug
+  // remove trailing slash (folder pages)
+  p = p.replace(/\/+$/, "")
+  return (p || "index") as FullSlug
+}
+
+async function initialExplorerRender() {
+  try {
+    await setupExplorer(slugFromLocation())
+  } catch (e) {
+    console.error("Explorer: initial render failed", e)
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => void initialExplorerRender(), { once: true })
+} else {
+  void initialExplorerRender()
 }

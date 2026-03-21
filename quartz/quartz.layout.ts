@@ -1,5 +1,31 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import type { Options as ExplorerOptions } from "./quartz/components/Explorer"
+
+const explorerSortLatestFirst: ExplorerOptions["sortFn"] = (a, b) => {
+  const aIsFolder = a.isFolder
+  const bIsFolder = b.isFolder
+
+  // Put files first so the newest notes are visible immediately
+  if (aIsFolder !== bIsFolder) return aIsFolder ? 1 : -1
+
+  const dateMs = (node: any) => {
+    const d = node?.data?.date
+    if (!d) return -Infinity
+    if (typeof d === "number") return d
+    const t = Date.parse(typeof d === "string" ? d : String(d))
+    return Number.isFinite(t) ? t : -Infinity
+  }
+
+  // If both are files, sort newest first by published date
+  if (!aIsFolder && !bIsFolder) {
+    const dt = dateMs(b) - dateMs(a)
+    if (dt !== 0) return dt
+  }
+
+  // Fallback: alphabetical (folders and tie-breaks)
+  return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -35,15 +61,12 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ title: "Pages", sortFn: explorerSortLatestFirst }),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
   ],
 }
 
@@ -62,7 +85,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ title: "Pages", sortFn: explorerSortLatestFirst }),
   ],
   right: [],
 }

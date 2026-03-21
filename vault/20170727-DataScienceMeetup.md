@@ -6,6 +6,8 @@ tags:
   - "eeg"
   - "cnn"
   - "nnet"
+created: "2024-08-22"
+modified: "2024-08-22"
 ---
 Introduction
 ============

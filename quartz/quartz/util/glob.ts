@@ -15,7 +15,11 @@ export async function glob(
     await globby(pattern, {
       cwd,
       ignore: ignorePatterns,
-      gitignore: true,
+      // Quartz runs inside larger repos where the parent `.gitignore`
+      // may exclude generated or vendored paths that Quartz still needs
+      // to read/copy at build time (e.g. static assets). We rely on
+      // `ignorePatterns` for Quartz-specific filtering instead.
+      gitignore: false,
     })
   ).map(toPosixPath)
   return fps as FilePath[]
