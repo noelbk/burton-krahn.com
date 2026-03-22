@@ -12,7 +12,7 @@ Here are some samples of my own code from favourite past projects.
 
 ### Genetisnake (genetic programming, Three.js, Phoenix)
 
-[![Battlesnake game board](/static/site/battlesnakes.png)](https://cdn.rawgit.com/noelbk/genetisnake/abc247e/html/snake.html)
+[![Battlesnake game board](/static/site/battlesnakes.png)](/static/site/pages/battlesnakes/)
 
 Battlesnake is an AI competition where snakes compete to survive on a simple board. My entry used [genetic programming](https://en.wikipedia.org/wiki/Genetic_programming). I rendered the board with [Three.js](https://threejs.org/), and the game server was a multi-room chat application written in [Phoenix](http://www.phoenixframework.org/).
 

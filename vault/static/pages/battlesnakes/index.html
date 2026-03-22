@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="https://cdn.jsdelivr.net/gh/noelbk/genetisnake@2aec38547c62da77a4e73453bf64d2a8e78311a3/html/">
+    <meta charset=utf-8>
+    <title>Snake</title>
+    <script src="libs/three.js"></script>
+    <script src="libs/stats.js"></script>
+    <script src="libs/dat.gui.js"></script>
+    <script src="libs/jquery-1.12.4.js"></script>
+    <script>
+     // jsDelivr serves assets cross-origin. jQuery's `$.getJSON` adds headers that can
+     // trigger a CORS preflight that fails on some CDNs (notably `X-Requested-With`).
+     // Override `$.getJSON` to use `fetch()` (no extra headers), while keeping the
+     // `.done()` / `.fail()` chaining used by `snake.js`.
+     (function() {
+         if(!window.jQuery) return;
+         var $ = window.jQuery;
+         $.getJSON = function(url, data, success) {
+             if(typeof data === 'function') {
+                 success = data;
+                 data = undefined;
+             }
+             var p = fetch(url, { credentials: 'omit' }).then(function(res) {
+                 if(!res.ok) throw new Error("HTTP " + res.status + " for " + url);
+                 return res.json();
+             });
+             if(typeof success === 'function') {
+                 p.then(success);
+             }
+             var api = {
+                 done: function(fn) { p.then(fn); return api; },
+                 fail: function(fn) {
+                     p.catch(function(e) {
+                         try {
+                             fn(null, null, [null, null, (e && e.message) ? e.message : String(e)]);
+                         } catch(_) {}
+                     });
+                     return api;
+                 }
+             };
+             return api;
+         };
+     })();
+    </script>
+    <script src="libs/Tween.js"></script>
+    <script src="libs/vue.min.js"></script>
+    <script src="libs/howler.js"></script>
+    <script src="snake.js"></script>
+    <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link href="libs/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet"/>
+    
+
+    <style>
+     .scoreboard-flag {
+         height: 4em;
+         width: 100%;
+         fill: #797784;
+     }
+
+     .scoreboard-logo {
+         margin-bottom: 1em;
+     }
+
+     .nopadding {
+         padding: 0px;
+     }
+     
+     body {
+         font-family: "Comic Sans MS", cursive, sans-serif;
+         margin: 0px;
+         overflow: hidden;
+         color: white;
+     }
+
+     a {
+         color: white;
+     }
+
+     body, #audio-controls {
+         background: #6a6676;
+     }
+
+     #snake-board {
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         bottom: 0px;
+         right: 410px;
+     }
+
+     #scoreboard-panel {
+         display: flex;
+         flex-direction: column;
+         position: absolute;
+         top: 10px;
+         width: 400px;
+         right: 10px;
+         bottom: 10px;
+     }
+
+     .scoreboard-game-info {
+         margin-left: 5px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+     }
+
+     .scoreboard-flag {
+         height: 5em;
+     }
+
+     #snake-info-list {
+         position: absolute;
+         top: 160px;
+         width: 400px;
+         right: 10px;
+         bottom: 10px;
+     }
+
+     .snake-info {
+         position: absolute;
+         width: 400px;
+         top: 200px;
+         right: 10px;
+     }
+
+     .noborder {
+         border: none;
+     }
+
+     #snake-info-template {
+         display: none;
+     }
+
+     .snake-info-right {
+         margin-left: 10px;
+         width: 300px;
+     }
+
+     .snake-info-health-border {
+         position: relative;
+         left: 0px;
+         right: 0px;
+         height: 40px;
+     }
+
+     .snake-info-health-background {
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         bottom: 0px;
+         right: 0px;
+         background: green;
+         opacity: 0.3;
+     }
+
+     .snake-info-health {
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         bottom: 0px;
+         background: green;
+         width: 35%;
+     }
+
+     .snake-info-name {
+         color: white;
+         font-weight: bold;
+     }
+
+     .snake-info-taunt {
+         position: absolute;
+         overflow: hidden;
+         color: white;
+         z-index: 5;
+         line-height: 40px;
+         top: 0px;
+         bottom: 0px;
+         margin-left: 10px;
+     }
+
+     .snake-info-img {
+         width: 64px;
+         height: 64px;
+     }
+
+     #audio-controls-popup {
+         position: absolute;
+         top: 60px;
+         right: 20px;
+         width: 250px;
+         z-index: 20;
+         background-image: url(./images/audio.png);
+         background-repeat: no-repeat;
+         background-position: right top;
+         margin-right: 5px;
+     }
+
+     #audio-controls-popup:hover > #audio-controls {
+         right: 0px;
+     }
+     
+     #audio-controls-popup:hover > #audio-controls-popup-button {
+         opacity: 0;
+     }
+
+     #audio-controls {
+         position: relative;
+         right: -400px;
+         width: 100%;
+         height: 100%;
+         border: 1px solid black;
+         border-radius: 10px;
+         padding: 10px;
+         box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+         transition-property: right;
+         transition-duration: 500ms;
+     }
+
+     #audio-controls-popup-button {
+         position: absolute;
+         right: 0px;
+         bottom: 0px;
+         /* left: 50%;
+            transform: translate3d(-50%, 0, 0) */
+         transition-property: opacity;
+         transition-duration: 500ms;
+     }
+     
+     .audio-horiz {
+         display: flex;
+         align-items: center;
+     }
+
+     .audio-volume {
+         flex-grow: 1;
+     }
+     
+     .audio-on {
+         width: 75px;
+         text-align: left;
+     }
+
+     .audio-on input {
+         clear: left;
+         float: left;
+     }
+
+     .about-panel {
+         width: 330px;
+     }
+     
+     .intro-panel-popup:hover > #intro-panel {
+         left: 50%;
+         transform: translate3d(-50%, 0, 0);
+     }
+     
+    </style>
+  </head>
+
+  <body>
+    <div id="audio-controls-popup">
+      <div id="audio-controls">
+        <div class="audio-horiz">
+          <input id="effects-on" type="checkbox"><label for="effects-on" class="audio-on">Effects</label>
+          <input type="range" id="effects-volume-slider" class="audio-volume"/>
+        </div>
+        <div class="audio-horiz">
+          <input id="music-on" type="checkbox"><label for="music-on" class="audio-on">Music</label>
+          <input type="range" id="music-volume-slider" class="audio-volume"/>
+        </div>
+      </div>
+      <div id="audio-controls-popup-button"></div>
+    </div>
+
+    <div id="snake-board">
+    </div>
+    
+    <div id="scoreboard-panel">
+      <div id="scoreboard-game-info" class="scoreboard-game-info-wrapper">
+        <div id="scoreboard-logo">
+          <img src="./images/bs-logo-light.svg" class="scoreboard-logo"/>
+        </div>
+        
+        <div class="about-panel">
+          <a href="https://en.wikipedia.org/wiki/Genetic_programming">Genetically</a>
+          trained snakes for the <a href="https://play.battlesnake.com/">BattleSnake 2017</a> competition,
+          rendered with <a href="https://threejs.org/">three.js</a>.
+          --<a href="http://burton-krahn.com">Noel Burton-Krahn</a>, 2017.
+        </div>
+
+        <div class="scoreboard-game-info">
+	  <div>
+            <span>{{game_name}}</span>
+	  </div>
+	  <div>
+            <span>Turn</span>
+            <span>{{game_turn}}</span>
+	  </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div id="snake-info-list"></div>
+
+    <!-- snake-info-block-template -->
+    <div class="snake-info" id="snake-info-template" v-bind:style="{'border-color': color}">
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="noborder nopadding" valign="top" width="64px"><img class="snake-info-img" v-bind:src="img"/></td>
+          <td class="noborder nopadding" valign="top" width="100%">
+            <div class="snake-info-right">
+              <div class="snake-info-name">{{name}}</div>
+              <div class="snake-info-health-border">
+                <div class="snake-info-health-background"  v-bind:style="{'background': color}"></div>
+                <div class="snake-info-health" v-bind:style="{width: health + '%', 'background': color}"></div>
+	        <div class="snake-info-taunt">{{killed || taunt}}</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 
+    <div class="intro-panel">
+      <div class="intro-panel-top">
+        <img src="./images/bs-logo-light.svg" class="scoreboard-logo"/>
+
+        My entry in to the <a href="https://play.battlesnake.com/">BattleSnake 2017</a> competition.  I used <a href="https://en.wikipedia.org/wiki/Genetic_programming">Genetic Programming</a> to train snake brains. Here's an example training game, rendered with <a href="https://threejs.org/">three.js</a>.
+      </div>
+      <div class="intro-panel-signature">
+        <a href="http://burton-krahn.com">Noel Burton-Krahn</a>, 2017
+      </div>
+    </div>
+    -->
+    
+    <div class="intro-panel-popup">
+    </div>
+    
+    <script>
+     var game_renderer;
+
+     function init() {
+         game_renderer = new BattleSnakes.GameRenderer("#snake-board", "#snake-info-list");
+
+         var game_data;
+         var game_turn_data;
+         var game_turn_index;
+         var snake_defaults;
+         var GAME_TURN_FPS = 10;
+
+         function set_snake_defaults(snakes) {
+             for(var snake_i=0; snakes && snake_i<snakes.length; snake_i++) {
+                 var snake = snakes[snake_i];
+                 var snake_default = snake_defaults[snake.board_id];
+                 for(var key in snake_default) {
+                     if( !(key in snake) ) {
+                         snake[key] = snake_default[key];
+                     }
+                 }
+             }
+         }
+         
+         function render_turn() {
+             if( !game_turn_data ) {
+                 return;
+             }
+
+             game_turn_index++;
+             game_turn_index %= game_turn_data.length;
+             var board = game_turn_data[game_turn_index];
+             set_snake_defaults(board.snakes);
+             set_snake_defaults(board.killed);
+                 
+             game_renderer.render(board);
+
+             setTimeout(render_turn, 1000 / GAME_TURN_FPS);
+         }
+
+         function stringToColor(str) {
+             // when you can't pick a color, hash a string
+             var hash = 0;
+             for (var i = 0; i < str.length; i++) {
+                 hash = str.charCodeAt(i) + ((hash << 5) - hash);
+             }
+             var color = '#';
+             for (var i = 0; i < 3; i++) {
+                 var value = (hash >> (i * 8)) & 0xFF;
+                 color += ('00' + value.toString(16)).substr(-2);
+             }
+             return color;
+         }
+
+         function load_game(url) {
+             // load the game.  When loaded, set game_dirty
+             $.getJSON(url, function(data) {
+                 game_data = data;
+
+                 snake_defaults = {};
+                 var snakes = game_data["snakes"];
+                 for(var i=0; i<snakes.length; i++) {
+                     var snake = snakes[i];
+                     if( (!("taunt" in snake)) && ("func" in snake) ) {
+                         snake.taunt = snake.func;
+                     }
+                     if( !("id" in snake) ) {
+                         snake.id = snake.board_id;
+                     }
+                     if( !("color" in snake) ) {
+                         snake.color = stringToColor(snake.taunt);
+                     }
+                     if( !("head_url" in snake) ) {
+                         snake.head_url = "./images/heads/snake_head_" + i + ".png";
+                     }
+
+                     snake_defaults[snake.board_id] = snake;
+                 }
+
+                 game_turn_data = data["turns"];
+                 game_turn_index = -1;
+
+                 render_turn();
+             });
+         }
+
+         load_game("game.json");
+     }
+     window.onload = init;
+
+     function resize() {
+         if( game_renderer ) {
+             game_renderer.resize();
+         }
+     }
+     window.addEventListener('resize', resize, false);
+
+    </script>
+  </body>
+</html>

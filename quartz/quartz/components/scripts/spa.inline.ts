@@ -32,7 +32,11 @@ const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined 
   if ("routerIgnore" in a.dataset) return
   const { href } = a
   if (!isLocalUrl(href)) return
-  return { url: new URL(href), scroll: "routerNoscroll" in a.dataset ? false : undefined }
+  const url = new URL(href)
+  // Don't SPA-navigate to static assets/pages. Those pages aren't Quartz-rendered and
+  // can break SPA assumptions (and browser back button/history).
+  if (url.pathname.startsWith("/static/")) return
+  return { url, scroll: "routerNoscroll" in a.dataset ? false : undefined }
 }
 
 function notifyNav(url: FullSlug) {
@@ -132,6 +136,12 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
 async function navigate(url: URL, isBack: boolean = false) {
   if (isNavigating) return
+  // Never SPA-navigate into static pages (e.g. `/static/site/pages/...`).
+  // These aren't Quartz-rendered and can break the router + browser history.
+  if (url.pathname.startsWith("/static/")) {
+    window.location.assign(url)
+    return
+  }
   isNavigating = true
   try {
     await _navigate(url, isBack)
