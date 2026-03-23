@@ -3,8 +3,8 @@ title: "Communicating with vegtative patients"
 date: "2017-06-22"
 tags:
   - "eeg"
-created: "2024-08-22"
-modified: "2024-08-22"
+created: "2017-06-23"
+modified: "2017-06-23"
 ---
 Imagine if you were completely conscious but couldn't move or speak?
 [Neuroscientist Adrian Owen](http://www.owenlab.uwo.ca/) has been

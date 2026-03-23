@@ -4,7 +4,7 @@ date: "2017-03-10"
 tags:
   - "programming"
 created: "2017-03-10"
-modified: "2024-08-22"
+modified: "2026-03-23"
 ---
 This was my entry for the AI
 [Battlesnake](https://play.battlesnake.com/) competition in

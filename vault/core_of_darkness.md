@@ -7,8 +7,8 @@ tags:
 authors:
   - "Donald Chan"
   - "Noel Burton-Krahn"
-created: "2024-08-22"
-modified: "2024-08-22"
+created: "2016-10-05"
+modified: "2017-03-10"
 ---
 A young Co-op is sent down I-5 to "downsize" Don Knuth because his
 methods are unsound. The co-op student is well trained in .Net, XML,

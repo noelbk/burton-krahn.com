@@ -1,6 +1,19 @@
 .content-meta {
   margin-top: 0;
   color: var(--darkgray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+
+  .meta-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+
+  .meta-label {
+    font-weight: 600;
+  }
 
   &[show-comma="true"] {
     > *:not(:last-child) {

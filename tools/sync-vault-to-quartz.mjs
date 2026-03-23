@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -45,6 +46,65 @@ async function pathExists(p) {
   } catch {
     return false;
   }
+}
+
+function getGitLatestModifiedDate(filePath) {
+  try {
+    const out = execFileSync("git", ["log", "-1", "--format=%aI", "--", filePath], {
+      cwd: REPO_ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    return out ? out.slice(0, 10) : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function getFrontmatterField(markdown, key) {
+  if (!markdown.startsWith("---\n")) return undefined;
+
+  const end = markdown.indexOf("\n---\n", 4);
+  if (end === -1) return undefined;
+
+  const frontmatter = markdown.slice(4, end);
+  const fieldRe = new RegExp(`^${key}:\\s*"?(.+?)"?\\s*$`, "m");
+  const match = frontmatter.match(fieldRe);
+  return match?.[1];
+}
+
+function pickMostRecentDate(...values) {
+  let bestValue = undefined;
+  let bestTime = -Infinity;
+
+  for (const value of values) {
+    if (!value) continue;
+    const time = new Date(value).getTime();
+    if (Number.isNaN(time)) continue;
+    if (time > bestTime) {
+      bestTime = time;
+      bestValue = value;
+    }
+  }
+
+  return bestValue;
+}
+
+function upsertFrontmatterField(markdown, key, value) {
+  if (!markdown.startsWith("---\n")) return markdown;
+
+  const end = markdown.indexOf("\n---\n", 4);
+  if (end === -1) return markdown;
+
+  const frontmatter = markdown.slice(4, end);
+  const body = markdown.slice(end + 5);
+  const line = `${key}: "${value}"`;
+  const fieldRe = new RegExp(`^${key}:.*$`, "m");
+  const nextFrontmatter = fieldRe.test(frontmatter)
+    ? frontmatter.replace(fieldRe, line)
+    : `${frontmatter}\n${line}`;
+
+  return `---\n${nextFrontmatter}\n---\n${body}`;
 }
 
 async function walk(dir) {
@@ -178,7 +238,13 @@ async function syncContent() {
     const outPath = path.join(QUARTZ_CONTENT_DIR, rel);
     expectedOutAbsPaths.add(outPath);
 
-    const raw = await fs.readFile(f, "utf8");
+    let raw = await fs.readFile(f, "utf8");
+    const explicitModified = getFrontmatterField(raw, "modified");
+    const gitModified = getGitLatestModifiedDate(path.relative(REPO_ROOT, f));
+    const resolvedModified = pickMostRecentDate(explicitModified, gitModified);
+    if (resolvedModified) {
+      raw = upsertFrontmatterField(raw, "modified", resolvedModified);
+    }
     const idBase = rel.replace(/\.md$/i, "").replaceAll(path.sep, "-");
     const processed = await replaceTikzBlocksWithImages({
       markdown: raw,

@@ -4,8 +4,8 @@ date: "2017-04-30"
 tags:
   - "nnet"
   - "fda"
-created: "2024-08-22"
-modified: "2024-08-22"
+created: "2017-06-23"
+modified: "2017-06-23"
 ---
 Machine learning has made great strides in the last few years, and
 [Convolutional Neural Networks](

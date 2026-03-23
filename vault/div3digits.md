@@ -4,8 +4,8 @@ date: "Oct 3, 2016"
 description: "A toy proof of a math trick I learned in elementary school."
 tags:
   - "math"
-created: "2024-08-22"
-modified: "2024-08-22"
+created: "2016-10-04"
+modified: "2016-10-04"
 ---
 # Preamble
 

@@ -4,8 +4,8 @@ date: "2015-08-27"
 description: "The good bits of Emacs, after the online tutorial without too much kool-aid"
 tags:
   - "programming"
-created: "2024-08-22"
-modified: "2024-08-22"
+created: "2016-10-05"
+modified: "2016-10-05"
 ---
 Emacs Advanced Features Tutorial
 --------------------------------
