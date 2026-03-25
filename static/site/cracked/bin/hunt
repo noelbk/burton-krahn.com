@@ -1,0 +1,168 @@
+#! /usr/bin/perl -w
+
+use strict;
+
+my(%hunt, $here, $there, $last, $dist, $hunt);
+
+my(@welcome) = 
+    ( 
+      sub { "Let the hunt begin!  You are $dist steps away from victory!" },
+    );
+
+my(@there) = 
+    ( 
+    "You're here! ",
+    "Oh my God! It's full of stars!",
+    "Welcome to the 9th Gate",
+    "Beautiful, isn't it?",
+    "Experience the joy of the bugs... just before the Raid.",
+    );
+
+my(@same) = 
+    (
+    "Do you really think I'm not on to you?",
+    "joe won't help",
+    "Come on, play my game.  cd somewhere and see what happens",
+    "You are pathetic !!! TYPE CD !!!",
+    "No wonder it took you days to figure out rm -rf /var/log",
+    "I bet you think fixing ps will save you",
+    "cd, stupid, cd!",
+    "I'm a leprechaun, and there's a pot of gold in a directory somewhere",
+    "You are a dolt; cd for a better life!",
+    "Didn't you read my banner, or is SUE YOUR ASS unclear?",
+    "Here's a hint: ifconfig",
+    );
+
+my(@warm) = 
+    ( 
+    sub { "Warmer! only $dist steps to go!" },
+    "Warmer! It's just around the corner",
+    sub { ("Way " x ($hunt{last_dist} - $dist)) . "Warmer" },
+    );
+
+my(@cold) = 
+    ( 
+    "Colder! The key is in cd",
+    "Colder! All that way, and I didn't check the dotfiles",
+    "Colder! disfile, datfile, dotfile...",
+    "Colder",
+    sub { ("Way " x ($dist - $hunt{last_dist})) . "Colder" },
+    "Almost absolute bottom.  Just how dumb are you?",
+    "Colder! That won't work",
+    "Colder! Almost there and... Ugh",
+    "Hey stupid, try 'cd'",
+    );
+	 
+sub find_there {
+    my($there, $i, $s, @l);
+
+    $i = 10;
+    $there = '/usr';
+    for($i=0; $i<10; $i++) {
+	unless( opendir(D, "$there") ) {
+	    $there =~ s|(/.+)/.*|$1|;
+	    next;
+	}
+	@l = ();
+	while( $s = readdir(D) ) {
+	    next unless -d "$there/$s";
+	    push(@l, $s);
+	}
+	closedir(D);
+	$s = $l[rand(@l)];
+	if( $s eq '.' ) {
+	    next;
+	}
+	elsif( $s eq '..' ) {	
+	    $there =~ s|(/.+)/.*|$1|;
+	}
+	else {
+	    $there .= "/$s";
+	}
+    }
+    return $there;    
+}
+
+sub init_hunt {
+    my($hunt) = @_;
+    %$hunt = 
+	(
+	 there => find_there(),
+	 start => time(),
+	 score => 0,
+	 steps => 0,
+	 );
+}
+
+sub msg {
+    my($class) = @_;
+    
+    my($x);
+
+    $x = @$class[rand(@$class)];
+    if( ref($x) ) {
+	$x = &$x();
+    }
+    print("\e[1m\e[32m",
+	  $x,
+	  "\e[0m",
+	  "\n");
+}
+
+#---------------------------------------------------------------------
+my($s, $i, $x, $t, @lh, @lt);
+
+use Cwd;
+
+$here = cwd();
+
+$i = open(F, "<$ENV{HOME}/.hunt");
+if( !$i ) {
+    init_hunt(\%hunt);
+}
+else {
+    while(<F>) {
+	$hunt{$1} = $2 if( /(^\w+)=(.*)$/ );
+    }
+    close(F);
+}
+
+# the distance to the goal is the number of 'cd's up and down required
+# to get from $here to $there.
+@lh = split(/\//, $here);
+@lt = split(/\//, $hunt{there});
+shift(@lt);
+shift(@lh);
+while(@lh && @lt && $lh[0] eq $lt[0]) {
+    shift(@lt);
+    shift(@lh);
+}
+$dist = @lh + @lt;
+
+if( !$i ) {
+    msg(\@welcome);
+}
+
+if( $dist == 0 ) {
+    msg(\@there);
+    init_hunt(\%hunt);
+}
+
+if( defined($hunt{'last_dist'}) ) {
+    $i = $dist - $hunt{'last_dist'};
+    $hunt{'score'} += -$i;
+    msg( ($i < 0) ? \@warm : ($i == 0 ? \@same : \@cold));
+}
+
+$hunt{'moves'}++;
+$hunt{'last_time'} = time();
+$hunt{'last_here'} = $here;
+$hunt{'last_dist'} = $dist;
+
+open(F, ">$ENV{HOME}/.hunt");
+while( my($k, $v) = each(%hunt) ) {
+    print(F "$k=$v\n");
+}
+close(F);
+
+
