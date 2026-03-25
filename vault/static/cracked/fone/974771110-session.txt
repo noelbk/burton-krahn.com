@@ -1,0 +1,219 @@
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+[root@ariel .Fone]# dir
+Desktop
+[root@ariel .Fone]# df
+Filesystem           1k-blocks      Used Available Use% Mounted on
+/dev/hda3              2031920   1416992    511712  73% /
+[root@ariel .Fone]# cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 6
+model name	: Celeron (Mendocino)
+stepping	: 5
+cpu MHz		: 367.496127
+cache size	: 128 KB
+fdiv_bug	: no
+hlt_bug		: no
+sep_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 2
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 sep mtrr pge mca cmov pat pse36 mmx fxsr
+bogomips	: 366.18
+
+[root@ariel .Fone]# rm /var/logs
+rm: cannot remove `/var/logs': No such file or directory
+[root@ariel .Fone]# dir
+Desktop
+[root@ariel .Fone]# cd /var/ 
+[root@ariel /var]# dir
+arpwatch  catman  gated  kerberos  local  log	    named  preserve  spool  tmp
+cache	  db	  gdm	 lib	   lock   mars_nwe  nis    run	     state  yp
+[root@ariel /var]# ps -x
+  PID TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  536 ?        S      0:00 crond
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  654 ?        S      0:00 gpm -t ps/2
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  794 tty1     S      0:00 /sbin/mingetty tty1
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+ 1004 ?        S      0:00 in.telnetd: 211.43.92.125                            
+ 1005 pts/0    S      0:00 login -- Fone                
+ 1028 pts/0    S      0:00 su Fone1
+ 1029 pts/0    S      0:00 bash
+ 1047 pts/0    R      0:00 ps -x
+[root@ariel /var]# cd ~
+[root@ariel .Fone]# rm /var/log
+rm: /var/log: is a directory
+[root@ariel .Fone]# rm -f /var/log
+rm: /var/log: is a directory
+[root@ariel .Fone]# rm -f /var/logrm -rf /var/log
+[root@ariel .Fone]# dir
+Desktop
+[root@ariel .Fone]# uptime
+ 11:51pm  up 11:25,  1 user,  load average: 0.00, 0.00, 0.00
+[root@ariel .Fone]# exit
+exit
+[Fone@ariel .Fone]$ exit
+logout
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+su Fone1
+C
+
+It's not the men in my life, but the life in my men that counts.
+		-- Mae West
+
+Colder! Almost there and... Ugh
+
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+su: incorrect password
+
+The best cure for insomnia is to get a  lot of sleep.
+		-- W. C. Fields
+
+You're not getting worse, but no better either
+
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+
+AWAKE! FEAR! FIRE! FOES! AWAKE!
+	FEAR! FIRE! FOES!
+		AWAKE! AWAKE!
+		-- J. R. R. Tolkien
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# dir
+Desktop
+
+	Strange memories on this nervous night in Las Vegas.  Five years later?
+Six?  It seems like a lifetime, or at least a Main Era -- the kind of peak that
+never comes again.  San Fransisco in the middle sixties was a very special time
+and place to be a part of.  Maybe it meant something.  Maybe not, in the long
+run...  There was madness in any direction, at any hour.  If not across the
+Bay, then up the Golden Gate or down 101 to Los Altos or La Honda...  You could
+strike sparks anywhere. There was a fantastic universal sense that whatever we
+were doing was right, that we were winning...
+	And that, I think, was the handle -- that sense of inevitable victory
+over the forces of Old and Evil.  Not in any mean or military sense; we didn't
+need that. Our energy would simply prevail.  There was no point in fighting
+-- on our side or theirs.  We had all the momentum; we were riding the crest
+of a high and beautiful wave.  So now, less than five years later, you can go
+up on a steep hill in Las Vegas and look West, and with the right kind of eyes
+you can almost ___see the high-water mark -- that place where the wave finally
+broke and rolled back.
+		-- Hunter S. Thompson
+
+Try cd...
+
+[root@ariel .Fone]# rm /var/log
+rm: cannot remove `/var/log': No such file or directory
+
+Some people around here wouldn't recognize subtlety if it hit them on the head.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# rm -rf /var/log
+
+We're here to give you a computer, not a religion.
+- attributed to Bob Pariseau, at the introduction of the Amiga
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# ps -x
+  PID TTY      STAT   TIME COMMAND
+    1 ?        S      0:05 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  308 ?        S      0:00 /sbin/pump -i eth0
+  376 ?        SW     0:00 [lockd]
+  377 ?        SW     0:00 [rpciod]
+  386 ?        S      0:00 rpc.statd
+  400 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  427 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  480 ?        S      0:00 syslogd -m 0
+  489 ?        S      0:00 klogd
+  553 ?        S      0:00 inetd
+  567 ?        S      0:00 smbd -D
+  576 ?        S      0:00 nmbd -D
+  590 ?        S      0:00 lpd
+  638 ?        S      0:00 sendmail: accepting connections on port 25
+  653 ?        S      0:00 gpm -t ps/2
+  752 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  793 tty1     S      0:00 /sbin/mingetty tty1
+  794 tty2     S      0:00 /sbin/mingetty tty2
+  795 tty3     S      0:00 /sbin/mingetty tty3
+  796 tty4     S      0:00 /sbin/mingetty tty4
+  797 tty5     S      0:00 /sbin/mingetty tty5
+  798 tty6     S      0:00 /sbin/mingetty tty6
+  814 ?        S      0:00 in.telnetd: 211.43.92.125                            
+  815 pts/0    S      0:00 login -- Fone                
+  844 pts/0    S      0:00 su Fone1
+  845 pts/0    S      0:00 bash
+  869 pts/0    R      0:00 ps -x
+
+Viking, n.:
+	1. Daring Scandinavian seafarers, explorers, adventurers,
+	entrepreneurs world-famous for their aggressive, nautical import
+	business, highly leveraged takeovers and blue eyes.
+	2. Bloodthirsty sea pirates who ravaged northern Europe beginning
+	in the 9th century.
+
+Hagar's note: The first definition is much preferred; the second is used
+only by malcontents, the envious, and disgruntled owners of waterfront
+property.
+
+Try cd...
+
+[root@ariel .Fone]# nslookup 209.53.2.233
+Server:  serrano.bconnected.net
+Address:  209.53.0.17
+
+Name:    00-20-78-13-a3-51.bconnected.net
+Address:  209.53.2.233
+
+"I'm growing older, but not up."
+-- Jimmy Buffett
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]#

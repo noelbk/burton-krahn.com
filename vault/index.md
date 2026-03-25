@@ -13,6 +13,7 @@ Recent posts:
 
 - [Calculating π](calculating-pi) — Archimedes + TikZ diagram
 - [Great Circle](great-circle) — interactive demo
+- [Cracked, Wiped, Recovered, and Curious](20001125-cracked-wiped-recovered) — getting cracked in 2000, rebuilding, and setting up a honeypot
 - [Data Science Meetup: Delirium Detection With CNNs](20170727-DataScienceMeetup)
 - [Deep Learning for Medicine](20170430-deep-learning-for-medicine)
 - [Battlesnakes](battlesnake2017)

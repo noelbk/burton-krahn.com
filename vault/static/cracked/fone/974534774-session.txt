@@ -1,0 +1,158 @@
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+[root@ariel .Fone]# dir
+Desktop
+[root@ariel .Fone]# cd ..
+[root@ariel /dev]# cd ..
+[root@ariel /]# dir
+bin   dev  home  lost+found  mnt  opt	root  tftpboot	usr
+boot  etc  lib	 misc	     net  proc	sbin  tmp	var
+[root@ariel /]# ping yahoo.com -c 4
+PING yahoo.com (216.115.108.243) from 10.0.1.5 : 56(84) bytes of data.
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=0 ttl=238 time=87.0 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=1 ttl=238 time=82.7 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=2 ttl=238 time=83.4 ms
+64 bytes from img3.yahoo.com (216.115.108.243): icmp_seq=3 ttl=238 time=84.0 ms
+
+--- yahoo.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 82.7/84.2/87.0 ms
+[root@ariel /]# ps -x
+  PID TTY      STAT   TIME COMMAND
+    1 ?        S      0:04 init [3]
+    2 ?        SW     0:00 [kflushd]
+    3 ?        SW     0:00 [kupdate]
+    4 ?        SW     0:00 [kpiod]
+    5 ?        SW     0:00 [kswapd]
+    6 ?        SW<    0:00 [mdrecoveryd]
+  308 ?        S      0:00 /sbin/pump -i eth0
+  376 ?        SW     0:00 [lockd]
+  377 ?        SW     0:00 [rpciod]
+  400 ?        S      0:00 /usr/sbin/apmd -p 10 -w 5 -W -s /etc/sysconfig/apm-sc
+  427 ?        S      0:00 /usr/sbin/automount --timeout 60 /misc file /etc/auto
+  480 ?        S      0:00 syslogd -m 0
+  489 ?        S      0:00 klogd
+  535 ?        S      0:00 crond
+  553 ?        S      0:00 inetd
+  567 ?        S      0:00 smbd -D
+  576 ?        S      0:00 nmbd -D
+  590 ?        S      0:00 lpd
+  638 ?        S      0:00 sendmail: accepting connections on port 25
+  653 ?        S      0:00 gpm -t ps/2
+  752 ?        S      0:00 /usr/sbin/amd -F /etc/amd.conf
+  793 tty1     S      0:00 /sbin/mingetty tty1
+  794 tty2     S      0:00 /sbin/mingetty tty2
+  795 tty3     S      0:00 /sbin/mingetty tty3
+  796 tty4     S      0:00 /sbin/mingetty tty4
+  797 tty5     S      0:00 /sbin/mingetty tty5
+  798 tty6     S      0:00 /sbin/mingetty tty6
+ 1024 ?        S      0:00 in.telnetd: 211.43.92.125                            
+ 1025 pts/0    S      0:00 login -- Fone                
+ 1050 pts/0    S      0:00 su Fone1
+ 1051 pts/0    S      0:00 bash
+ 1069 pts/0    R      0:00 ps -x
+[root@ariel /]# exit
+exit
+[Fone@ariel .Fone]$ exit
+logout
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+[root@ariel .Fone]# ping yahoo.com -c 4
+PING yahoo.com (216.115.108.245) from 10.0.1.5 : 56(84) bytes of data.
+64 bytes from img5.yahoo.com (216.115.108.245): icmp_seq=0 ttl=238 time=85.1 ms
+64 bytes from img5.yahoo.com (216.115.108.245): icmp_seq=1 ttl=238 time=83.5 ms
+64 bytes from img5.yahoo.com (216.115.108.245): icmp_seq=2 ttl=238 time=84.4 ms
+64 bytes from img5.yahoo.com (216.115.108.245): icmp_seq=3 ttl=238 time=83.7 ms
+
+--- yahoo.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 83.5/84.1/85.1 ms
+[root@ariel .Fone]# ping thetruth.com -c 4
+PING thetruth.com (63.77.181.111) from 10.0.1.5 : 56(84) bytes of data.
+64 bytes from thetruth.com (63.77.181.111): icmp_seq=0 ttl=115 time=106.1 ms
+64 bytes from thetruth.com (63.77.181.111): icmp_seq=1 ttl=115 time=104.3 ms
+64 bytes from thetruth.com (63.77.181.111): icmp_seq=2 ttl=115 time=105.0 ms
+64 bytes from thetruth.com (63.77.181.111): icmp_seq=3 ttl=115 time=105.1 ms
+
+--- thetruth.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 104.3/105.1/106.1 ms
+[root@ariel .Fone]# nslookup bconnected.c net -c 4
+Usage:
+   nslookup [-opt ...]             # interactive mode using default server
+   nslookup [-opt ...] - server    # interactive mode using 'server'
+   nslookup [-opt ...] host        # just look up 'host' using default server
+   nslookup [-opt ...] host server # just look up 'host' using 'server'
+[root@ariel .Fone]# nslookup bconnected.net -c 4        net
+Server:  serrano.bconnected.net
+Address:  209.53.0.17
+
+*** serrano.bconnected.net can't find bconnected.net: Non-existent host/domain
+[root@ariel .Fone]# nslookup 209.53.2.233
+Server:  serrano.bconnected.net
+Address:  209.53.0.17
+
+Name:    00-20-78-13-a3-51.bconnected.net
+Address:  209.53.2.233
+
+[root@ariel .Fone]# lynx http://bamazed.bconnected.net
+(B)0Getting http://bamazed.bconnected.net/
+Looking up bamazed.bconnected.net.
+Making HTTP connection to bamazed.bconnected.net.
+
+Exiting via interrupt: 2
+
+[root@ariel .Fone]# lynx http://sec   packetstorm.securift y.com
+(B)0Getting http://packetstorm.securify.com/
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+
+Exiting via interrupt: 2
+
+[root@ariel .Fone]# lynx http://packetstorm.securify.com
+(B)0Getting http://packetstorm.securify.com/
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+Alert!: Unable to connect to remote host.
+
+Looking up packetstorm.securify.com.
+Making HTTP connection to packetstorm.securify.com.
+Alert!: Unable to connect to remote host.
+
+lynx: Can't access startfile http://packetstorm.securify.com/
+[root@ariel .Fone]# exit
+exit
+[Fone@ariel .Fone]$ exit
+logout
+
+Red Hat Linux release 6.2 (Zoot)
+Kernel 2.2.14-5.0 on an i686
+login: Fone
+Password: 
+[Fone@ariel .Fone]$ su Fone1
+Password: 
+[root@ariel .Fone]# dir
+Desktop
+[root@ariel .Fone]# nslookup datek.com
+Server:  serrano.bconnected.net
+Address:  209.53.0.17
+
+Name:    datek.com
+Addresses:  209.191.156.89, 209.191.132.24
+
+[root@ariel .Fone]# exit
+exit
+[Fone@ariel .Fone]$ exit
+logout

@@ -1,0 +1,151 @@
+To: Petr Arnstein <petr.arnstein@creditlyonnais.fr>
+cc: "radek.majer" <radek.majer@globalone.cz>,
+    "martin.sejvl" <martin.sejvl@Globalone.net>,
+    "vladimir.madansky" <vladimir.madansky@Globalone.net>,
+    "jiri.jakes" <Jiri.Jakes@Globalone.net>,
+    Radim Berka <radim.berka@creditlyonnais.fr>
+Subject: Re: The case of suspected abuse from 62.229.32.20 - explorations & conclusions 
+In-Reply-To: Your message of "12 Oct 2000 16:48:54 +0200."
+             <0594339E5CF56002*/c=FR/admd=ATLAS/prmd=CL/o=NOTES/s=ARNSTEIN/g=PETR/@MHS> 
+Date: Thu, 12 Oct 2000 09:25:17 -0700
+From: Noel Burton-Krahn <noel@burton-krahn.com>
+
+
+Thanks Petr, for your quick response!
+
+Yes, I accidentally left wu-ftp up and running, and that is how some
+hackers gained access to my machine.  The last of them deleted my
+working files, and for that I hope he or she goes to prison.  I'm
+sorry you were falsely accused; I'm just tracking down all of the IP
+addresses I've found in my log files.
+
+I'm embarrassed to be hacked to thoroughly, and frustrated that there
+is no recourse to law.  The local law enforcement agency, the RCMP,
+is powerless to track this kind of attack.  Hopefully with the help of
+professionals like yourself, I can track down the real culprits.
+
+Now I know my attackers weren't in .cz, and probably not in .il, the
+other IP from my log files.  Hopefully they are much more local, and
+thus easier to catch.
+
+Thanks again for your information.
+
+Noel Burton-Krahn
+noel@burton-krahn.com
+
+
+> Date: 12 Oct 2000 16:48:54 +0200
+> From: Petr Arnstein <petr.arnstein@creditlyonnais.fr>
+> To: justin <justin@faxpc.com>, noel <noel@burton-krahn.com>
+> cc: "radek.majer" <radek.majer@globalone.cz>,
+>         "martin.sejvl" <martin.sejvl@Globalone.net>,
+>         "vladimir.madansky" <vladimir.madansky@Globalone.net>,
+>         "jiri.jakes" <Jiri.Jakes@Globalone.net>,
+>         Radim Berka <radim.berka@creditlyonnais.fr>
+> Subject: The case of suspected abuse from 62.229.32.20 - explorations & conclusions
+> 
+> Dear gentlemen,
+> 
+>   First of all, please let introduce myself. My name is Petr Arnstein
+> and I'm emplyoed as System & Network Administrator in Credit
+> Lyonnais Bank in Prague, Czech Republic.
+> 
+>   Yesterday I've got a phone call from our ISP - Global One
+> company - that from our assigned address space - to be exact:
+> IP address 62.229.32.20  -  somebody "hacked" a computer
+> with IP 209.53.2.233 - your computer.
+> 
+>   After gathering a sum of relevant facts - which really was not an
+> easy task - I was able to make a list of (partially only probable)
+> events (they're chronologically sorted - please notice that fact with
+> caution to prevent further discrepancies):
+> 
+> 1) AT VERY START, October 10th, shortly after lunchtime (in Prague,
+> there is CET time (GMT+1) - just for info), I've noticed suspicious
+> activity from IP address 209.53.2.233 in log of our company Firewall
+> (pleasee see attachment - a small JPEG image of relevant part
+> of FW log). Also please note that machine 62.229.32.20  doesn't have any
+> opened ports for FTP, HTTP etc. and our Firewall allows only
+> exchange of DNS type of informations from outside world (ie. Internet)
+> and this box.
+> 
+> 
+> 
+> 2) AFTER THAT, as usually in similar cases, I've used portscanning
+> tool (nmap) to gather informations about attacker's box. It was apparent
+> that it's Linux box with many opened ports - freshly installed and/or
+> very insufficiently secured for on-Internet operation. Seemed to me
+> as some "wannabe hacker" got some toys and trying to bother around.
+> 
+> 3) As I'd saw opened FTP port, I've tried to login as "guest" and "anonymous"
+> to get some more info. On the second possibility I was successful.
+> I've used a non-existent e-mail address - notice the fact it was the
+> computer from which somebody ATTACKED US! The only one bad
+> thing I did in all that stuff is that I've used the 'prdel' word - it's 
+> four-letter
+> in Czech ;) I did a 'ls' command on 'pub' and 'incoming' directories -
+> - seen some MacIntosh files I suppose - and then 'exit'. That's all !
+> 
+> 4) After that I considered all that matter as an unsuccessful attempt
+> to break into our corporate network (as I'm experiencing a couple per
+> week) and forgot about it until our ISP called me with bringing that
+> "hacking" charge against our company.
+> 
+> 5) After some time I've got your criminative angry e-mail forwarded
+> and later (today morning) also that part of your machine's log. Now
+> the things became clarified. What  I can see is that your machine was
+> really hacked (see the first part of your log) and used as an "redirector"
+> or "cracker's fortress" against our site (and maybe not only ours).
+> With it's level of security your box is (was) an ideal object for such
+> an exploitation.
+> 
+> 
+> SUMMARY OF RELEVANT FACTS:
+> 
+> 1) I've logged onto >> freely accessible anonymous << FTP server,
+> listed two directiories, and logged out. Nothing more! (and your box
+> log is saying that). I suppose nobody can see anything bad or, more,
+> illegal on such an activity.
+> 
+> 2) I'm following your state of mind after recognizing somebody compromised
+> your computer but the fact is that it IS illegal to denominate somebody
+> as "criminal" to some other person (in fact his bussiness partner!) with
+> totally zero evindence! It's illegal here in Czech Republic and in Canada
+> too, I suppose.
+> 
+> EPILOGUE:
+> 
+>   I consider myself being an IT professional since '92, same time actively
+> spent on Internet, computer enthusiast since my childhood. Also, from
+> the scope of computer criminality, I'm and always was standing on the
+> "good boys' side of barricade". So such an incident when somebody
+> who seems to have some 1/20 of my technical background, calls me
+> some kind of criminal "lamer" who destroys data on others' boxes
+> AND leaves such flagrant evidence of presence, it's  really very ofensive
+> for me, both professionally and personally.
+> 
+> 
+>   So, to reach any meaningful conclusion, I'm really sorry that somebody's
+> got your computer and you've lost your work of such an value (backups ?)
+> but I can only recommend you to gain stronger IT knowledge and skills for
+> a) better and more secure life on Internet and b) to make right decisions
+> based on facts.
+> 
+> Yours sincerely
+> 
+> Petr Arnstein
+> 
+> 
+> -------------------------------------------------------
+> Petr Arnstein
+> 
+> System & Network Administrator
+> EDP department
+> Credit Lyonnais Bank Praha, a.s.
+> 
+> Tel.:    +420 - 2 - 220 76 564
+> Fax:     +420 - 2 - 220 76 549
+> GSM:     +420 - 602 684 125
+> E-mail:  petr.arnstein@creditlyonnais.fr
+> -------------------------------------------------------- 
+> 

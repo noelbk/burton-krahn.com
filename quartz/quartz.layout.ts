@@ -27,6 +27,11 @@ const explorerSortLatestFirst: ExplorerOptions["sortFn"] = (a, b) => {
   return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
 }
 
+const explorerFilterTopLevelOnly: ExplorerOptions["filterFn"] = (node) => {
+  if (node.slugSegment === "tags") return false
+  return !node.slug.includes("/")
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -63,7 +68,11 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({ title: "Pages", sortFn: explorerSortLatestFirst }),
+    Component.Explorer({
+      title: "Pages",
+      sortFn: explorerSortLatestFirst,
+      filterFn: explorerFilterTopLevelOnly,
+    }),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -85,7 +94,11 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({ title: "Pages", sortFn: explorerSortLatestFirst }),
+    Component.Explorer({
+      title: "Pages",
+      sortFn: explorerSortLatestFirst,
+      filterFn: explorerFilterTopLevelOnly,
+    }),
   ],
   right: [],
 }
