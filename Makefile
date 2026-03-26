@@ -138,12 +138,21 @@ github: publish
 
 PREVIEW_HOST?=127.0.0.1
 PREVIEW_PORT?=4321
+VAULT_WATCH_PID_FILE?=$(BASEDIR)/.vault-watch.pid
 
 preview-stop:
 	@pids="$$(lsof -ti tcp:$(PREVIEW_PORT) 2>/dev/null)"; \
 	if [ -n "$$pids" ]; then \
 	  echo "Stopping preview on port $(PREVIEW_PORT): $$pids"; \
 	  kill $$pids || true; \
+	fi; \
+	if [ -f "$(VAULT_WATCH_PID_FILE)" ]; then \
+	  watcher_pid="$$(cat "$(VAULT_WATCH_PID_FILE)" 2>/dev/null)"; \
+	  if [ -n "$$watcher_pid" ] && kill -0 "$$watcher_pid" 2>/dev/null; then \
+	    echo "Stopping vault watcher: $$watcher_pid"; \
+	    kill "$$watcher_pid" || true; \
+	  fi; \
+	  rm -f "$(VAULT_WATCH_PID_FILE)"; \
 	fi
 
 sync-vault:
@@ -155,7 +164,12 @@ build: preview-stop sync-vault
 
 preview: preview-stop sync-vault
 	npm --prefix $(QUARTZ_DIR) install
-	cd $(QUARTZ_DIR) && npx quartz build -d ../site-content --serve --port $(PREVIEW_PORT)
+	@set -e; \
+	VAULT_DIR="$(VAULT_DIR)" QUARTZ_DIR="$(QUARTZ_DIR)" QUARTZ_CONTENT_DIR="$(QUARTZ_SITE_CONTENT_DIR)" node "$(BASEDIR)/tools/watch-vault-to-quartz.mjs" & \
+	watcher_pid="$$!"; \
+	echo "$$watcher_pid" > "$(VAULT_WATCH_PID_FILE)"; \
+	trap 'kill "$$watcher_pid" 2>/dev/null || true; rm -f "$(VAULT_WATCH_PID_FILE)"' EXIT INT TERM; \
+	cd "$(QUARTZ_DIR)" && npx quartz build -d ../site-content --serve --port $(PREVIEW_PORT)
 
 quartz-publish: build
 	cd $(QUARTZ_DIR) && npx gh-pages -d public -b gh-pages --nojekyll --cname $(SITE_DOMAIN)

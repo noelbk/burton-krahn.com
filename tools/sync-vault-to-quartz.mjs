@@ -34,9 +34,39 @@ async function atomicWriteFile(filePath, data, encoding = "utf8") {
   await fs.rename(tmpPath, filePath);
 }
 
-async function clearDir(dir) {
-  await fs.rm(dir, { recursive: true, force: true });
-  await ensureDir(dir);
+async function writeFileIfChanged(filePath, data, encoding = "utf8") {
+  try {
+    const existing = await fs.readFile(filePath, encoding);
+    if (existing === data) return false;
+  } catch (err) {
+    if (err?.code !== "ENOENT") throw err;
+  }
+
+  await atomicWriteFile(filePath, data, encoding);
+  return true;
+}
+
+async function copyFileIfChanged(srcPath, destPath) {
+  let src = null;
+  let dest = null;
+
+  try {
+    src = await fs.readFile(srcPath);
+  } catch (err) {
+    if (err?.code !== "ENOENT") throw err;
+  }
+
+  try {
+    dest = await fs.readFile(destPath);
+  } catch (err) {
+    if (err?.code !== "ENOENT") throw err;
+  }
+
+  if (src && dest && src.equals(dest)) return false;
+
+  await ensureDir(path.dirname(destPath));
+  await fs.copyFile(srcPath, destPath);
+  return true;
 }
 
 async function pathExists(p) {
@@ -207,13 +237,26 @@ async function replaceTikzBlocksWithImages({ markdown, idBase, siteRequire }) {
 }
 
 async function syncStatic() {
-  if (!(await pathExists(VAULT_STATIC_DIR))) return;
-  const files = await walk(VAULT_STATIC_DIR);
+  const files = (await pathExists(VAULT_STATIC_DIR)) ? await walk(VAULT_STATIC_DIR) : [];
+  const expectedOutAbsPaths = new Set();
+
   for (const f of files) {
     const rel = path.relative(VAULT_STATIC_DIR, f);
     const out = path.join(QUARTZ_SITE_STATIC_DIR, rel);
-    await ensureDir(path.dirname(out));
-    await fs.copyFile(f, out);
+    expectedOutAbsPaths.add(out);
+    await copyFileIfChanged(f, out);
+  }
+
+  if (!(await pathExists(QUARTZ_SITE_STATIC_DIR))) {
+    await ensureDir(QUARTZ_SITE_STATIC_DIR);
+    return;
+  }
+
+  const existing = await walk(QUARTZ_SITE_STATIC_DIR);
+  for (const p of existing) {
+    if (!expectedOutAbsPaths.has(p)) {
+      await fs.rm(p, { force: true });
+    }
   }
 }
 
@@ -251,7 +294,7 @@ async function syncContent() {
       idBase,
       siteRequire,
     });
-    await atomicWriteFile(outPath, processed, "utf8");
+    await writeFileIfChanged(outPath, processed, "utf8");
   }
 
   // Remove stale generated markdown that no longer exists in the vault.
@@ -275,8 +318,8 @@ async function main() {
   if (!(await pathExists(QUARTZ_DIR))) throw new Error(`QUARTZ_DIR not found: ${QUARTZ_DIR}`);
 
   await ensureDir(QUARTZ_CONTENT_DIR);
-  // Don't clear QUARTZ_STATIC_DIR entirely (Quartz owns icons/fonts). Only clear our site-owned static.
-  await clearDir(QUARTZ_SITE_STATIC_DIR);
+  // Don't clear QUARTZ_STATIC_DIR entirely (Quartz owns icons/fonts). Only mirror our site-owned static.
+  await ensureDir(QUARTZ_SITE_STATIC_DIR);
 
   await syncStatic();
   await syncContent();
