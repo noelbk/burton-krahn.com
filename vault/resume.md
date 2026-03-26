@@ -29,9 +29,11 @@ This was a multi-camera digital video recording and playback system. The code cr
 
 ### Hotswap — Transparent Failover for Linux (C++, linux kernel)
 
-[![LISA'02 hotswap presentation](/static/site/lisa02-200.png)](/static/site/lisa02.pdf)
+[![Linux process transparent failover](/static/site/lisa02-200.png)](20020226-transparent-failover)
 
 My Master's project was to replicate Linux process trees between servers, so one server could seamlessly take over from another without losing data or breaking network connections.
+
+- [LISA'02 paper](/static/site/lisa02.pdf)
 
 ### Page Flipping (Java, OpenGL)
 
