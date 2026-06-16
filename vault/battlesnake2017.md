@@ -9,7 +9,7 @@ modified: 2026-03-23
 This was my entry for the AI [Battlesnake](https://play.battlesnake.com/) competition in 2017.  Battlesnake is an AI competition where snakes move around an arena looking for food and trying to avoid collisions with walls, other snakes, and themselves. Last one slithering wins!
 
 I decided to try [genetic programming](https://en.wikipedia.org/wiki/Genetic_programming) instead of neural nets.  For a good reference, see
-[A Field Guide to Genetic Programming](a_field_guide_to_genetic_programming.pdf).  
+[A Field Guide to Genetic Programming](static/battlesnakes/a_field_guide_to_genetic_programming.pdf).  
 
 My evolved snakes did well in competition, and I loved seeing them evolve original and surprising behaviour that I wouldn't have programmed myself.
 
