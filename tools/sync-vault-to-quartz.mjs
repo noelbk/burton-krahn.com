@@ -278,6 +278,54 @@ function rewriteVaultStaticPaths(markdown) {
   return out;
 }
 
+/**
+ * Transform Obsidian Dataview JS iframe blocks into plain HTML iframes for Quartz.
+ *
+ * In the vault, interactive demos are embedded using Dataview JS so Obsidian can
+ * resolve the vault-relative path via the Obsidian API:
+ *
+ *   ```dataviewjs
+ *   // quartz-iframe | title: My Demo | style: width:100%;height:75vh;border:0
+ *   let iframe = this.container.createEl("iframe");
+ *   iframe.src = app.vault.adapter.getResourcePath("static/pages/demo/index.html");
+ *   ...
+ *   ```
+ *
+ * The sync script replaces the entire block with:
+ *   <iframe src="/static/site/pages/demo/" title="My Demo" style="..." data-router-ignore></iframe>
+ *
+ * Path mapping: getResourcePath("static/foo/index.html") → /static/site/foo/
+ *              (strips trailing index.html, applies static/ → /static/site/ prefix)
+ */
+function rewriteDataviewJsIframes(markdown) {
+  return markdown.replace(
+    /```dataviewjs\n([\s\S]*?)```/g,
+    (fullMatch, body) => {
+      // Only handle blocks that contain getResourcePath — leave other dataviewjs alone
+      const pathMatch = body.match(/getResourcePath\(["']([^"']+)["']\)/);
+      if (!pathMatch) return fullMatch;
+
+      const vaultPath = pathMatch[1]; // e.g. "static/pages/greatcircle/greatcircle/index.html"
+      // Map static/foo/index.html → /static/site/foo/
+      let src = "/static/site/" + vaultPath.replace(/^static\//, "").replace(/index\.html$/, "");
+
+      // Extract optional metadata from the quartz-iframe comment line
+      const metaMatch = body.match(/\/\/\s*quartz-iframe\s*\|([^\n]*)/);
+      const meta = {};
+      if (metaMatch) {
+        for (const part of metaMatch[1].split("|")) {
+          const [k, ...v] = part.split(":");
+          if (k && v.length) meta[k.trim().toLowerCase()] = v.join(":").trim();
+        }
+      }
+
+      const title = meta.title ? ` title="${meta.title}"` : "";
+      const style = meta.style ? ` style="${meta.style}"` : "";
+      return `<iframe src="${src}"${title}${style} loading="lazy" data-router-ignore></iframe>`;
+    }
+  );
+}
+
 async function syncContent() {
   const files = await walk(VAULT_DIR);
   const mdFiles = files.filter((f) => f.toLowerCase().endsWith(".md"));
@@ -307,6 +355,7 @@ async function syncContent() {
       raw = upsertFrontmatterField(raw, "modified", resolvedModified);
     }
     raw = rewriteVaultStaticPaths(raw);
+    raw = rewriteDataviewJsIframes(raw);
     const idBase = rel.replace(/\.md$/i, "").replaceAll(path.sep, "-");
     const processed = await replaceTikzBlocksWithImages({
       markdown: raw,
