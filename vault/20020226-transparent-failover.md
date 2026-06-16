@@ -17,7 +17,7 @@ or losing any application state.
 
 ## Publications
 
-- [LISA'02 paper](static/lisa02.pdf)
+- [LISA'02 paper](lisa02.pdf)
 - [Presentation Slides](static/failover/csc554.pdf)
 - [Master's thesis](static/failover/thesis-20020226.pdf)
 

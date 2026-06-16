@@ -12,7 +12,7 @@ Here are some samples of my own code from favourite past projects.
 
 ### Genetisnake (genetic programming, Three.js, Phoenix)
 
-[![Battlesnake game board](static/battlesnakes.png)](static/pages/battlesnakes/)
+[![Battlesnake game board](static/battlesnakes/battlesnakes.png)](static/battlesnakes/)
 
 Battlesnake is an AI competition where snakes compete to survive on a simple board. My entry used [genetic programming](https://en.wikipedia.org/wiki/Genetic_programming). I rendered the board with [Three.js](https://threejs.org/), and the game server was a multi-room chat application written in [Phoenix](http://www.phoenixframework.org/).
 
@@ -29,11 +29,11 @@ This was a multi-camera digital video recording and playback system. The code cr
 
 ### Hotswap — Transparent Failover for Linux (C++, linux kernel)
 
-[![Linux process transparent failover](static/lisa02-200.png)](20020226-transparent-failover)
+[![Linux process transparent failover](lisa02-200.png)](20020226-transparent-failover)
 
 My Master's project was to replicate Linux process trees between servers, so one server could seamlessly take over from another without losing data or breaking network connections.
 
-- [LISA'02 paper](static/lisa02.pdf)
+- [LISA'02 paper](lisa02.pdf)
 
 ### Page Flipping (Java, OpenGL)
 
