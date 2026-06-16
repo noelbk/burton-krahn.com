@@ -260,6 +260,24 @@ async function syncStatic() {
   }
 }
 
+/**
+ * Rewrite vault-relative static asset paths to the Quartz-served absolute URL.
+ * In the vault, authors write:  ![alt](static/folder/file.png)
+ *                           or: <img src="static/folder/file.png">
+ *                           or: <a href="static/folder/file.png">
+ * Quartz serves those files at: /static/site/folder/file.png
+ * This lets Obsidian resolve images relative to the vault root while Quartz
+ * still finds them under /static/site/.
+ * Already-absolute paths (leading / or scheme) are left untouched.
+ */
+function rewriteVaultStaticPaths(markdown) {
+  // Markdown link/image syntax: [text](static/...) or ![alt](static/...)
+  let out = markdown.replace(/\]\(static\//g, "](/static/site/");
+  // HTML attribute syntax: src="static/..." or href="static/..." (double or single quotes)
+  out = out.replace(/(src|href)=(["'])static\//g, '$1=$2/static/site/');
+  return out;
+}
+
 async function syncContent() {
   const files = await walk(VAULT_DIR);
   const mdFiles = files.filter((f) => f.toLowerCase().endsWith(".md"));
@@ -288,6 +306,7 @@ async function syncContent() {
     if (resolvedModified) {
       raw = upsertFrontmatterField(raw, "modified", resolvedModified);
     }
+    raw = rewriteVaultStaticPaths(raw);
     const idBase = rel.replace(/\.md$/i, "").replaceAll(path.sep, "-");
     const processed = await replaceTikzBlocksWithImages({
       markdown: raw,

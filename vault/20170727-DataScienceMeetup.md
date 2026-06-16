@@ -22,31 +22,31 @@ Got baseStudyEDF: control and delerium EEGs
 Total Control: 27
 Total Delirium: 25
 
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/baseStudyEDF.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/baseStudyEDF.png)
 
 Neural Networks
 ===============
 
 Images from [CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
 
-![neural_net2](/static/site/20170727-DataScienceMeetup/neural_net2.jpeg)
+![neural_net2](static/20170727-DataScienceMeetup/neural_net2.jpeg)
 
-![cnn](/static/site/20170727-DataScienceMeetup/cnn.jpeg)
+![cnn](static/20170727-DataScienceMeetup/cnn.jpeg)
 
 Convolutional Networks
 ----------------------
 
-![convnet](/static/site/20170727-DataScienceMeetup/convnet.jpeg)
+![convnet](static/20170727-DataScienceMeetup/convnet.jpeg)
 
-![weights](/static/site/20170727-DataScienceMeetup/weights.jpeg)
+![weights](static/20170727-DataScienceMeetup/weights.jpeg)
 
 
 Deep Neural Networks
 --------------------
 
-![AlexNet](/static/site/20170727-DataScienceMeetup/Figure-27-CNN-Architecture-from-AlexNet-32.jpg)
+![AlexNet](static/20170727-DataScienceMeetup/Figure-27-CNN-Architecture-from-AlexNet-32.jpg)
 
-![inception](/static/site/20170727-DataScienceMeetup/inception.png)
+![inception](static/20170727-DataScienceMeetup/inception.png)
 
 
 Demo Digit Classifier
@@ -84,7 +84,7 @@ in Python's Keras
     Dense(1, activation='sigmoid')
 ```
 
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/model.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/model.png)
 
 
 Training
@@ -93,9 +93,9 @@ Training
 Trained on 3 splits: train on 66% of data, evaluate on 33% untrained
 data.  Average accuracy: (94 + 100 + 82)/3 = 92%
 
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/split0.png)
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/split1.png)
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/split2.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/split0.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/split1.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/split2.png)
 
 
 The training graphs demonstrate:
@@ -105,9 +105,9 @@ The training graphs demonstrate:
 * The training dataset is too small.  When the training accuracy goes
   to 100%, the net is overfitted to the data.
 
-![split0.gif](/static/site/20170727-DataScienceMeetup/model-split0.gif)
-![split1.gif](/static/site/20170727-DataScienceMeetup/model-split1.gif)
-![split2.gif](/static/site/20170727-DataScienceMeetup/model-split2.gif)
+![split0.gif](static/20170727-DataScienceMeetup/model-split0.gif)
+![split1.gif](static/20170727-DataScienceMeetup/model-split1.gif)
+![split2.gif](static/20170727-DataScienceMeetup/model-split2.gif)
 
 
 CNNs are easily Fooled
@@ -115,18 +115,18 @@ CNNs are easily Fooled
 
 [Attacking Machine Learning with Adversarial Examples](https://blog.openai.com/adversarial-example-research/)
 
-![blackbox](/static/site/20170727-DataScienceMeetup/adversarial_img_1.png)
+![blackbox](static/20170727-DataScienceMeetup/adversarial_img_1.png)
 
 
 [Deep Neural Network are Easily Fooled: High Confidence Predictions for Unrecognizable Images](http://anhnguyen.me/project/fooling/)
 
-![blackbox](/static/site/20170727-DataScienceMeetup/diversity_40_images_label.png)
+![blackbox](static/20170727-DataScienceMeetup/diversity_40_images_label.png)
 
 
 The Black Box Problem
 ---------------------
 
-![blackbox](/static/site/20170727-DataScienceMeetup/blackbox.jpg)
+![blackbox](static/20170727-DataScienceMeetup/blackbox.jpg)
 
 Medical device approval requires justification.
 
@@ -164,10 +164,10 @@ The final correlation layer's output is passed through a
 fully-connected network for final classification.
 
 
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer1.png)
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer4.png)
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer7.png)
-![baseStudyEDF](/static/site/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer10.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer1.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer4.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer7.png)
+![baseStudyEDF](static/20170727-DataScienceMeetup/model-split0-epoch28-val_acc0.94.hdf5-layer10.png)
    
 
 Other ways of looking at EEGS
@@ -178,7 +178,7 @@ Frequency spectrogram
 
 Spectrograms of 8 delirium and 8 control EEGs
 
-![eeg-spectrogram.png](/static/site/20170727-DataScienceMeetup/eeg-spectrogram.png)
+![eeg-spectrogram.png](static/20170727-DataScienceMeetup/eeg-spectrogram.png)
 
 
 Wavelet transform
@@ -193,11 +193,11 @@ http://people.math.sc.edu/blanco/imi/dtcwt0.pdf) is shift-invariant
 
 Here's the DTCWT vs the DWT for a control EEG
 
-![dtcwt-dwt-control1.png](/static/site/20170727-DataScienceMeetup/dtcwt-dwt-control1.png)
+![dtcwt-dwt-control1.png](static/20170727-DataScienceMeetup/dtcwt-dwt-control1.png)
 
 And the DTCWT for a control vs delirium EEG
 
-![dtcwt1-control-delirum.png](/static/site/20170727-DataScienceMeetup/dtcwt1-control-delirum.png)
+![dtcwt1-control-delirum.png](static/20170727-DataScienceMeetup/dtcwt1-control-delirum.png)
 
 
 Examining 8sec DWT samples grouped by patient, ordered by validate_acc
@@ -216,7 +216,7 @@ oscillations around coeffs 90-128, and low amplitudes overall.
 There were exceptions to these rules that were nevertheless
 consistently accurate.
 
-  ![jupyter_validate_acc](/static/site/20170727-DataScienceMeetup/jupyter_validate_acc.png)
+  ![jupyter_validate_acc](static/20170727-DataScienceMeetup/jupyter_validate_acc.png)
 
 
 Continuous wavelet transform of 8sec delirium eeg
@@ -224,7 +224,7 @@ Continuous wavelet transform of 8sec delirium eeg
 
 From noel/classifiers/CWTTest.ipynb
 
-![dwt-cwt](/static/site/20170727-DataScienceMeetup/20170519-cwt.png)
+![dwt-cwt](static/20170727-DataScienceMeetup/20170519-cwt.png)
 
 
 Trying CNN on Wavelet transform
@@ -236,7 +236,7 @@ Found: dtcwt scales 6-8, (8Hz, 4Hz, 2Hz, 896 points per sample, from
 32k), fc16, fc16 nnet: 98.1%
 
 <video width="720" height="240" controls>
-  <source src="/static/site/20170727-DataScienceMeetup/eeg-ddtcwt-nnet-coeffs4-5-fc16.mp4" type="video/mp4">
+  <source src="static/20170727-DataScienceMeetup/eeg-ddtcwt-nnet-coeffs4-5-fc16.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

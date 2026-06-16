@@ -17,9 +17,9 @@ or losing any application state.
 
 ## Publications
 
-- [LISA'02 paper](/static/site/lisa02.pdf)
-- [Presentation Slides](/static/site/failover/csc554.pdf)
-- [Master's thesis](/static/site/failover/thesis-20020226.pdf)
+- [LISA'02 paper](static/lisa02.pdf)
+- [Presentation Slides](static/failover/csc554.pdf)
+- [Master's thesis](static/failover/thesis-20020226.pdf)
 
 ## Goal
 
@@ -36,7 +36,7 @@ continue service.
 
 ## Implementation
 
-![client-server-hotswap.png](/static/site/failover/client-server-hotswap.png)
+![client-server-hotswap.png](static/failover/client-server-hotswap.png)
 
 The core idea was to provide transparent failover for existing UNIX servers
 without rewriting them. A master server and a backup server would start from

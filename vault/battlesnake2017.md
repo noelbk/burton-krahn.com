@@ -15,15 +15,15 @@ other snakes, and themselves.  Last one slithering wins.
 I decided to try
 [genetic programming](https://en.wikipedia.org/wiki/Genetic_programming) instead of neural nets.
 For a good reference, see
-[A Field Guide to Genetic Programming](/static/site/docs/a_field_guide_to_genetic_programming.pdf).
+[A Field Guide to Genetic Programming](static/docs/a_field_guide_to_genetic_programming.pdf).
 My evolved snakes did
 well in competition, and I loved seeing them evolve original and
 surprising behaviour that I wouldn't have programmed myself.
 
 <div>
-<a href="/static/site/pages/battlesnakes/" data-router-ignore>
+<a href="static/pages/battlesnakes/" data-router-ignore>
 See them in action!
-<img src="/static/site/battlesnakes.png" width="322px" height="250px" />
+<img src="static/battlesnakes.png" width="322px" height="250px" />
 </a>
 </div>
 

@@ -28,7 +28,7 @@ Looking at my logs, several different crackers had accounts on my computer from
 at least a week before that. Some were using my machine as a base to attack
 other systems. The last few entries in my logs were from system admins who were
 angry that my machine was attacking them. One of the victims was the [Credit
-Lyonnais Bank in Prague, Czech Republic](/static/site/cracked/letter-czech.txt).
+Lyonnais Bank in Prague, Czech Republic](static/cracked/letter-czech.txt).
 
 I learned a few lessons from the experience:
 
@@ -64,7 +64,7 @@ There are some really excellent accounts of cracker activity. These were some
 of the references I recommended at the time:
 
 - Cliff Stoll's excellent book, [_The Cuckoo's Egg_](https://www.simonandschuster.com/books/The-Cuckoos-Egg/Cliff-Stoll/9781668048160)
-- [An Evening with Berferd](/static/site/cracked/berferd.txt)
+- [An Evening with Berferd](static/cracked/berferd.txt)
 - [An account of crackers at Texas A&M University](https://www.usenix.org/publications/library/proceedings/sec4/tamu.saf.html)
 - Lance Spitzner's [Know Your Enemy](https://honeynet.onofri.org/papers/kye.html)
 
@@ -109,5 +109,5 @@ I would like to take a more active role in catching and prosecuting crackers.
 ## Updates
 
 - **2026-03-24:** Reformatted for Quartz, updated links, and added the
-  <a href="/static/site/cracked/extract_telnet_sessions.py" download data-router-ignore>telnet session extraction script</a>.
+  <a href="static/cracked/extract_telnet_sessions.py" download data-router-ignore>telnet session extraction script</a>.
 

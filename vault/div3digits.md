@@ -14,8 +14,8 @@ It's really Just an excuse to play with
 [$\LaTeX$](https://www.latex-project.org/).
 
 This document is also available as
-[PDF](/static/site/div3digits.pdf) and $\LaTeX$
-[source](/static/site/div3digits.tex).
+[PDF](static/div3digits.pdf) and $\LaTeX$
+[source](static/div3digits.tex).
 
 # Introduction
 

@@ -13,6 +13,7 @@ site-content/
 
 # Repo-local public vault
 vault/.obsidian/
+vault/static/site/
 
 # Legacy/local artifacts
 env/

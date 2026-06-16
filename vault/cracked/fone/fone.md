@@ -36,7 +36,7 @@ Fone broke into my [honeypot](../honeypot) on Nov 19, 2000 from
 
 Extracted session text:
 
-- [974534774-session.txt](/static/site/cracked/fone/974534774-session.txt)
+- [974534774-session.txt](static/cracked/fone/974534774-session.txt)
 
 ### Nov 20, 2000
 
@@ -45,7 +45,7 @@ to do it.
 
 Extracted session text:
 
-- [974771110-session.txt](/static/site/cracked/fone/974771110-session.txt)
+- [974771110-session.txt](static/cracked/fone/974771110-session.txt)
 
 ### Nov 23, 2000
 
@@ -53,12 +53,12 @@ Good boy, spot. He finally figured out `rm -rf /var/log`.
 
 Extracted session text:
 
-- [975002946-session.txt](/static/site/cracked/fone/975002946-session.txt)
+- [975002946-session.txt](static/cracked/fone/975002946-session.txt)
 
 On Nov 20, I decided that fone was not spending enough time on my system, so I
 tried to pique his interest by taunting him. I modified his shell to print a
 fortune and play a hotter-colder hidden-directory game using
-[`hunt`](/static/site/cracked/bin/hunt):
+[`hunt`](static/cracked/bin/hunt):
 
 ```sh
 PS1='\n$(/usr/games/fortune)\n$(/usr/games/hunt)\n'"$PS1"

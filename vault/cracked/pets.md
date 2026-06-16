@@ -89,4 +89,4 @@ If your `tcpdump` program could not read one of mine, Ethereal or `editcap`
 were the tools I recommended trying.
 
 I also wrote a small script to reconstruct and clean these recovered telnet
-sessions: <a href="/static/site/cracked/extract_telnet_sessions.py" download data-router-ignore>extract_telnet_sessions.py</a>.
+sessions: <a href="static/cracked/extract_telnet_sessions.py" download data-router-ignore>extract_telnet_sessions.py</a>.

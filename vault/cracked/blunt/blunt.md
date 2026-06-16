@@ -34,8 +34,8 @@ be more competent than [fone](../fone/fone).
 ### Dec 09, 2000
 
 blunt "secured" my system for me. He cleaned up the machine with this
-[patch helper](/static/site/cracked/blunt/patch) and an
-[ftp script](/static/site/cracked/blunt/update).
+[patch helper](static/cracked/blunt/patch) and an
+[ftp script](static/cracked/blunt/update).
 
 The original page also linked a `blunt.tar.gz` rootkit archive, but that file
 is not present in the recovered source tree.
@@ -45,7 +45,7 @@ systems and cleaned them up, or just a hacker who wanted privacy.
 
 Extracted session text:
 
-- [975117774-session.txt](/static/site/cracked/blunt/975117774-session.txt)
+- [975117774-session.txt](static/cracked/blunt/975117774-session.txt)
 
 ### Nov 29, 2000
 
@@ -53,9 +53,9 @@ blunt came back.
 
 Extracted session text:
 
-- [2000-11-29-session.txt](/static/site/cracked/blunt/2000-11-29-session.txt)
+- [2000-11-29-session.txt](static/cracked/blunt/2000-11-29-session.txt)
 
-He finally found [`hunt`](/static/site/cracked/bin/hunt) and `fortune` and
+He finally found [`hunt`](static/cracked/bin/hunt) and `fortune` and
 managed to remove them. I still do not think he understood how they worked.
 
 Poor [fone](../fone/fone). blunt wiped out his home directory.
