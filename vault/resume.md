@@ -9,8 +9,13 @@ modified: "2026-10-14"
 I’m a scientific software engineer and consultant working in C++ and Python, with experience in biomedical signal processing, scientific instruments, and distributed systems. Here are some samples of my own code from favourite past projects.
 
 - [Resume PDF](static/NoelBurtonKrahnResume.pdf)
-- [PQRST: Detecting P, QRS, and T Waves in an ECG](20260615-ecg-pqrst)
 - [GitHub](https://github.com/noelbk)
+
+### PQRST: Detecting P, QRS, and T Waves in an ECG
+
+<a href="./20260615-ecg-pqrst" style="display:block;width:293px;max-width:100%;height:132px;overflow:hidden;border-radius:5px"><img src="/static/site/20260615-ecg-pqrst/MO1_001_HE_pqrst.png" alt="Annotated ECG beats with detected P, QRS, and T waves" width="650" style="width:650px;max-width:none;margin:0;transform:translate(-40px,-57px)" /></a>
+
+I developed a geometric PQRST delineation algorithm for HeartEye’s 12-lead ECG device, revisiting my original work from 1997. The article shows how the algorithm identifies P and T waves and distinguishes irregular rhythms through RR and PQ variability. [Read the full article](20260615-ecg-pqrst).
 
 ### Genetisnake (genetic programming, Three.js, Phoenix)
 
