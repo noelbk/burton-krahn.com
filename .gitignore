@@ -22,3 +22,6 @@ pelican-themes/
 content/static/genetisnake/
 *.pid
 .DS_Store
+
+# Generated compatibility copy of the public resume.
+/quartz/quartz/static/NoelBurtonKrahnResume.pdf

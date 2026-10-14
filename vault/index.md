@@ -1,9 +1,10 @@
 ---
 title: "Noel Burton-Krahn"
 date: "2026-03-21"
+modified: "2026-10-14"
 ---
 
-Noel Burton-Krahn. I build software (backend, data, and graphics-y experiments) and keep notes here.
+I’m Noel Burton-Krahn, a scientific software engineer and consultant. I work on algorithms, biomedical signals, scientific instruments, and distributed systems. This is where I share projects, experiments, and notes on things I find interesting.
 
 Start here:
 

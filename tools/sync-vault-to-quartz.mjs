@@ -390,6 +390,11 @@ async function main() {
   await ensureDir(QUARTZ_SITE_STATIC_DIR);
 
   await syncStatic();
+  // Preserve the published resume download URL for existing external links.
+  await fs.copyFile(
+    path.join(VAULT_STATIC_DIR, "NoelBurtonKrahnResume.pdf"),
+    path.join(QUARTZ_STATIC_DIR, "NoelBurtonKrahnResume.pdf"),
+  );
   await syncContent();
   console.log("Synced vault -> quartz (content + static).");
 }

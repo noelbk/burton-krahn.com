@@ -1,13 +1,15 @@
 ---
 title: "Projects and Resume"
 date: "2017-03-10"
+modified: "2026-10-14"
 ---
 
 ## Noel Burton-Krahn — code samples
 
-Here are some samples of my own code from favourite past projects.
+I’m a scientific software engineer and consultant working in C++ and Python, with experience in biomedical signal processing, scientific instruments, and distributed systems. Here are some samples of my own code from favourite past projects.
 
 - [Resume PDF](static/NoelBurtonKrahnResume.pdf)
+- [PQRST: Detecting P, QRS, and T Waves in an ECG](20260615-ecg-pqrst)
 - [GitHub](https://github.com/noelbk)
 
 ### Genetisnake (genetic programming, Three.js, Phoenix)
