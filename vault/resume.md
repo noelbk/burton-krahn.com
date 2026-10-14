@@ -42,7 +42,7 @@ This was a multi-camera digital video recording and playback system. The code cr
 
 [Read the full article](20020226-transparent-failover)
 
-[![Linux process transparent failover](lisa02-200.png)](20020226-transparent-failover)
+<a href="./20020226-transparent-failover"><img src="/static/site/hotswap-thumbnail.png" alt="HotSwap architecture: synchronized master and backup hosts preserving client connections" width="320" /></a>
 
 My Master's project was to replicate Linux process trees between servers, so one server could seamlessly take over from another without losing data or breaking network connections.
 
