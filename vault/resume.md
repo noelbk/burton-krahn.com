@@ -13,11 +13,15 @@ I’m a scientific software engineer and consultant working in C++ and Python, w
 
 ### PQRST: Detecting P, QRS, and T Waves in an ECG
 
+[Read the full article](20260615-ecg-pqrst)
+
 <a href="./20260615-ecg-pqrst" style="display:block;width:293px;max-width:100%;height:132px;overflow:hidden;border-radius:5px"><img src="/static/site/20260615-ecg-pqrst/MO1_001_HE_pqrst.png" alt="Annotated ECG beats with detected P, QRS, and T waves" width="650" style="width:650px;max-width:none;margin:0;transform:translate(-40px,-57px)" /></a>
 
-I developed a geometric PQRST delineation algorithm for HeartEye’s 12-lead ECG device, revisiting my original work from 1997. The article shows how the algorithm identifies P and T waves and distinguishes irregular rhythms through RR and PQ variability. [Read the full article](20260615-ecg-pqrst).
+I developed a geometric PQRST delineation algorithm for HeartEye’s 12-lead ECG device, revisiting my original work from 1997. The article shows how the algorithm identifies P and T waves and distinguishes irregular rhythms through RR and PQ variability.
 
 ### Genetisnake (genetic programming, Three.js, Phoenix)
+
+[Read the full article](battlesnake2017)
 
 [![Battlesnake game board](static/battlesnakes/battlesnakes.png)](static/battlesnakes/)
 
@@ -35,6 +39,8 @@ This was a multi-camera digital video recording and playback system. The code cr
 - Real-time scheduling: [`task.h`](static/task.h), [`task.cpp`](static/task.cpp)
 
 ### Hotswap — Transparent Failover for Linux (C++, linux kernel)
+
+[Read the full article](20020226-transparent-failover)
 
 [![Linux process transparent failover](lisa02-200.png)](20020226-transparent-failover)
 
